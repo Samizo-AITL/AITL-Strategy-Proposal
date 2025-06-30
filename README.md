@@ -16,6 +16,7 @@ This repository presents the national-level strategy proposal for AITL (All-in-T
 
 | File | Description |
 |------|-------------|
+📄 [提案書本文はこちら → Proposal_v1.0.md](./Proposal_v1.0.md)
 | `Proposal_v1.0.md` | Full proposal (Markdown format) / 提案書全文（Markdown） |
 | `Proposal_v1.0.pdf` | Printable version / 提出・印刷用PDF |
 | `Summary_JP.md` | 1-page Japanese summary / 日本語要約（A4 1ページ） |
