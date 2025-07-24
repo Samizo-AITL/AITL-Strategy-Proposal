@@ -77,6 +77,9 @@ This three-layer architecture bridges AI and real-world physical control, enabli
 - [🧠 SamizoGPT](https://github.com/Samizo-AITL/SamizoGPT)  
   👉 ChatGPTによるプロンプト支援・教材構築・GUI支援テンプレート
 
+- [📄 提言書ドラフト v3](./AITL_Strategy_Proposal_Draft_v3.md)  
+  👉 ChatGPTテンプレートによる統合型設計戦略を含む最新版提言書
+
 ---
 
 ## 📫 お問い合わせ | Contact
