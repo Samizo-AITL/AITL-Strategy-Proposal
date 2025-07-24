@@ -151,3 +151,7 @@ It’s not about advanced nodes, but about rebuilding local design capability gr
 It can start—right now, right here.
 
 ---
+
+![AITL Architecture Diagram](./Figures/AITL_Architecture_Diagram_v1.png)
+
+---
