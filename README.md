@@ -3,6 +3,9 @@
 **AITL構想による国家戦略提案 × 統合教育パッケージの展開**  
 **National Strategy & Educational Framework Based on AITL: AI × Control × Physical Systems**
 
+> 📄 **最新版提言書 / Latest Proposal 👉 [AITL_Strategy_Proposal_Draft_v3.md](./AITL_Strategy_Proposal_Draft_v3.md)**  
+> ChatGPT Template-based Integrated Design × Field PoC × Regional Startup Strategy
+
 ---
 
 ## 🌐 概要 | Overview
