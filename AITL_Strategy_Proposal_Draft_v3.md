@@ -152,6 +152,28 @@ It can start—right now, right here.
 
 ---
 
+### 📊 AITL統合構成図 / AITL Integrated Architecture Diagram
+
 ![AITL Architecture Diagram](./Figures/AITL_Architecture_Diagram_v1.png)
+
+**図注 | Notes:**
+
+1. **Core of AITL**  
+   センサ→FSM/PID→UART→ChatGPT という制御＋分析フロー。  
+   リアルタイム制御はFSM/PIDが担い、ChatGPTはPoCログの**解析・異常検出・可視化支援**を担う。  
+   → 教材設計やPoC評価における**非リアルタイム補助AI**として機能。  
+   Sensor → FSM/PID → UART → ChatGPT: Control and analysis flow.  
+   Real-time control is handled by FSM/PID, while ChatGPT supports **log analysis, anomaly detection, and visualization** in non-real-time.  
+   → Functions as a **non-real-time assistant AI** for educational design and PoC evaluation.
+
+2. **AITL Architecture**  
+   三層（Logic / Control / Physical）に分かれた統合制御構造。AI・制御理論・実世界を接続し、再利用性と説明性のあるアーキテクチャを実現。  
+   A three-layer architecture (Logic / Control / Physical) that integrates AI, control theory, and real-world systems, providing reusability and explainability.
+
+3. **AITL Startup Strategy**  
+   教育 → テンプレート設計 → FPGA検証 → ASIC PoC → M&A型エグジットまでを一貫支援。  
+   教材とPoC設計支援を通じて、**地域発の実装型スタートアップ**を創出。  
+   Supports the full pipeline from education → template design → FPGA validation → ASIC PoC → M&A exit.  
+   Creates **regionally-rooted implementation startups** through education and PoC design assistance.
 
 ---
