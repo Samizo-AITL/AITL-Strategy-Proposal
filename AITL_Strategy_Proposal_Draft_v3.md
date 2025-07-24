@@ -149,3 +149,5 @@ It’s not about advanced nodes, but about rebuilding local design capability gr
 
 今ここから、実行可能である。  
 It can start—right now, right here.
+
+---
