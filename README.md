@@ -85,14 +85,6 @@ This three-layer architecture bridges AI and real-world physical control, enabli
 
 ---
 
-## 📫 お問い合わせ | Contact
-
-- **提案者 / Author**: 三溝 真一（Shinichi Samizo）  
-- **Email**: [shin3t72@gmail.com](mailto:shin3t72@gmail.com)  
-- **GitHub**: [@Samizo-AITL](https://github.com/Samizo-AITL)
-
----
-
 ## 🔖 ライセンス | License
 
 本提案および構成ファイルは MITライセンス または CC-BY で自由に活用可能です。  
