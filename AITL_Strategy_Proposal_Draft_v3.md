@@ -132,18 +132,37 @@ AITL is a **three-layer integrative architecture** comprising:
 
 ---
 
-## 7. **提言と施策 / Policy Recommendations**
+## 7. 提言と施策 / Policy Recommendations
 
 | 対象 / Target     | 提言内容 / Recommendation                                 |
 |-------------------|-----------------------------------------------------------|
-| **文部科学省**      | **FSM / PID / LLM統合教材**の**高専・大学導入支援**         |
-| **経済産業省**      | **Sky130 / 180nm活用PoC支援制度**の創設                    |
-| **農林水産省**      | **テンプレ制御LSI**の**スマート農業導入促進**               |
-| **自治体**          | **地域PoC＋設計＋教育体制**の**整備支援**                  |
+| 文部科学省        | FSM / PID / LLM統合教材の高専・大学導入支援              |
+| 経済産業省        | Sky130 / 180nm活用PoC支援制度の創設                     |
+| 農林水産省        | テンプレ制御LSIのスマート農業導入促進                   |
+| 自治体            | 地域PoC＋設計＋教育体制の整備支援                        |
+
+### 7.1 物理制約設計支援：SystemDKの戦略的位置付け / SystemDK as a Strategic Enabler
+
+**SystemDK** は、AITLの物理層（Physical Layer）において、PoC設計と実装を担保するための  
+**物理制約統合設計プラットフォーム**である。これは、**GAA / AMS / MRAM などのノード特性に応じた制約設計**をテンプレート化し、  
+教育・評価・試作・起業までを一貫して支援可能にする。
+
+SystemDK provides a **constraint-aware physical design platform**, ensuring implementable PoC development  
+for devices such as **GAA, AMS, and MRAM**. It bridges the physical layer of AITL with scalable educational  
+and entrepreneurial applications.
+
+#### 🎯 推進施策 / Recommended Actions
+
+| 対象 / Target     | 施策内容 / Proposed Action                                            |
+|-------------------|-----------------------------------------------------------------------|
+| 文部科学省        | 半導体基礎教育における SystemDKテンプレート演習 の教材整備・導入支援         |
+| 経済産業省        | 180nm・130nm等のレガシーファウンドリ向けにSystemDKを用いたPoC試作助成       |
+| 高専・大学        | GAA / MRAM設計教育の実習教材化とSky130演習連携（Edusemiとの統合）         |
+| 中小企業支援機構  | 地域製造業と連携したSystemDK×AITL PoC支援プログラムの実証フィールド展開     |
 
 ---
 
-## 8. **おわりに / Conclusion**
+## 8. おわりに / Conclusion
 
 **AITL戦略**は、**教育 → PoC → 製品・起業**までを繋ぐ  
 **現実志向型の設計戦略**である。  
