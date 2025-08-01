@@ -94,16 +94,21 @@ AITL is a **three-layer integrative architecture** comprising:
 
 ---
 
-## 5. **社会実装とPoC展開 / PoC and Real-World Applications**
+## 5. 社会実装とPoC展開 / PoC and Real-World Applications
 
-### 5.1 **実装例 / Use Cases**
+### 5.1 実装例 / Use Cases
 
-| 分野 / Field     | PoC内容 / Content                                  | 使用ノード / Node     |
-|------------------|----------------------------------------------------|------------------------|
-| **農業 / Agriculture** | 温室制御（**温湿度＋PID＋ChatGPTログ**）           | Sky130 / 180nm         |
-| **防災 / Disaster**    | 傾斜センサ（**FSM＋ChatGPT**）                      | 65nm                   |
-| **介護 / Care**        | 歩行補助（**IMU＋PID＋転倒検知**）                 | 130nm                  |
-| **製造 / Factory**     | 温度制御AI（**FSM＋LLM最適化**）                   | 0.35μm HVMOS           |
+| 分野 / Field         | PoC内容 / Content                                          | 使用ノード / Node     |
+|----------------------|------------------------------------------------------------|------------------------|
+| **農業 / Agriculture** | 温室制御（**温湿度＋PID＋ChatGPTログ**）                 | Sky130 / 180nm         |
+| **防災 / Disaster**    | 傾斜センサ（**FSM＋ChatGPT**）                            | 65nm                   |
+| **介護 / Care**        | 歩行補助（**IMU＋PID＋転倒検知**）                       | 130nm                  |
+| **製造 / Factory**     | 温度制御AI（**FSM＋LLM最適化**）                         | 0.35μm HVMOS           |
+| **回路設計 / AMS Design** | 高耐圧ADC制御（**SystemDK + PID制御 + Sky130 AMS**）     | Sky130 / 180nm         |
+
+SystemDKを活用したAMS設計PoCでは、Sky130ベースの高耐圧ADC制御に対し、  
+PID制御ブロックとAMS制約モデルを統合し、実動作環境におけるPoCが可能となった。  
+制約設計はテンプレート化されており、Edusemiとの連携で教材化も進行中である。
 
 ### 5.2 **FPGA検証の意義 / Importance of FPGA Verification**
 
