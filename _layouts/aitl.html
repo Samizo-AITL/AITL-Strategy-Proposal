@@ -3,11 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>{{ page.title | default: site.title }}</title>
-  {%- seo -%}
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <!-- サイトの通常CSSは読み込まない。真っ白＋本文だけ -->
+  <style>
+    /* 画面表示時も真っ白に近い最小装飾（PDFは pdf.css が別途適用） */
+    :root { --text:#111; --bg:#fff; }
+    html,body{margin:0;padding:0;background:#fff;color:var(--text);}
+    .page-content{max-width: 980px; margin: 16px auto; padding: 0 14px;}
+    h1,h2,h3{font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans", "Yu Gothic", sans-serif;}
+    a{color:#0b3d75; text-decoration:none;}
+    a:hover{text-decoration:underline;}
+  </style>
 </head>
-<body class="aitl">
+<body>
   <main class="page-content">
     {{ content }}
   </main>
