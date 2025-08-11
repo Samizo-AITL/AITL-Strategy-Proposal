@@ -2,18 +2,19 @@
 ---
 
 /* =========================================================
-   AITL Strategy Proposal – Minimal Theme Extension (v2)
-   Minima を継承 → 追記。SCSSとしてビルドされます。
+   AITL Strategy Proposal – Minimal Theme Extension (v3)
+   - Screen: readable, mild accent
+   - Print(PDF): compact, ink-friendly, no bg fills
    ========================================================= */
 
-/* Minima 継承 */
+/* Minima 継承（SCSSビルド前提） */
 @import "minima";
 
 /* ========== Base & Color System ========== */
 :root{
-  --aitl-blue:   #005bac;  /* Primary */
-  --aitl-light:  #e6f0fa;  /* Subtle bg */
-  --aitl-accent: #ffcc00;  /* Accent   */
+  --aitl-blue:   #005bac;   /* Primary */
+  --aitl-light:  #e9f2fb;   /* Subtle bg */
+  --aitl-accent: #ffcc00;   /* Accent   */
   --text-strong: #0f172a;
   --text-base:   #1f2937;
   --border:      #e5e7eb;
@@ -23,24 +24,25 @@
 
 @media (prefers-color-scheme: dark){
   :root{
-    --aitl-light:  #0b253b;
+    --aitl-light:  #0e2236;
     --text-strong: #e5e7eb;
     --text-base:   #d1d5db;
-    --border:      #2b3a4a;
+    --border:      #304151;
     --code-bg:     #0f172a;
-    --ring:        rgba(147,197,253,.3);
+    --ring:        rgba(147,197,253,.35);
   }
 }
 
-/* 全体の余白と文字 */
+/* 全体 */
+.site-header,.site-footer{ display:none !important; } /* 提案ページはクローム簡素化 */
 .page-content{ padding-top:.5rem; }
 body{ color:var(--text-base); }
 
-/* ========== Headings ========== */
+/* ========== Headings (Screen) ========== */
 h1,h2,h3{
   border-left:8px solid var(--aitl-blue);
   padding-left:10px;
-  background-color:var(--aitl-light);
+  background:var(--aitl-light);
   color:var(--aitl-blue);
   font-weight:700;
   margin-top:1rem;
@@ -50,26 +52,29 @@ h1{ font-size:1.85rem; }
 h2{ font-size:1.5rem;  }
 h3{ font-size:1.2rem;  }
 
-/* アンカーずれ対策（ページ内リンク時の見切れ防止） */
-:target{ scroll-margin-top: 72px; }
+:target{ scroll-margin-top:72px; } /* アンカーずれ対策 */
 
 /* ========== Links ========== */
 a{ color:var(--aitl-blue); text-decoration:none; }
 a:hover,a:focus{ text-decoration:underline; color:var(--aitl-accent); }
 a[href^="http"]{ word-break:break-word; }
 
+/* ========== Media (images/figures) ========== */
+img{ max-width:100%; height:auto; }
+figure{ margin:1rem 0; }
+figcaption{
+  font-size:.9rem; color:#6b7280; margin-top:.25rem;
+}
+
 /* ========== Tables ========== */
 .table-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
 table{ width:100%; border-collapse:collapse; margin:1rem 0; }
 th,td{ border:1px solid var(--border); padding:.6rem .7rem; vertical-align:top; }
 th{ background:var(--aitl-light); color:var(--text-strong); font-weight:700; }
-/* 偶数行の薄い帯（fallback → color-mix） */
 tbody tr:nth-child(even){ background:#f4f8fe; }
 @supports (background: color-mix(in oklab, white, black)){
   tbody tr:nth-child(even){ background:color-mix(in oklab, var(--aitl-light) 40%, transparent); }
 }
-
-/* モバイルでセルを詰める */
 @media (max-width:640px){
   th,td{ padding:.5rem; font-size:.95rem; }
 }
@@ -91,34 +96,24 @@ pre{
 pre code{ display:block; padding:0; background:transparent; }
 
 /* ========== Buttons / CTAs ========== */
-.btn-row,.cta-buttons{
-  display:flex; gap:12px; flex-wrap:wrap; margin:12px 0 6px;
-}
+.btn-row,.cta-buttons{ display:flex; gap:12px; flex-wrap:wrap; margin:12px 0 6px; }
 .btn{
   display:inline-block; padding:10px 14px; border-radius:8px;
   background:var(--aitl-blue); color:#fff !important; text-decoration:none; font-weight:600;
-  border:1px solid rgba(0,0,0,.15);
-  box-shadow:0 2px 6px rgba(0,0,0,.08);
+  border:1px solid rgba(0,0,0,.12); box-shadow:0 2px 6px rgba(0,0,0,.08);
   transition: filter .15s ease, transform .02s ease;
 }
 .btn:hover{ filter:brightness(1.05); }
 .btn:active{ transform: translateY(1px); }
-.btn:focus-visible{
-  outline:2px solid transparent;
-  box-shadow:0 0 0 3px var(--ring);
-}
-.btn--outline{
-  background:transparent; color:var(--aitl-blue) !important; border:2px solid var(--aitl-blue);
-}
-.btn--accent{
-  background:var(--aitl-accent); color:#1f2937 !important; border:1px solid rgba(0,0,0,.12);
-}
+.btn:focus-visible{ outline:2px solid transparent; box-shadow:0 0 0 3px var(--ring); }
+.btn--outline{ background:transparent; color:var(--aitl-blue) !important; border:2px solid var(--aitl-blue); }
+.btn--accent{ background:var(--aitl-accent); color:#1f2937 !important; border:1px solid rgba(0,0,0,.12); }
 
 /* ========== Callouts ========== */
 .note,.tip,.warn{
   border:1px solid var(--border);
   border-left:6px solid var(--aitl-blue);
-  background:#f6fbff; /* fallback */
+  background:#f6fbff;
   padding:.85rem .9rem; border-radius:8px; margin:1rem 0;
 }
 @supports (background: color-mix(in srgb, white, black)){
@@ -134,5 +129,41 @@ pre code{ display:block; padding:0; background:transparent; }
 .muted { color:#6b7280; }
 .compact-list>li{ margin:.15rem 0; }
 
-/* ========== Site Chrome (hide Minima header/footer on proposal pages) ========== */
-.site-header,.site-footer{ display:none !important; }
+/* =========================================================
+   Print / PDF 専用の最適化
+   - 余白縮小
+   - 背景塗りを撤去（読みやすさ＆軽量化）
+   - 表・コード・見出しのページ分割崩れ防止
+   ========================================================= */
+@media print{
+  @page{ size: A4; margin: 14mm 14mm 16mm 14mm; }
+
+  body{
+    font-family:"Noto Sans","Noto Sans CJK JP",sans-serif;
+    font-size: 11.2pt; line-height: 1.45; color:#111;
+  }
+
+  /* UI非表示 */
+  .btn-row,.cta-buttons,.site-header,.site-footer{ display:none !important; }
+
+  /* 背景塗りは撤去、ボーダー中心に */
+  h1,h2,h3{
+    background:none !important; color:#0b4d87; border-left:none;
+    page-break-after: avoid;
+  }
+  h1{ font-size:19pt; margin:0 0 10pt; border-bottom:2px solid #005bac; }
+  h2{ font-size:15pt; margin:14pt 0 6pt; border-bottom:1px solid #005bac; }
+  h3{ font-size:12pt; margin:10pt 0 4pt; border-left:4px solid #005bac; padding-left:6pt; }
+
+  table{ font-size:10.5pt; margin:8pt 0; }
+  th,td{ border-color:#cfcfcf; padding:6pt; }
+  th{ background:#f3f6fa !important; color:#111; }
+  tr{ break-inside: avoid; } /* 表行の分割抑制 */
+
+  pre{ padding:6pt; border-radius:4pt; }
+  pre, code{ background:#f6f8fa !important; }
+  pre, table, figure, .note, .tip, .warn{ break-inside: avoid; } /* 分割崩れ防止 */
+
+  a{ color:#0b4d87; text-decoration:none; }
+  a[href^="http"]::after{ content:" <" attr(href) ">"; font-size:.85em; color:#666; } /* 参照URLを紙面に残す */
+}
