@@ -1,12 +1,12 @@
-name: Build PDF (Pandoc + WeasyPrint)
+name: Build PDF (Pandoc + WeasyPrint + pdf-style)
 
 on:
   push:
     branches: [ main ]
     paths:
-      - 'AITL_Strategy_Proposal_Draft_v3.md'
-      - 'assets/css/pdf.css'
-      - '.github/workflows/build-pdf.yml'
+      - "AITL_Strategy_Proposal_Draft_v3.md"
+      - "Figures/**"
+      - ".github/workflows/build-pdf.yml"
   workflow_dispatch:
 
 permissions:
@@ -22,35 +22,61 @@ jobs:
       - name: Install Pandoc, WeasyPrint and Fonts
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc python3-pip \
-            fonts-noto-core fonts-noto-cjk fonts-noto-color-emoji
-          pip install --no-cache-dir "weasyprint>=60,<63"
+          sudo apt-get install -y pandoc python3-pip fonts-noto-cjk fonts-noto-color-emoji
+          pip install weasyprint
 
       - name: Ensure Figures directory
         run: mkdir -p Figures
 
       - name: Build HTML (Pandoc)
         run: |
-          set -eux
           pandoc AITL_Strategy_Proposal_Draft_v3.md \
-            --from gfm --to html5 --standalone \
+            --from gfm \
             --resource-path=".:Figures" \
             --metadata title="AITL Strategy Proposal (Draft v3)" \
-            -o /tmp/aitl.html
+            -t html5 -s -o /tmp/aitl.html
 
-      - name: Build PDF (WeasyPrint + pdf.css)
+      - name: Prepare PDF CSS (temp)
         run: |
-          set -eux
-          # base-url をワークスペースにして相対パス画像/リンクを解決
+          mkdir -p tmp
+          cat > tmp/pdf.css <<'CSS'
+          /* ---------- PDF styles (minimal) ---------- */
+          @page { size: A4; margin: 18mm 16mm 20mm 16mm; }
+          html { font-family: "Noto Sans CJK JP", "Noto Sans", sans-serif; font-size: 11.5pt; }
+          h1,h2,h3 { color:#005bac; }
+          h1 { font-size: 18pt; border-left: 6pt solid #005bac; padding-left: 8pt; background: #e6f0fa; }
+          h2 { font-size: 15pt; border-left: 5pt solid #005bac; padding-left: 8pt; background: #e6f0fa; }
+          h3 { font-size: 12.5pt; border-left: 4pt solid #005bac; padding-left: 6pt; background: #eef6ff; }
+          p, li { line-height: 1.45; }
+          table { width:100%; border-collapse: collapse; margin: 10pt 0; }
+          th, td { border: 1px solid #90b6d6; padding: 6pt 7pt; vertical-align: top; }
+          th { background:#e6f0fa; font-weight: 700; }
+          code { font-family: "Noto Sans Mono", "Noto Mono", monospace; background:#f6f8fa; padding: 0 2pt; }
+          pre  { background:#f6f8fa; padding:8pt; border-radius:4pt; overflow: auto; }
+          a { color:#005bac; text-decoration: none; }
+          a:hover { text-decoration: underline; }
+          hr { border: 0; border-top: 1px solid #90b6d6; margin: 14pt 0; }
+          /* headroom for in-page anchors if any */
+          [id] { scroll-margin-top: 80px; }
+          CSS
+
+      - name: Build PDF (WeasyPrint with css)
+        run: |
           weasyprint \
-            --base-url "$(pwd)" \
-            --stylesheet assets/css/pdf.css \
+            --base-url . \
+            --stylesheet tmp/pdf.css \
             /tmp/aitl.html Figures/AITL_Strategy_Proposal_Draft_v3.pdf
+
+      - name: Pull latest (avoid non-ff)
+        run: |
+          git config user.name "actions-user"
+          git config user.email "actions@github.com"
+          git pull --rebase origin main || true
 
       - name: Commit PDF back to repo
         uses: EndBug/add-and-commit@v9
         with:
-          add: 'Figures/AITL_Strategy_Proposal_Draft_v3.pdf'
-          message: 'ci: build PDF from Markdown (Pandoc + WeasyPrint + pdf.css)'
-          author_name: GitHub Actions
+          add: "Figures/AITL_Strategy_Proposal_Draft_v3.pdf"
+          message: "ci: build PDF from Markdown (Pandoc + WeasyPrint + pdf-style)"
+          author_name: actions-user
           author_email: actions@github.com
