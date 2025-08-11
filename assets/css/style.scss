@@ -1,0 +1,32 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h1 {
+  color: #003366;
+  border-bottom: 3px solid #003366;
+  padding-bottom: 0.2em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #aaa;
+  padding: 8px;
+}
+
+a {
+  color: #0055aa;
+}
+
+a:hover {
+  text-decoration: underline;
+}
