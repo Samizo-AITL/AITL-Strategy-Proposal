@@ -8,10 +8,8 @@ title: AITL-Strategy-Proposal
 **AITL構想による国家戦略提案 × 統合教育パッケージ**  
 **National Strategy & Educational Framework Based on AITL (AI × Control × Physical Systems)**
 
-<div class="btn-row">
-  <a class="btn" href="/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v3.md">📄 Read the Proposal (MD)</a>
-  <a class="btn" href="/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v3.pdf">⬇️ Download PDF</a>
-</div>
+[📄 Read the Proposal (MD)](AITL_Strategy_Proposal_Draft_v3.md)  
+[⬇️ Download PDF](Figures/AITL_Strategy_Proposal_Draft_v3.pdf)
 
 ---
 
@@ -33,21 +31,19 @@ title: AITL-Strategy-Proposal
 ## 📂 収録コンテンツ / Repository Contents
 | Path | 内容 / Description |
 |---|---|
-| [`AITL_Strategy_Proposal_Draft_v3.md`](/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v3.md) | 提言書 本文（Markdown） / Full proposal (MD) |
-| [`Figures/AITL_Strategy_Proposal_Draft_v3.pdf`](/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v3.pdf) | 提言書 PDF / Proposal PDF |
-| [`01_background/`](/AITL-Strategy-Proposal/01_background/) | 政策背景・技術課題 / Policy background & rationale |
-| [`02_education_model/`](/AITL-Strategy-Proposal/02_education_model/) | 教育モデル（Edusemi中心）/ Education framework (Edusemi-centric) |
-| [`03_industry_use/`](/AITL-Strategy-Proposal/03_industry_use/) | 産業実装・PoC事例 / Industry use cases & PoC |
-| [`04_ai_integration/`](/AITL-Strategy-Proposal/04_ai_integration/) | LLM統合テンプレート / LLM integration templates |
+| [AITL_Strategy_Proposal_Draft_v3.md](AITL_Strategy_Proposal_Draft_v3.md) | 提言書 本文（Markdown） / Full proposal (MD) |
+| [Figures/AITL_Strategy_Proposal_Draft_v3.pdf](Figures/AITL_Strategy_Proposal_Draft_v3.pdf) | 提言書 PDF / Proposal PDF |
+
+> 💡 *他のディレクトリ（01〜04）は今後追加予定のため非表示としています。*
 
 ---
 
 ## 🔗 連携プロジェクト / Linked Projects
-- **Edusemi-Plus（応用教材）**: [https://samizo-aitl.github.io/Edusemi-Plus/](https://samizo-aitl.github.io/Edusemi-Plus/)  
-- **Edusemi-v4x（基礎教材）**: [https://github.com/Samizo-AITL/Edusemi-v4x](https://github.com/Samizo-AITL/Edusemi-v4x)  
-- **EduController（制御教材）**: [https://github.com/Samizo-AITL/EduController](https://github.com/Samizo-AITL/EduController)  
-- **AITL-H（FSM×PID×LLM統合）**: [https://github.com/Samizo-AITL/AITL-H](https://github.com/Samizo-AITL/AITL-H)  
-- **SamizoGPT（プロンプト・GUI支援）**: [https://github.com/Samizo-AITL/SamizoGPT](https://github.com/Samizo-AITL/SamizoGPT)
+- **Edusemi-Plus（応用教材）** — [GitHub Pages](https://samizo-aitl.github.io/Edusemi-Plus/)  
+- **Edusemi-v4x（基礎教材）** — [GitHub](https://github.com/Samizo-AITL/Edusemi-v4x)  
+- **EduController（制御教材）** — [GitHub](https://github.com/Samizo-AITL/EduController)  
+- **AITL-H（FSM×PID×LLM統合）** — [GitHub](https://github.com/Samizo-AITL/AITL-H)  
+- **SamizoGPT（プロンプト・GUI支援）** — [GitHub](https://github.com/Samizo-AITL/SamizoGPT)
 
 ---
 
@@ -68,4 +64,4 @@ MIT; free to reuse & modify for education/non-profit.
 ## 👤 Author
 **Shinichi Samizo** — M.Eng., Shinshu Univ. / ex-Seiko Epson  
 Domains: Logic/Memory/HV-AMS, thin-film piezo, productization/BOM/ISO  
-Contact: [✉️ Email](mailto:shin3t72@gmail.com) ｜ [X](https://x.com/shin3t72) ｜ [🌐 Website](https://samizo-aitl.github.io/)
+📧 [Email](mailto:shin3t72@gmail.com) ｜ [X](https://x.com/shin3t72) ｜ [🌐 Website](https://samizo-aitl.github.io/)
