@@ -27,7 +27,7 @@ jobs:
       - name: Ensure output dir
         run: mkdir -p Figures
 
-      - name: Build PDF with Chromium (Puppeteer)
+      - name: Prepare style and header
         run: |
           cat > tmp-pdf-style.css <<'CSS'
           @page { size: A4; margin: 16mm 16mm 18mm 16mm; }
@@ -39,27 +39,29 @@ jobs:
           th { background: #e6f0fa; }
           CSS
 
-          # Google Fonts で Noto を読み込み（Puppeteer はインターネット可）
           cat > tmp-pdf-header.html <<'HTML'
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
           HTML
 
+          cat > tmp-pdf-config.json <<'JSON'
+          {
+            "stylesheet": ["tmp-pdf-style.css"],
+            "body_class": "aitl-doc",
+            "pdf_options": {
+              "format": "A4",
+              "printBackground": true,
+              "displayHeaderFooter": false
+            },
+            "header": "tmp-pdf-header.html"
+          }
+          JSON
+
+      - name: Build PDF with Chromium (Puppeteer)
+        run: |
           md-to-pdf AITL_Strategy_Proposal_Draft_v3.md \
-            --config-file <(cat <<'JSON'
-            {
-              "stylesheet": ["tmp-pdf-style.css"],
-              "body_class": "aitl-doc",
-              "pdf_options": {
-                "format": "A4",
-                "printBackground": true,
-                "displayHeaderFooter": false
-              },
-              "header": "tmp-pdf-header.html"
-            }
-            JSON
-            ) \
+            --config-file tmp-pdf-config.json \
             --basedir . \
             --pdf-options '{"path":"Figures/AITL_Strategy_Proposal_Draft_v3.pdf"}'
 
