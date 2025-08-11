@@ -6,7 +6,7 @@ on:
     paths:
       - 'AITL_Strategy_Proposal_Draft_v3.md'
       - 'Figures/**'
-      - 'assets/css/**'
+      - 'pdf-style.css'
       - '.github/workflows/build-pdf.yml'
   workflow_dispatch:
 
@@ -16,75 +16,36 @@ permissions:
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # WeasyPrint ランタイム必須のネイティブ依存を入れる
-      - name: Install Pandoc, WeasyPrint & deps
+      - name: Install Pandoc & WeasyPrint
         run: |
-          set -eux
           sudo apt-get update
-          sudo apt-get install -y \
-            pandoc python3-pip \
-            libcairo2 libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 \
-            fonts-noto fonts-noto-cjk fonts-noto-color-emoji
-          pip install --upgrade pip
-          pip install "weasyprint>=61" tinycss2 cssselect2 html5lib
+          sudo apt-get install -y pandoc python3-pip fonts-noto-cjk fonts-noto-color-emoji
+          pip install weasyprint
 
       - name: Ensure Figures directory
         run: mkdir -p Figures
 
-      # PDF向けの最小CSSをその場で生成（余白/フォント/表/画像）
-      - name: Prepare print CSS
-        run: |
-          cat > /tmp/print.css <<'CSS'
-          @page { size: A4; margin: 16mm 16mm 18mm 16mm; }
-          html,body { font-family: "Noto Sans", "Noto Sans CJK JP", system-ui, -apple-system, sans-serif; }
-          body { font-size: 11.3pt; line-height: 1.38; color: #111827; }
-          h1,h2,h3 { color: #0b4d87; page-break-after: avoid; }
-          h1 { font-size: 20pt; margin: 0 0 10pt; border-left: 8px solid #005bac; padding-left: 8px; background: #e6f0fa; }
-          h2 { font-size: 16pt; margin: 14pt 0 6pt;  border-left: 6px solid #005bac; padding-left: 8px; background: #e6f0fa; }
-          h3 { font-size: 13pt; margin: 10pt 0 4pt;  border-left: 4px solid #005bac; padding-left: 8px; background: #eef6ff; }
-          pre, code { font-family: "Noto Sans Mono", ui-monospace, Consolas, Menlo, monospace; }
-          pre { background: #f6f8fa; padding: 8pt; border-radius: 6px; }
-          table { border-collapse: collapse; width: 100%; margin: 8pt 0; font-size: 10.6pt; }
-          th, td { border: 1px solid #e5e7eb; padding: 6pt 7pt; vertical-align: top; }
-          th { background: #e6f0fa; font-weight: 700; }
-          tr:nth-child(even) { background: #f7fbff; }
-          img { max-width: 100%; height: auto; }
-          a { color: #0b4d87; text-decoration: none; }
-          a:hover { text-decoration: underline; }
-          .btn, .btn-row, .site-header, .site-footer { display: none !important; } /* 画面用UIを非表示 */
-          CSS
-
-      - name: Build HTML with Pandoc
+      - name: Build PDF with WeasyPrint (compact margins & JP fonts)
         run: |
           set -eux
           pandoc AITL_Strategy_Proposal_Draft_v3.md \
             --from gfm \
             --resource-path=".:Figures" \
             --metadata title="AITL Strategy Proposal (Draft v3)" \
-            -c /tmp/print.css \
-            -t html5 -s -o /tmp/proposal.html
-
-      - name: Render PDF with WeasyPrint
-        run: |
-          set -eux
-          weasyprint /tmp/proposal.html Figures/AITL_Strategy_Proposal_Draft_v3.pdf \
-            --base-url="$(pwd)"
+            -V mainfont="Noto Sans CJK JP" \
+            -V monofont="Noto Sans Mono CJK JP" \
+            -c pdf-style.css \
+            -t html -s -o /tmp/out.html
+          weasyprint /tmp/out.html Figures/AITL_Strategy_Proposal_Draft_v3.pdf
 
       - name: Commit PDF back to repo
         uses: EndBug/add-and-commit@v9
         with:
           add: 'Figures/AITL_Strategy_Proposal_Draft_v3.pdf'
-          message: 'ci: build PDF from Markdown (Pandoc + WeasyPrint)'
-          author_name: GitHub Actions
+          message: 'ci: build PDF from Markdown (Pandoc + WeasyPrint + pdf-style)'
+          author_name: actions-user
           author_email: actions@github.com
-
-      - name: Upload artifact (optional)
-        uses: actions/upload-artifact@v4
-        with:
-          name: AITL_PDF
-          path: Figures/AITL_Strategy_Proposal_Draft_v3.pdf
