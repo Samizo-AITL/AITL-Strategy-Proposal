@@ -1,103 +1,115 @@
 /* =========================================================
-   AITL Strategy Proposal — PDF style (WeasyPrint / Pandoc)
-   - 印刷向け：余白コンパクト、背景色や装飾は抑制
-   - 画面表示でも破綻しないように配慮
+   AITL Strategy Proposal – PDF style (for WeasyPrint)
+   - 落ち着いた色味、読みやすい余白、紙面の見出し強調
    ========================================================= */
 
-/* 基本色（控えめ） */
+/* カラー定義 */
 :root{
-  --blue:   #0b5cab;   /* 見出しの縁取りなどに控えめに使用 */
-  --text:   #111827;   /* 本文 */
-  --muted:  #374151;   /* 小見出し・注記 */
-  --line:   #e5e7eb;   /* 罫線 */
-  --codebg: #f6f8fa;   /* コード背景 */
+  --blue: #0b5cab;         /* アクセント青（落ち着き） */
+  --blue-soft: #e9f2fb;    /* 見出しの淡背景 */
+  --text: #111827;         /* 本文 */
+  --muted: #374151;        /* サブ */
+  --border: #e5e7eb;       /* 罫線 */
+  --code-bg: #f6f8fa;      /* コード背景 */
+  --link: #174b82;         /* リンク色（印刷向けに暗め） */
 }
 
-/* 本文ベース */
+/* ページ設定（A4・余白すっきり） */
+@page {
+  size: A4;
+  margin: 18mm 17mm 20mm 17mm;
+}
+/* 1ページ目だけ少し広め（タイトル用に） */
+@page:first {
+  margin-top: 22mm;
+}
+
 html, body{
-  font-family: "Noto Sans CJK JP", "Noto Sans JP", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Noto Sans CJK JP", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", sans-serif;
+  font-size: 12.2pt;
   color: var(--text);
-  line-height: 1.55;
-  font-size: 12.3pt;  /* A4で読みやすい字量 */
-  -webkit-font-smoothing: antialiased;
+  line-height: 1.65;
 }
 
-/* 見出し（背景ベタ塗りは避け、左罫＋太字のみ） */
+/* 見出し：左罫＋淡背景で視認性UP（印刷でうるさくない） */
 h1, h2, h3{
   page-break-after: avoid;
+  border-left: 6px solid var(--blue);
+  padding: 4px 0 4px 10px;
+  margin: 1.1rem 0 .6rem;
+  background: rgba(11,92,171,0.06);
   color: var(--blue);
   font-weight: 700;
-  border-left: 6px solid var(--blue);
-  padding-left: 8px;
-  margin: 1.1rem 0 .6rem;
 }
 h1{ font-size: 20pt; }
 h2{ font-size: 16pt; }
-h3{ font-size: 13.5pt; color: var(--muted); border-left-color:#3b82f6; }
+h3{
+  font-size: 13.5pt;
+  color: var(--muted);
+  border-left-color: #3b82f6;
+}
 
 /* 段落・リスト */
-p{ margin: .35rem 0 .6rem; }
-ul, ol{ margin: .2rem 0 .7rem .95rem; }
+p{ margin: .45rem 0 .55rem; }
+ul, ol{ margin: .35rem 0 .6rem .9rem; }
 
-/* テーブル：細罫線＋行間 */
+/* 目次の行間を少し広げる */
+#toc ul li{ margin: .22rem 0; }
+
+/* テーブル */
 table{
   width: 100%;
   border-collapse: collapse;
-  margin: .6rem 0 .9rem;
-  font-size: 11.8pt;
+  margin: .8rem 0 1.0rem;
+  page-break-inside: avoid;
 }
 th, td{
-  border: 1px solid var(--line);
-  padding: .35rem .45rem;
+  border: 1px solid var(--border);
+  padding: .5rem .6rem;
   vertical-align: top;
 }
 th{
+  background: var(--blue-soft);
+  color: #0f172a;
   font-weight: 700;
-  color: var(--muted);
-  background: #fafafa;
 }
 
-/* コード／プリ */
-code{
-  background: var(--codebg);
-  padding: 0 .25rem;
-  border-radius: 4px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Noto Sans Mono CJK JP", monospace;
-  font-size: 90%;
-}
-pre{
-  background: var(--codebg);
-  padding: .6rem .7rem;
+/* コード・プレ */
+code, pre code{
+  background: var(--code-bg);
   border-radius: 6px;
-  overflow: auto;
-  font-size: 90%;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: .95em;
+}
+code{ padding: 2px 6px; }
+pre{
+  background: var(--code-bg);
+  border-radius: 8px;
+  padding: 10px 12px;
+  overflow: hidden;
+  page-break-inside: avoid;
 }
 
-/* リンク：印刷では装飾だけ、URLは本文に展開しない */
+/* リンク（印刷を意識して低彩度＆下線薄） */
 a{
-  color: var(--blue);
+  color: var(--link);
   text-decoration: none;
-  border-bottom: 1px solid rgba(11,92,171,.35);
+  border-bottom: 1px solid rgba(23,75,130,0.35);
 }
 a:hover{ text-decoration: underline; }
 
-/* 画像：ページからはみ出さない */
-img{ max-width: 100%; }
-
-/* 改ページ制御（見出し直後の分割を防ぐ） */
-h1, h2, h3, table, pre, blockquote{ page-break-inside: avoid; }
-
-/* 付録の図が長いときの分割許容 */
-figure{ page-break-inside: avoid; }
-
-/* 印刷設定 */
-@page{
-  size: A4;
-  margin: 12mm 14mm 14mm 14mm; /* 余白を詰める */
+/* 画像は段落幅にフィット、キャプションと余白 */
+img{ max-width: 100%; height: auto; }
+figure{ margin: .8rem 0 1rem; page-break-inside: avoid; }
+figcaption{
+  font-size: 10pt;
+  color: var(--muted);
+  text-align: center;
+  margin-top: .25rem;
 }
 
-/* 印刷時は背景塗りをさらに抑制（WeasyPrintは背景描画OKだが最小限に） */
-@media print{
-  /* 背景色は基本使わない設計なので追加指定は最小 */
-  nav, header, footer{ display: none !important; }
-}
+/* ページ分割の気配り */
+h1, h2, h3, table, figure, pre { break-inside: avoid; }
+
+/* フッタ／ヘッダを使わない（GitHub PagesのUIはPDFに影響しないが一応） */
+header, footer, nav { display: none; }
