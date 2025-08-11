@@ -1,115 +1,44 @@
-/* =========================================================
-   AITL Strategy Proposal – PDF style (for WeasyPrint)
-   - 落ち着いた色味、読みやすい余白、紙面の見出し強調
-   ========================================================= */
+/* ===== AITL PDF style (CJK-friendly) ===== */
+@page { size: A4; margin: 16mm 16mm 18mm; }
 
-/* カラー定義 */
-:root{
-  --blue: #0b5cab;         /* アクセント青（落ち着き） */
-  --blue-soft: #e9f2fb;    /* 見出しの淡背景 */
-  --text: #111827;         /* 本文 */
-  --muted: #374151;        /* サブ */
-  --border: #e5e7eb;       /* 罫線 */
-  --code-bg: #f6f8fa;      /* コード背景 */
-  --link: #174b82;         /* リンク色（印刷向けに暗め） */
+html, body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-feature-settings: "liga" 1, "calt" 1;
 }
 
-/* ページ設定（A4・余白すっきり） */
-@page {
-  size: A4;
-  margin: 18mm 17mm 20mm 17mm;
-}
-/* 1ページ目だけ少し広め（タイトル用に） */
-@page:first {
-  margin-top: 22mm;
-}
-
-html, body{
-  font-family: "Noto Sans CJK JP", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", sans-serif;
-  font-size: 12.2pt;
-  color: var(--text);
-  line-height: 1.65;
+/* 和文の上下つぶれ対策：行間を広めに固定 */
+body {
+  font-family: "Noto Sans CJK JP", "Noto Sans", "Hiragino Kaku Gothic ProN",
+               "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 11pt;
+  line-height: 1.65;           /* ★ここが効きます */
+  letter-spacing: 0.01em;
+  color: #1f2937;
 }
 
-/* 見出し：左罫＋淡背景で視認性UP（印刷でうるさくない） */
-h1, h2, h3{
-  page-break-after: avoid;
-  border-left: 6px solid var(--blue);
-  padding: 4px 0 4px 10px;
-  margin: 1.1rem 0 .6rem;
-  background: rgba(11,92,171,0.06);
-  color: var(--blue);
-  font-weight: 700;
-}
-h1{ font-size: 20pt; }
-h2{ font-size: 16pt; }
-h3{
-  font-size: 13.5pt;
-  color: var(--muted);
-  border-left-color: #3b82f6;
-}
+p, li, td, th { line-height: 1.6; }
 
-/* 段落・リスト */
-p{ margin: .45rem 0 .55rem; }
-ul, ol{ margin: .35rem 0 .6rem .9rem; }
-
-/* 目次の行間を少し広げる */
-#toc ul li{ margin: .22rem 0; }
-
-/* テーブル */
-table{
-  width: 100%;
-  border-collapse: collapse;
-  margin: .8rem 0 1.0rem;
-  page-break-inside: avoid;
+/* 見出し：行高を固定して潰れ防止 */
+h1, h2, h3 {
+  line-height: 1.35;
+  margin: 1.0em 0 .5em;
+  color: #005bac;
 }
-th, td{
-  border: 1px solid var(--border);
-  padding: .5rem .6rem;
-  vertical-align: top;
-}
-th{
-  background: var(--blue-soft);
-  color: #0f172a;
-  font-weight: 700;
-}
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.55rem; }
+h3 { font-size: 1.25rem; }
 
-/* コード・プレ */
-code, pre code{
-  background: var(--code-bg);
-  border-radius: 6px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  font-size: .95em;
-}
-code{ padding: 2px 6px; }
-pre{
-  background: var(--code-bg);
-  border-radius: 8px;
-  padding: 10px 12px;
-  overflow: hidden;
-  page-break-inside: avoid;
-}
+/* 表：必ず罫線を出す＋セル中央寄せ */
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+th, td { border: 1px solid #222; padding: 6px 8px; vertical-align: middle; }
+th { background: #e6f0fa; font-weight: 700; }
+tbody tr:nth-child(even) { background: #f7fbff; }
 
-/* リンク（印刷を意識して低彩度＆下線薄） */
-a{
-  color: var(--link);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(23,75,130,0.35);
-}
-a:hover{ text-decoration: underline; }
+/* コード・引用 */
+pre, code { background: #f6f8fa; border-radius: 6px; }
+pre { padding: 12px 14px; overflow-x: auto; }
 
-/* 画像は段落幅にフィット、キャプションと余白 */
-img{ max-width: 100%; height: auto; }
-figure{ margin: .8rem 0 1rem; page-break-inside: avoid; }
-figcaption{
-  font-size: 10pt;
-  color: var(--muted);
-  text-align: center;
-  margin-top: .25rem;
-}
-
-/* ページ分割の気配り */
-h1, h2, h3, table, figure, pre { break-inside: avoid; }
-
-/* フッタ／ヘッダを使わない（GitHub PagesのUIはPDFに影響しないが一応） */
-header, footer, nav { display: none; }
+/* 絵文字の縦詰まり回避（行高=1） */
+.emoji, img.emoji { font-family: "Noto Color Emoji"; line-height: 1; }
