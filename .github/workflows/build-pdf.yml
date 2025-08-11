@@ -11,23 +11,19 @@ on:
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
 
-      - name: Install deps (fonts & libs)
+      - name: Install deps (fonts & chromium runtime)
         run: |
           sudo apt-get update
           sudo apt-get install -y \
             fonts-noto-cjk fonts-noto-color-emoji \
-            libnss3 libxss1 libasound2 libatk-bridge2.0-0 \
-            libgtk-3-0 libgbm1 libxshmfence1
+            libnss3 libxss1 libatk-bridge2.0-0 libgtk-3-0 \
+            libgbm1 libxshmfence1 libasound2t64
 
       - name: Install md-to-pdf
         run: npm i -g md-to-pdf
@@ -35,11 +31,11 @@ jobs:
       - name: Ensure output dir
         run: mkdir -p Figures
 
-      - name: Prepare style and header
+      - name: Prepare style
         run: |
           cat > tmp-pdf-style.css <<'CSS'
           @page { size: A4; margin: 16mm 16mm 18mm 16mm; }
-          body { font-family: "Noto Sans JP","Noto Sans","Arial",sans-serif; }
+          body { font-family: "Noto Sans JP","Noto Sans","Arial",sans-serif; line-height:1.5; }
           h1,h2,h3 { color:#0b62b4; }
           code,pre { font-family: "Noto Sans Mono", monospace; }
           table{border-collapse:collapse;width:100%}
@@ -47,7 +43,7 @@ jobs:
           th{background:#e6f0fa}
           CSS
 
-      - name: Build PDF with Chromium (no-sandbox)
+      - name: Build PDF (no-sandbox)
         run: |
           md-to-pdf AITL_Strategy_Proposal_Draft_v3.md \
             --stylesheet tmp-pdf-style.css \
