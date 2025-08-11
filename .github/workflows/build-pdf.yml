@@ -1,52 +1,55 @@
-name: Build PDF from Markdown
+name: Build PDF (Pandoc + WeasyPrint)
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
     paths:
-      - '**.md'
+      - 'AITL_Strategy_Proposal_Draft_v3.md'
       - 'assets/pdf/pdf.css'
       - '.github/workflows/build-pdf.yml'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
+      - name: Install Pandoc, WeasyPrint, and Fonts
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc fonts-noto-cjk
+          sudo apt-get install -y \
+            pandoc python3-pip \
+            fonts-noto fonts-noto-cjk fonts-noto-cjk-extra \
+            fonts-noto-color-emoji
           pip install weasyprint
 
-      - name: Build PDF with WeasyPrint
+      - name: Ensure Figures directory
+        run: mkdir -p Figures
+
+      - name: Build PDF with WeasyPrint (CJK tuned)
         run: |
           set -eux
-          # HTMLに変換（CSS適用）
           pandoc AITL_Strategy_Proposal_Draft_v3.md \
-            --from=gfm \
+            --from gfm \
             --resource-path=".:Figures" \
-            --metadata=title:"AITL Strategy Proposal (Draft v3)" \
-            --standalone \
-            --toc --toc-depth=3 \
-            --css assets/pdf/pdf.css \
-            -t html5 -o /tmp/aitl_proposal.html
+            --metadata title="AITL Strategy Proposal (Draft v3)" \
+            -V mainfont="Noto Sans CJK JP" \
+            -V monofont="Noto Sans Mono CJK JP" \
+            -V fontsize=11pt \
+            -V geometry:margin=16mm \
+            -c assets/pdf/pdf.css \
+            -t html -s -o /tmp/out.html
+          weasyprint /tmp/out.html Figures/AITL_Strategy_Proposal_Draft_v3.pdf
 
-          # PDF化
-          weasyprint /tmp/aitl_proposal.html Figures/AITL_Strategy_Proposal_Draft_v3.pdf
-
-      - name: Upload PDF to Artifacts
-        uses: actions/upload-artifact@v4
+      - name: Commit PDF back to repo
+        uses: EndBug/add-and-commit@v9
         with:
-          name: aitl-proposal-pdf
-          path: Figures/AITL_Strategy_Proposal_Draft_v3.pdf
+          add: 'Figures/AITL_Strategy_Proposal_Draft_v3.pdf'
+          message: 'ci: build PDF (CJK line-height + table borders + Noto fonts)'
+          author_name: actions-user
+          author_email: actions@github.com
