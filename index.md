@@ -3,6 +3,8 @@ layout: default
 title: 📘 AITL-Strategy-Proposal
 ---
 
+---
+
 # 📘 AITL-Strategy-Proposal  
 **AITL構想による国家戦略提案 × 統合教育パッケージ**  
 **National Strategy & Educational Framework Based on AITL (AI × Control × Physical Systems)**
