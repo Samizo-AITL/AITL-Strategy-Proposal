@@ -1,10 +1,9 @@
-name: Build PDF (Pandoc + wkhtmltopdf)
+name: Build PDF (Pandoc + WeasyPrint)
 
 on:
   push:
     branches: [ main ]
     paths:
-      - 'index.md'
       - 'AITL_Strategy_Proposal_Draft_v3.md'
       - 'Figures/**'
       - '.github/workflows/build-pdf.yml'
@@ -16,46 +15,36 @@ permissions:
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install deps (Pandoc, wkhtmltopdf, and CJK fonts)
+      - name: Install Pandoc & WeasyPrint
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc wkhtmltopdf fonts-noto-cjk fonts-noto-color-emoji
+          sudo apt-get install -y pandoc python3-pip fonts-noto-cjk fonts-noto-color-emoji
+          pip install weasyprint
 
       - name: Ensure Figures directory
         run: mkdir -p Figures
 
-      - name: Build PDF with Pandoc
+      - name: Build PDF with WeasyPrint
         run: |
           set -eux
-          # 画像など相対パスの解決先
-          RESOURCE_PATH=".:Figures"
           pandoc AITL_Strategy_Proposal_Draft_v3.md \
             --from gfm \
-            --resource-path="$RESOURCE_PATH" \
+            --resource-path=".:Figures" \
             --metadata title="AITL Strategy Proposal (Draft v3)" \
-            --pdf-engine=wkhtmltopdf \
-            --pdf-engine-opt=--enable-local-file-access \
-            --pdf-engine-opt=--load-error-handling=ignore \
             -V mainfont="Noto Sans CJK JP" \
             -V monofont="Noto Sans Mono CJK JP" \
             -V geometry:margin=20mm \
-            -o Figures/AITL_Strategy_Proposal_Draft_v3.pdf
-
-      - name: Upload artifact (optional)
-        uses: actions/upload-artifact@v4
-        with:
-          name: AITL_Strategy_Proposal_Draft_v3.pdf
-          path: Figures/AITL_Strategy_Proposal_Draft_v3.pdf
+            -t html -s -o /tmp/out.html
+          weasyprint /tmp/out.html Figures/AITL_Strategy_Proposal_Draft_v3.pdf
 
       - name: Commit PDF back to repo
         uses: EndBug/add-and-commit@v9
         with:
           add: 'Figures/AITL_Strategy_Proposal_Draft_v3.pdf'
-          message: 'ci: build PDF from Markdown (pandoc + wkhtmltopdf)'
+          message: 'ci: build PDF from Markdown (pandoc + weasyprint)'
           author_name: GitHub Actions
           author_email: actions@github.com
