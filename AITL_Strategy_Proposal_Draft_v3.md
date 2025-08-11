@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: aitl
 title: AITL Strategy Proposal (Draft v3)
 ---
 
