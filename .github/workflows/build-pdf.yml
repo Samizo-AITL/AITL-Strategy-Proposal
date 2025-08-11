@@ -1,14 +1,11 @@
-name: Build PDF (WeasyPrint with Noto CJK)
+name: Build PDF (Pandoc + wkhtmltopdf)
 
 on:
   push:
     branches: [ main ]
     paths:
-      - "index.md"
-      - "AITL_Strategy_Proposal_Draft_v3.md"
-      - "assets/css/**"
-      - "_config.yml"
-      - ".github/workflows/build-pdf.yml"
+      - 'AITL_Strategy_Proposal_Draft_v3.md'
+      - '.github/workflows/build-pdf.yml'
   workflow_dispatch:
 
 jobs:
@@ -18,35 +15,40 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install deps (WeasyPrint & Japanese fonts)
+      - name: Install deps (pandoc, wkhtmltopdf, Noto CJK)
         run: |
           sudo apt-get update
-          sudo apt-get install -y weasyprint fonts-noto-cjk fonts-noto-color-emoji
+          sudo apt-get install -y pandoc wkhtmltopdf fonts-noto-cjk fonts-noto-color-emoji
 
-      - name: Build site with Jekyll (same as GitHub Pages)
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
-
-      - name: Ensure Figures dir
+      - name: Make output dir
         run: mkdir -p Figures
 
-      - name: Render Proposal → PDF
+      - name: Build PDF
         run: |
-          INPUT_HTML="_site/AITL_Strategy_Proposal_Draft_v3.html"
-          if [ ! -f "$INPUT_HTML" ]; then
-            INPUT_HTML="_site/index.html"
-          fi
-          weasyprint "$INPUT_HTML" "Figures/AITL_Strategy_Proposal_Draft_v3.pdf"
+          pandoc AITL_Strategy_Proposal_Draft_v3.md \
+            -o Figures/AITL_Strategy_Proposal_Draft_v3.pdf \
+            --from gfm \
+            --pdf-engine=wkhtmltopdf \
+            --metadata title="AITL Strategy Proposal (Draft v3)" \
+            --toc \
+            --css <(cat <<'CSS'
+              body { font-family: "Noto Sans CJK JP","Noto Sans CJK KR","Noto Sans","Arial",sans-serif; }
+              h1,h2,h3 { color:#0b62b4; }
+              code,pre { font-family: "Noto Sans Mono","Noto Sans Mono CJK JP",monospace; }
+              table { border-collapse: collapse; width: 100%; }
+              th, td { border: 1px solid #ddd; padding: 6px; }
+              th { background: #e6f0fa; }
+            CSS
+            )
 
-      - name: Commit PDF
+      - name: Commit PDF if changed
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add Figures/AITL_Strategy_Proposal_Draft_v3.pdf
-          if git commit -m "Update PDF (WeasyPrint, Noto CJK)"; then
-            git push
+          if git diff --quiet -- Figures/AITL_Strategy_Proposal_Draft_v3.pdf; then
+            echo "No PDF changes."
           else
-            echo "No PDF changes to commit."
+            git config user.name "github-actions"
+            git config user.email "github-actions@github.com"
+            git add Figures/AITL_Strategy_Proposal_Draft_v3.pdf
+            git commit -m "Auto-build PDF from Markdown"
+            git push
           fi
