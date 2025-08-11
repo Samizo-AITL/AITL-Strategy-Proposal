@@ -1,54 +1,52 @@
-name: Build PDF (Pandoc + WeasyPrint)
+name: Build PDF from Markdown
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
     paths:
-      - 'AITL_Strategy_Proposal_Draft_v3.md'
-      - 'pdf-style.css'
+      - '**.md'
+      - 'assets/pdf/pdf.css'
       - '.github/workflows/build-pdf.yml'
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Pandoc, WeasyPrint, and CJK fonts
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc python3-pip fonts-noto-cjk fonts-noto-color-emoji
+          sudo apt-get install -y pandoc fonts-noto-cjk
           pip install weasyprint
 
-      - name: Ensure Figures directory
-        run: mkdir -p Figures
-
-      - name: Build HTML with Pandoc (attach pdf-style.css)
+      - name: Build PDF with WeasyPrint
         run: |
           set -eux
+          # HTMLに変換（CSS適用）
           pandoc AITL_Strategy_Proposal_Draft_v3.md \
-            --from gfm \
-            --to html5 \
-            --standalone \
+            --from=gfm \
             --resource-path=".:Figures" \
-            --metadata title="AITL Strategy Proposal (Draft v3)" \
-            --css pdf-style.css \
-            -o /tmp/aitl_proposal.html
+            --metadata=title:"AITL Strategy Proposal (Draft v3)" \
+            --standalone \
+            --toc --toc-depth=3 \
+            --css assets/pdf/pdf.css \
+            -t html5 -o /tmp/aitl_proposal.html
 
-      - name: Render PDF with WeasyPrint
-        run: |
+          # PDF化
           weasyprint /tmp/aitl_proposal.html Figures/AITL_Strategy_Proposal_Draft_v3.pdf
 
-      - name: Commit PDF back to repo
-        uses: EndBug/add-and-commit@v9
+      - name: Upload PDF to Artifacts
+        uses: actions/upload-artifact@v4
         with:
-          add: 'Figures/AITL_Strategy_Proposal_Draft_v3.pdf'
-          message: 'ci: build PDF from Markdown (Pandoc + WeasyPrint, styled)'
-          author_name: actions-user
-          author_email: actions@github.com
+          name: aitl-proposal-pdf
+          path: Figures/AITL_Strategy_Proposal_Draft_v3.pdf
