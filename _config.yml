@@ -7,3 +7,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 show_downloads: false
+
+remote_theme: minima
+
+# CSS読み込み
+sass:
+  sass_dir: assets/css
+  style: compressed
