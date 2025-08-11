@@ -1,4 +1,3 @@
-# .github/workflows/build-pdf.yml
 name: Build PDF (Pandoc + wkhtmltopdf)
 
 on:
@@ -12,26 +11,32 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   # ← PDF をリポジトリに push するために必要
+  contents: write
 
 jobs:
   build-pdf:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    env:
+      DEBIAN_FRONTEND: noninteractive   # ← これで apt の対話止まりを回避
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Install Pandoc, wkhtmltopdf, and CJK fonts
         run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc wkhtmltopdf \
-              fonts-noto-cjk fonts-noto-cjk-extra fonts-noto-color-emoji
+          set -eux
+          sudo apt-get update -y
+          sudo apt-get install -y --no-install-recommends \
+            pandoc wkhtmltopdf \
+            fonts-noto-cjk fonts-noto-cjk-extra fonts-noto-color-emoji
 
       - name: Ensure Figures directory
         run: mkdir -p Figures
 
       - name: Build PDF with Pandoc
         run: |
+          set -eux
           pandoc AITL_Strategy_Proposal_Draft_v3.md \
             --from gfm \
             --pdf-engine=wkhtmltopdf \
@@ -41,9 +46,8 @@ jobs:
             -o Figures/AITL_Strategy_Proposal_Draft_v3.pdf
 
       - name: Commit PDF if changed
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -eux
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add Figures/AITL_Strategy_Proposal_Draft_v3.pdf
