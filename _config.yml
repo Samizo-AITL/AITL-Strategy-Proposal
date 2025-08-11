@@ -1,0 +1,9 @@
+title: AITL-Strategy-Proposal
+description: National Strategy & Educational Framework Based on AITL (AI × Control × Physical Systems)
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+show_downloads: false
