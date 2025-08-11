@@ -5,7 +5,6 @@ on:
     branches: [ main ]
     paths:
       - 'AITL_Strategy_Proposal_Draft_v3.md'
-      - 'Figures/**'
       - 'pdf-style.css'
       - '.github/workflows/build-pdf.yml'
   workflow_dispatch:
@@ -16,11 +15,12 @@ permissions:
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Pandoc & WeasyPrint
+      - name: Install Pandoc, WeasyPrint, and CJK fonts
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc python3-pip fonts-noto-cjk fonts-noto-color-emoji
@@ -29,23 +29,26 @@ jobs:
       - name: Ensure Figures directory
         run: mkdir -p Figures
 
-      - name: Build PDF with WeasyPrint (compact margins & JP fonts)
+      - name: Build HTML with Pandoc (attach pdf-style.css)
         run: |
           set -eux
           pandoc AITL_Strategy_Proposal_Draft_v3.md \
             --from gfm \
+            --to html5 \
+            --standalone \
             --resource-path=".:Figures" \
             --metadata title="AITL Strategy Proposal (Draft v3)" \
-            -V mainfont="Noto Sans CJK JP" \
-            -V monofont="Noto Sans Mono CJK JP" \
-            -c pdf-style.css \
-            -t html -s -o /tmp/out.html
-          weasyprint /tmp/out.html Figures/AITL_Strategy_Proposal_Draft_v3.pdf
+            --css pdf-style.css \
+            -o /tmp/aitl_proposal.html
+
+      - name: Render PDF with WeasyPrint
+        run: |
+          weasyprint /tmp/aitl_proposal.html Figures/AITL_Strategy_Proposal_Draft_v3.pdf
 
       - name: Commit PDF back to repo
         uses: EndBug/add-and-commit@v9
         with:
           add: 'Figures/AITL_Strategy_Proposal_Draft_v3.pdf'
-          message: 'ci: build PDF from Markdown (Pandoc + WeasyPrint + pdf-style)'
+          message: 'ci: build PDF from Markdown (Pandoc + WeasyPrint, styled)'
           author_name: actions-user
           author_email: actions@github.com
