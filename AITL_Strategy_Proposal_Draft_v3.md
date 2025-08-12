@@ -1,6 +1,7 @@
 ---
 layout: aitl
 title: AITL Strategy Proposal (Draft v3)
+permalink: /AITL_Strategy_Proposal_Draft_v3.html
 ---
 
 # 🇯🇵 **AITL戦略提言書** / 🇺🇸 **AITL Strategy Proposal** {#top}
@@ -104,6 +105,7 @@ An **alternative** to capital-intensive advanced-node paths—**template-based d
 
 ### 5.1 **実装例 / Use Cases** {#use-cases}
 
+<div class="table-wrap">
 <table class="border-table">
   <thead>
     <tr>
@@ -140,6 +142,7 @@ An **alternative** to capital-intensive advanced-node paths—**template-based d
     </tr>
   </tbody>
 </table>
+</div>
 
 > **SystemDK×AMS**: Sky130高耐圧ADCの**PID制御ブロック**と**AMS制約モデル**を統合し、実環境PoCを実施。  
 Constraints are **templated** and aligned to **Edusemi** materials.
@@ -164,7 +167,7 @@ Constraints are **templated** and aligned to **Edusemi** materials.
 
 ## 7. **提言と施策 / Policy Recommendations** {#policy}
 
-<!-- ★ ここをHTMLテーブルに置き換え（枠線必ず表示） -->
+<div class="table-wrap">
 <table class="border-table">
   <thead>
     <tr>
@@ -191,6 +194,7 @@ Constraints are **templated** and aligned to **Edusemi** materials.
     </tr>
   </tbody>
 </table>
+</div>
 
 ### 7.1 **SystemDKの戦略的役割 / SystemDK as an Enabler** {#systemdk-policy}
 
