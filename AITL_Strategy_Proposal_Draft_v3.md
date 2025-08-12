@@ -176,6 +176,6 @@ Constraints are **templated** and aligned to **Edusemi** materials.
 
 ## 🔙 戻る / Back {#back}
 
-- **Edusemi-Plus Top:** https://samizo-aitl.github.io/Edusemi-Plus/  
-- **Repo Home:** https://github.com/Samizo-AITL/AITL-Strategy-Proposal  
-- **Contact:** ✉️ shin3t72@gmail.com ｜ X: https://x.com/shin3t72
+| 🏠 **Edusemi-Plus Top** | 🌐 **Repository Home** | 📬 **Contact** |
+|-----------------|----------------------|----------------|
+| [samizo-aitl.github.io/Edusemi-Plus](https://samizo-aitl.github.io/Edusemi-Plus/) | [github.com/Samizo-AITL/AITL-Strategy-Proposal](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) | ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)<br>🐦 [x.com/shin3t72](https://x.com/shin3t72) |
