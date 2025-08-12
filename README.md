@@ -30,8 +30,9 @@ title: AITL-Strategy-Proposal
 
 ## 📂 収録コンテンツ / Repository Contents
 
-- **提言書 本文（Markdown）**：  
-  [`AITL_Strategy_Proposal_Draft_v3.md`](/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v3.md)
+- **提言書 本文（Markdown）**：
+  [GitHub Pages で読む](AITL_Strategy_Proposal_Draft_v3.md) ｜ [GitHub で開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v3.md)
+
 - **提言書 PDF**：  
   [`Figures/AITL_Strategy_Proposal_Draft_v3.pdf`](/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v3.pdf)
 
