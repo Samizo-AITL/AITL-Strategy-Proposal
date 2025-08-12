@@ -4,15 +4,51 @@
   <meta charset="utf-8">
   <title>{{ page.title | default: site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- サイトの通常CSSは読み込まない。真っ白＋本文だけ -->
+
+  <!--
+    Minimal layout: 余計な装飾は入れず、本文だけをシンプルに表示。
+    ただし、表の罫線だけは確実に見えるように最小限のCSSを同梱。
+    （サイト共通CSSは読み込まない）
+  -->
   <style>
-    /* 画面表示時も真っ白に近い最小装飾（PDFは pdf.css が別途適用） */
-    :root { --text:#111; --bg:#fff; }
-    html,body{margin:0;padding:0;background:#fff;color:var(--text);}
-    .page-content{max-width: 980px; margin: 16px auto; padding: 0 14px;}
-    h1,h2,h3{font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans", "Yu Gothic", sans-serif;}
-    a{color:#0b3d75; text-decoration:none;}
-    a:hover{text-decoration:underline;}
+    /* ===== Base ===== */
+    :root { --text:#111; --bg:#fff; --link:#0b3d75; }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--text); }
+    .page-content { max-width:980px; margin:16px auto; padding:0 14px; }
+    h1, h2, h3 {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+                   Arial, "Hiragino Sans", "Yu Gothic", sans-serif;
+      line-height: 1.3;
+      margin: 1rem 0 .6rem;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width:100%; height:auto; }
+
+    /* ===== Tables: 枠線を必ず表示 ===== */
+    table { border-collapse: collapse; width: 100%; margin: .8rem 0; }
+    th, td {
+      border: 1px solid #8aa9c9;       /* 薄めのブルー罫線（見え方優先なら #000 にしてOK） */
+      padding: 6px 10px;
+      vertical-align: top;
+    }
+    th {
+      background: #eef5fb;              /* 薄い背景（紙にも映える） */
+      font-weight: 700;
+      white-space: nowrap;
+      text-align: left;
+    }
+
+    /* モバイルで少し詰める */
+    @media (max-width:640px){
+      th, td { padding: 6px 8px; }
+    }
+
+    /* 印刷時の安定性：ヘッダ繰り返し／分割抑制 */
+    @media print {
+      thead { display: table-header-group; }
+      tr, img, table, pre { break-inside: avoid; page-break-inside: avoid; }
+    }
   </style>
 </head>
 <body>
