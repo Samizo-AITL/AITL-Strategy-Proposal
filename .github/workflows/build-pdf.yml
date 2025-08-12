@@ -42,7 +42,6 @@ jobs:
             -t html \
             -o /tmp/aitl_proposal.html
 
-      # CSSを強制適用（相対パス解決のため --base-url . を指定）
       - name: Build PDF (WeasyPrint with pdf.css)
         run: |
           set -eux
