@@ -8,8 +8,8 @@ title: AITL-Strategy-Proposal
 **AITL構想による国家戦略提案 × 統合教育パッケージ**  
 **National Strategy & Educational Framework Based on AITL (AI × Control × Physical Systems)**
 
-[📄 Read the Proposal (MD)](AITL_Strategy_Proposal_Draft_v3.md)  
-[⬇️ Download PDF](Figures/AITL_Strategy_Proposal_Draft_v3.pdf)
+[📄 GitHub Pages で読む](./AITL_Strategy_Proposal_Draft_v3)  
+[⬇️ Download PDF](./Figures/AITL_Strategy_Proposal_Draft_v3.pdf)
 
 ---
 
@@ -31,9 +31,10 @@ title: AITL-Strategy-Proposal
 ## 📂 収録コンテンツ / Repository Contents
 
 - **提言書 本文（Markdown）**：  
-  [GitHub Pages で読む](/AITL_Strategy_Proposal_Draft_v3) ｜ [GitHub で開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v3.md)
+  [GitHub Pages で読む](./AITL_Strategy_Proposal_Draft_v3) ｜ [GitHub で開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v3.md)
 
-- **提言書 PDF**：[`Figures/AITL_Strategy_Proposal_Draft_v3.pdf`](/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v3.pdf)
+- **提言書 PDF**：  
+  [`Figures/AITL_Strategy_Proposal_Draft_v3.pdf`](./Figures/AITL_Strategy_Proposal_Draft_v3.pdf)
 
 > 💡 01〜04 の各ディレクトリ（背景 / 教育モデル / 産業応用 / AI統合）は、今後追加予定です。
 
@@ -76,4 +77,3 @@ MIT; free to reuse & modify for education/non-profit.
 **Shinichi Samizo** — M.Eng., Shinshu Univ. / ex-Seiko Epson  
 Domains: Logic/Memory/HV-AMS, thin-film piezo, productization/BOM/ISO  
 📧 [Email](mailto:shin3t72@gmail.com) ｜ [X](https://x.com/shin3t72) ｜ [🌐 Website](https://samizo-aitl.github.io/)
-
