@@ -1,16 +1,130 @@
-/* assets/css/pdf.css */
-@page { size: A4; margin: 18mm 16mm 20mm 16mm; }
-html { font-family: "Noto Sans CJK JP", "Noto Sans", sans-serif; font-size: 11.5pt; }
-h1,h2,h3 { color:#005bac; }
-h1 { font-size: 18pt; border-left: 6pt solid #005bac; padding-left: 8pt; background: #e6f0fa; }
-h2 { font-size: 15pt; border-left: 5pt solid #005bac; padding-left: 8pt; background: #e6f0fa; }
-h3 { font-size: 12.5pt; border-left: 4pt solid #005bac; padding-left: 6pt; background: #eef6ff; }
-p, li { line-height: 1.45; }
-table { width:100%; border-collapse: collapse; margin: 10pt 0; }
-th, td { border: 1px solid #90b6d6; padding: 6pt 7pt; vertical-align: top; }
-th { background:#e6f0fa; font-weight:700; }
-code { font-family: "Noto Sans Mono","Noto Mono",monospace; background:#f6f8fa; padding: 0 2pt; }
-pre  { background:#f6f8fa; padding:8pt; border-radius:4pt; overflow:auto; }
-a { color:#005bac; text-decoration:none; }
-a:hover { text-decoration:underline; }
-hr { border:0; border-top:1px solid #90b6d6; margin:14pt 0; }
+/* assets/css/pdf.css — WeasyPrint 専用 / 品質改善版 v4 */
+
+/* 用紙・マージン */
+@page {
+  size: A4;
+  margin: 18mm 16mm 20mm 16mm;
+
+  /* ランニングヘッダ/フッタ */
+  @top-left {
+    content: "AITL Strategy Proposal (Draft v3)";
+    color: #607d8b; font-size: 9pt;
+  }
+  @top-right {
+    content: string(section);
+    color: #607d8b; font-size: 9pt;
+  }
+  @bottom-left {
+    content: "© Samizo-AITL";
+    color: #8a9aa5; font-size: 9pt;
+  }
+  @bottom-right {
+    content: counter(page) " / " counter(pages);
+    color: #8a9aa5; font-size: 9pt;
+  }
+}
+
+/* ベース文字組 */
+html {
+  font-family: "Noto Sans CJK JP","Noto Sans",system-ui,-apple-system,"Segoe UI",Roboto,"Hiragino Sans","Yu Gothic",sans-serif;
+  font-size: 11.25pt;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-break: strict;                 /* 和文の禁則 */
+  font-feature-settings: "palt" 1, "kern" 1;  /* 詰め過ぎ解消 */
+}
+
+/* 見出し（和文セリフで格上げ） */
+h1, h2, h3 {
+  font-family: "Noto Serif CJK JP","Noto Serif","Source Serif 4",serif;
+  color: #0b4d87;
+  break-after: avoid;
+  string-set: section content();
+}
+
+h1 {
+  font-size: 20pt;
+  margin: 0 0 10pt;
+  border-bottom: 1.2pt solid #0b4d87;
+  padding-bottom: 4pt;
+}
+
+h2 {
+  font-size: 16.5pt;
+  margin: 16pt 0 8pt;
+  border-left: 4.5pt solid #0b4d87;
+  padding-left: 8pt;
+  background: #edf4fc;
+}
+
+h3 {
+  font-size: 13pt;
+  margin: 12pt 0 6pt;
+  border-left: 3.5pt solid #0b4d87;
+  padding-left: 7pt;
+  background: #f2f7ff;
+}
+
+/* 段落・箇条書き */
+p, li { line-height: 1.55; }
+ul, ol { margin: 6pt 0 8pt 16pt; }
+
+/* テーブル（線が確実に出る & 見やすい濃度） */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  margin: 10pt 0;
+}
+
+th, td {
+  border: 0.7pt solid #608bb4;   /* 0.7pt + 濃いめで消えない */
+  padding: 6pt 7pt;
+  vertical-align: top;
+}
+
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+
+th {
+  background: #e9f2fb;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #0f172a;
+}
+
+/* 交互背景は控えめ（印字のムラを避ける） */
+tbody tr:nth-child(even) td { background: #f7fbff; }
+
+/* 図版・画像：改ページで割れにくく */
+img, svg, figure { max-width: 100%; height: auto; break-inside: avoid; }
+figure { margin: 8pt 0; }
+
+/* コード */
+code {
+  font-family: "Noto Sans Mono","Noto Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  background: #f6f8fa;
+  padding: 0 2pt;
+}
+pre {
+  background: #f6f8fa;
+  padding: 8pt;
+  border-radius: 4pt;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  break-inside: avoid;
+  font-size: 10pt;
+}
+
+/* 区切り線 */
+hr {
+  border: 0;
+  border-top: 0.7pt solid #608bb4;
+  margin: 14pt 0;
+}
+
+/* リンク（印刷用に下線オフ・色のみ） */
+a { color: #0b4d87; text-decoration: none; }
+a:hover { text-decoration: underline; }
