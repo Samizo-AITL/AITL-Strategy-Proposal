@@ -1,18 +1,18 @@
 ---
 layout: aitl
-title: AITL Strategy Proposal (Draft v4.1 – Policy-Oriented)
-permalink: /AITL_Strategy_Proposal_Draft_v4_1.html
+title: AITL Strategy Proposal (Draft v4.1 – Policy-Oriented, Improved)
+permalink: /AITL_Strategy_Proposal_Draft_v4_1_Improved.html
 ---
 
-# 🇯🇵 **AITL戦略提言書 v4.1（政策寄り改訂版）** / 🇺🇸 **AITL Strategy Proposal v4.1 (Policy-Oriented)** {#top}
+# 🇯🇵 **AITL戦略提言書 v4.1（政策寄り・改善版）** / 🇺🇸 **AITL Strategy Proposal v4.1 (Policy-Oriented, Improved)** {#top}
 
 > ⚠️ **注意 / Note:**  
-> 本提案は **v4.1 改訂版（政策寄り）** であり、記載内容は検討中です。  
+> 本提案は **v4.1 改訂版（政策寄り・改善版）** であり、記載内容は検討中です。  
 > 詳細な実行計画・政策ロードマップは今後の議論を踏まえて更新されます。
 
 <div class="btn-row">
   <a class="btn" href="#overview">📎 Jump to Overview</a>
-  <a class="btn" href="./Figures/AITL_Strategy_Proposal_Draft_v4_1.pdf">⬇️ Download PDF</a>
+  <a class="btn" href="./Figures/AITL_Strategy_Proposal_Draft_v4_1_Improved.pdf">⬇️ Download PDF</a>
 </div>
 
 ---
@@ -48,7 +48,7 @@ AITL戦略はこれらを**統合制御（Feedback–Transition Integration）**
 
 ---
 
-## 1. **状態フィードバックと状態遷移統合の価値 / Value of Feedback–Transition Integration** {#feedback-transition}
+## 1. **統合制御の価値 / Value of Feedback–Transition Integration** {#feedback-transition}
 
 現在の産業・研究現場では、  
 ① 状態フィードバック制御（PID, MPC 等）  
@@ -56,7 +56,7 @@ AITL戦略はこれらを**統合制御（Feedback–Transition Integration）**
 ③ システム解析・最適化（通常は人手 or AI解析）  
 が別々に存在している。
 
-これを統合すると、以下の価値が生まれる：
+これを**統合制御（Feedback–Transition Integration）**として統合すると、以下の価値が生まれる：
 
 | 項目 / Item | 価値 / Value |
 |---|---|
@@ -65,8 +65,6 @@ AITL戦略はこれらを**統合制御（Feedback–Transition Integration）**
 | **故障対応力** / Fault Adaptation | 一部モジュールが故障しても残存機能で動作継続 |
 | **最適化効率** / Optimization Efficiency | 状態と遷移情報が揃っているため、最適化探索範囲が減少 |
 | **実装容易性** / Easier Physical Integration | 状態管理と制御が一体化され、ワンチップ・マルチチップを問わず実装しやすい |
-
-### ① 状態フィードバック＋状態遷移統合の価値
 
 📎 **Mermaid参照**: [GitHubで開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v4_0.md)
 
@@ -94,84 +92,56 @@ flowchart LR
 
 ## 2. **LLM融合によるAITLの価値 / Value of AITL with LLM** {#aitl-llm-value}
 
-AITLは上記統合制御に**LLM（大規模言語モデル）**を加えることで、新しい価値を創出する。
+AITLは**統合制御**に**LLM（大規模言語モデル）**を加えることで、新しい価値を創出する。
 
 | LLM活用領域 / LLM Role | 新しい価値 / New Value |
 |---|---|
 | **状況解析** / Situation Analysis | ログやセンサーデータから異常検知・原因推定を自動化 |
 | **準リアルタイム設計** / Quasi-Real-Time Design | 数分単位で仕様変更に対応し、制御アルゴリズムやFSM構造を再設計 |
-| **統合アーキ設計** / Integrated Architecture Design | 仕様書から直接、状態制御とフィードバック制御を統合した全体設計図を生成 |
+| **統合アーキ設計** / Integrated Architecture Design | 仕様書から直接、統合制御を含む全体設計図を生成 |
 | **故障時再設計** / Fault-Time Redesign | 残存機能を活用した動作モード再構築 |
 | **SystemDK連携** / SystemDK Collaboration | 物理制約・ノード特性を設計段階から反映し、最適な実装形態を選択 |
-
-
-### ② LLM融合によるAITLの価値
-
-📎 **Mermaid参照**: [GitHubで開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v4_0.md)
-
-```mermaid
-flowchart TB
-  subgraph Physical [物理層：Sensors & Actuators]
-    SENSORS[センサ入力]
-    ACT[アクチュエータ出力]
-  end
-
-  subgraph Control [統合制御層：PID＋FSM]
-    CTRL[統合制御コア]
-  end
-
-  subgraph LLM [LLM層：解析・再設計・仕様生成]
-    AI[大規模言語モデル]
-    AINOTE[故障時再設計<br/>仕様変更対応<br/>最適化提案]
-  end
-
-  SENSORS --> CTRL
-  CTRL --> ACT
-  CTRL --> AI
-  AI -- 再設計指示 --> CTRL
-  AI --- AINOTE
-
-  %% ノート風スタイル（対応しない環境でも無視されます）
-  classDef note fill:#fff8cc,stroke:#b59f00,stroke-dasharray:3 3,color:#333;
-  class AINOTE note;
-```
 
 ---
 
 ## 3. **PoC具体例 / Real-World PoC Examples** {#poc-examples}
 
 1. **ロボット制御統合**  
-   - 状態フィードバックと状態遷移を統合し、LLMで動的に制御構造を再構築。  
-   - 片腕故障時、残存アームで作業続行する制御系を自動生成。
+   - **課題:** 従来は各関節やアームの制御が個別で、故障時に全停止が必要  
+   - **AITL解決:** 統合制御＋LLMにより、片腕故障時でも残存アームで作業続行可能な制御系を自動生成
 
 2. **スマート工場ライン最適化**  
-   - 生産工程の状態遷移とフィードバックを統合、LLMが設備状態を解析し、数分単位で制御ロジックを更新。  
-   - 故障発生時、代替ラインを自動編成。
+   - **課題:** 故障時に代替ライン構成を人手で調整するため再稼働に数日要する  
+   - **AITL解決:** 統合制御でライン全体を最適化し、LLMが設備状態解析から数分で代替ラインを編成
 
 3. **自律移動ロボット群制御**  
-   - 複数ロボットのFSMを統合管理し、状態フィードバックで全体動作を同期化。  
-   - LLMが交通状況や障害物情報を解析して経路最適化。
+   - **課題:** 複数ロボットの経路調整に遅延が発生し、全体効率が低下  
+   - **AITL解決:** 統合制御で全体動作を同期し、LLMが交通状況解析に基づきリアルタイム経路最適化
 
 ---
 
 ## 4. **AITL実装とSystemDKの必要性 / Need for SystemDK in AITL Implementation** {#systemdk}
 
 AITLを実システムに実装する際には、**物理制約（熱・応力・電源・EMIなど）**を初期段階から設計に反映する必要がある。  
-**SystemDK** は、これを可能にする設計基盤であり、次の理由から有効である：
+**SystemDK（System Design Kit）**は、これを可能にする設計基盤である。
 
-- **AITLの典型事例**では、複数制御モジュールやセンサ・アクチュエータを高密度に統合する必要があり、熱や信号干渉が問題化しやすい。  
-- **SystemDK** を用いれば、物理解析（FEM等）を設計段階に組み込み、回路・パッケージ・基板の統合最適化が可能。  
-- この手法はAITLに限らず、**先端ノード実装**では必須となる設計アプローチである。
+SystemDKの適用範囲はAITLに限らず、**半導体チップ全般**に渡る。  
+特に、今後の**先端ノード半導体チップ**においては、物理制約を設計初期段階で統合的に扱う**SystemDKによる設計手法は必須**となる。
 
+- 高密度実装環境での熱・信号干渉の早期対策が可能  
+- FEM解析を設計段階に組み込み、回路・パッケージ・基板の統合最適化を実現  
+- 長期的には設計効率・製品信頼性・量産歩留まりの向上につながる
 
-### 4.1 **技術的課題とリスク / Technical Challenges and Risks** {#risks}
+---
+
+## 4.1 **技術的課題とリスク / Technical Challenges and Risks** {#risks}
 
 | 分類 / Category | 課題 / Challenge | リスク / Risk |
 |---|---|---|
 | **AI信頼性** / AI Reliability | LLM応答の精度・一貫性の保証 | 誤判断・幻覚応答による制御ミス |
 | **セキュリティ** / Security | 統合制御系のサイバー攻撃耐性 | 生産停止・安全性低下 |
 | **物理モデル融合** / Physical Model Integration | FEM等の物理制約モデルとリアルタイム制御の融合 | 設計遅延・性能劣化 |
-| **標準化とIP** / Standardization & IP | 標準化に伴う知財・ライセンス調整 | 国際競争力低下のリスク |
+| **標準化とIP** / Standardization & IP | 標準化に伴う知財・ライセンス調整 | 国際競争力低下 |
 
 ---
 
@@ -179,12 +149,15 @@ AITLを実システムに実装する際には、**物理制約（熱・応力�
 
 ### 5.1 **導入効果試算 / Expected Benefits (Model Case)**
 
+> **前提条件:** 国内製造ラインにAITL導入、PoC評価データに基づく試算値
+
 | 項目 / Item | 従来型 / Conventional | AITL導入後 / With AITL | 効果 / Impact |
 |---|---|---|---|
 | 故障対応時間 / Fault Response Time | 8時間 | 30分 | ダウンタイム94%削減 |
 | 生産ライン再構成時間 / Line Reconfiguration | 2日 | 2時間 | 生産性向上8倍 |
 | 設計変更対応コスト / Design Change Cost | 100 | 60 | 40%削減 |
 
+---
 
 ### 5.2 **政策ロードマップ / Policy Roadmap**
 
