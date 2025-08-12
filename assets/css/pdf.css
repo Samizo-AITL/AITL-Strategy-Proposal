@@ -1,85 +1,140 @@
-/* ========== Page & Base ========== */
-@page { size: A4; margin: 18mm 16mm 20mm 16mm; }
+/* assets/css/pdf.css  — WeasyPrint / A4 最適化 */
+
+@page {
+  size: A4;
+  margin: 16mm 14mm 18mm 14mm;
+}
+
+/* ---------- 基本書式 ---------- */
 html {
   font-family: "Noto Sans CJK JP", "Noto Sans", sans-serif;
-  font-size: 11.5pt;
-}
-body {
+  font-size: 11.3pt;
+  line-height: 1.48;
   color: #111;
-  line-height: 1.45;
-  -weasy-hyphens: auto;
 }
 
-/* ========== Headings ========== */
-h1, h2, h3 { color: #005bac; page-break-after: avoid; }
+h1, h2, h3 {
+  color: #0b4d87; /* AITL ブルー系 */
+  margin: 0.6em 0 0.35em;
+}
+
 h1 {
-  font-size: 18pt;
-  border-left: 6pt solid #005bac;
-  padding-left: 8pt;
-  background: #e6f0fa;
-  margin: 0 0 10pt;
+  font-size: 18.5pt;
+  border-bottom: 2px solid #0b4d87;
+  padding-bottom: 4pt;
 }
+
 h2 {
-  font-size: 15pt;
-  border-left: 5pt solid #005bac;
-  padding-left: 8pt;
-  background: #e6f0fa;
-  margin: 14pt 0 6pt;
+  font-size: 15.5pt;
+  border-bottom: 1px solid #0b4d87;
+  padding-bottom: 3pt;
 }
+
 h3 {
-  font-size: 12.5pt;
-  border-left: 4pt solid #005bac;
+  font-size: 13pt;
+  border-left: 4pt solid #0b4d87;
   padding-left: 6pt;
-  background: #eef6ff;
-  margin: 10pt 0 4pt;
 }
 
-/* ========== Links (紙面でURLを残す) ========== */
+/* 段落まわり */
+p { margin: 0 0 0.7em; }
+ul, ol { margin: 0.2em 0 0.8em 1.2em; }
+li { margin: 0.15em 0; }
+
+/* 孤立行/寡婦行を減らす */
+p, li { orphans: 2; widows: 2; }
+
+/* ハイフネーション（英語に有効。日本語には影響少） */
+p, li { hyphens: auto; }
+
+/* リンク */
 a { color: #0b4d87; text-decoration: none; }
-a[href^="http"]::after {
-  content: " <" attr(href) ">";
-  font-size: .85em;
-  color: #666;
+a:hover { text-decoration: underline; }
+/* 紙面にURLを残したい場合は下記をコメント解除
+a[href^="http"]:after { content: " <" attr(href) ">"; font-size: 0.85em; color: #666; }
+*/
+
+/* 水平線 */
+hr {
+  border: none;
+  border-top: 1px solid #b8cbe0;
+  margin: 10pt 0;
 }
 
-/* ========== Tables (太めの枠線を強制) ========== */
+/* ---------- 表（枠線くっきり） ---------- */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 10pt 0;
-  table-layout: auto;
+  margin: 9pt 0;
+  font-size: 10.8pt;
 }
-thead { display: table-header-group; } /* ページまたぎでヘッダ繰り返し */
-tr { break-inside: avoid; }
+
 th, td {
-  border: 0.8pt solid #2d6ebd;   /* 視認性の高い青系の枠線 */
-  padding: 7pt 8pt;
+  border: 1px solid #5a88b5;           /* しっかり見える枠線 */
+  padding: 6pt 8pt;
   vertical-align: top;
 }
+
 th {
-  background: #e6f0fa;
+  background: #eaf2fb;                  /* 見出しの薄い網掛け */
   font-weight: 700;
   white-space: nowrap;
+  color: #0f172a;
 }
-tbody tr:nth-child(even) { background: #f7fbff; }
 
-/* ========== Code & Pre ========== */
+/* 偶数行の薄い帯（印刷でうるさくない程度） */
+tbody tr:nth-child(even) td {
+  background: #f6f9fd;
+}
+
+/* 長い表の分割崩れ防止＆ヘッダ繰り返し */
+tr { break-inside: avoid; }
+thead { display: table-header-group; }
+tfoot { display: table-footer-group; }
+
+/* 必要に応じて md から class 付けた表を強化 */
+table.border-table th, table.border-table td { border-color: #4a78a7; }
+
+/* ---------- 画像・図版 ---------- */
+img, svg {
+  max-width: 100%;
+  height: auto;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* 図キャプション風 */
+.figure-note {
+  font-size: 9.5pt;
+  color: #555;
+  margin-top: 3pt;
+}
+
+/* ---------- コード/等幅 ---------- */
 code {
-  font-family: "Noto Sans Mono","Noto Mono",monospace;
-  background:#f6f8fa;
+  font-family: "Noto Sans Mono", "Noto Mono", ui-monospace, monospace;
+  background: #f6f8fa;
   padding: 0 2pt;
 }
-pre  {
-  background:#f6f8fa;
-  padding:8pt;
-  border-radius:4pt;
-  overflow:auto;
+
+pre {
+  font-family: "Noto Sans Mono", "Noto Mono", ui-monospace, monospace;
+  background: #f6f8fa;
+  padding: 7pt 8pt;
+  border-radius: 3pt;
   break-inside: avoid;
+  page-break-inside: avoid;
+  font-size: 10.2pt;
 }
 
-/* ========== Figures / Images ========== */
-img, figure { break-inside: avoid; page-break-inside: avoid; }
-figcaption { font-size: .9rem; color: #6b7280; margin-top: 2pt; }
+/* ---------- ボタンやWeb専用UIはPDFでは非表示 ---------- */
+.btn, .btn-row, .cta-buttons, .site-header, .site-footer { display: none; }
 
-/* ========== Separators ========== */
-hr { border:0; border-top:1px solid #90b6d6; margin:14pt 0; }
+/* ---------- 章見出しの直後で改ページさせない ---------- */
+h1, h2 { page-break-after: avoid; }
+
+/* ---------- 任意の調整用ユーティリティ ---------- */
+.narrow { font-size: 10.6pt; }
+.tight  { line-height: 1.36; }
+.center { text-align: center; }
+.right  { text-align: right; }
