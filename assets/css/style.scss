@@ -34,7 +34,7 @@
 }
 
 /* 全体 */
-.site-header,.site-footer{ display:none !important; } /* 提案ページはクローム簡素化 */
+.site-header,.site-footer{ display:none !important; }
 .page-content{ padding-top:.5rem; }
 body{ color:var(--text-base); }
 
@@ -52,7 +52,7 @@ h1{ font-size:1.85rem; }
 h2{ font-size:1.5rem;  }
 h3{ font-size:1.2rem;  }
 
-:target{ scroll-margin-top:72px; } /* アンカーずれ対策 */
+:target{ scroll-margin-top:72px; }
 
 /* ========== Links ========== */
 a{ color:var(--aitl-blue); text-decoration:none; }
@@ -140,10 +140,8 @@ pre code{ display:block; padding:0; background:transparent; }
     font-size: 11.2pt; line-height: 1.45; color:#111;
   }
 
-  /* UI非表示 */
   .btn-row,.cta-buttons,.site-header,.site-footer{ display:none !important; }
 
-  /* 背景塗り撤去 */
   h1,h2,h3{
     background:none !important; color:#0b4d87; border-left:none;
     page-break-after: avoid;
@@ -156,9 +154,9 @@ pre code{ display:block; padding:0; background:transparent; }
   th,td{ border-color:#cfcfcf; padding:6pt; }
   th{ background:#f3f6fa !important; color:#111; }
   tr{ break-inside: avoid; }
-  thead { display: table-header-group; } /* ヘッダ繰り返し */
+  thead { display: table-header-group; }
 
-  img { break-inside: avoid; page-break-inside: avoid; } /* 画像分割防止 */
+  img { break-inside: avoid; page-break-inside: avoid; }
 
   pre{ padding:6pt; border-radius:4pt; }
   pre, code{ background:#f6f8fa !important; }
@@ -178,7 +176,7 @@ table.border-table {
 
 table.border-table th,
 table.border-table td {
-  border: 1px solid rgba(0, 91, 172, .55);
+  border: 1px solid rgba(0, 91, 172, .65);
   padding: 8px 10px;
   vertical-align: top;
 }
@@ -205,4 +203,10 @@ table.border-table th {
   table.border-table td { border-color: #cfcfcf; }
   table.border-table th { background: #f3f6fa !important; }
   table.border-table tbody tr:nth-child(even){ background: transparent; }
+}
+
+/* Fallback: クラス忘れ対策（囲み適用） */
+.force-borders table th,
+.force-borders table td {
+  border:1px solid rgba(0, 91, 172, .55) !important;
 }
