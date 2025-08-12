@@ -51,7 +51,12 @@ AITL戦略はこれらを**統合**し、**リアルタイム～準リアルタ�
 | **最適化効率** / Optimization Efficiency | 状態と遷移情報が揃っているため、最適化探索範囲が減少 |
 | **実装容易性** / Easier Physical Integration | 状態管理と制御が一体化され、ワンチップ・マルチチップを問わず実装しやすい |
 
+### ① 状態フィードバック＋状態遷移統合の価値
+
+📎 **Mermaidソース**: [GitHub上のファイル](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/mermaid/feedback_transition_integration.mmd)
+
 ```mermaid
+
 flowchart LR
     subgraph Conventional[従来型（別々）]
         PID[PID制御\n(状態フィードバック)]
@@ -69,9 +74,8 @@ flowchart LR
     end
 
     Conventional -->|統合| Integrated
-```
 
-📎 Mermaidソース: <https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/mermaid/feedback_transition_integration.mmd>
+```
 
 ---
 
@@ -87,7 +91,13 @@ AITLは上記統合制御に**LLM（大規模言語モデル）**を加えるこ
 | **故障時再設計** / Fault-Time Redesign | 残存機能を活用した動作モード再構築 |
 | **SystemDK連携** / SystemDK Collaboration | 物理制約・ノード特性を設計段階から反映し、最適な実装形態を選択 |
 
+
+### ② LLM融合によるAITLの価値
+
+📎 **Mermaidソース**: [GitHub上のファイル](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/mermaid/aitl_with_llm.mmd)
+
 ```mermaid
+
 flowchart TB
     subgraph Physical[物理層\nSensors & Actuators]
         SENSORS[センサ入力]
@@ -112,9 +122,8 @@ flowchart TB
         仕様変更対応
         最適化提案
     end note
-```
 
-📎 Mermaidソース: <https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/mermaid/aitl_llm_integration.mmd>
+```
 
 ---
 
