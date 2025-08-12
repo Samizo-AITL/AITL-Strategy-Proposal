@@ -164,11 +164,12 @@ Constraints are **templated** and aligned to **Edusemi** materials.
 
 ## 7. **提言と施策 / Policy Recommendations** {#policy}
 
+<!-- ★ ここをHTMLテーブルに置き換え（枠線必ず表示） -->
 <table class="border-table">
   <thead>
     <tr>
-      <th>🎯 対象 / Target</th>
-      <th>💡 提言 / Recommendation</th>
+      <th>Target</th>
+      <th>Recommendation</th>
     </tr>
   </thead>
   <tbody>
@@ -212,19 +213,17 @@ Constraints are **templated** and aligned to **Edusemi** materials.
 ### 📊 **AITL統合構成図 / AITL Integrated Architecture**
 
 <p align="center">
-  <img src="./Figures/AITL_Architecture_Diagram_v1.png" alt="AITL Architecture Diagram" style="max-width:80%; height:auto;">
+  <img src="./Figures/AITL_Architecture_Diagram_v1.png" alt="AITL Architecture Diagram" width="80%">
 </p>
 
 **Notes**  
 1) **Core Flow**: Sensor → **FSM/PID** → UART → **ChatGPT**（非リアルタイム解析）  
 2) **Three-Layer Architecture**: Logic / Control / Physical（再利用性・説明性）  
-3) **Startup Path**: Education → Template → FPGA → ASIC PoC → M&A  
-
-📄 **PDF版はこちら:** [Download PDF](./Figures/AITL_Strategy_Proposal_Draft_v3.pdf)
+3) **Startup Path**: Education → Template → FPGA → ASIC PoC → M&A
 
 ---
 
 ## 🔙 戻る / Back {#back}
 
-- 🌐 **Repository:** [github.com/Samizo-AITL/AITL-Strategy-Proposal](https://github.com/Samizo-AITL/AITL-Strategy-Proposal)  
-- 📬 **Contact:** ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com) ｜ 🐦 [x.com/shin3t72](https://x.com/shin3t72)
+**Repository:** [github.com/Samizo-AITL/AITL-Strategy-Proposal](https://github.com/Samizo-AITL/AITL-Strategy-Proposal)  
+**Contact:** ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com) ｜ 🐦 [x.com/shin3t72](https://x.com/shin3t72)
