@@ -2,7 +2,7 @@
 ---
 
 /* =========================================================
-   AITL Strategy Proposal – Minimal Theme Extension (v3)
+   AITL Strategy Proposal – Minimal Theme Extension (v3+修正版)
    - Screen: readable, mild accent
    - Print(PDF): compact, ink-friendly, no bg fills
    ========================================================= */
@@ -131,9 +131,6 @@ pre code{ display:block; padding:0; background:transparent; }
 
 /* =========================================================
    Print / PDF 専用の最適化
-   - 余白縮小
-   - 背景塗りを撤去（読みやすさ＆軽量化）
-   - 表・コード・見出しのページ分割崩れ防止
    ========================================================= */
 @media print{
   @page{ size: A4; margin: 14mm 14mm 16mm 14mm; }
@@ -146,7 +143,7 @@ pre code{ display:block; padding:0; background:transparent; }
   /* UI非表示 */
   .btn-row,.cta-buttons,.site-header,.site-footer{ display:none !important; }
 
-  /* 背景塗りは撤去、ボーダー中心に */
+  /* 背景塗り撤去 */
   h1,h2,h3{
     background:none !important; color:#0b4d87; border-left:none;
     page-break-after: avoid;
@@ -158,14 +155,17 @@ pre code{ display:block; padding:0; background:transparent; }
   table{ font-size:10.5pt; margin:8pt 0; }
   th,td{ border-color:#cfcfcf; padding:6pt; }
   th{ background:#f3f6fa !important; color:#111; }
-  tr{ break-inside: avoid; } /* 表行の分割抑制 */
+  tr{ break-inside: avoid; }
+  thead { display: table-header-group; } /* ヘッダ繰り返し */
+
+  img { break-inside: avoid; page-break-inside: avoid; } /* 画像分割防止 */
 
   pre{ padding:6pt; border-radius:4pt; }
   pre, code{ background:#f6f8fa !important; }
-  pre, table, figure, .note, .tip, .warn{ break-inside: avoid; } /* 分割崩れ防止 */
+  pre, table, figure, .note, .tip, .warn{ break-inside: avoid; }
 
   a{ color:#0b4d87; text-decoration:none; }
-  a[href^="http"]::after{ content:" <" attr(href) ">"; font-size:.85em; color:#666; } /* 参照URLを紙面に残す */
+  a[href^="http"]::after{ content:" <" attr(href) ">"; font-size:.85em; color:#666; }
 }
 
 /* === Tables with visible borders on GitHub Pages & PDF === */
@@ -178,7 +178,7 @@ table.border-table {
 
 table.border-table th,
 table.border-table td {
-  border: 1px solid rgba(0, 91, 172, .55); /* var(--aitl-blue) 由来の青い枠 */
+  border: 1px solid rgba(0, 91, 172, .55);
   padding: 8px 10px;
   vertical-align: top;
 }
@@ -197,4 +197,12 @@ table.border-table th {
     padding: 6px 8px;
     font-size: .95rem;
   }
+}
+
+/* 印刷用 border-table 調整 */
+@media print{
+  table.border-table th,
+  table.border-table td { border-color: #cfcfcf; }
+  table.border-table th { background: #f3f6fa !important; }
+  table.border-table tbody tr:nth-child(even){ background: transparent; }
 }
