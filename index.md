@@ -39,17 +39,6 @@ title: AITL-Strategy-Proposal
 
 ---
 
-## 📂 収録コンテンツ / Repository Contents
-
-- **提言書 本文（Markdown）**：  
-  [`AITL_Strategy_Proposal_Draft_v3.md`](/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v3.md)
-- **提言書 PDF**：  
-  [`Figures/AITL_Strategy_Proposal_Draft_v3.pdf`](/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v3.pdf)
-
-> 💡 01〜04 の各ディレクトリ（背景 / 教育モデル / 産業応用 / AI統合）は、今後追加予定です。
-
----
-
 ## 🔗 連携プロジェクト / Linked Projects
 
 - **Edusemi-v4x（基礎教材）**  
