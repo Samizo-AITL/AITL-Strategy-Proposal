@@ -175,6 +175,5 @@ Constraints are **templated** and aligned to **Edusemi** materials.
 
 ## 🔙 戻る / Back {#back}
 
-| 🌐 **Repository Home** | 📬 **Contact** |
-|----------------------|----------------|
-| [github.com/Samizo-AITL/AITL-Strategy-Proposal](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) | ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)<br>🐦 [x.com/shin3t72](https://x.com/shin3t72) |
+- **Repository Home:** [github.com/Samizo-AITL/AITL-Strategy-Proposal](https://github.com/Samizo-AITL/AITL-Strategy-Proposal)  
+- **Contact:** ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com) ｜ 🐦 [x.com/shin3t72](https://x.com/shin3t72)
