@@ -107,19 +107,17 @@ flowchart TB
 
     subgraph LLM[LLM層\n解析・再設計・仕様生成]
         AI["大規模言語モデル"]
+        note right of AI
+            故障時再設計
+            仕様変更対応
+            最適化提案
+        end note
     end
 
     SENSORS --> CTRL
     CTRL --> ACT
     CTRL --> AI
     AI -->|"再設計指示"| CTRL
-
-    %% noteはリンクとノードの間ではなく、ノードに直付け
-    note right of AI
-        故障時再設計
-        仕様変更対応
-        最適化提案
-    end note
 ```
 
 ---
