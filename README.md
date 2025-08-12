@@ -8,7 +8,7 @@ title: AITL-Strategy-Proposal
 **AITL構想による国家戦略提案 × 統合教育パッケージ**  
 **National Strategy & Educational Framework Based on AITL (AI × Control × Physical Systems)**
 
-[📄 Read the Proposal (MD)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v3/)  
+[📄 Read the Proposal (MD)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v3.html)  
 [⬇️ Download PDF](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v3.pdf)
 
 ---
