@@ -53,7 +53,7 @@ AITL戦略はこれらを**統合**し、**リアルタイム～準リアルタ�
 
 ### ① 状態フィードバック＋状態遷移統合の価値
 
-📎 **Mermaid参照**: [Github](AITL_Strategy_Proposal_Draft_v4_0.md)
+📎 **Mermaid参照**: [Github](./AITL_Strategy_Proposal_Draft_v4_0.md)
 
 ```mermaid
 flowchart LR
