@@ -8,7 +8,6 @@ title: AITL Strategy Proposal (Draft v3)
 <div class="btn-row">
   <a class="btn" href="#introduction">📎 Jump to Introduction</a>
   <a class="btn" href="./Figures/AITL_Strategy_Proposal_Draft_v3.pdf">⬇️ Download PDF</a>
-  <a class="btn" href="https://samizo-aitl.github.io/Edusemi-Plus/">🏠 Edusemi-Plus</a>
 </div>
 
 ---
@@ -176,6 +175,6 @@ Constraints are **templated** and aligned to **Edusemi** materials.
 
 ## 🔙 戻る / Back {#back}
 
-| 🏠 **Edusemi-Plus Top** | 🌐 **Repository Home** | 📬 **Contact** |
-|-----------------|----------------------|----------------|
-| [samizo-aitl.github.io/Edusemi-Plus](https://samizo-aitl.github.io/Edusemi-Plus/) | [github.com/Samizo-AITL/AITL-Strategy-Proposal](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) | ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)<br>🐦 [x.com/shin3t72](https://x.com/shin3t72) |
+| 🌐 **Repository Home** | 📬 **Contact** |
+|----------------------|----------------|
+| [github.com/Samizo-AITL/AITL-Strategy-Proposal](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) | ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com)<br>🐦 [x.com/shin3t72](https://x.com/shin3t72) |
