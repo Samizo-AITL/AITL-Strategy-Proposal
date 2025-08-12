@@ -41,11 +41,12 @@ title: AITL-Strategy-Proposal
 
 ## 🔗 連携プロジェクト / Linked Projects
 
+- **Edusemi-v4x（基礎教材）**  
+  [🌐 GitHub Pages](https://samizo-aitl.github.io/Edusemi-v4x/) ｜ [📦 GitHub]
+(https://github.com/Samizo-AITL/Edusemi-v4x)
+
 - **Edusemi-Plus（応用教材）**  
   [🌐 GitHub Pages](https://samizo-aitl.github.io/Edusemi-Plus/) ｜ [📦 GitHub](https://github.com/Samizo-AITL/Edusemi-Plus)
-
-- **Edusemi-v4x（基礎教材）**  
-  [🌐 GitHub Pages](https://samizo-aitl.github.io/Edusemi-v4x/) ｜ [📦 GitHub](https://github.com/Samizo-AITL/Edusemi-v4x)
 
 - **EduController（制御教材）**  
   [🌐 GitHub Pages](https://samizo-aitl.github.io/EduController/) ｜ [📦 GitHub](https://github.com/Samizo-AITL/EduController)
