@@ -53,7 +53,7 @@ AITL戦略はこれらを**統合**し、**リアルタイム～準リアルタ�
 
 ### ① 状態フィードバック＋状態遷移統合の価値
 
-📎 **Mermaidソース**: [GitHub上のファイル](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/mermaid/feedback_transition_integration.mmd)
+📎 **Mermaid Github**: [AITL_Strategy_Proposal_Draft_v4_0.md](AITL_Strategy_Proposal_Draft_v4_0.md)
 
 ```mermaid
 flowchart LR
@@ -92,7 +92,7 @@ AITLは上記統合制御に**LLM（大規模言語モデル）**を加えるこ
 
 ### ② LLM融合によるAITLの価値
 
-📎 **Mermaid Github**: [AITL_Strategy_Proposal_Draft_v4_0.md#feedback-transition](AITL_Strategy_Proposal_Draft_v4_0.md)
+📎 **Mermaid Github**: [AITL_Strategy_Proposal_Draft_v4_0.md](AITL_Strategy_Proposal_Draft_v4_0.md)
 
 ```mermaid
 flowchart TB
