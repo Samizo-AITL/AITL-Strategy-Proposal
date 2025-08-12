@@ -16,17 +16,22 @@ permissions:
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
+    env:
+      LC_ALL: C.UTF-8
+      LANG: C.UTF-8
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Pandoc & WeasyPrint and fonts
+      - name: Install Pandoc, WeasyPrint and fonts
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc python3-pip \
             fonts-noto-cjk fonts-noto-color-emoji fonts-noto-mono
-          pip install --upgrade pip
-          pip install weasyprint==60.2
+          python3 -m pip install --upgrade pip
+          # 🔧 WeasyPrint を安定版にピン止め（60系はAPI変更で失敗）
+          python3 -m pip install weasyprint==53.3
 
       - name: Ensure Figures directory
         run: mkdir -p Figures
@@ -57,6 +62,6 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           add: 'Figures/AITL_Strategy_Proposal_Draft_v3.pdf'
-          message: 'ci: build PDF from Markdown (WeasyPrint + pdf.css)'
+          message: 'ci: build PDF from Markdown (WeasyPrint 53.3 + pdf.css)'
           author_name: actions-user
           author_email: actions@github.com
