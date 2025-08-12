@@ -40,11 +40,21 @@ title: AITL-Strategy-Proposal
 ---
 
 ## 🔗 連携プロジェクト / Linked Projects
-- **Edusemi-Plus（応用教材）** — [GitHub Pages](https://samizo-aitl.github.io/Edusemi-Plus/)  
-- **Edusemi-v4x（基礎教材）** — [GitHub](https://github.com/Samizo-AITL/Edusemi-v4x)  
-- **EduController（制御教材）** — [GitHub](https://github.com/Samizo-AITL/EduController)  
-- **AITL-H（FSM×PID×LLM統合）** — [GitHub](https://github.com/Samizo-AITL/AITL-H)  
-- **SamizoGPT（プロンプト・GUI支援）** — [GitHub](https://github.com/Samizo-AITL/SamizoGPT)
+
+- **Edusemi-Plus（応用教材）**  
+  [🌐 GitHub Pages](https://samizo-aitl.github.io/Edusemi-Plus/) ｜ [📦 GitHub](https://github.com/Samizo-AITL/Edusemi-Plus)
+
+- **Edusemi-v4x（基礎教材）**  
+  [🌐 GitHub Pages](https://samizo-aitl.github.io/Edusemi-v4x/) ｜ [📦 GitHub](https://github.com/Samizo-AITL/Edusemi-v4x)
+
+- **EduController（制御教材）**  
+  [🌐 GitHub Pages](https://samizo-aitl.github.io/EduController/) ｜ [📦 GitHub](https://github.com/Samizo-AITL/EduController)
+
+- **AITL-H（FSM×PID×LLM統合）**  
+  [🌐 GitHub Pages](https://samizo-aitl.github.io/AITL-H/) ｜ [📦 GitHub](https://github.com/Samizo-AITL/AITL-H)
+
+- **SamizoGPT（プロンプト・GUI支援）**  
+  [🌐 GitHub Pages](https://samizo-aitl.github.io/SamizoGPT/) ｜ [📦 GitHub](https://github.com/Samizo-AITL/SamizoGPT)
 
 ---
 
