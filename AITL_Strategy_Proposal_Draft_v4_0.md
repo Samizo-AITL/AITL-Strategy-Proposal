@@ -56,7 +56,6 @@ AITL戦略はこれらを**統合**し、**リアルタイム～準リアルタ�
 📎 **Mermaidソース**: [GitHub上のファイル](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/mermaid/feedback_transition_integration.mmd)
 
 ```mermaid
-
 flowchart LR
     subgraph Conventional[従来型（別々）]
         PID[PID制御\n(状態フィードバック)]
@@ -74,7 +73,6 @@ flowchart LR
     end
 
     Conventional -->|統合| Integrated
-
 ```
 
 ---
@@ -97,7 +95,6 @@ AITLは上記統合制御に**LLM（大規模言語モデル）**を加えるこ
 📎 **Mermaidソース**: [GitHub上のファイル](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/mermaid/aitl_with_llm.mmd)
 
 ```mermaid
-
 flowchart TB
     subgraph Physical[物理層\nSensors & Actuators]
         SENSORS[センサ入力]
@@ -122,7 +119,6 @@ flowchart TB
         仕様変更対応
         最適化提案
     end note
-
 ```
 
 ---
