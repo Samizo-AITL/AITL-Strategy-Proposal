@@ -164,12 +164,32 @@ Constraints are **templated** and aligned to **Edusemi** materials.
 
 ## 7. **提言と施策 / Policy Recommendations** {#policy}
 
-| Target | Recommendation |
-|---|---|
-| **MEXT** | 高専/大学に **FSM・PID・LLM統合教材** を導入支援 |
-| **METI** | **Sky130/180nm PoC** 支援制度の整備 |
-| **MAFF** | **テンプレ制御LSI** のスマート農業導入 |
-| **Local Gov.** | **地域PoC＋設計＋教育** の一体支援 |
+<table class="border-table">
+  <thead>
+    <tr>
+      <th>🎯 対象 / Target</th>
+      <th>💡 提言 / Recommendation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>MEXT</b></td>
+      <td>高専/大学に <b>FSM・PID・LLM統合教材</b> を導入支援</td>
+    </tr>
+    <tr>
+      <td><b>METI</b></td>
+      <td><b>Sky130/180nm PoC</b> 支援制度の整備</td>
+    </tr>
+    <tr>
+      <td><b>MAFF</b></td>
+      <td><b>テンプレ制御LSI</b> のスマート農業導入</td>
+    </tr>
+    <tr>
+      <td><b>Local Gov.</b></td>
+      <td><b>地域PoC＋設計＋教育</b> の一体支援</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 7.1 **SystemDKの戦略的役割 / SystemDK as an Enabler** {#systemdk-policy}
 
@@ -192,17 +212,19 @@ Constraints are **templated** and aligned to **Edusemi** materials.
 ### 📊 **AITL統合構成図 / AITL Integrated Architecture**
 
 <p align="center">
-  <img src="./Figures/AITL_Architecture_Diagram_v1.png" alt="AITL Architecture Diagram" width="80%">
+  <img src="./Figures/AITL_Architecture_Diagram_v1.png" alt="AITL Architecture Diagram" style="max-width:80%; height:auto;">
 </p>
 
 **Notes**  
 1) **Core Flow**: Sensor → **FSM/PID** → UART → **ChatGPT**（非リアルタイム解析）  
 2) **Three-Layer Architecture**: Logic / Control / Physical（再利用性・説明性）  
-3) **Startup Path**: Education → Template → FPGA → ASIC PoC → M&A
+3) **Startup Path**: Education → Template → FPGA → ASIC PoC → M&A  
+
+📄 **PDF版はこちら:** [Download PDF](./Figures/AITL_Strategy_Proposal_Draft_v3.pdf)
 
 ---
 
 ## 🔙 戻る / Back {#back}
 
-**Repository:** [github.com/Samizo-AITL/AITL-Strategy-Proposal](https://github.com/Samizo-AITL/AITL-Strategy-Proposal)  
-**Contact:** ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com) ｜ 🐦 [x.com/shin3t72](https://x.com/shin3t72)
+- 🌐 **Repository:** [github.com/Samizo-AITL/AITL-Strategy-Proposal](https://github.com/Samizo-AITL/AITL-Strategy-Proposal)  
+- 📬 **Contact:** ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com) ｜ 🐦 [x.com/shin3t72](https://x.com/shin3t72)
