@@ -96,28 +96,30 @@ AITLは上記統合制御に**LLM（大規模言語モデル）**を加えるこ
 
 ```mermaid
 flowchart TB
-    subgraph Physical[物理層\nSensors & Actuators]
-        SENSORS["センサ入力"]
-        ACT["アクチュエータ出力"]
-    end
+  subgraph Physical["物理層\nSensors & Actuators"]
+    SENSORS["センサ入力"]
+    ACT["アクチュエータ出力"]
+  end
 
-    subgraph Control[統合制御層\nPID+FSM]
-        CTRL["統合制御コア"]
-    end
+  subgraph Control["統合制御層\nPID + FSM"]
+    CTRL["統合制御コア"]
+  end
 
-    subgraph LLM[LLM層\n解析・再設計・仕様生成]
-        AI["大規模言語モデル"]
-        note right of AI
-            故障時再設計
-            仕様変更対応
-            最適化提案
-        end note
-    end
+  subgraph LLM["LLM層\n解析・再設計・仕様生成"]
+    AI["大規模言語モデル"]
+    AINOTE["故障時再設計\n仕様変更対応\n最適化提案"]
+  end
 
-    SENSORS --> CTRL
-    CTRL --> ACT
-    CTRL --> AI
-    AI -->|"再設計指示"| CTRL
+  %% 配線
+  SENSORS --> CTRL
+  CTRL --> ACT
+  CTRL --> AI
+  AI -->|"再設計指示"| CTRL
+  AI --- AINOTE  %% ノート風ノードに接続
+
+  %% ノート風スタイル
+  classDef note fill:#fff8cc,stroke:#b59f00,stroke-dasharray:3 3,color:#333;
+  class AINOTE note;
 ```
 
 ---
