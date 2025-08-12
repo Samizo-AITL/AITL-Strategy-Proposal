@@ -92,7 +92,7 @@ AITLは上記統合制御に**LLM（大規模言語モデル）**を加えるこ
 
 ### ② LLM融合によるAITLの価値
 
-📎 **Mermaid参照**: [Github](AITL_Strategy_Proposal_Draft_v4_0.md)
+📎 **Mermaid参照**: [Github](./AITL_Strategy_Proposal_Draft_v4_0.md)
 
 ```mermaid
 flowchart TB
