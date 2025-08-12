@@ -104,13 +104,42 @@ An **alternative** to capital-intensive advanced-node paths—**template-based d
 
 ### 5.1 **実装例 / Use Cases** {#use-cases}
 
-| Field | PoC Content | Node |
-|---|---|---|
-| **Agriculture** | Greenhouse: **Temp/Humidity → PID → Fan → ChatGPT log analysis** | Sky130 / 180nm |
-| **Disaster** | Tilt sensor: **FSM + ChatGPT** | 65nm |
-| **Care** | Gait assist: **IMU + PID + fall detection** | 130nm |
-| **Factory** | Thermal control AI: **FSM + LLM optimization** | 0.35µm HVMOS |
-| **AMS Design** | HV-ADC control (**SystemDK + PID + Sky130 AMS**) | Sky130 / 180nm |
+<table class="border-table">
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>PoC Content</th>
+      <th>Node</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Agriculture</td>
+      <td>Greenhouse: <b>Temp/Humidity → PID → Fan → ChatGPT log analysis</b></td>
+      <td>Sky130 / 180nm</td>
+    </tr>
+    <tr>
+      <td>Disaster</td>
+      <td>Tilt sensor: <b>FSM + ChatGPT</b></td>
+      <td>65nm</td>
+    </tr>
+    <tr>
+      <td>Care</td>
+      <td>Gait assist: <b>IMU + PID + fall detection</b></td>
+      <td>130nm</td>
+    </tr>
+    <tr>
+      <td>Factory</td>
+      <td>Thermal control AI: <b>FSM + LLM optimization</b></td>
+      <td>0.35µm HVMOS</td>
+    </tr>
+    <tr>
+      <td>AMS Design</td>
+      <td>HV-ADC control (<b>SystemDK + PID + Sky130 AMS</b>)</td>
+      <td>Sky130 / 180nm</td>
+    </tr>
+  </tbody>
+</table>
 
 > **SystemDK×AMS**: Sky130高耐圧ADCの**PID制御ブロック**と**AMS制約モデル**を統合し、実環境PoCを実施。  
 Constraints are **templated** and aligned to **Edusemi** materials.
@@ -146,7 +175,7 @@ Constraints are **templated** and aligned to **Edusemi** materials.
 
 **SystemDK** は **物理制約統合設計**の要。**GAA/AMS/MRAM**等の**ノード特性**に応じた制約をテンプレ化し、  
 **教育→評価→試作→起業**を一貫支援。  
-**Action:** 教材整備（MEXT）、PoC助成（METI）、演習化（高専/大学）、地域プロラム（中小機構）。
+**Action:** 教材整備（MEXT）、PoC助成（METI）、演習化（高専/大学）、地域プログラム（中小機構）。
 
 ---
 
@@ -175,5 +204,5 @@ Constraints are **templated** and aligned to **Edusemi** materials.
 
 ## 🔙 戻る / Back {#back}
 
-- **Repository Home:** [github.com/Samizo-AITL/AITL-Strategy-Proposal](https://github.com/Samizo-AITL/AITL-Strategy-Proposal)  
-- **Contact:** ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com) ｜ 🐦 [x.com/shin3t72](https://x.com/shin3t72)
+**Repository:** [github.com/Samizo-AITL/AITL-Strategy-Proposal](https://github.com/Samizo-AITL/AITL-Strategy-Proposal)  
+**Contact:** ✉️ [shin3t72@gmail.com](mailto:shin3t72@gmail.com) ｜ 🐦 [x.com/shin3t72](https://x.com/shin3t72)
