@@ -52,6 +52,28 @@ AITL戦略はこれらを**統合**し、**リアルタイム～準リアルタ�
 
 ---
 
+### ① 状態フィードバック＋状態遷移統合の価値
+
+```mermaid
+flowchart LR
+    subgraph Conventional[従来型（別々）]
+        PID[PID制御\n(状態フィードバック)]
+        FSM[FSM\n(状態遷移)]
+        ANALYSIS[解析\n(人手/AI)]
+        PID -->|制御信号| OUT1[出力]
+        FSM -->|モード変更| PID
+        ANALYSIS -->|改善案| PID
+    end
+
+    subgraph Integrated[AITL統合型]
+        CORE[統合制御コア\n(PID＋FSM連動)]
+        CORE -->|統合制御信号| OUT2[出力]
+        CORE <-->|状態＋遷移情報共有| CORE
+    end
+
+    Conventional -->|統合| Integrated
+```
+
 ## 2. **LLM融合によるAITLの価値 / Value of AITL with LLM** {#aitl-llm-value}
 
 AITLは上記統合制御に**LLM（大規模言語モデル）**を加えることで、新しい価値を創出する。
@@ -64,6 +86,33 @@ AITLは上記統合制御に**LLM（大規模言語モデル）**を加えるこ
 | **故障時再設計** / Fault-Time Redesign | 残存機能を活用した動作モード再構築（例：ロボットが別アームで作業継続） |
 | **SystemDK連携** / SystemDK Collaboration | 物理制約・ノード特性を設計段階から反映し、ワンチップSoC化を加速 |
 
+```mermaid
+flowchart TB
+    subgraph Physical[物理層\nSensors & Actuators]
+        SENSORS[センサ入力]
+        ACT[アクチュエータ出力]
+    end
+
+    subgraph Control[統合制御層\nPID＋FSM]
+        CTRL[統合制御コア]
+    end
+
+    subgraph LLM[LLM層\n解析・再設計・仕様生成]
+        AI[大規模言語モデル]
+    end
+
+    SENSORS --> CTRL
+    CTRL --> ACT
+    CTRL --> AI
+    AI -->|再設計指示| CTRL
+
+    note right of AI
+        故障時再設計
+        仕様変更対応
+        最適化提案
+    end note
+```
+    
 ---
 
 ## 3. **PoC具体例 / Real-World PoC Examples** {#poc-examples}
