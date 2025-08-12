@@ -1,18 +1,18 @@
 ---
 layout: aitl
-title: AITL Strategy Proposal (Draft v4.0)
-permalink: /AITL_Strategy_Proposal_Draft_v4_0.html
+title: AITL Strategy Proposal (Draft v4.1 – Policy-Oriented)
+permalink: /AITL_Strategy_Proposal_Draft_v4_1.html
 ---
 
-# 🇯🇵 **AITL戦略提言書 v4.0** / 🇺🇸 **AITL Strategy Proposal v4.0** {#top}
+# 🇯🇵 **AITL戦略提言書 v4.1（政策寄り改訂版）** / 🇺🇸 **AITL Strategy Proposal v4.1 (Policy-Oriented)** {#top}
 
 > ⚠️ **注意 / Note:**  
-> 本提案は **v4.0 素案（Draft）** 段階であり、記載内容は検討中です。  
+> 本提案は **v4.1 改訂版（政策寄り）** であり、記載内容は検討中です。  
 > 詳細な実行計画・政策ロードマップは今後の議論を踏まえて更新されます。
 
 <div class="btn-row">
   <a class="btn" href="#overview">📎 Jump to Overview</a>
-  <a class="btn" href="./Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf">⬇️ Download PDF</a>
+  <a class="btn" href="./Figures/AITL_Strategy_Proposal_Draft_v4_1.pdf">⬇️ Download PDF</a>
 </div>
 
 ---
@@ -20,10 +20,11 @@ permalink: /AITL_Strategy_Proposal_Draft_v4_0.html
 ## 📑 目次 / Table of Contents {#toc}
 
 - [0. 概要 / Overview](#overview)
-- [1. 状態フィードバックと状態遷移統合の価値 / Value of Feedback–Transition Integration](#feedback-transition)
+- [1. 統合制御の価値 / Value of Feedback–Transition Integration](#feedback-transition)
 - [2. LLM融合によるAITLの価値 / Value of AITL with LLM](#aitl-llm-value)
 - [3. PoC具体例 / Real-World PoC Examples](#poc-examples)
 - [4. AITL実装とSystemDKの必要性 / Need for SystemDK in AITL Implementation](#systemdk)
+- [4.1 技術的課題とリスク / Technical Challenges and Risks](#risks)
 - [5. 政策提言 / Policy Recommendations](#policy)
 - [6. おわりに / Conclusion](#conclusion)
 
@@ -31,9 +32,19 @@ permalink: /AITL_Strategy_Proposal_Draft_v4_0.html
 
 ## 0. **概要 / Overview** {#overview}
 
+**対象読者 / Intended Audience:**  
+- 🇯🇵 政策立案者、学術研究機関、産業技術戦略担当者  
+- 🇺🇸 Policymakers, academic institutions, and industrial R&D strategy planners  
+
 現代の工学・産業では、**状態フィードバック制御（PID等）**、**状態遷移制御（FSM）**、そして**AI（LLM）による解析・設計**は、ほぼ全て**独立運用**されている。  
-AITL戦略はこれらを**統合**し、**リアルタイム～準リアルタイム**での**仕様変更・故障時再設計・最適化**を可能にする。  
+AITL戦略はこれらを**統合制御（Feedback–Transition Integration）**として統合し、**リアルタイム～準リアルタイム**での**仕様変更・故障時再設計・最適化**を可能にする。  
 さらに、**SystemDK** によって物理制約を反映した**実装形態（ワンチップSoCやマルチチップ構成）**を設計段階から最適化する。
+
+**現状の課題 / Current Issues:**  
+- 制御・解析技術が分断され、全体最適化が困難  
+- 仕様変更や故障発生時の対応に時間とコストがかかる  
+- 製造・インフラ分野ではダウンタイム増大による経済損失が発生  
+- AI技術は導入されつつあるが、リアルタイム性と物理実装最適化が不足
 
 ---
 
