@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'AITL_Strategy_Proposal_Draft_v3.md'
+      - 'AITL_Strategy_Proposal_Draft_v*.md'
       - 'assets/css/pdf.css'
       - 'assets/pdf/head.html'
       - '.github/workflows/build-pdf.yml'
@@ -30,19 +30,36 @@ jobs:
           sudo apt-get install -y pandoc python3-pip \
             fonts-noto-cjk fonts-noto-color-emoji fonts-noto-mono
           python3 -m pip install --upgrade pip
-          # 🔧 WeasyPrint を安定版にピン止め（60系はAPI変更で失敗）
+          # 🔧 WeasyPrintは安定版に固定（60系はAPI変更で不整合あり）
           python3 -m pip install weasyprint==53.3
 
       - name: Ensure Figures directory
         run: mkdir -p Figures
 
+      - name: Detect latest draft file & set vars
+        id: detect
+        shell: bash
+        run: |
+          set -euo pipefail
+          FILE=$(ls -1 AITL_Strategy_Proposal_Draft_v*.md | sort -V | tail -1)
+          echo "FILE=$FILE" >> $GITHUB_ENV
+          PDF="Figures/${FILE%.md}.pdf"
+          echo "PDF=$PDF" >> $GITHUB_ENV
+          # タイトルは先頭のH1から取得（なければ既定値）
+          TITLE=$(grep -m1 '^#' "$FILE" | sed 's/^#\s*//' || true)
+          if [ -z "${TITLE:-}" ]; then TITLE="AITL Strategy Proposal"; fi
+          echo "TITLE=$TITLE" >> $GITHUB_ENV
+          echo "Using markdown: $FILE"
+          echo "Output pdf: $PDF"
+          echo "Doc title: $TITLE"
+
       - name: Build HTML (Pandoc with head injection)
         run: |
           set -eux
-          pandoc AITL_Strategy_Proposal_Draft_v3.md \
+          pandoc "$FILE" \
             --from gfm \
             --standalone \
-            --metadata title="AITL Strategy Proposal (Draft v3)" \
+            --metadata title="$TITLE" \
             -H assets/pdf/head.html \
             -t html \
             -o /tmp/aitl_proposal.html
@@ -56,12 +73,12 @@ jobs:
             --presentational-hints \
             --stylesheet assets/css/pdf.css \
             /tmp/aitl_proposal.html \
-            Figures/AITL_Strategy_Proposal_Draft_v3.pdf
+            "$PDF"
 
       - name: Commit PDF back to repo
         uses: EndBug/add-and-commit@v9
         with:
-          add: 'Figures/AITL_Strategy_Proposal_Draft_v3.pdf'
-          message: 'ci: build PDF from Markdown (WeasyPrint 53.3 + pdf.css)'
+          add: '${{ env.PDF }}'
+          message: 'ci: build PDF from ${{ env.FILE }} → ${{ env.PDF }} (WeasyPrint 53.3 + pdf.css)'
           author_name: actions-user
           author_email: actions@github.com
