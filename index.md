@@ -8,35 +8,35 @@ title: AITL-Strategy-Proposal
 **AITL構想による国家戦略提案 × 統合教育パッケージ**  
 **National Strategy & Educational Framework Based on AITL (AI × Control × Physical Systems)**
 
-[📄 Read the Proposal (MD)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v3.html)  
-[⬇️ Download PDF](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v3.pdf)
+[📄 Read the Proposal (MD)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v4_0.html)  
+[⬇️ Download PDF](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf)
 
 ---
 
 ## 🧭 概要 / Overview
-**JP:** 本リポジトリは、AITL (All-in-Theory Logic) に基づく **国家レベルの統合アーキテクチャ提案** と、Edusemiを中核とした **実証済み教育パッケージ** を公開します。  
-**EN:** This repo presents a **national-level architecture proposal** based on AITL, plus a **validated educational package** centered on Edusemi, extended to control (EduController) and intelligent integration (AITL-H) for field-deployable PoC models.
+**JP:** 本リポジトリは、AITL (All-in-Theory Logic) に基づく **国家レベルの統合アーキテクチャ提案** と、Edusemiを中核とした **実証済み統合パッケージ** を公開します。  
+**EN:** This repo presents a **national-level architecture proposal** based on AITL, plus a **validated integration package** centered on Edusemi, extended to control (AITL-H) and intelligent integration for deployable PoC models.
 
 ---
 
 ## 🧠 AITLとは / What is AITL?
 - **Logic Layer** — AI inference, anomaly detection, hypothesis generation  
-- **Control Layer** — Explainable control with **PID / MPC / FSM**  
+- **Control Layer** — Explainable control with **PID / FSM** integration  
 - **Physical Layer** — Sensors, actuators, real-world constraints
 
-🎯 **Goal:** explainability, safety, implementability across AI–control–physical systems.
+🎯 **Goal:** Real-time or quasi-real-time design, fault-time redesign, and physical constraint-aware SoC integration.
 
 ---
 
 ## 📂 収録コンテンツ / Repository Contents
 
 - **提言書 本文（Markdown）**：  
-  [GitHub Pages で読む](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v3.html) ｜ [GitHub で開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v3.md)
+  [GitHub Pages で読む](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v4_0.html) ｜ [GitHub で開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v4_0.md)
 
 - **提言書 PDF**：  
-  [GitHub Pages でダウンロード](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v3.pdf) ｜ [GitHub で開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/Figures/AITL_Strategy_Proposal_Draft_v3.pdf)
+  [GitHub Pages でダウンロード](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf) ｜ [GitHub で開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf)
 
-> 💡 01〜04 の各ディレクトリ（背景 / 教育モデル / 産業応用 / AI統合）は、今後追加予定です。
+> 💡 PoC具体例やSystemDK連携例などは、今後追加予定です。
 
 ---
 
@@ -60,9 +60,9 @@ title: AITL-Strategy-Proposal
 ---
 
 ## ✍️ 使い方 / How to Use
-1. 提言書を読む → **Draft v3 (MD/PDF)**  
-2. カリキュラム設計 → **Edusemi-Plus** の該当モジュールを選定  
-3. 現場PoC → **AITL-H / EduController** テンプレートで実装  
+1. 提言書を読む → **Draft v4.0 (MD/PDF)**  
+2. PoC設計 → **AITL-H / EduController** テンプレートで統合制御を実装  
+3. 現場検証 → **PoC実装モデル** で評価  
 4. 共同体制 → 高専・大学・企業の **地域連携** で推進
 
 ---
@@ -77,4 +77,3 @@ MIT; free to reuse & modify for education/non-profit.
 **Shinichi Samizo** — M.Eng., Shinshu Univ. / ex-Seiko Epson  
 Domains: Logic/Memory/HV-AMS, thin-film piezo, productization/BOM/ISO  
 📧 [Email](mailto:shin3t72@gmail.com) ｜ [X](https://x.com/shin3t72) ｜ [🌐 Website](https://samizo-aitl.github.io/)
-
