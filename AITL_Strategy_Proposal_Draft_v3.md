@@ -105,44 +105,13 @@ An **alternative** to capital-intensive advanced-node paths—**template-based d
 
 ### 5.1 **実装例 / Use Cases** {#use-cases}
 
-<div class="table-wrap">
-<table class="border-table">
-  <thead>
-    <tr>
-      <th>Field</th>
-      <th>PoC Content</th>
-      <th>Node</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Agriculture</td>
-      <td>Greenhouse: <b>Temp/Humidity → PID → Fan → ChatGPT log analysis</b></td>
-      <td>Sky130 / 180nm</td>
-    </tr>
-    <tr>
-      <td>Disaster</td>
-      <td>Tilt sensor: <b>FSM + ChatGPT</b></td>
-      <td>65nm</td>
-    </tr>
-    <tr>
-      <td>Care</td>
-      <td>Gait assist: <b>IMU + PID + fall detection</b></td>
-      <td>130nm</td>
-    </tr>
-    <tr>
-      <td>Factory</td>
-      <td>Thermal control AI: <b>FSM + LLM optimization</b></td>
-      <td>0.35µm HVMOS</td>
-    </tr>
-    <tr>
-      <td>AMS Design</td>
-      <td>HV-ADC control (<b>SystemDK + PID + Sky130 AMS</b>)</td>
-      <td>Sky130 / 180nm</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+| 分野 / Field | PoC内容 / PoC Content | ノード / Node |
+|--------------|-----------------------|---------------|
+| 農業 / Agriculture | 温室: **温度・湿度 → PID制御 → ファン → ChatGPTログ解析** | Sky130 / 180nm |
+| 防災 / Disaster | 傾斜センサ: **FSM + ChatGPT** | 65nm |
+| 介護 / Care | 歩行支援: **IMU + PID制御 + 転倒検知** | 130nm |
+| 工場 / Factory | 熱制御AI: **FSM + LLM最適化** | 0.35µm HVMOS |
+| AMS設計 / AMS Design | 高耐圧ADC制御 (**SystemDK + PID + Sky130 AMS**) | Sky130 / 180nm |
 
 > **SystemDK×AMS**: Sky130高耐圧ADCの**PID制御ブロック**と**AMS制約モデル**を統合し、実環境PoCを実施。  
 Constraints are **templated** and aligned to **Edusemi** materials.
@@ -167,34 +136,12 @@ Constraints are **templated** and aligned to **Edusemi** materials.
 
 ## 7. **提言と施策 / Policy Recommendations** {#policy}
 
-<div class="table-wrap">
-<table class="border-table">
-  <thead>
-    <tr>
-      <th>Target</th>
-      <th>Recommendation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>MEXT</b></td>
-      <td>高専/大学に <b>FSM・PID・LLM統合教材</b> を導入支援</td>
-    </tr>
-    <tr>
-      <td><b>METI</b></td>
-      <td><b>Sky130/180nm PoC</b> 支援制度の整備</td>
-    </tr>
-    <tr>
-      <td><b>MAFF</b></td>
-      <td><b>テンプレ制御LSI</b> のスマート農業導入</td>
-    </tr>
-    <tr>
-      <td><b>Local Gov.</b></td>
-      <td><b>地域PoC＋設計＋教育</b> の一体支援</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+| 対象 / Target | 提言内容 / Recommendation |
+|---------------|---------------------------|
+| 文科省 (MEXT) | 高専/大学に **FSM・PID・LLM統合教材** を導入支援 |
+| 経産省 (METI) | **Sky130/180nm PoC** 支援制度の整備 |
+| 農水省 (MAFF) | **テンプレ制御LSI** のスマート農業導入 |
+| 地方自治体 (Local Gov.) | **地域PoC＋設計＋教育** の一体支援 |
 
 ### 7.1 **SystemDKの戦略的役割 / SystemDK as an Enabler** {#systemdk-policy}
 
