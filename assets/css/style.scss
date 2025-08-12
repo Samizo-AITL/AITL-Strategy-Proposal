@@ -167,3 +167,34 @@ pre code{ display:block; padding:0; background:transparent; }
   a{ color:#0b4d87; text-decoration:none; }
   a[href^="http"]::after{ content:" <" attr(href) ">"; font-size:.85em; color:#666; } /* 参照URLを紙面に残す */
 }
+
+/* === Tables with visible borders on GitHub Pages & PDF === */
+table.border-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.8rem 0;
+  table-layout: auto;
+}
+
+table.border-table th,
+table.border-table td {
+  border: 1px solid rgba(0, 91, 172, .55); /* var(--aitl-blue) 由来の青い枠 */
+  padding: 8px 10px;
+  vertical-align: top;
+}
+
+table.border-table th {
+  background: var(--aitl-light, #e6f0fa);
+  color: var(--text-strong, #0f172a);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* モバイル調整 */
+@media (max-width: 640px) {
+  table.border-table th,
+  table.border-table td {
+    padding: 6px 8px;
+    font-size: .95rem;
+  }
+}
