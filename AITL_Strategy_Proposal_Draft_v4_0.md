@@ -58,18 +58,18 @@ AITL戦略はこれらを**統合**し、**リアルタイム～準リアルタ�
 ```mermaid
 flowchart LR
     subgraph Conventional[従来型（別々）]
-        PID[PID制御\n(状態フィードバック)]
-        FSM[FSM\n(状態遷移)]
-        ANALYSIS[解析\n(人手/AI)]
-        PID -->|制御信号| OUT1[出力]
-        FSM -->|モード変更| PID
-        ANALYSIS -->|改善案| PID
+        PID["PID制御（状態フィードバック）"]
+        FSM["FSM（状態遷移）"]
+        ANALYSIS["解析（人手/AI）"]
+        PID -->|"制御信号"| OUT1["出力1"]
+        FSM -->|"モード変更"| PID
+        ANALYSIS -->|"改善案"| PID
     end
 
     subgraph Integrated[AITL統合型]
-        CORE[統合制御コア\n(PID＋FSM連動)]
-        CORE -->|統合制御信号| OUT2[出力]
-        CORE <-->|状態＋遷移情報共有| CORE
+        CORE["統合制御コア（PID+FSM連動）"]
+        CORE -->|"統合制御信号"| OUT2["出力2"]
+        CORE <-->|"状態＋遷移情報共有"| CORE
     end
 
     Conventional -->|統合| Integrated
@@ -97,23 +97,24 @@ AITLは上記統合制御に**LLM（大規模言語モデル）**を加えるこ
 ```mermaid
 flowchart TB
     subgraph Physical[物理層\nSensors & Actuators]
-        SENSORS[センサ入力]
-        ACT[アクチュエータ出力]
+        SENSORS["センサ入力"]
+        ACT["アクチュエータ出力"]
     end
 
-    subgraph Control[統合制御層\nPID＋FSM]
-        CTRL[統合制御コア]
+    subgraph Control[統合制御層\nPID+FSM]
+        CTRL["統合制御コア"]
     end
 
     subgraph LLM[LLM層\n解析・再設計・仕様生成]
-        AI[大規模言語モデル]
+        AI["大規模言語モデル"]
     end
 
     SENSORS --> CTRL
     CTRL --> ACT
     CTRL --> AI
-    AI -->|再設計指示| CTRL
+    AI -->|"再設計指示"| CTRL
 
+    %% noteはリンクとノードの間ではなく、ノードに直付け
     note right of AI
         故障時再設計
         仕様変更対応
