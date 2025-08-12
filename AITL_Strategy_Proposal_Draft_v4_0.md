@@ -1,7 +1,7 @@
 ---
 layout: aitl
 title: AITL Strategy Proposal (Draft v4.1 – Policy-Oriented, Improved)
-permalink: /AITL_Strategy_Proposal_Draft_v4_1_Improved.html
+permalink: /AITL_Strategy_Proposal_Draft_v4_0.html
 ---
 
 ---
