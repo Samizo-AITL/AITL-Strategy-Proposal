@@ -57,23 +57,25 @@ AITL戦略はこれらを**統合**し、**リアルタイム～準リアルタ�
 📎 [Mermaid公式ドキュメント (GitHub)](https://github.com/mermaid-js/mermaid)
 
 ```mermaid
+
 flowchart LR
     subgraph Conventional["従来型（別々）"]
-        PID["PID制御<br>(状態フィードバック)"]
-        FSM["FSM<br>(状態遷移)"]
-        ANALYSIS["解析<br>(人手/AI)"]
+        PID["PID制御<br/>（状態フィードバック）"]
+        FSM["FSM<br/>（状態遷移）"]
+        ANALYSIS["解析<br/>（人手/AI）"]
         PID -->|制御信号| OUT1["出力"]
         FSM -->|モード変更| PID
         ANALYSIS -->|改善案| PID
     end
 
     subgraph Integrated["AITL統合型"]
-        CORE["統合制御コア<br>(PID＋FSM連動)"]
+        CORE["統合制御コア<br/>(PID＋FSM連動)"]
         CORE -->|統合制御信号| OUT2["出力"]
         CORE <-->|状態＋遷移情報共有| CORE
     end
 
     Conventional -->|統合| Integrated
+
 ```
 
 ---
@@ -97,6 +99,7 @@ AITLは上記統合制御に**LLM（大規模言語モデル）**を加えるこ
 📎 [Mermaid公式ドキュメント (GitHub)](https://github.com/mermaid-js/mermaid)
 
 ```mermaid
+
 flowchart TB
     subgraph Physical["物理層<br/>Sensors &amp; Actuators"]
         SENSORS["センサ入力"]
@@ -116,13 +119,11 @@ flowchart TB
     CTRL --> AI
     AI -->|再設計指示| CTRL
 
-    %% ← 空行が大事（リンク行と note の間に入れる）
+    NOTE1["故障時再設計<br/>仕様変更対応<br/>最適化提案"]:::note
+    AI -.-> NOTE1
 
-    note right of AI
-      故障時再設計
-      仕様変更対応
-      最適化提案
-    end note
+    classDef note fill:#fffbe6,stroke:#999,stroke-dasharray:3 3,color:#333;
+
 ```
 
 ---
