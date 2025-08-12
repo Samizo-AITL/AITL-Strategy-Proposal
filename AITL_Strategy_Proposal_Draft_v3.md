@@ -162,7 +162,10 @@ Constraints are **templated** and aligned to **Edusemi** materials.
 ## 付録：図・注記 / Figures & Notes {#figures}
 
 ### 📊 **AITL統合構成図 / AITL Integrated Architecture**
-![AITL Architecture Diagram](./Figures/AITL_Architecture_Diagram_v1.png)
+
+<p align="center">
+  <img src="./Figures/AITL_Architecture_Diagram_v1.png" alt="AITL Architecture Diagram" width="80%">
+</p>
 
 **Notes**  
 1) **Core Flow**: Sensor → **FSM/PID** → UART → **ChatGPT**（非リアルタイム解析）  
