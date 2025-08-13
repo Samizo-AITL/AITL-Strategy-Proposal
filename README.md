@@ -1,5 +1,5 @@
 ---
-layout: aitl
+layout: aitl 
 title: AITL-Strategy-Proposal
 ---
 
