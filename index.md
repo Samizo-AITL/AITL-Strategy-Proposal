@@ -1,6 +1,6 @@
 ---
 layout: aitl
-title: AITL-Strategy-Proposal
+title: AITL-Strategy-Proposal 
 ---
 
 ---
