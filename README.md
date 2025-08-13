@@ -3,7 +3,7 @@ layout: aitl
 title: AITL-Strategy-Proposal
 ---
 
-# 📘 AITL-Strategy-Proposal
+# 🏛️ AITL-Strategy-Proposal
 
 > ⚠️ **注意 / Note:**  
 > 本提案は **v4.0 素案（Draft）** 段階であり、記載内容は検討中です。  
