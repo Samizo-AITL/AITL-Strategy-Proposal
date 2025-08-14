@@ -59,19 +59,19 @@ title: AITL-Strategy-Proposal
 ## 🔗 Linked Projects
 
 - **Edusemi-v4x (Foundational Materials)**  
-  [🌐 GitHub Pages](https://samizo-aitl.github.io/Edusemi-v4x/) ｜ [📦 GitHub](https://github.com/Samizo-AITL/Edusemi-v4x)
+  [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x)
 
 - **Edusemi-Plus (Applied Materials)**  
-  [🌐 GitHub Pages](https://samizo-aitl.github.io/Edusemi-Plus/) ｜ [📦 GitHub](https://github.com/Samizo-AITL/Edusemi-Plus)
+  [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-Plus/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-Plus)
 
 - **EduController (Control Systems Materials)**  
-  [🌐 GitHub Pages](https://samizo-aitl.github.io/EduController/) ｜ [📦 GitHub](https://github.com/Samizo-AITL/EduController)
+  [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController)
 
 - **AITL-H (FSM × PID × LLM Integration)**  
-  [🌐 GitHub Pages](https://samizo-aitl.github.io/AITL-H/) ｜ [📦 GitHub](https://github.com/Samizo-AITL/AITL-H)
+  [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H)
 
 - **SamizoGPT (Prompt & GUI Support)**  
-  [🌐 GitHub Pages](https://samizo-aitl.github.io/SamizoGPT/) ｜ [📦 GitHub](https://github.com/Samizo-AITL/SamizoGPT)
+  [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/SamizoGPT/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/SamizoGPT)
 
 ---
 
