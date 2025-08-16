@@ -16,7 +16,7 @@ title: AITL-Strategy-Proposal
 **National Strategy Proposal × Integrated Educational Package via AITL**  
 **National Strategy & Educational Framework Based on AITL (AI × Control × Physical Systems)**
 
-[📄 Read the Proposal (MD)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v4_0_en.html)  
+[📄 Read the Proposal (MD)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/AITL_Strategy_Proposal_Draft_v4_0_en.html)  
 [⬇️ Download PDF](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf)
 
 ---
@@ -47,7 +47,7 @@ title: AITL-Strategy-Proposal
 ## 📂 Repository Contents
 
 - **Proposal (Markdown):**  
-  [Read on GitHub Pages](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v4_0.html) ｜ [View on GitHub](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v4_0_en.md)
+  [Read on GitHub Pages](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v4_0.html) ｜ [View on GitHub](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/en/AITL_Strategy_Proposal_Draft_v4_0_en.md)
 
 - **Proposal (PDF):**  
   [Download from GitHub Pages](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf) ｜ [View on GitHub](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf)
