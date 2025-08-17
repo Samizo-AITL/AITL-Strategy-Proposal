@@ -1,16 +1,26 @@
 title: AITL-Strategy-Proposal
 description: National Strategy & Educational Framework Based on AITL (AI × Control × Physical Systems)
+lang: ja
+
+# テーマ（安定版）
 theme: minima
+
+# Markdown エンジン
 markdown: kramdown
+kramdown:
+  input: GFM
+  parse_block_html: true
+
+# GitHub Pages 標準対応プラグイン
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# 表示調整
 show_downloads: false
 
-remote_theme: minima
-
-# CSS読み込み
+# SASS/CSS (必要なら assets/css 内で追加)
 sass:
   sass_dir: assets/css
   style: compressed
