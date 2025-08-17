@@ -54,8 +54,6 @@ permalink: /AITL_Strategy_Proposal_Draft_v4_0.html
 | **柔軟性 / Flexibility** | 設計時点と運用中の要求変更に柔軟対応 |
 | **冗長性 / Redundancy** | 一部機能喪失時にも安全かつ効率的に動作継続 |
 
-📎 **Mermaid参照**: [GitHubで開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v4_0.md)
-
 ```mermaid
 flowchart LR
     A[状態フィードバック制御] --> C[統合制御コア]
