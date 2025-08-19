@@ -98,18 +98,33 @@ AITL creates **new value** that goes beyond conventional control and design para
 
 ## 3. **PoC具体例 / Real-World PoC Examples** {#poc-examples}
 
-1. **ロボット制御統合**  
-   - **課題:** 従来は各関節やアームの制御が個別で、故障時に全停止が必要  
-   - **AITL解決:** 統合制御＋LLMにより、片腕故障時でも残存アームで作業続行可能な制御系を自動生成
+### 3.1 **ロボット制御統合 / Integrated Robotic Control**
+- **課題 / Challenge:**  
+  従来は各関節やアームの制御が個別で、1つのアクチュエータが故障すると全体を停止せざるを得なかった。  
+  *In conventional systems, each joint or arm is controlled separately, and a failure in one actuator forces the entire system to shut down.*  
 
-2. **スマート工場ライン最適化**  
-   - **課題:** 故障時に代替ライン構成を人手で調整するため再稼働に数日要する  
-   - **AITL解決:** 統合制御でライン全体を最適化し、LLMが設備状態解析から数分で代替ラインを編成
+- **AITL解決 / AITL Solution:**  
+  統合制御＋LLMにより、片腕故障時でも残存アームで作業を続行できる制御系を自動生成。  
+  *With integrated control and LLM support, AITL can automatically generate a control system that allows remaining arms to continue operation even if one arm fails.*  
 
-3. **自律移動ロボット群制御**  
-   - **課題:** 複数ロボットの経路調整に遅延が発生し、全体効率が低下  
-   - **AITL解決:** 統合制御で全体動作を同期し、LLMが交通状況解析に基づきリアルタイム経路最適化
+### 3.2 **スマート工場ライン最適化 / Smart Factory Line Optimization**
+- **課題 / Challenge:**  
+  従来は故障時に代替ライン構成を人手で調整する必要があり、再稼働まで数日を要した。  
+  *Traditionally, reconfiguring production lines after failures required manual intervention, taking several days before resuming operations.*  
 
+- **AITL解決 / AITL Solution:**  
+  統合制御でライン全体を最適化し、LLMが設備状態解析から数分で代替ラインを編成。  
+  *AITL enables integrated optimization of the entire production line, with LLMs analyzing equipment status and reconfiguring substitute lines within minutes.*  
+
+### 3.3 **自律移動ロボット群制御 / Autonomous Mobile Robot Fleet Control**
+- **課題 / Challenge:**  
+  複数ロボット間での経路調整に遅延が生じ、全体効率が低下していた。  
+  *Delays in coordinating paths among multiple robots caused overall efficiency to drop.*  
+
+- **AITL解決 / AITL Solution:**  
+  統合制御により全体動作を同期し、LLMが交通状況解析に基づいてリアルタイムで経路を最適化。  
+  *AITL synchronizes overall fleet operations through integrated control, while LLMs optimize routing in real time based on traffic and situational analysis.*
+  
 ---
 
 ## 4. **AITL実装とSystemDKの必要性 / Need for SystemDK in AITL Implementation** {#systemdk}
