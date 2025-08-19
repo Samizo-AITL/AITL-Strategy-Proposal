@@ -130,25 +130,32 @@ AITL creates **new value** that goes beyond conventional control and design para
 ## 4. **AITL実装とSystemDKの必要性 / Need for SystemDK in AITL Implementation** {#systemdk}
 
 AITLを実システムに実装する際には、**物理制約（熱・応力・電源・EMIなど）**を初期段階から設計に反映する必要がある。  
-**SystemDK（System Design Kit）**は、これを可能にする設計基盤である。
+When implementing AITL into real systems, it is essential to reflect **physical constraints (thermal, stress, power, EMI, etc.)** at the earliest design stage.  
 
-SystemDKの適用範囲はAITLに限らず、**半導体チップ全般**に渡る。  
-特に、今後の**先端ノード半導体チップ**においては、物理制約を設計初期段階で統合的に扱う**SystemDKによる設計手法は必須**となる。
+**SystemDK（System Design Kit）**は、これを可能にする設計基盤である。  
+**SystemDK (System Design Kit)** provides the foundational design framework that makes this possible.  
+
+SystemDKの適用範囲はAITLに限らず、**半導体チップ全般**に及ぶ。  
+The application scope of SystemDK extends beyond AITL, encompassing **semiconductor chip design as a whole**.  
+
+特に、今後の**先端ノード半導体チップ**においては、物理制約を設計初期段階で統合的に扱う**SystemDKによる設計手法は必須**となる。  
+In particular, for **future advanced-node semiconductor chips**, design methodologies based on SystemDK—which integrate physical constraints at the earliest stages—will be **indispensable**.  
 
 - 高密度実装環境での熱・信号干渉の早期対策が可能  
+  *Enables early countermeasures against thermal and signal interference in high-density environments.*  
 - FEM解析を設計段階に組み込み、回路・パッケージ・基板の統合最適化を実現  
-- 長期的には設計効率・製品信頼性・量産歩留まりの向上につながる
-
----
+  *Integrates FEM analysis directly into the design phase, achieving co-optimization across circuits, packages, and substrates.*  
+- 長期的には設計効率・製品信頼性・量産歩留まりの向上につながる  
+  *Ultimately improves design efficiency, product reliability, and mass-production yield.*  
 
 ## 4.1 **技術的課題とリスク / Technical Challenges and Risks** {#risks}
 
 | 分類 / Category | 課題 / Challenge | リスク / Risk |
 |---|---|---|
-| **AI信頼性** / AI Reliability | LLM応答の精度・一貫性の保証 | 誤判断・幻覚応答による制御ミス |
-| **セキュリティ** / Security | 統合制御系のサイバー攻撃耐性 | 生産停止・安全性低下 |
-| **物理モデル融合** / Physical Model Integration | FEM等の物理制約モデルとリアルタイム制御の融合 | 設計遅延・性能劣化 |
-| **標準化とIP** / Standardization & IP | 標準化に伴う知財・ライセンス調整 | 国際競争力低下 |
+| **AI信頼性 / AI Reliability** | LLM応答の精度・一貫性の保証<br>*Ensuring accuracy and consistency of LLM responses* | 誤判断・幻覚応答による制御ミス<br>*Misjudgments or hallucinations leading to control errors* |
+| **セキュリティ / Security** | 統合制御系のサイバー攻撃耐性<br>*Cybersecurity resilience of integrated control systems* | 生産停止・安全性低下<br>*Production shutdowns, reduced safety* |
+| **物理モデル融合 / Physical Model Integration** | FEM等の物理制約モデルとリアルタイム制御の融合<br>*Integrating FEM-based physical models with real-time control* | 設計遅延・性能劣化<br>*Design delays, performance degradation* |
+| **標準化とIP / Standardization & IP** | 標準化に伴う知財・ライセンス調整<br>*Aligning intellectual property and licensing with standardization* | 国際競争力低下<br>*Loss of international competitiveness* |
 
 ---
 
