@@ -49,7 +49,7 @@ title: AITL-Strategy-Proposal
   [GitHub Pages で読む](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v4_1.html) ｜ [GitHub で開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v4_1.md)
 
 - **提言書 PDF**：  
-  [GitHub Pages でダウンロード](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf) ｜ [GitHub で開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf)
+  [GitHub Pages でダウンロード](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v4_1.pdf) ｜ [GitHub で開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/Figures/AITL_Strategy_Proposal_Draft_v4_1.pdf)
 
 > 💡 PoC具体例やSystemDK連携例などは、今後追加予定です。
 
