@@ -68,7 +68,7 @@ and enables a **next-generation control framework** with stability, flexibility,
 | **冗長性 / Redundancy** | 一部機能喪失時にも安全かつ効率的に動作継続<br>Continues safe and efficient operation even when some functions fail |
 
 ```mermaid
-flowchart LR
+flowchart TB
     A[状態フィードバック制御 / State Feedback Control] --> C[統合制御コア / Integrated Control Core]
     B[状態遷移制御 / State Transition Control] --> C
     C --> D[安定性 + 柔軟性 + 冗長性 / Stability + Flexibility + Redundancy]
