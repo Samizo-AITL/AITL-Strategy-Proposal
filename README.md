@@ -7,7 +7,8 @@ title: AITL-Strategy-Proposal
 
 # 🏛️ AITL-Strategy-Proposal
 
-[![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Samizo-AITLポータルサイトに戻る](https://img.shields.io/badge/Samizo--AITL%20ポータルサイトに戻る-brightgreen)](https://samizo-aitl.github.io/)
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)  
 
 > ⚠️ **注意 / Note:**  
 > 本提案は **v4.0 素案（Draft）** 段階であり、記載内容は検討中です。  
