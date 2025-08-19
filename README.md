@@ -84,13 +84,38 @@ title: AITL-Strategy-Proposal
 
 ---
 
-## 📄 License
-MIT License（教育・非営利での再利用／改変歓迎）  
-MIT; free to reuse & modify for education/non-profit.
+## 👤 **執筆者情報 / Author**
+
+| **📌 項目 / Item** | **内容 / Details** |
+|--------------------|--------------------|
+| **氏名 / Name** | **三溝 真一（Shinichi Samizo）**<br>*Shinichi Samizo* |
+| **学歴 / Education** | **信州大学大学院 電気電子工学 修了**<br>*M.S. in Electrical and Electronic Engineering, Shinshu University* |
+| **経歴 / Career** | **元 セイコーエプソン株式会社 技術者（1997年〜）**<br>*Former Engineer at Seiko Epson Corporation (since 1997)* |
+| **経験領域 / Expertise** | **半導体デバイス**（ロジック・メモリ・高耐圧混載）<br>*Semiconductor devices (logic, memory, high-voltage mixed integration)*<br>**インクジェット薄膜ピエゾアクチュエータ**<br>*Inkjet thin-film piezo actuators*<br>**PrecisionCoreプリントヘッド製品化・BOM管理・ISO教育**<br>*Productization of PrecisionCore printheads, BOM management, and ISO training* |
+| **連絡先 / Contact** | ✉️ [Email](mailto:shin3t72@gmail.com) / 🐦 [X](https://x.com/shin3t72) / 💻 [GitHub](https://samizo-aitl.github.io/) |
 
 ---
 
-## 👤 Author
-**Shinichi Samizo** — M.Eng., Shinshu Univ. / ex-Seiko Epson  
-Domains: Logic/Memory/HV-AMS, thin-film piezo, productization/BOM/ISO  
-📧 [Email](mailto:shin3t72@gmail.com) ｜ [X](https://x.com/shin3t72) ｜ [🌐 Website](https://samizo-aitl.github.io/)
+## 📄 **ライセンス / License**
+
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-ライセンス--license)  
+
+> **本プロジェクトはハイブリッドライセンスを採用**  
+> 教材・コード・図表の性質に応じて以下のライセンスを適用します。
+
+| **📌 項目 / Item** | **ライセンス / License** | **説明 / Description** |
+|--------------------|--------------------------|------------------------|
+| **コード（Code）** | **[MIT License](https://opensource.org/licenses/MIT)** | 自由に使用・改変・再配布可 |
+| **教材テキスト（Text materials）** | **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)** | 著者表示必須 |
+| **図表・イラスト（Figures & diagrams）** | **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)** | 非商用利用のみ可 |
+| **外部引用（External references）** | 元ライセンスに従う | 引用元を明記 |
+
+---
+
+## 💬 **フィードバック | Feedback**
+
+> 改善提案や議論は **GitHub Discussions** からお願いします。  
+> *Propose improvements or start discussions via GitHub Discussions.*
+
+[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/discussions)
+
