@@ -14,63 +14,83 @@ permalink: /en/AITL_Strategy_Proposal_Draft_v4_1_en.html
 </div>
 
 ---
+## 📑 Table of Contents {#toc}
 
-## 📑 目次 / Table of Contents {#toc}
+-   [0. Overview](#overview)\
+-   [1. Value of Feedback--Transition
+    Integration](#feedback-transition)\
+-   [2. Value of AITL with LLM](#aitl-llm-value)\
+-   [3. Real-World PoC Examples](#poc-examples)\
+-   [4. Need for SystemDK in AITL Implementation](#systemdk)\
+-   [4.1 Technical Challenges and Risks](#risks)\
+-   [5. Policy Recommendations](#policy)\
+-   [6. Conclusion](#conclusion)
 
-- [0. 概要 / Overview](#overview)
-- [1. 統合制御の価値 / Value of Feedback–Transition Integration](#feedback-transition)
-- [2. LLM融合によるAITLの価値 / Value of AITL with LLM](#aitl-llm-value)
-- [3. PoC具体例 / Real-World PoC Examples](#poc-examples)
-- [4. AITL実装とSystemDKの必要性 / Need for SystemDK in AITL Implementation](#systemdk)
-- [4.1 技術的課題とリスク / Technical Challenges and Risks](#risks)
-- [5. 政策提言 / Policy Recommendations](#policy)
-- [6. おわりに / Conclusion](#conclusion)
+------------------------------------------------------------------------
 
----
+## 0. Overview
 
-## 0. 概要 / Overview
+This proposal presents the **AITL Strategy (AI-Integrated Transition &
+Loop)**, which integrates **state feedback control** and **state
+transition control**, further enhanced by **LLMs (Large Language
+Models)** and **SystemDK (System Design Kit)**.\
+This integration enables real-time to quasi-real-time **design
+modification**, **fault-time redesign**, and **constraint-aware
+implementation**.
 
-本提案は、**状態フィードバック制御**と**状態遷移制御**を統合し、さらに**LLM（大規模言語モデル）**および**SystemDK（System Design Kit）**を組み合わせることで、リアルタイム〜準リアルタイムにおける仕様変更対応・故障時再設計・物理制約を考慮した設計を可能とする「**AITL戦略（AI-Integrated Transition & Loop）**」を提示するものである。  
+Traditionally, **control, analysis, and physical implementation** have
+been managed as **independent processes**. However, in advanced-node
+semiconductor design and next-generation autonomous systems, **operating
+them within a unified design framework has become indispensable for
+maintaining international competitiveness**. This proposal outlines a
+**practical framework** to achieve that goal.
 
-This proposal presents the **AITL Strategy (AI-Integrated Transition & Loop)**, which integrates **state feedback control** and **state transition control**, further enhanced by **LLMs (Large Language Models)** and **SystemDK (System Design Kit)**. This integration enables real-time to quasi-real-time **design modification**, **fault-time redesign**, and **constraint-aware implementation**.  
+> **==The technologies integrated in this proposal---control (state
+> feedback + state transition), design & analysis (LLMs), and physical
+> implementation optimization (SystemDK)---are complementary elements
+> that can directly share results and constraints. Together, they enable
+> a level of real-time, constraint-aware holistic optimization that
+> cannot be achieved through partial improvements alone.==**
 
-従来、制御・解析・物理実装はそれぞれ**独立したプロセス**として扱われてきた。しかし、先端ノード半導体や次世代自律システムの分野では、**これらを単一の設計基盤上で統合的に運用することが国際競争力確保の必須条件**となっている。本提案はそのための**具体的枠組み**を提示する。  
+**==Moreover, the global semiconductor and control industries are
+undergoing rapid transformation. Without integrating these three
+technologies *now*, nations risk falling fatally behind in areas such as
+EUV-generation semiconductor design and industrial autonomous
+systems.==**\
+**==In particular, SystemDK is not limited to AITL-specific
+applications---it is an essential foundation for all advanced-node
+semiconductor design.==**
 
-Traditionally, **control, analysis, and physical implementation** have been managed as **independent processes**. However, in advanced-node semiconductor design and next-generation autonomous systems, **operating them within a unified design framework has become indispensable for maintaining international competitiveness**. This proposal outlines a **practical framework** to achieve that goal.  
+------------------------------------------------------------------------
 
-> **==本提案が統合する技術群は、制御（状態フィードバック＋状態遷移）、解析・設計（LLM）、物理実装最適化（SystemDK）である。これらは成果物と制約条件を直接共有できる相補的要素であり、部分的改善では到達できない「リアルタイムかつ物理制約を考慮した統合的最適化」を実現する。==**  
->  
-> **==The technologies integrated in this proposal—control (state feedback + state transition), design & analysis (LLMs), and physical implementation optimization (SystemDK)—are complementary elements that can directly share results and constraints. Together, they enable a level of **real-time, constraint-aware holistic optimization** that cannot be achieved through partial improvements alone.==**
+## 1. Value of Integrated Feedback and Transition Control {#feedback-transition}
 
-**==さらに、世界の半導体市場と制御系産業はいま急速な変革期にあり、これら3つの技術を「今」統合しなければ、EUV世代の半導体設計や産業用自律システム制御といった分野で国家的な技術競争において致命的な遅れを招く可能性が高い。==**  
-**==特に、SystemDKはAITLの専用技術にとどまらず、あらゆる先端ノード半導体設計に不可欠な基盤である。==**  
+Integrated control resolves the limitations of conventional methods\
+(local optimization, poor tolerance to specification changes, and
+fragility under faults),\
+and enables a **next-generation control framework** with stability,
+flexibility, and redundancy.
 
-**==Moreover, the global semiconductor and control industries are undergoing rapid transformation. Without integrating these three technologies *now*, nations risk falling fatally behind in areas such as EUV-generation semiconductor design and industrial autonomous systems.==**  
-**==In particular, SystemDK is not limited to AITL-specific applications—it is an essential foundation for **all advanced-node semiconductor design**.==**
+  -----------------------------------------------------------------------
+  Item                                Effect
+  ----------------------------------- -----------------------------------
+  **Stability**                       Maintains continuous and stable
+                                      operation even across different
+                                      modes
 
----
+  **Flexibility**                     Adapts flexibly to design-time and
+                                      runtime requirement changes
 
-## 1. 状態フィードバック＋状態遷移統合制御の価値  
-**1. Value of Integrated Feedback and Transition Control**
+  **Redundancy**                      Continues safe and efficient
+                                      operation even when some functions
+                                      fail
+  -----------------------------------------------------------------------
 
-統合制御は、従来型制御の課題（局所最適化・仕様変更耐性不足・故障時脆弱性）を解消し、  
-安定性・柔軟性・冗長性を兼ね備えた次世代制御基盤を実現する。  
-
-Integrated control resolves the limitations of conventional methods  
-(local optimization, poor tolerance to specification changes, and fragility under faults),  
-and enables a **next-generation control framework** with stability, flexibility, and redundancy.  
-
-| 項目 / Item | 効果 / Effect |
-|---|---|
-| **安定性 / Stability** | 異なるモード間でも連続的で安定した動作を維持<br>Maintains continuous and stable operation even across different modes |
-| **柔軟性 / Flexibility** | 設計時点および運用中の要求変更に柔軟対応<br>Adapts flexibly to design-time and runtime requirement changes |
-| **冗長性 / Redundancy** | 一部機能喪失時にも安全かつ効率的に動作継続<br>Continues safe and efficient operation even when some functions fail |
-
-```mermaid
+``` mermaid
 flowchart TB
-    A[状態フィードバック制御 / State Feedback Control] --> C[統合制御コア / Integrated Control Core]
-    B[状態遷移制御 / State Transition Control] --> C
-    C --> D[安定性 + 柔軟性 + 冗長性 / Stability + Flexibility + Redundancy]
+    A[State Feedback Control] --> C[Integrated Control Core]
+    B[State Transition Control] --> C
+    C --> D[Stability + Flexibility + Redundancy]
 ```
 
 ---
