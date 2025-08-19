@@ -71,20 +71,11 @@ fragility under faults),\
 and enables a **next-generation control framework** with stability,
 flexibility, and redundancy.
 
-  -----------------------------------------------------------------------
-  Item                                Effect
-  ----------------------------------- -----------------------------------
-  **Stability**                       Maintains continuous and stable
-                                      operation even across different
-                                      modes
-
-  **Flexibility**                     Adapts flexibly to design-time and
-                                      runtime requirement changes
-
-  **Redundancy**                      Continues safe and efficient
-                                      operation even when some functions
-                                      fail
-  -----------------------------------------------------------------------
+| Item          | Effect |
+|---------------|--------|
+| **Stability** | Maintains continuous and stable operation even across different modes |
+| **Flexibility** | Adapts flexibly to design-time and runtime requirement changes |
+| **Redundancy** | Continues safe and efficient operation even when some functions fail |
 
 ``` mermaid
 flowchart TB
@@ -133,6 +124,8 @@ AITL creates **new value** that goes beyond conventional control and design para
 - **AITL Solution:**  
   AITL synchronizes overall fleet operations through integrated control, while LLMs optimize routing in real time based on traffic and situational analysis.
 
+---
+
 ## 4. **Need for SystemDK in AITL Implementation** {#systemdk}
 
 When implementing AITL into real systems, it is essential to incorporate **physical constraints (thermal, stress, power, EMI, etc.)** at the earliest design stage.  
@@ -149,7 +142,7 @@ In particular, for **future advanced-node semiconductor chips**, design methodol
 
 ---
 
-## 4.1 **Technical Challenges and Risks** {#risks}
+### 4.1 **Technical Challenges and Risks** {#risks}
 
 | **Category** | **Challenge** | **Risk** |
 |---|---|---|
@@ -160,9 +153,9 @@ In particular, for **future advanced-node semiconductor chips**, design methodol
 
 ---
 
-# 5. Policy Recommendations {#policy}
+## 5. Policy Recommendations {#policy}
 
-## 5.1 Expected Benefits (Model Case)
+### 5.1 Expected Benefits (Model Case)
 
 > **Assumption:** Introduction of AITL into a domestic production line, based on PoC evaluation data.
 
@@ -172,9 +165,7 @@ In particular, for **future advanced-node semiconductor chips**, design methodol
 | Line Reconfiguration | 2 days | 2h | *8× productivity improvement* |
 | Design Change Cost | 100 | 60 | *40% cost reduction* |
 
----
-
-## 5.2 Policy Roadmap
+### 5.2 Policy Roadmap
 
 ```mermaid
 timeline
@@ -188,9 +179,7 @@ timeline
 - **2027–2029:** Establishment of an international standardization working group  
 - **2029–2032:** Launch of an industrial implementation consortium  
 
----
-
-## 5.3 Academic Systematization & Human Resource Development
+### 5.3 Academic Systematization & Human Resource Development
 
 AITL and SystemDK represent an interdisciplinary domain spanning physics, control, and AI—beyond the reach of field engineers alone.  
 
@@ -233,10 +222,9 @@ flowchart TB
     style A stroke-width:2px
     style C stroke-width:2px
 ```
-
 ---
 
-# 6. Conclusion {#conclusion}
+## 6. Conclusion {#conclusion}
 
 The **AITL Strategy** integrates traditionally siloed **control technologies** and **AI-driven design**,  
 realizing a **new class of industrial systems** capable of swiftly responding to **design modifications** and **unexpected failures**.  
