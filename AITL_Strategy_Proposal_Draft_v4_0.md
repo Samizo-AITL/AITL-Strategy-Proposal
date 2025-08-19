@@ -142,6 +142,11 @@ timeline
     2029-2032 : 産業実装コンソーシアム発足 / Launch industrial implementation consortium
 ```
 
+### 5.3 学術化と人材育成 / Academic Systematization & Human Resource Development
+AITLおよびSystemDKは、物理・制御・AIを横断する学際的領域であり、現場実装者のみでの吸収は困難である。  
+従って「AITL学（仮称）」を体系化し、修士〜博士レベルでの教育カリキュラムを整備することが不可欠である。  
+この分野で育成された人材が産業界に流入することで、研究開発と実装現場の分断を解消し、持続的な国際競争力を確保できる。
+
 ---
 
 ## 6. **おわりに / Conclusion** {#conclusion}
