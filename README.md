@@ -48,12 +48,14 @@ title: AITL-Strategy-Proposal
 
 ## 📂 収録コンテンツ / Repository Contents
 
-- **提言書 本文（Markdown）**：  
-  [GitHub Pages で読む](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v4_1.html) ｜ [GitHub で開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v4_1.md)
+- **提言書 本文（Markdown）**  
+  [![Read on GitHub Pages](https://img.shields.io/badge/📖_Read-GitHub%20Pages-blue?style=for-the-badge)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v4_1.html)
+  [![View on GitHub](https://img.shields.io/badge/💻_View-GitHub-black?style=for-the-badge)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v4_1.md)
 
-- **提言書 PDF**：  
-  [GitHub Pages でダウンロード](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v4_1.pdf) ｜ [GitHub で開く](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/Figures/AITL_Strategy_Proposal_Draft_v4_1.pdf)
-
+- **提言書 PDF**  
+  [![Download PDF](https://img.shields.io/badge/⬇️_Download-PDF-red?style=for-the-badge)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v4_1.pdf)
+  [![View on GitHub](https://img.shields.io/badge/💻_View-GitHub-black?style=for-the-badge)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/Figures/AITL_Strategy_Proposal_Draft_v4_1.pdf)
+  
 > 💡 PoC具体例やSystemDK連携例などは、今後追加予定です。
 
 ---
