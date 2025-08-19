@@ -163,15 +163,14 @@ In particular, for **future advanced-node semiconductor chips**, design methodol
 
 ### 5.1 **導入効果試算 / Expected Benefits (Model Case)**
 
-> **前提条件:** 国内製造ラインにAITL導入、PoC評価データに基づく試算値
+> **前提条件:** 国内製造ラインにAITL導入、PoC評価データに基づく試算値  
+> **Assumption:** Introduction of AITL into a domestic production line, based on PoC evaluation data.
 
 | 項目 / Item | 従来型 / Conventional | AITL導入後 / With AITL | 効果 / Impact |
 |---|---|---|---|
-| 故障対応時間 / Fault Response Time | 8時間 | 30分 | ダウンタイム94%削減 |
-| 生産ライン再構成時間 / Line Reconfiguration | 2日 | 2時間 | 生産性向上8倍 |
-| 設計変更対応コスト / Design Change Cost | 100 | 60 | 40%削減 |
-
----
+| 故障対応時間 / Fault Response Time | 8時間 / 8h | 30分 / 30min | ダウンタイム94%削減<br>*94% reduction in downtime* |
+| 生産ライン再構成時間 / Line Reconfiguration | 2日 / 2 days | 2時間 / 2h | 生産性向上8倍<br>*8× productivity improvement* |
+| 設計変更対応コスト / Design Change Cost | 100 | 60 | 40%削減<br>*40% cost reduction* |
 
 ### 5.2 **政策ロードマップ / Policy Roadmap**
 
@@ -183,24 +182,35 @@ timeline
     2029-2032 : 産業実装コンソーシアム発足 / Launch industrial implementation consortium
 ```
 
----
+- **2025–2027:** 基盤研究支援の開始 / Launch of foundational R&D support programs  
+- **2027–2029:** 国際標準化ワーキンググループ設立 / Establishment of an international standardization working group  
+- **2029–2032:** 産業実装コンソーシアム発足 / Launch of an industrial implementation consortium  
 
-### 5.3 学術化と人材育成 / Academic Systematization & Human Resource Development
+### 5.3 **学術化と人材育成 / Academic Systematization & Human Resource Development**
+
 AITLおよびSystemDKは、物理・制御・AIを横断する学際的領域であり、現場実装者のみでの吸収は困難である。  
+AITL and SystemDK represent an interdisciplinary domain spanning physics, control, and AI—beyond the reach of field engineers alone.  
+
 従って「AITL学（仮称）」を体系化し、修士〜博士レベルでの教育カリキュラムを整備することが不可欠である。  
-この分野で育成された人材が産業界に流入することで、研究開発と実装現場の分断を解消し、持続的な国際競争力を確保できる。
+Therefore, it is essential to establish a systematic discipline—tentatively called *“AITL Studies”*—with dedicated Master's to Doctoral-level curricula.  
+
+この分野で育成された人材が産業界に流入することで、研究開発と実装現場の分断を解消し、持続的な国際競争力を確保できる。  
+Graduates trained in this field will flow into industry, bridging the gap between R&D and implementation, thereby ensuring sustainable international competitiveness.  
 
 さらに、**国際共同研究ネットワーク**や**産学連携拠点**を設置し、  
 学術的知見と産業界の実装要求を相互循環させる仕組みを構築すべきである。  
+Furthermore, **international joint research networks** and **industry–academia collaboration hubs** should be established to create a feedback loop between academic insights and industrial requirements.  
+
 これにより、AITL学を基盤とした教育・研究・実装が連続的に展開され、  
-持続的な人材供給と国際競争力強化につながる。
+持続的な人材供給と国際競争力強化につながる。  
+This will enable continuous education, research, and implementation grounded in AITL Studies, ensuring a sustainable talent pipeline and strengthened international competitiveness.  
 
 ```mermaid
 flowchart TB
-    A[大学院教育（修士・博士）] --> B[研究開発人材]
-    B --> C[産業界での実装・応用]
-    C --> D[政策・社会実装]
-    D --> E[国際標準化・競争力]
+    A[大学院教育（修士・博士）<br>Graduate Education (MSc/PhD)] --> B[研究開発人材<br>R&D Human Resources]
+    B --> C[産業界での実装・応用<br>Industrial Implementation & Application]
+    C --> D[政策・社会実装<br>Policy & Societal Deployment]
+    D --> E[国際標準化・競争力<br>International Standardization & Competitiveness]
     E --> A
 
     subgraph Academic
@@ -225,9 +235,7 @@ style E fill:#f0f9f0,stroke:#2e7d32,stroke-width:1px
 
 style A stroke-width:2px
 style C stroke-width:2px
-
 ```
-
 ---
 
 ## 6. **おわりに / Conclusion** {#conclusion}
