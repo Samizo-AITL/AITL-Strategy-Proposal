@@ -10,10 +10,6 @@ title: AITL-Strategy-Proposal (EN)
 [![Back to Samizo-AITL Portal](https://img.shields.io/badge/Back%20to-Samizo--AITL%20Portal-brightgreen)](https://samizo-aitl.github.io/)
 [![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-license)  
 
-> ⚠️ **Note:**  
-> This proposal is currently at the **v4.0 Draft** stage.  
-> Details of the execution plan and policy roadmap will be updated through future discussions.
-
 **National Strategy Proposal × Integrated Educational Package based on AITL**  
 **AITL (AI × Control × Physical Systems) as a framework for education and national-level deployment**
 
