@@ -1,23 +1,24 @@
 ---
 layout: aitl
-title: AITL-Strategy-Proposal
+title: AITL-Strategy-Proposal (EN)
 ---
 
 ---
 
 # 🏛️ AITL-Strategy-Proposal
 
-[![Back to Samizo-AITL Portal](https://img.shields.io/badge/Back%20to%20Samizo--AITL%20Portal-brightgreen)](https://samizo-aitl.github.io/) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Back to Samizo-AITL Portal](https://img.shields.io/badge/Back%20to-Samizo--AITL%20Portal-brightgreen)](https://samizo-aitl.github.io/)
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-license)  
 
 > ⚠️ **Note:**  
-> This proposal is currently at the **v4.0 draft** stage, and its contents are under review.  
-> The detailed execution plan and policy roadmap will be updated based on future discussions.
+> This proposal is currently at the **v4.0 Draft** stage.  
+> Details of the execution plan and policy roadmap will be updated through future discussions.
 
-**National Strategy Proposal × Integrated Educational Package via AITL**  
-**National Strategy & Educational Framework Based on AITL (AI × Control × Physical Systems)**
+**National Strategy Proposal × Integrated Educational Package based on AITL**  
+**AITL (AI × Control × Physical Systems) as a framework for education and national-level deployment**
 
-[📄 Read the Proposal (MD)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v4_0.html)  
-[⬇️ Download PDF](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf)
+[📄 Read the Proposal (MD)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/AITL_Strategy_Proposal_Draft_v4_0.html)  
+[⬇️ Download PDF](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf)
 
 ---
 
@@ -31,14 +32,15 @@ title: AITL-Strategy-Proposal
 ---
 
 ## 🧭 Overview
-**EN:** This repository presents a **national-level architecture proposal** based on AITL, along with a **validated integrated package** centered on Edusemi, expanded to cover control systems (AITL-H) and intelligent integration for deployable PoC models.
+This repository presents a **national-level architecture proposal** based on AITL (All-in-Theory Logic),  
+together with a **validated integrated package** centered on Edusemi, extended with control (AITL-H) and intelligent integration for deployable PoC models.
 
 ---
 
 ## 🧠 What is AITL?
 - **Logic Layer** — AI inference, anomaly detection, hypothesis generation  
-- **Control Layer** — Explainable control integrating **PID / FSM**  
-- **Physical Layer** — Sensors, actuators, and real-world constraints
+- **Control Layer** — Explainable control with **PID / FSM** integration  
+- **Physical Layer** — Sensors, actuators, real-world constraints
 
 🎯 **Goal:** Real-time or quasi-real-time design, fault-time redesign, and physical constraint-aware SoC integration.
 
@@ -46,50 +48,73 @@ title: AITL-Strategy-Proposal
 
 ## 📂 Repository Contents
 
-- **Proposal (Markdown):**  
-  [Read on GitHub Pages](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v4_0.html) ｜ [View on GitHub](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v4_0.md)
+- **Proposal Document (Markdown):**  
+  [Read on GitHub Pages](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/AITL_Strategy_Proposal_Draft_v4_0.html) ｜ [Open on GitHub](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/en/AITL_Strategy_Proposal_Draft_v4_0.md)
 
-- **Proposal (PDF):**  
-  [Download from GitHub Pages](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf) ｜ [View on GitHub](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf)
+- **Proposal Document (PDF):**  
+  [Download from GitHub Pages](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf) ｜ [Open on GitHub](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/en/Figures/AITL_Strategy_Proposal_Draft_v4_0.pdf)
 
-> 💡 PoC examples and SystemDK integration cases will be added in future updates.
+> 💡 Examples of PoC and SystemDK collaboration will be added in future updates.
 
 ---
 
 ## 🔗 Linked Projects
 
-- **Edusemi-v4x (Foundational Materials)**  
+- **Edusemi-v4x (Basic materials)**  
   [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x)
 
-- **Edusemi-Plus (Applied Materials)**  
+- **Edusemi-Plus (Applied materials)**  
   [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-Plus/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-Plus)
 
-- **EduController (Control Systems Materials)**  
+- **EduController (Control education)**  
   [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController)
 
-- **AITL-H (FSM × PID × LLM Integration)**  
+- **AITL-H (FSM × PID × LLM integration)**  
   [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H)
 
-- **SamizoGPT (Prompt & GUI Support)**  
+- **SamizoGPT (Prompt & GUI support)**  
   [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/SamizoGPT/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/SamizoGPT)
 
 ---
 
 ## ✍️ How to Use
 1. Read the proposal → **Draft v4.0 (MD/PDF)**  
-2. Design PoC → Implement integrated control using **AITL-H / EduController** templates  
-3. Field Verification → Evaluate using **PoC implementation models**  
-4. Collaboration → Promote through **regional cooperation** with technical colleges, universities, and companies
+2. Design PoC → Implement with **AITL-H / EduController** templates  
+3. Field verification → Evaluate using **PoC implementation models**  
+4. Collaboration → Promote through **regional cooperation** with colleges, universities, and companies
+
+---
+
+## 👤 Author Information
+
+| **📌 Item** | **Details** |
+|-------------|-------------|
+| **Name** | **Shinichi Samizo** (*三溝 真一*) |
+| **Education** | M.S. in Electrical and Electronic Engineering, Shinshu University |
+| **Career** | Former Engineer at Seiko Epson Corporation (since 1997) |
+| **Expertise** | Semiconductor devices (logic, memory, high-voltage mixed integration)<br>Inkjet thin-film piezo actuators<br>Productization of PrecisionCore printheads, BOM management, and ISO training |
+| **Contact** | ✉️ [Email](mailto:shin3t72@gmail.com) / 🐦 [X](https://x.com/shin3t72) / 💻 [GitHub](https://samizo-aitl.github.io/) |
 
 ---
 
 ## 📄 License
-MIT License — Free to reuse & modify for educational and non-profit purposes.
+
+[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-license)  
+
+> **This project adopts a hybrid license.**  
+> Different licenses are applied depending on the nature of the material.
+
+| **📌 Item** | **License** | **Description** |
+|-------------|-------------|-----------------|
+| **Code** | **[MIT License](https://opensource.org/licenses/MIT)** | Free use, modification, and redistribution |
+| **Text materials** | **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)** | Attribution required |
+| **Figures & diagrams** | **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)** | Non-commercial use only |
+| **External references** | Follows original license | Must cite the source |
 
 ---
 
-## 👤 Author
-**Shinichi Samizo** — M.Eng., Shinshu Univ. / ex-Seiko Epson  
-Domains: Logic/Memory/HV-AMS, thin-film piezo, productization/BOM/ISO  
-📧 [Email](mailto:shin3t72@gmail.com) ｜ [X](https://x.com/shin3t72) ｜ [🌐 Website](https://samizo-aitl.github.io/)
+## 💬 Feedback
 
+> Propose improvements or start discussions via **GitHub Discussions**.
+
+[![💬 GitHub Discussions](https://img.shields.io/badge/💬%20GitHub-Discussions-brightgreen?logo=github)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/discussions)
