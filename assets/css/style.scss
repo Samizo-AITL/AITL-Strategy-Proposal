@@ -2,13 +2,21 @@
 ---
 
 /* =========================================================
-   AITL Strategy Proposal – Minimal Theme Extension (v3+修正版)
-   - Screen: readable, mild accent
-   - Print(PDF): compact, ink-friendly, no bg fills
+   AITL Strategy Proposal – Minimal Theme Extension (fixed)
+   - Screen: unified font (system-ui + Noto Sans JP)
+   - Print(PDF): same family, compact, ink-friendly
    ========================================================= */
 
 /* Minima 継承（SCSSビルド前提） */
 @import "minima";
+
+/* ====== 共通フォントスタック ====== */
+$base-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI",
+  "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro",
+  "Yu Gothic UI", "Yu Gothic", "Meiryo", "Helvetica Neue", Arial, sans-serif;
+
+$mono-font-stack: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
 
 /* ========== Base & Color System ========== */
 :root{
@@ -36,7 +44,17 @@
 /* 全体 */
 .site-header,.site-footer{ display:none !important; }
 .page-content{ padding-top:.5rem; }
-body{ color:var(--text-base); }
+
+/* ★ 画面用：本文と Markdown 領域のフォントを統一 */
+body, .markdown-body{
+  font-family: $base-font-stack;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 16px;
+  color: var(--text-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 /* ========== Headings (Screen) ========== */
 h1,h2,h3{
@@ -44,7 +62,7 @@ h1,h2,h3{
   padding-left:10px;
   background:var(--aitl-light);
   color:var(--aitl-blue);
-  font-weight:700;
+  font-weight:700;           /* フォントは body を継承 */
   margin-top:1rem;
   line-height:1.25;
 }
@@ -62,9 +80,7 @@ a[href^="http"]{ word-break:break-word; }
 /* ========== Media (images/figures) ========== */
 img{ max-width:100%; height:auto; }
 figure{ margin:1rem 0; }
-figcaption{
-  font-size:.9rem; color:#6b7280; margin-top:.25rem;
-}
+figcaption{ font-size:.9rem; color:#6b7280; margin-top:.25rem; }
 
 /* ========== Tables ========== */
 .table-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
@@ -83,7 +99,7 @@ tbody tr:nth-child(even){ background:#f4f8fe; }
 code, pre code{
   background:var(--code-bg);
   border-radius:6px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-family: $mono-font-stack;
   font-size:.95em;
 }
 code{ padding:2px 6px; }
@@ -124,19 +140,19 @@ pre code{ display:block; padding:0; background:transparent; }
 
 /* ========== Utilities ========== */
 .nowrap{ white-space:nowrap; }
-.mono  { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+.mono  { font-family: $mono-font-stack; }
 .small { font-size:.9em; }
 .muted { color:#6b7280; }
 .compact-list>li{ margin:.15rem 0; }
 
 /* =========================================================
-   Print / PDF 専用の最適化
+   Print / PDF 専用の最適化（フォント統一）
    ========================================================= */
 @media print{
   @page{ size: A4; margin: 14mm 14mm 16mm 14mm; }
 
   body{
-    font-family:"Noto Sans","Noto Sans CJK JP",sans-serif;
+    font-family: $base-font-stack;     /* 画面と同じ系列に統一 */
     font-size: 11.2pt; line-height: 1.45; color:#111;
   }
 
@@ -173,14 +189,12 @@ table.border-table {
   margin: 0.8rem 0;
   table-layout: auto;
 }
-
 table.border-table th,
 table.border-table td {
   border: 1px solid rgba(0, 91, 172, .65);
   padding: 8px 10px;
   vertical-align: top;
 }
-
 table.border-table th {
   background: var(--aitl-light, #e6f0fa);
   color: var(--text-strong, #0f172a);
