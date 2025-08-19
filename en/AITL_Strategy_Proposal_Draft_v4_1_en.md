@@ -26,7 +26,7 @@ permalink: /en/AITL_Strategy_Proposal_Draft_v4_1_en.html
 -   [5. Policy Recommendations](#policy)\
 -   [6. Conclusion](#conclusion)
 
-------------------------------------------------------------------------
+---
 
 ## 0. Overview
 
@@ -61,7 +61,7 @@ systems.==**\
 applications---it is an essential foundation for all advanced-node
 semiconductor design.==**
 
-------------------------------------------------------------------------
+---
 
 ## 1. Value of Integrated Feedback and Transition Control {#feedback-transition}
 
