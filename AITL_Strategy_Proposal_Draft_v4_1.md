@@ -227,14 +227,14 @@ flowchart TB
       E
     end
 
-style A fill:#eef5fb,stroke:#0b3d75,stroke-width:1px
-style B fill:#eef5fb,stroke:#0b3d75,stroke-width:1px
-style C fill:#f9f2ec,stroke:#a65e2e,stroke-width:1px
-style D fill:#f9f2ec,stroke:#a65e2e,stroke-width:1px
-style E fill:#f0f9f0,stroke:#2e7d32,stroke-width:1px
+    style A fill:#eef5fb,stroke:#0b3d75,stroke-width:1px
+    style B fill:#eef5fb,stroke:#0b3d75,stroke-width:1px
+    style C fill:#f9f2ec,stroke:#a65e2e,stroke-width:1px
+    style D fill:#f9f2ec,stroke:#a65e2e,stroke-width:1px
+    style E fill:#f0f9f0,stroke:#2e7d32,stroke-width:1px
 
-style A stroke-width:2px
-style C stroke-width:2px
+    style A stroke-width:2px
+    style C stroke-width:2px
 ```
 ---
 
