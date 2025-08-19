@@ -159,14 +159,17 @@ flowchart LR
     C --> D[政策・社会実装]
     D --> E[国際標準化・競争力]
     E --> A
+
     subgraph Academic
       A
       B
     end
+
     subgraph Industrial
       C
       D
     end
+
     subgraph Global
       E
     end
