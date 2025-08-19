@@ -9,10 +9,6 @@ permalink: /AITL_Strategy_Proposal_Draft_v4_0.html
 # 🇯🇵 **AITL戦略提言書 v4.1 完成版**  
 # 🇺🇸 **AITL Strategy Proposal v4.1 Final Edition** {#top}
 
-> ⚠️ **注意 / Note:**  
-> 本提案は **v4.1 改訂版（政策寄り・改善版）** であり、記載内容は検討中です。  
-> 詳細な実行計画・政策ロードマップは今後の議論を踏まえて更新されます。
-
 <div class="btn-row">
   <a class="btn" href="#overview">📎 Jump to Overview</a>
   <a class="btn" href="./Figures/AITL_Strategy_Proposal_Draft_v4_1_Improved.pdf">⬇️ Download PDF</a>
