@@ -207,24 +207,24 @@ This will enable continuous education, research, and implementation grounded in 
 
 ```mermaid
 flowchart TB
-    A["大学院教育（修士・博士） Graduate Education (MSc/PhD)"] --> B["研究開発人材 R&D Human Resources"]
-    B --> C["産業界での実装・応用 Industrial Implementation & Application"]
-    C --> D["政策・社会実装 Policy & Societal Deployment"]
-    D --> E["国際標準化・競争力 International Standardization & Competitiveness"]
+    A["大学院教育（修士・博士）<br/>Graduate Education (MSc/PhD)"] --> B["研究開発人材<br/>R&D Human Resources"]
+    B --> C["産業界での実装・応用<br/>Industrial Implementation & Application"]
+    C --> D["政策・社会実装<br/>Policy & Societal Deployment"]
+    D --> E["国際標準化・競争力<br/>International Standardization & Competitiveness"]
     E --> A
 
     subgraph Academic
-      A
-      B
+        A
+        B
     end
 
     subgraph Industrial
-      C
-      D
+        C
+        D
     end
 
     subgraph Global
-      E
+        E
     end
 
     style A fill:#eef5fb,stroke:#0b3d75,stroke-width:1px
