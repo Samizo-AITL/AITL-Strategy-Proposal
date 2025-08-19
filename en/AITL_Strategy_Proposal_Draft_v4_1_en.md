@@ -30,36 +30,35 @@ permalink: /en/AITL_Strategy_Proposal_Draft_v4_1_en.html
 
 ## 0. Overview
 
-This proposal presents the **AITL Strategy (AI-Integrated Transition &
-Loop)**, which integrates **state feedback control** and **state
-transition control**, further enhanced by **LLMs (Large Language
-Models)** and **SystemDK (System Design Kit)**.\
-This integration enables real-time to quasi-real-time **design
-modification**, **fault-time redesign**, and **constraint-aware
-implementation**.
+This proposal presents the **AITL Strategy (AI-Integrated Transition & Loop)**,  
+which integrates **state feedback control** and **state transition control**,  
+further enhanced by **LLMs (Large Language Models)** and **SystemDK (System Design Kit)**.  
+This integration enables real-time to quasi-real-time **design modification**,  
+**fault-time redesign**, and **constraint-aware implementation**.
 
-Traditionally, **control, analysis, and physical implementation** have
-been managed as **independent processes**. However, in advanced-node
-semiconductor design and next-generation autonomous systems, **operating
-them within a unified design framework has become indispensable for
-maintaining international competitiveness**. This proposal outlines a
-**practical framework** to achieve that goal.
+Traditionally, **control, analysis, and physical implementation** have been managed as **independent processes**.  
+However, in advanced-node semiconductor design and next-generation autonomous systems,  
+**operating them within a unified design framework has become indispensable for maintaining international competitiveness**.  
+This proposal outlines a **practical framework** to achieve that goal.
 
-> **==The technologies integrated in this proposal---control (state
-> feedback + state transition), design & analysis (LLMs), and physical
-> implementation optimization (SystemDK)---are complementary elements
-> that can directly share results and constraints. Together, they enable
-> a level of real-time, constraint-aware holistic optimization that
-> cannot be achieved through partial improvements alone.==**
+> ### Integrated Technologies  
+> The technologies integrated in this proposal—  
+> - **control (state feedback + state transition)**  
+> - **design & analysis (LLMs)**  
+> - **physical implementation optimization (SystemDK)**  
+>   
+> are complementary elements that can directly share results and constraints.  
+> Together, they enable a level of **real-time, constraint-aware holistic optimization**  
+> that cannot be achieved through partial improvements alone.
 
-**==Moreover, the global semiconductor and control industries are
-undergoing rapid transformation. Without integrating these three
-technologies *now*, nations risk falling fatally behind in areas such as
-EUV-generation semiconductor design and industrial autonomous
-systems.==**\
-**==In particular, SystemDK is not limited to AITL-specific
-applications---it is an essential foundation for all advanced-node
-semiconductor design.==**
+### Urgency & Strategic Impact
+
+Moreover, the global semiconductor and control industries are undergoing rapid transformation.  
+Without integrating these three technologies *now*, nations risk falling fatally behind in areas such as  
+**EUV-generation semiconductor design** and **industrial autonomous systems**.  
+
+In particular, **SystemDK is not limited to AITL-specific applications—  
+it is an essential foundation for all advanced-node semiconductor design**.
 
 ---
 
