@@ -78,15 +78,21 @@ flowchart TB
 
 ## 2. **LLM融合によるAITLの価値 / Value of AITL with LLM** {#aitl-llm-value}
 
-AITLは**統合制御**に**LLM（大規模言語モデル）**を加えることで、新しい価値を創出する。
+AITLは**統合制御**に**LLM（大規模言語モデル）**を加えることで、  
+従来の制御・設計の枠を超えた新しい価値を創出する。  
+
+By incorporating **LLMs (Large Language Models)** into **integrated control**,  
+AITL creates **new value** that goes beyond conventional control and design paradigms.  
+
+---
 
 | LLM活用領域 / LLM Role | 新しい価値 / New Value |
 |---|---|
-| **状況解析** / Situation Analysis | ログやセンサーデータから異常検知・原因推定を自動化 |
-| **準リアルタイム設計** / Quasi-Real-Time Design | 数分単位で仕様変更に対応し、制御アルゴリズムやFSM構造を再設計 |
-| **統合アーキ設計** / Integrated Architecture Design | 仕様書から直接、統合制御を含む全体設計図を生成 |
-| **故障時再設計** / Fault-Time Redesign | 残存機能を活用した動作モード再構築 |
-| **SystemDK連携** / SystemDK Collaboration | 物理制約・ノード特性を設計段階から反映し、最適な実装形態を選択 |
+| **状況解析 / Situation Analysis** | ログやセンサーデータから異常検知・原因推定を自動化<br>Automates anomaly detection and root-cause estimation from logs and sensor data |
+| **準リアルタイム設計 / Quasi-Real-Time Design** | 数分単位で仕様変更に対応し、制御アルゴリズムやFSM構造を再設計<br>Adapts to specification changes within minutes, redesigning control algorithms and FSM structures |
+| **統合アーキ設計 / Integrated Architecture Design** | 仕様書から直接、統合制御を含む全体設計図を生成<br>Generates complete system architectures, including integrated control, directly from specifications |
+| **故障時再設計 / Fault-Time Redesign** | 残存機能を活用して動作モードを再構築<br>Reconstructs operation modes by leveraging remaining functional modules during faults |
+| **SystemDK連携 / SystemDK Collaboration** | 物理制約・ノード特性を設計初期から反映し、最適な実装形態を選択<br>Integrates physical constraints and node characteristics from the early design stage to select the optimal implementation form |
 
 ---
 
