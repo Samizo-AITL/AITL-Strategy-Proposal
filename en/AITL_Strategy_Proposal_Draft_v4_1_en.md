@@ -221,6 +221,186 @@ flowchart TB
     style A stroke-width:2px
     style C stroke-width:2px
 ```
+### 5.4 **AITL Industrialization Model: Samizo-AITL Design Company** {#aitl-industry-model}
+
+This section presents the concept of a small-scale entity, **“Samizo-AITL Design Company”**,  
+as a **model case to connect the AITL strategy to real industrial implementation**.  
+
+This model is based on **EDA / MATLAB-Simulink / SystemDK evaluation equipment**,  
+and demonstrates a **roadmap starting with minimal personnel and funding, aiming for M&A in 5–7 years**.  
+
+---
+
+#### 🧑‍🤝‍🧑 **Team Composition**
+- **Minimum Setup (PoC Stage):** 3–4 members  
+  - System Architect & Leader  
+  - EDA Circuit Design Engineer  
+  - Control & Simulink Engineer  
+  - Test & Evaluation Engineer (dual role possible)  
+- **Expanded Setup (Productization Stage):** 5–7 members  
+  - Add FEM/Physics Analysis, Quality Assurance, and Training  
+
+---
+
+#### 💰 **Investment Scale**
+- **Initial Investment (PoC Lab Setup):** ~¥15M  
+  - Equipment (EDA, MATLAB, SystemDK, measurement): ¥3–7M  
+  - Office setup: ¥1–1.5M  
+  - Personnel (3 members × 6 months): ~¥10M  
+- **Small Startup Stage:** ¥22–25M  
+- **Productization & Mass Production Prep:** ¥30M+  
+
+---
+
+#### 🏦 **Support Schemes**
+- **Public Grants** (NEDO, “Monozukuri” subsidies): Covers 1/3–1/2 of initial investment  
+- **Local Incubation**: Halves office costs  
+- **VC & CVC Investment**: Several hundred million yen in 2–4 years  
+- **Intl. Research Hubs**: Parallel education & talent development  
+
+---
+
+#### ⏳ **M&A Roadmap**
+
+| Phase | Years | Status | M&A Potential |
+|-------|-------|--------|---------------|
+| PoC & Proof | 0–2 yrs | Tech demo & early customers | Low |
+| Productization | 2–4 yrs | ARR ¥100–300M, early customers | Medium (Acquihire possible) |
+| Growth | 4–7 yrs | ARR ¥500M–1B, intl expansion | High (Strategic M&A target) |
+| Exit | 7–10 yrs | IPO or large-scale M&A | Clear Exit Window |
+
+---
+
+#### ✅ **Policy Significance**
+By integrating this industrialization model into the policy proposal, the following benefits are expected:  
+- **Clear quantitative model** → clarifies feasibility  
+- **Startable with small-scale investment** → attractive as a national project  
+- **M&A & Exit scenarios** → encourages private investment  
+
+---
+
+#### 5.4.1 **Implementation Roadmap**
+```mermaid
+timeline
+    title Samizo-AITL Design Company – Roadmap to M&A (5–7 yrs)
+    0–6mo : Launch PoC lab
+          : Fix test jigs & HIL
+    6–18mo: Early customer PoCs
+          : Mini productization study
+    18–36mo: Ship v1 (small lot)
+           : ARR ¥100–300M
+           : Raise Series A (¥100–300M)
+    36–60mo: Portfolio expansion
+           : Intl PoCs & channels
+           : ARR ¥500M–1B
+    60–84mo: Strategic M&A talks
+           : or Series B & Joint Ventures
+```
+
+---
+
+#### 5.4.2 **Org Scaling Model**
+```mermaid
+flowchart TB
+    subgraph Phase0["0–6mo: PoC Lab (3–4 ppl)"]
+        A1["System Architect/PM"]
+        A2["EDA Engineer"]
+        A3["Control/Simulink"]
+        A4["Test/Eval (Dual role)"]
+    end
+
+    subgraph Phase1["6–24mo: Early Product (5–7 ppl)"]
+        B1["System Architect/PM"]
+        B2["EDA/PCB + SI/PI"]
+        B3["Control/Simulink + Codegen"]
+        B4["Test/Eval Lead + Automation"]
+        B5["QA/Docs (0.5–1)"]
+        B6["FEM/Physics (optional)"]
+    end
+
+    subgraph Phase2["24–60mo: Growth (8–12 ppl)"]
+        C1["Product Manager"]
+        C2["EDA Lead + PDN"]
+        C3["Control Lead + Toolchain"]
+        C4["Test Automation + Data"]
+        C5["QA/Compliance"]
+        C6["FEM/EMI/THERM"]
+        C7["BizDev/Channel"]
+        C8["Procurement/Ops"]
+    end
+
+    Phase0 --> Phase1 --> Phase2
+```
+
+---
+
+#### 5.4.3 **Funding Plan**
+```mermaid
+gantt
+    title Funding & Spend Plan (0–12 months)
+    dateFormat  YYYY-MM
+
+    section Funding
+    Self funding & grants                        :done, f1a, 2025-09, 6mo
+
+    section Major Spend
+    Personnel (part 1)                           :crit, s1a, 2025-09, 12mo
+    Equipment (EDA/MATLAB/SystemDK)              :s2a, 2025-09, 12mo
+    Measurement Equipment                        :s3a, 2025-10, 10mo
+    Office & Infra (part 1)                      :s4a, 2025-09, 12mo
+
+    section Revenue
+    PoC Sales (start)                            :r1a, 2026-01, 8mo
+
+    section Spacer
+    Spacer (dummy)                               :spA, 2027-03, 6mo
+```
+
+```mermaid
+gantt
+    title Funding & Spend Plan (12–24 months)
+    dateFormat  YYYY-MM
+
+    section Funding
+    Series A Prep (milestone)                    :milestone, m1b, 2027-01, 1d
+    Series A (front)                             :active, f2b, 2027-03, 6mo
+
+    section Major Spend
+    Personnel (part 2)                           :crit, s1b, 2026-09, 12mo
+    Office & Infra (part 2)                      :s4b, 2026-09, 12mo
+    Certification & QA (front)                   :s5b, 2026-10, 10mo
+
+    section Revenue
+    PoC Sales (cont.)                            :r1b, 2026-09, 6mo
+    V1 Product Sales (start)                     :crit, r2b, 2027-04, 5mo
+
+    section Spacer
+    Spacer (dummy)                               :spB, 2028-01, 6mo
+```
+
+```mermaid
+gantt
+    title Funding & Spend Plan (24–36 months)
+    dateFormat  YYYY-MM
+
+    section Funding
+    Series A (back)                              :active, f2c, 2027-09, 10mo
+
+    section Major Spend
+    Personnel (part 3)                           :crit, s1c, 2027-09, 12mo
+    Office & Infra (part 3)                      :s4c, 2027-09, 12mo
+    Certification & QA (back)                    :s5c, 2027-10, 5mo
+
+    section Revenue (Domestic)
+    V1 Product Sales (cont.)                     :crit, r2c, 2027-03, 12mo
+
+    section Revenue (Intl)
+    Intl. Sales Expansion                        :r3c, 2028-05, 5mo
+
+    section Spacer
+    Spacer (dummy)                               :spC, 2029-06, 6mo
+```
+
 ---
 
 ## 6. Conclusion {#conclusion}
