@@ -358,7 +358,7 @@ flowchart LR
         B2["EDA/PCB + SI/PI"]
         B3["Control/Simulink + Codegen"]
         B4["Test/Eval Lead + Automation"]
-        B5["QA/Docs (0.5–1)"]   %% ← 修正済み
+        B5["QA/Docs (0.5–1)"]
         B6["FEM/Physics (opt.)"]
     end
 
