@@ -379,42 +379,56 @@ flowchart TB
 #### 5.4.3 **資金計画 / Funding Plan**
 ```mermaid
 gantt
-    title Funding & Spend Plan (0–18 months)
+    title Funding & Spend Plan (0–12 months)
     dateFormat  YYYY-MM
 
     section 資金調達 / Funding
-    自己資金・補助金 / Self funding & grants        :done, f1, 2025-09, 6mo
-    シリーズA開始マイルストーン / Series A Kickoff :milestone, m1, 2027-01, 1d
+    自己資金・補助金 / Self funding & grants        :done, f1a, 2025-09, 6mo
 
     section 主な支出 / Major Spend
-    人件費 (3→7名・前半) / Personnel (front half)   :crit, s1a, 2025-09, 18mo
-    装置投資 / Equipment (EDA/MATLAB/SystemDK)      :s2, 2025-09, 12mo
-    測定器&評価 / Measurement Equipment             :s3, 2025-10, 10mo
-    事務所・インフラ / Office & Infra               :s4a, 2025-09, 18mo
-    認証/QA（前半） / Certification & QA (front)     :s5a, 2026-10, 5mo
+    人件費 / Personnel (part 1)                     :crit, s1a, 2025-09, 12mo
+    装置投資 / Equipment (EDA/MATLAB/SystemDK)      :s2a, 2025-09, 12mo
+    測定器&評価 / Measurement Equipment             :s3a, 2025-10, 10mo
+    事務所・インフラ / Office & Infra               :s4a, 2025-09, 12mo
 
     section 収益化 / Revenue
-    PoC売上（前半） / PoC Sales (front)              :r1a, 2026-01, 14mo
+    PoC売上 / PoC Sales (start)                     :r1a, 2026-01, 8mo
 ```
 ```mermaid
 gantt
-    title Funding & Spend Plan (18–36 months)
+    title Funding & Spend Plan (12–24 months)
     dateFormat  YYYY-MM
 
     section 資金調達 / Funding
-    VC/CVC シリーズA / VC/CVC Series A              :active, f2, 2027-03, 16mo
+    シリーズA準備マイルストーン / Series A Prep     :milestone, m1b, 2027-01, 1d
+    VC/CVC シリーズA (前半) / Series A (front)       :active, f2b, 2027-03, 6mo
 
     section 主な支出 / Major Spend
-    人件費（後半） / Personnel (back half)          :crit, s1b, 2027-03, 18mo
-    事務所・インフラ（後半） / Office & Infra (back) :s4b, 2027-03, 18mo
-    認証/QA（後半） / Certification & QA (back)      :s5b, 2027-03, 15mo
+    人件費 / Personnel (part 2)                     :crit, s1b, 2026-09, 12mo
+    事務所・インフラ / Office & Infra (part 2)      :s4b, 2026-09, 12mo
+    認証/QA（前半） / Certification & QA (front)     :s5b, 2026-10, 10mo
 
     section 収益化 / Revenue
-    PoC売上（後半） / PoC Sales (back)               :r1b, 2027-03, 6mo
-    v1製品売上 / v1 Product Sales                    :crit, r2, 2027-04, 12mo
-    海外売上拡大 / Intl. Sales Expansion             :r3, 2028-04, 5mo
+    PoC売上（後半） / PoC Sales (cont.)              :r1b, 2026-09, 6mo
+    v1製品売上（開始） / v1 Product Sales (start)    :crit, r2b, 2027-04, 5mo
 ```
+```mermaid
+gantt
+    title Funding & Spend Plan (24–36 months)
+    dateFormat  YYYY-MM
 
+    section 資金調達 / Funding
+    VC/CVC シリーズA (後半) / Series A (back)        :active, f2c, 2027-09, 10mo
+
+    section 主な支出 / Major Spend
+    人件費 / Personnel (part 3)                     :crit, s1c, 2027-09, 12mo
+    事務所・インフラ / Office & Infra (part 3)      :s4c, 2027-09, 12mo
+    認証/QA（後半） / Certification & QA (back)      :s5c, 2027-10, 5mo
+
+    section 収益化 / Revenue
+    v1製品売上（継続） / v1 Product Sales (cont.)    :crit, r2c, 2027-09, 7mo
+    海外売上拡大 / Intl. Sales Expansion             :r3c, 2028-04, 5mo
+```
 ---
 
 ## 6. **おわりに / Conclusion** {#conclusion}
