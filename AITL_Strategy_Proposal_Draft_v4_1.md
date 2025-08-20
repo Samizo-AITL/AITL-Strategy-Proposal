@@ -347,30 +347,30 @@ timeline
 ```mermaid
 flowchart LR
     subgraph Phase0["0–6mo: PoC Lab (3–4 ppl)"]
-        A1[System Architect/PM]
-        A2[EDA Engineer]
-        A3[Control/Simulink]
-        A4[(Test/Eval -兼務- / Dual role)]
+        A1["System Architect/PM"]
+        A2["EDA Engineer"]
+        A3["Control/Simulink"]
+        A4["Test/Eval (兼務 / Dual role)"]
     end
 
     subgraph Phase1["6–24mo: Early Product (5–7 ppl)"]
-        B1[System Architect/PM]
-        B2[EDA/PCB + SI/PI]
-        B3[Control/Simulink + Codegen]
-        B4[Test/Eval Lead + Automation]
-        B5[QA/Docs (0.5–1)]
-        B6[FEM/Physics (opt.)]
+        B1["System Architect/PM"]
+        B2["EDA/PCB + SI/PI"]
+        B3["Control/Simulink + Codegen"]
+        B4["Test/Eval Lead + Automation"]
+        B5["QA/Docs (0.5–1)"]   %% ← 修正済み
+        B6["FEM/Physics (opt.)"]
     end
 
     subgraph Phase2["24–60mo: Growth (8–12 ppl)"]
-        C1[Product Manager]
-        C2[EDA Lead + PDN]
-        C3[Control Lead + Toolchain]
-        C4[Test Automation + Data]
-        C5[QA/Compliance]
-        C6[FEM/EMI/THERM]
-        C7[BizDev/Channel]
-        C8[Procurement/Ops]
+        C1["Product Manager"]
+        C2["EDA Lead + PDN"]
+        C3["Control Lead + Toolchain"]
+        C4["Test Automation + Data"]
+        C5["QA/Compliance"]
+        C6["FEM/EMI/THERM"]
+        C7["BizDev/Channel"]
+        C8["Procurement/Ops"]
     end
 
     Phase0 --> Phase1 --> Phase2
