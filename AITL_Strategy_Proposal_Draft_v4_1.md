@@ -379,25 +379,6 @@ flowchart TB
 #### 5.4.3 **資金計画 / Funding Plan**
 ```mermaid
 gantt
-    title Funding & Spend Plan (36 months)
-    dateFormat  YYYY-MM
-    section 資金調達 / Funding
-    自己資金・補助金(¥15–20M) / Self funding & grants     :done, f1, 2025-09, 6mo
-    VC/CVC シリーズA(¥100–300M) / VC/CVC Series A          :active, f2, 2027-01, 18mo
-
-    section 主な支出 / Major Spend
-    人件費 / Personnel (3→7 ppl)       :crit, s1, 2025-09, 36mo
-    装置投資 / Equipment (EDA/MATLAB/SystemDK) :s2, 2025-09, 12mo
-    測定器&評価 / Measurement Equip.   :s3, 2025-10, 10mo
-    事務所・インフラ / Office & Infra  :s4, 2025-09, 36mo
-    認証/QA / Certification & QA        :s5, 2026-10, 20mo
-
-    section 収益化 / Revenue
-    PoC売上 / PoC Sales                 :r1, 2026-01, 18mo
-    v1製品売上 / v1 Product Sales       :crit, r2, 2027-04, 12mo
-    海外売上 / Intl. Sales Expansion    :r3, 2028-04, 12mo
-
-gantt
     title Funding & Spend Plan (0–18 months)
     dateFormat  YYYY-MM
 
@@ -414,7 +395,8 @@ gantt
 
     section 収益化 / Revenue
     PoC売上（前半） / PoC Sales (front)              :r1a, 2026-01, 14mo
-
+```
+```mermaid
 gantt
     title Funding & Spend Plan (18–36 months)
     dateFormat  YYYY-MM
@@ -431,9 +413,6 @@ gantt
     PoC売上（後半） / PoC Sales (back)               :r1b, 2027-03, 6mo
     v1製品売上 / v1 Product Sales                    :crit, r2, 2027-04, 12mo
     海外売上拡大 / Intl. Sales Expansion             :r3, 2028-04, 5mo
-
-
-
 ```
 
 ---
