@@ -393,6 +393,9 @@ gantt
 
     section 収益化 / Revenue
     PoC売上 / PoC Sales (start)                     :r1a, 2026-01, 8mo
+
+    section ダミー / Spacer
+    _余白 / Spacer (dummy)                           :spA, 2026-08, 1mo
 ```
 ```mermaid
 gantt
@@ -411,6 +414,9 @@ gantt
     section 収益化 / Revenue
     PoC売上（後半） / PoC Sales (cont.)              :r1b, 2026-09, 6mo
     v1製品売上（開始） / v1 Product Sales (start)    :crit, r2b, 2027-04, 5mo
+
+    section ダミー / Spacer
+    _余白 / Spacer (dummy)                           :spB, 2027-08, 1mo
 ```
 ```mermaid
 gantt
@@ -425,9 +431,14 @@ gantt
     事務所・インフラ / Office & Infra (part 3)      :s4c, 2027-09, 12mo
     認証/QA（後半） / Certification & QA (back)      :s5c, 2027-10, 5mo
 
-    section 収益化 / Revenue
-    v1製品売上（継続） / v1 Product Sales (cont.)    :crit, r2c, 2027-09, 7mo
-    海外売上拡大 / Intl. Sales Expansion             :r3c, 2028-04, 5mo
+    section 収益化 (国内) / Revenue (Domestic)
+    v1製品売上 / v1 Product Sales                    :crit, r2c, 2027-03, 12mo
+
+    section 収益化 (海外) / Revenue (Intl)
+    海外売上拡大 / Intl. Sales Expansion             :r3c, 2028-05, 5mo
+
+    section ダミー / Spacer
+    _余白 / Spacer (dummy)                           :spC, 2028-10, 1mo
 ```
 ---
 
