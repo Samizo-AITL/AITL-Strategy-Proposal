@@ -271,6 +271,133 @@ flowchart TB
     style A stroke-width:2px
     style C stroke-width:2px
 ```
+
+### 5.4 **AITL産業化モデル：Samizo-AITL Design Company**  
+5.4 **AITL Industrialization Model: Samizo-AITL Design Company** {#aitl-industry-model}
+
+本節では、AITL戦略を**実際の産業実装へ接続するためのモデルケース**として、  
+小規模事業体「**Samizo-AITL Design Company**」の構想を提示する。  
+This section presents the concept of a small-scale entity, **“Samizo-AITL Design Company”**,  
+as a **model case to connect the AITL strategy to real industrial implementation**.  
+
+このモデルは、EDA／MATLAB-Simulink／SystemDK評価装置を基盤とし、  
+**最小限の人員・資金からスタートし、5〜7年でM&Aを実現可能とするロードマップ**を示すものである。  
+This model is based on EDA / MATLAB-Simulink / SystemDK evaluation equipment,  
+and demonstrates a **roadmap starting with minimal personnel and funding, aiming for M&A in 5–7 years**.  
+
+#### 🧑‍🤝‍🧑 **人員構成 / Team Composition**
+- **最小構成（PoC段階） / Minimum Setup (PoC Stage):** 3–4 members  
+  - システムアーキテクト／リーダー / System Architect & Leader  
+  - EDA回路設計エンジニア / EDA Circuit Design Engineer  
+  - 制御・Simulinkエンジニア / Control & Simulink Engineer  
+  - 評価・テストエンジニア（兼任可） / Test & Evaluation Engineer (dual role possible)  
+- **拡張構成（製品化段階） / Expanded Setup (Productization Stage):** 5–7 members  
+  - FEM/物理解析、品質保証、人材育成を追加  
+  - Add FEM/Physics Analysis, Quality Assurance, and Training  
+
+#### 💰 **投資規模 / Investment Scale**
+- **初期投資（PoCラボ設立） / Initial Investment (PoC Lab Setup):** ~¥15M (1500万円)  
+  - 装置投資 / Equipment (EDA, MATLAB, SystemDK, measurement): ¥3–7M  
+  - 事務所設置 / Office setup: ¥1–1.5M  
+  - 人件費（3名×半年） / Personnel (3 members × 6 months): ~¥10M  
+- **小規模スタートアップ化 / Small Startup Stage:** ¥22–25M  
+- **製品化・量産準備 / Productization & Mass Production Prep:** ¥30M+  
+
+#### 🏦 **支援スキーム / Support Schemes**
+- **公的補助金 / Public Grants** (NEDO, “Monozukuri” subsidies): Covers 1/3–1/2 of initial investment  
+- **自治体インキュベーション / Local Incubation**: Halves office costs  
+- **VC/CVC投資 / VC & CVC Investment**: Several hundred million yen in 2–4 years  
+- **国際共同研究拠点 / Intl. Research Hubs**: Parallel education & talent development  
+
+#### ⏳ **M&Aロードマップ / M&A Roadmap**
+
+| フェーズ / Phase | 年数 / Years | 状態 / Status | M&A可能性 / M&A Potential |
+|------------------|--------------|----------------|---------------------------|
+| PoC・実績 / PoC & Proof | 0–2年 | 技術デモ・初期顧客 / Tech demo & early customers | 低 / Low |
+| 製品化 / Productization | 2–4年 | ARR ¥100–300M, early customers | 中 / Medium (Acquihire type) |
+| 成長 / Growth | 4–7年 | ARR ¥500M–1B, intl expansion | 高 / High (Strategic M&A target) |
+| Exit | 7–10年 | IPO or large-scale M&A | 確定ライン / Clear Exit Window |
+
+#### ✅ **政策的意義 / Policy Significance**
+この産業化モデルを政策提言に組み込むことで、以下の効果が期待できる：  
+By integrating this industrialization model into the policy proposal, the following benefits are expected:  
+- **具体的数値モデルの提示 / Clear quantitative model** → 実行可能性を明確化 / Clarifies feasibility  
+- **小規模投資で始められる / Startable with small-scale investment** → 国家プロジェクトとして魅力 / Attractive as a national project  
+- **M&A／Exitシナリオ / M&A & Exit scenarios** → 民間資本参入を促進 / Encourages private investment  
+
+#### 5.4.1 **実装ロードマップ / Implementation Roadmap**
+```mermaid
+timeline
+    title Samizo-AITL Design Company – Roadmap to M&A (5–7 yrs)
+    0–6mo : PoCラボ立上げ / Launch PoC lab
+          : 評価治具・HIL環境固定 / Fix test jigs & HIL
+    6–18mo: 初期顧客PoC / Early customer PoCs
+          : Mini製品化検討 / Mini productization study
+    18–36mo: v1製品出荷(小ロット) / Ship v1 (small lot)
+           : ARR 1–3億円レンジへ / ARR ¥100–300M
+           : CVC/VC調達(数億) / Raise Series A (¥100–300M)
+    36–60mo: 製品ライン拡張 / Portfolio expansion
+           : 海外PoC/販売チャネル構築 / Intl PoCs & channels
+           : ARR 5–10億円レンジ / ARR ¥500M–¥1B
+    60–84mo: 戦略的M&A交渉 / Strategic M&A talks
+           : または Series B & 共同事業 / or Series B & JVs
+```
+
+#### 5.4.2 **組織拡張モデル / Org Scaling Model**
+```mermaid
+flowchart LR
+    subgraph Phase0["0–6mo: PoC Lab (3–4 ppl)"]
+        A1[System Architect/PM]
+        A2[EDA Engineer]
+        A3[Control/Simulink]
+        A4[(Test/Eval -兼務- / Dual role)]
+    end
+
+    subgraph Phase1["6–24mo: Early Product (5–7 ppl)"]
+        B1[System Architect/PM]
+        B2[EDA/PCB + SI/PI]
+        B3[Control/Simulink + Codegen]
+        B4[Test/Eval Lead + Automation]
+        B5[QA/Docs (0.5–1)]
+        B6[FEM/Physics (opt.)]
+    end
+
+    subgraph Phase2["24–60mo: Growth (8–12 ppl)"]
+        C1[Product Manager]
+        C2[EDA Lead + PDN]
+        C3[Control Lead + Toolchain]
+        C4[Test Automation + Data]
+        C5[QA/Compliance]
+        C6[FEM/EMI/THERM]
+        C7[BizDev/Channel]
+        C8[Procurement/Ops]
+    end
+
+    Phase0 --> Phase1 --> Phase2
+```
+
+#### 5.4.3 **資金計画 / Funding Plan**
+```mermaid
+gantt
+    title Funding & Spend Plan (36 months)
+    dateFormat  YYYY-MM
+    section 資金調達 / Funding
+    自己資金・補助金(¥15–20M) / Self funding & grants     :done, f1, 2025-09, 6mo
+    VC/CVC シリーズA(¥100–300M) / VC/CVC Series A          :active, f2, 2027-01, 18mo
+
+    section 主な支出 / Major Spend
+    人件費 / Personnel (3→7 ppl)       :crit, s1, 2025-09, 36mo
+    装置投資 / Equipment (EDA/MATLAB/SystemDK) :s2, 2025-09, 12mo
+    測定器&評価 / Measurement Equip.   :s3, 2025-10, 10mo
+    事務所・インフラ / Office & Infra  :s4, 2025-09, 36mo
+    認証/QA / Certification & QA        :s5, 2026-10, 20mo
+
+    section 収益化 / Revenue
+    PoC売上 / PoC Sales                 :r1, 2026-01, 18mo
+    v1製品売上 / v1 Product Sales       :crit, r2, 2027-04, 12mo
+    海外売上 / Intl. Sales Expansion    :r3, 2028-04, 12mo
+```
+
 ---
 
 ## 6. **おわりに / Conclusion** {#conclusion}
