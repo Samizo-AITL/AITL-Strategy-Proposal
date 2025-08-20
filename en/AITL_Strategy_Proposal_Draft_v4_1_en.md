@@ -221,6 +221,9 @@ flowchart TB
     style A stroke-width:2px
     style C stroke-width:2px
 ```
+
+---
+
 ### 5.4 **AITL Industrialization Model: Samizo-AITL Design Company** {#aitl-industry-model}
 
 This section presents the concept of a small-scale entity, **“Samizo-AITL Design Company”**,  
@@ -228,8 +231,6 @@ as a **model case to connect the AITL strategy to real industrial implementation
 
 This model is based on **EDA / MATLAB-Simulink / SystemDK evaluation equipment**,  
 and demonstrates a **roadmap starting with minimal personnel and funding, aiming for M&A in 5–7 years**.  
-
----
 
 #### 🧑‍🤝‍🧑 **Team Composition**
 - **Minimum Setup (PoC Stage):** 3–4 members  
@@ -240,8 +241,6 @@ and demonstrates a **roadmap starting with minimal personnel and funding, aiming
 - **Expanded Setup (Productization Stage):** 5–7 members  
   - Add FEM/Physics Analysis, Quality Assurance, and Training  
 
----
-
 #### 💰 **Investment Scale**
 - **Initial Investment (PoC Lab Setup):** ~¥15M  
   - Equipment (EDA, MATLAB, SystemDK, measurement): ¥3–7M  
@@ -250,15 +249,11 @@ and demonstrates a **roadmap starting with minimal personnel and funding, aiming
 - **Small Startup Stage:** ¥22–25M  
 - **Productization & Mass Production Prep:** ¥30M+  
 
----
-
 #### 🏦 **Support Schemes**
 - **Public Grants** (NEDO, “Monozukuri” subsidies): Covers 1/3–1/2 of initial investment  
 - **Local Incubation**: Halves office costs  
 - **VC & CVC Investment**: Several hundred million yen in 2–4 years  
 - **Intl. Research Hubs**: Parallel education & talent development  
-
----
 
 #### ⏳ **M&A Roadmap**
 
@@ -269,15 +264,11 @@ and demonstrates a **roadmap starting with minimal personnel and funding, aiming
 | Growth | 4–7 yrs | ARR ¥500M–1B, intl expansion | High (Strategic M&A target) |
 | Exit | 7–10 yrs | IPO or large-scale M&A | Clear Exit Window |
 
----
-
 #### ✅ **Policy Significance**
 By integrating this industrialization model into the policy proposal, the following benefits are expected:  
 - **Clear quantitative model** → clarifies feasibility  
 - **Startable with small-scale investment** → attractive as a national project  
 - **M&A & Exit scenarios** → encourages private investment  
-
----
 
 #### 5.4.1 **Implementation Roadmap**
 ```mermaid
@@ -296,8 +287,6 @@ timeline
     60–84mo: Strategic M&A talks
            : or Series B & Joint Ventures
 ```
-
----
 
 #### 5.4.2 **Org Scaling Model**
 ```mermaid
@@ -331,8 +320,6 @@ flowchart TB
 
     Phase0 --> Phase1 --> Phase2
 ```
-
----
 
 #### 5.4.3 **Funding Plan**
 ```mermaid
