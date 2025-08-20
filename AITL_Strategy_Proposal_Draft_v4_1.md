@@ -345,7 +345,7 @@ timeline
 
 #### 5.4.2 **組織拡張モデル / Org Scaling Model**
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph Phase0["0–6mo: PoC Lab (3–4 ppl)"]
         A1["System Architect/PM"]
         A2["EDA Engineer"]
