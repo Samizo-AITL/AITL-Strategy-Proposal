@@ -396,6 +396,44 @@ gantt
     PoC売上 / PoC Sales                 :r1, 2026-01, 18mo
     v1製品売上 / v1 Product Sales       :crit, r2, 2027-04, 12mo
     海外売上 / Intl. Sales Expansion    :r3, 2028-04, 12mo
+
+gantt
+    title Funding & Spend Plan (0–18 months)
+    dateFormat  YYYY-MM
+
+    section 資金調達 / Funding
+    自己資金・補助金 / Self funding & grants        :done, f1, 2025-09, 6mo
+    シリーズA開始マイルストーン / Series A Kickoff :milestone, m1, 2027-01, 1d
+
+    section 主な支出 / Major Spend
+    人件費 (3→7名・前半) / Personnel (front half)   :crit, s1a, 2025-09, 18mo
+    装置投資 / Equipment (EDA/MATLAB/SystemDK)      :s2, 2025-09, 12mo
+    測定器&評価 / Measurement Equipment             :s3, 2025-10, 10mo
+    事務所・インフラ / Office & Infra               :s4a, 2025-09, 18mo
+    認証/QA（前半） / Certification & QA (front)     :s5a, 2026-10, 5mo
+
+    section 収益化 / Revenue
+    PoC売上（前半） / PoC Sales (front)              :r1a, 2026-01, 14mo
+
+gantt
+    title Funding & Spend Plan (18–36 months)
+    dateFormat  YYYY-MM
+
+    section 資金調達 / Funding
+    VC/CVC シリーズA / VC/CVC Series A              :active, f2, 2027-03, 16mo
+
+    section 主な支出 / Major Spend
+    人件費（後半） / Personnel (back half)          :crit, s1b, 2027-03, 18mo
+    事務所・インフラ（後半） / Office & Infra (back) :s4b, 2027-03, 18mo
+    認証/QA（後半） / Certification & QA (back)      :s5b, 2027-03, 15mo
+
+    section 収益化 / Revenue
+    PoC売上（後半） / PoC Sales (back)               :r1b, 2027-03, 6mo
+    v1製品売上 / v1 Product Sales                    :crit, r2, 2027-04, 12mo
+    海外売上拡大 / Intl. Sales Expansion             :r3, 2028-04, 5mo
+
+
+
 ```
 
 ---
