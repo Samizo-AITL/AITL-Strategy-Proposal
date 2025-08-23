@@ -1,16 +1,16 @@
 ---
 ---
-
 /* =========================================================
-   AITL Strategy Proposal – Minimal Theme Extension (fixed)
-   - Screen: unified font (system-ui + Noto Sans JP)
-   - Print(PDF): same family, compact, ink-friendly
+   AITL Strategy Proposal – Minimal Theme Extension (unified)
+   - Screen: system-ui + Noto Sans JP
+   - Print:  ink-friendly / same family
+   - Portal統一（theme-sepia）時は Samizo-AITL のトーンへ寄せる
    ========================================================= */
 
-/* Minima 継承（SCSSビルド前提） */
+/* Minima を継承（SCSS ビルド前提） */
 @import "minima";
 
-/* ====== 共通フォントスタック ====== */
+/* ===== 共通フォント ===== */
 $base-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI",
   "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro",
   "Yu Gothic UI", "Yu Gothic", "Meiryo", "Helvetica Neue", Arial, sans-serif;
@@ -18,8 +18,8 @@ $base-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI",
 $mono-font-stack: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
   "Liberation Mono", "Courier New", monospace;
 
-/* ========== Base & Color System ========== */
-:root{
+/* ===== 色（提案書用のブルー系） ===== */
+:root {
   --aitl-blue:   #005bac;   /* Primary */
   --aitl-light:  #e9f2fb;   /* Subtle bg */
   --aitl-accent: #ffcc00;   /* Accent   */
@@ -30,8 +30,8 @@ $mono-font-stack: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
   --ring:        rgba(0,91,172,.28);
 }
 
-@media (prefers-color-scheme: dark){
-  :root{
+@media (prefers-color-scheme: dark) {
+  :root {
     --aitl-light:  #0e2236;
     --text-strong: #e5e7eb;
     --text-base:   #d1d5db;
@@ -41,12 +41,12 @@ $mono-font-stack: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
   }
 }
 
-/* 全体 */
-.site-header,.site-footer{ display:none !important; }
-.page-content{ padding-top:.5rem; }
+/* ===== ベース ===== */
+.site-header, .site-footer { display: none !important; } /* 単頁感を優先 */
+.page-content { padding-top: .5rem; }
 
-/* ★ 画面用：本文と Markdown 領域のフォントを統一 */
-body, .markdown-body{
+body,
+.markdown-body {
   font-family: $base-font-stack;
   font-weight: 400;
   line-height: 1.7;
@@ -56,137 +56,210 @@ body, .markdown-body{
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ========== Headings (Screen) ========== */
-h1,h2,h3{
-  border-left:8px solid var(--aitl-blue);
-  padding-left:10px;
-  background:var(--aitl-light);
-  color:var(--aitl-blue);
-  font-weight:700;           /* フォントは body を継承 */
-  margin-top:1rem;
-  line-height:1.25;
+/* ===== 見出し（提案書ブルー） ===== */
+h1, h2, h3 {
+  border-left: 8px solid var(--aitl-blue);
+  padding-left: 10px;
+  background: var(--aitl-light);
+  color: var(--aitl-blue);
+  font-weight: 700;
+  margin-top: 1rem;
+  line-height: 1.25;
 }
-h1{ font-size:1.85rem; }
-h2{ font-size:1.5rem;  }
-h3{ font-size:1.2rem;  }
+h1 { font-size: 1.85rem; }
+h2 { font-size: 1.5rem;  }
+h3 { font-size: 1.2rem;  }
 
-:target{ scroll-margin-top:72px; }
+:target { scroll-margin-top: 72px; }
 
-/* ========== Links ========== */
-a{ color:var(--aitl-blue); text-decoration:none; }
-a:hover,a:focus{ text-decoration:underline; color:var(--aitl-accent); }
-a[href^="http"]{ word-break:break-word; }
+/* ===== リンク ===== */
+a { color: var(--aitl-blue); text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; color: var(--aitl-accent); }
+a[href^="http"] { word-break: break-word; }
 
-/* ========== Media (images/figures) ========== */
-img{ max-width:100%; height:auto; }
-figure{ margin:1rem 0; }
-figcaption{ font-size:.9rem; color:#6b7280; margin-top:.25rem; }
+/* ===== 画像・図版 ===== */
+img { max-width: 100%; height: auto; }
+figure { margin: 1rem 0; }
+figcaption { font-size: .9rem; color: #6b7280; margin-top: .25rem; }
 
-/* ========== Tables ========== */
-.table-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
-table{ width:100%; border-collapse:collapse; margin:1rem 0; }
-th,td{ border:1px solid var(--border); padding:.6rem .7rem; vertical-align:top; }
-th{ background:var(--aitl-light); color:var(--text-strong); font-weight:700; }
-tbody tr:nth-child(even){ background:#f4f8fe; }
-@supports (background: color-mix(in oklab, white, black)){
-  tbody tr:nth-child(even){ background:color-mix(in oklab, var(--aitl-light) 40%, transparent); }
+/* ===== テーブル（画面） ===== */
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+th, td { border: 1px solid var(--border); padding: .6rem .7rem; vertical-align: top; }
+th { background: var(--aitl-light); color: var(--text-strong); font-weight: 700; }
+tbody tr:nth-child(even) { background: #f4f8fe; }
+@supports (background: color-mix(in oklab, white, black)) {
+  tbody tr:nth-child(even) { background: color-mix(in oklab, var(--aitl-light) 40%, transparent); }
 }
-@media (max-width:640px){
-  th,td{ padding:.5rem; font-size:.95rem; }
+@media (max-width: 640px) {
+  th, td { padding: .5rem; font-size: .95rem; }
 }
 
-/* ========== Code & Pre ========== */
-code, pre code{
-  background:var(--code-bg);
-  border-radius:6px;
+/* ===== コード ===== */
+code, pre code {
+  background: var(--code-bg);
+  border-radius: 6px;
   font-family: $mono-font-stack;
-  font-size:.95em;
+  font-size: .95em;
 }
-code{ padding:2px 6px; }
-pre{
-  background:var(--code-bg);
-  border-radius:8px;
-  padding:12px 14px;
-  overflow-x:auto;
+code { padding: 2px 6px; }
+pre {
+  background: var(--code-bg);
+  border-radius: 8px;
+  padding: 12px 14px;
+  overflow-x: auto;
 }
-pre code{ display:block; padding:0; background:transparent; }
+pre code { display: block; padding: 0; background: transparent; }
 
-/* ========== Buttons / CTAs ========== */
-.btn-row,.cta-buttons{ display:flex; gap:12px; flex-wrap:wrap; margin:12px 0 6px; }
-.btn{
-  display:inline-block; padding:10px 14px; border-radius:8px;
-  background:var(--aitl-blue); color:#fff !important; text-decoration:none; font-weight:600;
-  border:1px solid rgba(0,0,0,.12); box-shadow:0 2px 6px rgba(0,0,0,.08);
+/* ===== ボタン / CTA ===== */
+.btn-row, .cta-buttons { display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0 6px; }
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--aitl-blue);
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(0,0,0,.12);
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
   transition: filter .15s ease, transform .02s ease;
 }
-.btn:hover{ filter:brightness(1.05); }
-.btn:active{ transform: translateY(1px); }
-.btn:focus-visible{ outline:2px solid transparent; box-shadow:0 0 0 3px var(--ring); }
-.btn--outline{ background:transparent; color:var(--aitl-blue) !important; border:2px solid var(--aitl-blue); }
-.btn--accent{ background:var(--aitl-accent); color:#1f2937 !important; border:1px solid rgba(0,0,0,.12); }
+.btn:hover { filter: brightness(1.05); }
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible { outline: 2px solid transparent; box-shadow: 0 0 0 3px var(--ring); }
+.btn--outline { background: transparent; color: var(--aitl-blue) !important; border: 2px solid var(--aitl-blue); }
+.btn--accent  { background: var(--aitl-accent); color: #1f2937 !important; border: 1px solid rgba(0,0,0,.12); }
 
-/* ========== Callouts ========== */
-.note,.tip,.warn{
-  border:1px solid var(--border);
-  border-left:6px solid var(--aitl-blue);
-  background:#f6fbff;
-  padding:.85rem .9rem; border-radius:8px; margin:1rem 0;
+/* ===== Callouts ===== */
+.note, .tip, .warn {
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--aitl-blue);
+  background: #f6fbff;
+  padding: .85rem .9rem;
+  border-radius: 8px;
+  margin: 1rem 0;
 }
-@supports (background: color-mix(in srgb, white, black)){
-  .note,.tip,.warn{ background: color-mix(in srgb, var(--aitl-light) 55%, #fff 45%); }
+@supports (background: color-mix(in srgb, white, black)) {
+  .note, .tip, .warn { background: color-mix(in srgb, var(--aitl-light) 55%, #fff 45%); }
 }
-.tip { border-left-color:#16a34a; }
-.warn{ border-left-color:#dc2626; }
+.tip  { border-left-color: #16a34a; }
+.warn { border-left-color: #dc2626; }
 
-/* ========== Utilities ========== */
-.nowrap{ white-space:nowrap; }
-.mono  { font-family: $mono-font-stack; }
-.small { font-size:.9em; }
-.muted { color:#6b7280; }
-.compact-list>li{ margin:.15rem 0; }
+/* ===== Utilities ===== */
+.nowrap { white-space: nowrap; }
+.mono   { font-family: $mono-font-stack; }
+.small  { font-size: .9em; }
+.muted  { color: #6b7280; }
+.compact-list > li { margin: .15rem 0; }
 
-/* =========================================================
-   Print / PDF 専用の最適化（フォント統一）
-   ========================================================= */
-@media print{
-  @page{ size: A4; margin: 14mm 14mm 16mm 14mm; }
+/* ---------------------------------------------------------
+   ★ Portal統一トーン（theme-sepia が body に付与された場合）
+   --------------------------------------------------------- */
+body.theme-sepia {
+  background: #fdf6e3;
+  color: #3b2f2f;
+  font-family: "Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",
+               "Segoe UI","Helvetica Neue",Arial,sans-serif;
+  line-height: 1.9;
+  font-size: 1.05em;
+}
 
-  body{
-    font-family: $base-font-stack;     /* 画面と同じ系列に統一 */
-    font-size: 11.2pt; line-height: 1.45; color:#111;
+/* 見出しはセピア統一：青字・罫線なし・左寄せ（H1） */
+body.theme-sepia h1,
+body.theme-sepia h2,
+body.theme-sepia h3 {
+  color: #003366;
+  font-weight: 700;
+  background: transparent;
+  border-left: 0;
+  border-bottom: none;
+  padding-left: 0;
+}
+body.theme-sepia h1 { font-size: 2em;   text-align: left; margin-bottom: .8em; }
+body.theme-sepia h2 { font-size: 1.5em; margin-top: 1.6em; }
+body.theme-sepia h3 { font-size: 1.2em; margin-top: 1.2em; }
+
+/* セピア表（ヘッダー薄茶＋外枠2px＋交互色） */
+body.theme-sepia table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1em;
+  font-size: 1em;
+  border: 2px solid #999;
+}
+body.theme-sepia th {
+  background: #e9ddc9;
+  color: #2b2b2b;
+  border: 2px solid #999;
+  font-weight: 700;
+  text-align: left;
+  padding: .8em 1em;
+}
+body.theme-sepia td {
+  border: 1.5px solid #bbb;
+  color: #2b2b2b;
+  padding: .8em 1em;
+}
+body.theme-sepia tbody tr:nth-child(odd)  td { background: #ffffff; }
+body.theme-sepia tbody tr:nth-child(even) td { background: #f3efe6; }
+
+/* リンク（セピア） */
+body.theme-sepia a {
+  color: #0066cc;
+  font-weight: 600;
+  font-size: .95em;
+  text-decoration: underline;
+}
+body.theme-sepia a:hover { color: #004c99; }
+
+/* Mermaid を中央寄せ（共通） */
+.mermaid { display: block; margin: 1.5rem auto; max-width: 960px; text-align: center; }
+
+/* ---------------------------------------------------------
+   印刷 / PDF
+   --------------------------------------------------------- */
+@media print {
+  @page { size: A4; margin: 14mm 14mm 16mm 14mm; }
+
+  body {
+    font-family: $base-font-stack;  /* 画面と同系統に統一 */
+    font-size: 11.2pt; line-height: 1.45; color: #111;
   }
 
-  .btn-row,.cta-buttons,.site-header,.site-footer{ display:none !important; }
+  .btn-row, .cta-buttons, .site-header, .site-footer { display: none !important; }
 
-  h1,h2,h3{
-    background:none !important; color:#0b4d87; border-left:none;
+  h1, h2, h3 {
+    background: none !important;
+    color: #0b4d87;
+    border-left: none;
     page-break-after: avoid;
   }
-  h1{ font-size:19pt; margin:0 0 10pt; border-bottom:2px solid #005bac; }
-  h2{ font-size:15pt; margin:14pt 0 6pt; border-bottom:1px solid #005bac; }
-  h3{ font-size:12pt; margin:10pt 0 4pt; border-left:4px solid #005bac; padding-left:6pt; }
+  h1 { font-size: 19pt; margin: 0 0 10pt; border-bottom: 2px solid #005bac; }
+  h2 { font-size: 15pt; margin: 14pt 0 6pt; border-bottom: 1px solid #005bac; }
+  h3 { font-size: 12pt; margin: 10pt 0 4pt; border-left: 4px solid #005bac; padding-left: 6pt; }
 
-  table{ font-size:10.5pt; margin:8pt 0; }
-  th,td{ border-color:#cfcfcf; padding:6pt; }
-  th{ background:#f3f6fa !important; color:#111; }
-  tr{ break-inside: avoid; }
+  table { font-size: 10.5pt; margin: 8pt 0; }
+  th, td { border-color: #cfcfcf; padding: 6pt; }
+  th { background: #f3f6fa !important; color: #111; }
+  tr { break-inside: avoid; }
   thead { display: table-header-group; }
 
   img { break-inside: avoid; page-break-inside: avoid; }
 
-  pre{ padding:6pt; border-radius:4pt; }
-  pre, code{ background:#f6f8fa !important; }
-  pre, table, figure, .note, .tip, .warn{ break-inside: avoid; }
+  pre { padding: 6pt; border-radius: 4pt; }
+  pre, code { background: #f6f8fa !important; }
+  pre, table, figure, .note, .tip, .warn { break-inside: avoid; }
 
-  a{ color:#0b4d87; text-decoration:none; }
-  a[href^="http"]::after{ content:" <" attr(href) ">"; font-size:.85em; color:#666; }
+  a { color: #0b4d87; text-decoration: none; }
+  a[href^="http"]::after { content: " <" attr(href) ">"; font-size: .85em; color: #666; }
 }
 
-/* === Tables with visible borders on GitHub Pages & PDF === */
+/* ===== 「枠線見えるテーブル」を強制したい時用のクラス ===== */
 table.border-table {
   border-collapse: collapse;
   width: 100%;
-  margin: 0.8rem 0;
+  margin: .8rem 0;
   table-layout: auto;
 }
 table.border-table th,
@@ -201,26 +274,19 @@ table.border-table th {
   font-weight: 700;
   white-space: nowrap;
 }
-
-/* モバイル調整 */
 @media (max-width: 640px) {
   table.border-table th,
-  table.border-table td {
-    padding: 6px 8px;
-    font-size: .95rem;
-  }
+  table.border-table td { padding: 6px 8px; font-size: .95rem; }
 }
-
-/* 印刷用 border-table 調整 */
-@media print{
+@media print {
   table.border-table th,
   table.border-table td { border-color: #cfcfcf; }
   table.border-table th { background: #f3f6fa !important; }
-  table.border-table tbody tr:nth-child(even){ background: transparent; }
+  table.border-table tbody tr:nth-child(even) { background: transparent; }
 }
 
-/* Fallback: クラス忘れ対策（囲み適用） */
+/* Fallback：クラスを忘れた場合でも枠が出るように */
 .force-borders table th,
 .force-borders table td {
-  border:1px solid rgba(0, 91, 172, .55) !important;
+  border: 1px solid rgba(0, 91, 172, .55) !important;
 }
