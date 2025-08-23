@@ -73,7 +73,19 @@ title: AITL-Strategy-Proposal
 
 - **SamizoGPT（プロンプト・GUI支援）**  
   [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/SamizoGPT/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/SamizoGPT)
-  
+
+
+
+## 🔗 連携プロジェクト / Linked Projects
+
+| プロジェクト | リンク | 概要 |
+|--------------|--------|------|
+| 🎓 **Edusemi-v4x（基礎教材）** | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x) | 半導体設計・プロセス教育（Python, sky130, OpenLane）<br>*Semiconductor design & process education*<br>[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-license) |
+| 📘 **Edusemi-Plus（応用教材）** | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-Plus/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-Plus) | 半導体応用・地政学・戦略教材<br>*Applied semiconductor, geopolitics & strategy materials*<br>[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-license) |
+| ⚙️ **EduController（制御教材）** | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController) | 制御理論・AI制御教材（PID, LLMハイブリッド）<br>*Control theory & AI control materials*<br>[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-license) |
+| 🤖 **AITL-H（FSM×PID×LLM統合）** | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H) | FSM・PID・LLMを統合した三層制御フレームワーク<br>*Three-layer control framework (FSM×PID×LLM)*<br>[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-license) |
+| 🧠 **SamizoGPT（プロンプト・GUI支援）** | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/SamizoGPT/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/SamizoGPT) | プロンプト設計・GUI支援ツール集<br>*Prompt design & GUI support toolkit*<br>[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-license) |
+
 ---
 
 ## ✍️ 使い方 / How to Use
