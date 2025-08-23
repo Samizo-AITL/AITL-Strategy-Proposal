@@ -58,20 +58,13 @@ together with a **validated integrated package** centered on Edusemi, extended w
 
 ## 🔗 Linked Projects
 
-- **Edusemi-v4x (Basic materials)**  
-  [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x)
-
-- **Edusemi-Plus (Applied materials)**  
-  [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-Plus/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-Plus)
-
-- **EduController (Control education)**  
-  [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController)
-
-- **AITL-H (FSM × PID × LLM integration)**  
-  [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H)
-
-- **SamizoGPT (Prompt & GUI support)**  
-  [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/SamizoGPT/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/SamizoGPT)
+| Project | Links | Description |
+|---------|-------|-------------|
+| 🎓 **Edusemi-v4x (Basic Materials)** | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-v4x/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-v4x) | Semiconductor design & process education (Python, sky130, OpenLane)<br>[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-license) |
+| 📘 **Edusemi-Plus (Applied Materials)** | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/Edusemi-Plus/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/Edusemi-Plus) | Applied semiconductor, geopolitics & strategy materials<br>[![MIT License](https://img.shields.io/badge/license-MIT-blue)](#-license) [![Hybrid License](https://img.shields.io/badge/partly-Hybrid-blueviolet)](#-license) |
+| ⚙️ **EduController (Control Materials)** | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/EduController/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/EduController) | Control theory & AI control materials (PID, LLM hybrid)<br>[![MIT License](https://img.shields.io/badge/license-MIT-blue)](#-license) [![Hybrid License](https://img.shields.io/badge/partly-Hybrid-blueviolet)](#-license) |
+| 🤖 **AITL-H (FSM×PID×LLM Integration)** | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/AITL-H/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/AITL-H) | Three-layer control framework (FSM×PID×LLM)<br>[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-license) |
+| 🧠 **SamizoGPT (Prompt & GUI Support)** | [![🌐 View Site](https://img.shields.io/badge/View-Site-brightgreen?logo=github)](https://samizo-aitl.github.io/SamizoGPT/) [![💻 View Repo](https://img.shields.io/badge/View-Repo-blue?logo=github)](https://github.com/Samizo-AITL/SamizoGPT) | Prompt design & GUI support toolkit<br>[![Hybrid License](https://img.shields.io/badge/license-Hybrid-blueviolet)](#-license) |
 
 ---
 
