@@ -202,10 +202,10 @@ AITL creates **new value** that goes beyond conventional control and design para
 
 ```mermaid
 flowchart TB
-    U[User Voice/Task] --> LLM[LLM Layer: Goal & Anomaly Analysis]
+    U[User Voice / Task] --> LLM[LLM Layer: Goal & Anomaly Analysis]
     LLM --> FSM[FSM Layer: Behavior Switching]
-    FSM --> CTRL[PID + State-Space CTRL]
-    CTRL --> ACT[Power Drive (PWM H-Bridge)]
+    FSM --> CTRL[PID + State-Space Control]
+    CTRL --> ACT[Power Drive : PWM H-Bridge]
     SENS[Sensors: IMU / Camera / Force] --> CTRL
     EH[Energy Harvest: Piezo / PV / Regen] --> PMIC[Power Mgmt: Battery & DC-DC]
     PMIC --> DRIVE[Drive Output]
@@ -221,16 +221,16 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-    subgraph B [Brain SoC (22nm)]
+    subgraph B [Brain SoC : 22nm]
         B1[LLM + State-Space Control]
     end
-    subgraph S [Sensor Hub (0.18µm AMS)]
+    subgraph S [Sensor Hub : 0.18µm AMS]
         S1[IMU / Camera / Force Sensors]
     end
-    subgraph D [Power Drive (0.35µm LDMOS)]
+    subgraph D [Power Drive : 0.35µm LDMOS]
         D1[PWM / H-Bridge Torque Drive]
     end
-    subgraph E [Energy Harvest (MEMS/PV/Regen)]
+    subgraph E [Energy Harvest : MEMS / PV / Regen]
         E1[Self-Power & Storage]
     end
 
