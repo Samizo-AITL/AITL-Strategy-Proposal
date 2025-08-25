@@ -203,5 +203,20 @@ In particular, for **future advanced-node semiconductor chips**, design methodol
 
 ---
 
+## 4.1 技術的課題とリスク / Technical Challenges and Risks {#risks}
+
+AITLとSystemDKを実装するにあたり、以下のような技術的課題とリスクが存在する。  
+In implementing AITL with SystemDK, the following technical challenges and risks must be addressed:
+
+| 分類 / Category | 課題 / Challenge | リスク / Risk |
+|---|---|---|
+| **AI信頼性 / AI Reliability** | LLM応答の精度・一貫性の保証<br/>*Ensuring accuracy and consistency of LLM responses* | 誤判断・幻覚応答による制御ミス<br/>*Misjudgments or hallucinations leading to control errors* |
+| **セキュリティ / Security** | 統合制御系のサイバー攻撃耐性<br/>*Cybersecurity resilience of integrated control systems* | 生産停止・安全性低下<br/>*Production shutdowns, reduced safety* |
+| **物理モデル融合 / Physical Model Integration** | FEM等の物理制約モデルとリアルタイム制御の融合<br/>*Integrating FEM-based physical models with real-time control* | 設計遅延・性能劣化<br/>*Design delays, performance degradation* |
+| **標準化とIP / Standardization & IP** | 標準化に伴う知財・ライセンス調整<br/>*Aligning intellectual property and licensing with standardization* | 国際競争力低下<br/>*Loss of international competitiveness* |
+
+---
+
+
 
 
