@@ -22,6 +22,10 @@ permalink: /AITL_Strategy_Proposal_Draft_v4_3.html
 - [1. 統合制御の価値 / Value of Feedback–Transition Integration](#feedback-transition)
 - [2. LLM融合によるAITLの価値 / Value of AITL with LLM](#aitl-llm-value)
 - [3. PoC具体例 / Real-World PoC Examples](#poc-examples)
+  - [3.1 ロボット制御統合 / Integrated Robotic Control](#robotic-control)
+  - [3.2 スマート工場ライン最適化 / Smart Factory Line Optimization](#factory-optimization)
+  - [3.3 自律移動ロボット群制御 / Autonomous Mobile Robot Fleet Control](#robot-fleet)
+  - [3.4 フラッグシップPoC：人型ロボット / Flagship PoC: Humanoid Robot](#flagship-poc)
 - [4. AITL実装とSystemDKの必要性 / Need for SystemDK in AITL Implementation](#systemdk)
   - [4.1 技術的課題とリスク / Technical Challenges and Risks](#risks)
 - [5. 政策提言 / Policy Recommendations](#policy)
@@ -29,9 +33,10 @@ permalink: /AITL_Strategy_Proposal_Draft_v4_3.html
   - [5.2 政策ロードマップ / Policy Roadmap](#roadmap)
   - [5.3 学術化と人材育成 / Academic Systematization & HR Development](#hrd)
   - [5.4 産業化モデル / Industrialization Model](#industry-model)
+  - [5.5 社会的意義 / Societal Significance](#societal-significance)
 - [6. おわりに / Conclusion](#conclusion)
 - [🔙 戻る / Back](#back)
-
+  
 ---
 
 ## 0. 概要 / Overview {#overview}
