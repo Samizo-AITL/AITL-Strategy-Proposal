@@ -13,8 +13,8 @@ title: AITL-Strategy-Proposal (EN)
 **National Strategy Proposal × Integrated Educational Package based on AITL**  
 **AITL (AI × Control × Physical Systems) as a framework for education and national-level deployment**
 
-[📄 Read the Proposal (MD)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/AITL_Strategy_Proposal_Draft_v4_1_en.html)  
-[⬇️ Download PDF](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/Figures/AITL_Strategy_Proposal_Draft_v4_1_en.pdf)
+[📄 Read the Proposal (MD)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/AITL_Strategy_Proposal_Draft_v4_2_en.html)  
+[⬇️ Download PDF](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/Figures/AITL_Strategy_Proposal_Draft_v4_2_en.pdf)
 
 ---
 
@@ -45,12 +45,12 @@ together with a **validated integrated package** centered on Edusemi, extended w
 ## 📂 Repository Contents
 
 - **Proposal Document (Markdown):**  
-  [![Read on Pages](https://img.shields.io/badge/Read-Pages-green?style=for-the-badge)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/AITL_Strategy_Proposal_Draft_v4_1_en.html)
-  [![Open on GitHub](https://img.shields.io/badge/Open-GitHub-blue?style=for-the-badge)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/en/AITL_Strategy_Proposal_Draft_v4_1_en.md)
+  [![Read on Pages](https://img.shields.io/badge/Read-Pages-green?style=for-the-badge)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/AITL_Strategy_Proposal_Draft_v4_2_en.html)
+  [![Open on GitHub](https://img.shields.io/badge/Open-GitHub-blue?style=for-the-badge)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/en/AITL_Strategy_Proposal_Draft_v4_2_en.md)
 
 - **Proposal Document (PDF):**  
-  [![Download PDF](https://img.shields.io/badge/Download-PDF-orange?style=for-the-badge)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/Figures/AITL_Strategy_Proposal_Draft_v4_1_en.pdf)
-  [![Open on GitHub](https://img.shields.io/badge/Open-GitHub-blue?style=for-the-badge)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/en/Figures/AITL_Strategy_Proposal_Draft_v4_1_en.pdf)
+  [![Download PDF](https://img.shields.io/badge/Download-PDF-orange?style=for-the-badge)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/Figures/AITL_Strategy_Proposal_Draft_v4_2_en.pdf)
+  [![Open on GitHub](https://img.shields.io/badge/Open-GitHub-blue?style=for-the-badge)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/en/Figures/AITL_Strategy_Proposal_Draft_v4_2_en.pdf)
 
 > 💡 Examples of PoC and SystemDK collaboration will be added in future updates.
 
