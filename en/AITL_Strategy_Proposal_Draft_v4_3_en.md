@@ -4,6 +4,8 @@ title: AITL Strategy Proposal v4.3 (Final Draft – English Version)
 permalink: /en/AITL_Strategy_Proposal_Draft_v4_3_en.html
 ---
 
+---
+
 # 🇺🇸 **AITL Strategy Proposal v4.3 Final Edition** {#top}
 
 <div class="btn-row">
