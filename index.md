@@ -14,8 +14,8 @@ title: AITL-Strategy-Proposal
 **AITL構想による国家戦略提案 × 統合教育パッケージ**  
 **National Strategy & Educational Framework Based on AITL (AI × Control × Physical Systems)**
 
-[📄 Read the Proposal (MD)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v4_2.html)  
-[⬇️ Download PDF](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v4_2.pdf)
+[📄 Read the Proposal (MD)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v4_3.html)  
+[⬇️ Download PDF](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v4_3.pdf)
 
 ---
 
@@ -46,12 +46,12 @@ title: AITL-Strategy-Proposal
 ## 📂 収録コンテンツ / Repository Contents
 
 - **提言書 本文（Markdown）**：  
-  [![Read on Pages](https://img.shields.io/badge/Read-Pages-green?style=for-the-badge)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v4_2.html)
-  [![View on GitHub](https://img.shields.io/badge/View-GitHub-blue?style=for-the-badge)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v4_2.md)
+  [![Read on Pages](https://img.shields.io/badge/Read-Pages-green?style=for-the-badge)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/AITL_Strategy_Proposal_Draft_v4_3.html)
+  [![View on GitHub](https://img.shields.io/badge/View-GitHub-blue?style=for-the-badge)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/AITL_Strategy_Proposal_Draft_v4_3.md)
 
 - **提言書 PDF**：  
-  [![Download PDF](https://img.shields.io/badge/Download-PDF-orange?style=for-the-badge)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v4_2.pdf)
-  [![View on GitHub](https://img.shields.io/badge/View-GitHub-blue?style=for-the-badge)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/Figures/AITL_Strategy_Proposal_Draft_v4_2.pdf)
+  [![Download PDF](https://img.shields.io/badge/Download-PDF-orange?style=for-the-badge)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/Figures/AITL_Strategy_Proposal_Draft_v4_3.pdf)
+  [![View on GitHub](https://img.shields.io/badge/View-GitHub-blue?style=for-the-badge)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal/blob/main/Figures/AITL_Strategy_Proposal_Draft_v4_3.pdf)
 
 > 💡 PoC具体例やSystemDK連携例などは、今後追加予定です。
 
