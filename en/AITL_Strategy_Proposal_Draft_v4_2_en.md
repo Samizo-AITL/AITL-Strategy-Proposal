@@ -176,7 +176,7 @@ This will enable continuous education, research, and implementation grounded in 
 
 ---
 
-## 5.4 AITL Industrialization Model: Samizo-AITL Design Company {#aitl-industry-model}
+### 5.4 AITL Industrialization Model: Samizo-AITL Design Company {#aitl-industry-model}
 
 This section presents the concept of a small-scale entity, **“Samizo-AITL Design Company”**,  
 as a **model case to connect the AITL strategy to real industrial implementation**.  
@@ -184,7 +184,7 @@ as a **model case to connect the AITL strategy to real industrial implementation
 This model is based on EDA / MATLAB-Simulink / SystemDK evaluation equipment,  
 and demonstrates a **roadmap starting with minimal personnel and funding, aiming for M&A in 5–7 years**.  
 
-### Team Composition
+#### Team Composition
 - **Minimum Setup (PoC Stage):** 3–4 members  
   - System Architect & Leader  
   - EDA Circuit Design Engineer  
@@ -193,7 +193,7 @@ and demonstrates a **roadmap starting with minimal personnel and funding, aiming
 - **Expanded Setup (Productization Stage):** 5–7 members  
   - Add FEM/Physics Analysis, Quality Assurance, and Training  
 
-### Investment Scale
+#### Investment Scale
 - **Initial Investment (PoC Lab Setup):** ~¥15M  
   - Equipment (EDA, MATLAB, SystemDK, measurement): ¥3–7M  
   - Office setup: ¥1–1.5M  
@@ -201,13 +201,13 @@ and demonstrates a **roadmap starting with minimal personnel and funding, aiming
 - **Small Startup Stage:** ¥22–25M  
 - **Productization & Mass Production Prep:** ¥30M+  
 
-### Support Schemes
+#### Support Schemes
 - **Public Grants** (NEDO, “Monozukuri” subsidies): Covers 1/3–1/2 of initial investment  
 - **Local Incubation**: Halves office costs  
 - **VC & CVC Investment**: Several hundred million yen in 2–4 years  
 - **Intl. Research Hubs**: Parallel education & talent development  
 
-### M&A Roadmap
+#### M&A Roadmap
 
 | Phase | Years | Status | M&A Potential |
 |---|---|---|---|
@@ -216,7 +216,7 @@ and demonstrates a **roadmap starting with minimal personnel and funding, aiming
 | Growth | 4–7 | ARR ¥500M–1B, intl expansion | High (Strategic M&A target) |
 | Exit | 7–10 | IPO or large-scale M&A | Clear Exit Window |
 
-### Policy Significance
+#### Policy Significance
 By integrating this industrialization model into the policy proposal, the following benefits are expected:  
 - **Clear quantitative model** → Clarifies feasibility  
 - **Startable with small-scale investment** → Attractive as a national project  
