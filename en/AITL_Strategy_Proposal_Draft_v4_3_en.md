@@ -19,11 +19,21 @@ permalink: /en/AITL_Strategy_Proposal_Draft_v4_3_en.html
 - [1. Value of Feedback–Transition Integration](#feedback-transition)
 - [2. Value of AITL with LLM](#aitl-llm-value)
 - [3. Real-World PoC Examples](#poc-examples)
+  - [3.1 Integrated Robotic Control](#robotic-control)
+  - [3.2 Smart Factory Line Optimization](#factory-optimization)
+  - [3.3 Autonomous Mobile Robot Fleet Control](#robot-fleet)
+  - [3.4 Flagship PoC: Humanoid Robot](#flagship-poc)
 - [4. Need for SystemDK in AITL Implementation](#systemdk)
-- [4.1 Technical Challenges and Risks](#risks)
+  - [4.1 Technical Challenges and Risks](#risks)
 - [5. Policy Recommendations](#policy)
+  - [5.1 Expected Benefits (Model Case)](#benefits)
+  - [5.2 Policy Roadmap](#roadmap)
+  - [5.3 Academic Systematization & HR Development](#hrd)
+  - [5.4 Industrialization Model](#industry-model)
+  - [5.5 Societal Significance](#societal-significance)
 - [6. Conclusion](#conclusion)
-
+- [🔙 Back](#back)
+  
 ---
 
 ## 0. Overview {#overview}
@@ -290,6 +300,42 @@ By integrating this industrialization model into the policy proposal, the follow
 - **Clear quantitative model** → Clarifies feasibility  
 - **Startable with small-scale investment** → Attractive as a national project  
 - **M&A & Exit scenarios** → Encourages private investment  
+
+---
+
+### 5.5 Societal Significance {#societal-significance}
+
+The **AITL strategy** and the **Flagship PoC (Humanoid Robot Control)** go beyond a mere technical demonstration,  
+becoming a **national foundation bridging industry, education, and policy**.  
+
+---
+
+#### 🏭 Industrial Impact
+- Securing global competitiveness through the integration of **advanced-node semiconductor design and control**  
+- Standardized design using **SystemDK**, extendable to **automotive, robotics, and energy sectors**  
+
+---
+
+#### 🎓 Educational Impact
+- Establishing **“AITL Studies”** as a new interdisciplinary academic field centered on **Physical AI**  
+- Structured curricula at **MSc/PhD level**, providing a dual pipeline of **research and implementation talents**  
+
+---
+
+#### 🏛️ Policy Impact
+- Linking **energy efficiency, safety, and standardization strategies** directly from proof to policy  
+- Forming **collaborative frameworks across industry, academia, and municipalities** through national projects  
+
+---
+
+#### 🌐 Global Significance
+- Dissemination of a **PoC-driven standardization model** originating from Japan  
+- Securing leadership in **international standardization** (EUV-generation semiconductor design, autonomous systems control)  
+
+---
+
+By clarifying this societal significance, the AITL strategy explicitly demonstrates its role as a **bridge from technology to social systems**,  
+enhancing the completeness and policy relevance of **Draft v4.3**.
 
 ---
 
