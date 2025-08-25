@@ -251,6 +251,83 @@ timeline
 
 ---
 
+### 5.3 **学術化と人材育成 / Academic Systematization & Human Resource Development**
+
+AITLとSystemDKは、**物理・制御・AI** を横断する学際領域であり、従来の学科体系だけでは十分に吸収できない。  
+これを体系化した **「AITL学（仮称）」** を設立し、修士〜博士レベルでの教育カリキュラムを整備することが不可欠である。  
+
+AITL and SystemDK represent an **interdisciplinary domain** spanning **physics, control, and AI**,  
+which cannot be fully absorbed within conventional academic disciplines.  
+Therefore, it is essential to establish a systematic field—tentatively called **“AITL Studies”**—and  
+develop dedicated curricula at the Master's and Doctoral levels.  
+
+---
+
+#### 🎓 教育・研究の方向性 / Direction of Education & Research
+- **学際的カリキュラムの構築**  
+  *Build interdisciplinary curricula*  
+  - 制御理論 × AI設計 × 物理制約（熱・応力・電源・EMI）を統合的に学習  
+  - Integrated learning of **control theory × AI-driven design × physical constraints (thermal, stress, power, EMI)**  
+
+- **研究テーマ例 / Example Research Themes**  
+  - SystemDKベースの半導体設計教育  
+  - LLMによるリアルタイム制御再設計  
+  - Hybrid FSM+PID+LLM アーキテクチャの産業応用  
+
+- **産学連携の拠点整備**  
+  *Establish industry–academia collaboration hubs*  
+  - 国際共同研究ネットワーク  
+  - 産業界PoCを活用した教育実習  
+
+---
+
+#### 🧑‍🎓 人材フロー / Talent Flow
+AITL教育で育成された人材は、研究開発・産業実装・政策策定へと循環する。
+
+```mermaid
+flowchart TB
+    A["大学院教育<br/>Graduate Education (MSc/PhD)"] --> B["研究開発人材<br/>R&D Human Resources"]
+    B --> C["産業実装・応用<br/>Industrial Implementation & Application"]
+    C --> D["政策・社会実装<br/>Policy & Societal Deployment"]
+    D --> E["国際標準化・競争力<br/>Intl. Standardization & Competitiveness"]
+    E --> A
+
+    subgraph Academic
+        A
+        B
+    end
+
+    subgraph Industrial
+        C
+        D
+    end
+
+    subgraph Global
+        E
+    end
+
+    style A fill:#eef5fb,stroke:#0b3d75,stroke-width:1px
+    style B fill:#eef5fb,stroke:#0b3d75,stroke-width:1px
+    style C fill:#f9f2ec,stroke:#a65e2e,stroke-width:1px
+    style D fill:#f9f2ec,stroke:#a65e2e,stroke-width:1px
+    style E fill:#f0f9f0,stroke:#2e7d32,stroke-width:1px
+
+    style A stroke-width:2px
+    style C stroke-width:2px
+```
+
+---
+
+#### ✅ 期待される効果 / Expected Impacts
+- **持続的な人材供給**  
+  *Sustainable talent pipeline*  
+- **研究と実装のギャップ解消**  
+  *Bridging the gap between R&D and industrial implementation*  
+- **国際標準化活動のリーダー育成**  
+  *Developing leaders for international standardization*  
+
+---
+
 # 6. おわりに / Conclusion {#conclusion}
 
 AITL戦略は、これまで分断されてきた **制御技術** と **AI設計** を統合し、  
