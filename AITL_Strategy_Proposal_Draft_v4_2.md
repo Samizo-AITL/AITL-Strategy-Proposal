@@ -89,3 +89,58 @@ it is an **essential foundation for all advanced-node semiconductor design**.
 
 ---
 
+## 1. 統合制御の価値 / Value of Feedback–Transition Integration {#feedback-transition}
+
+統合制御は、従来型制御の課題（局所最適化・仕様変更耐性不足・故障時脆弱性）を解消し、  
+安定性・柔軟性・冗長性を兼ね備えた次世代制御基盤を実現する。  
+
+Integrated control resolves the limitations of conventional methods  
+(local optimization, poor tolerance to specification changes, and fragility under faults),  
+and enables a **next-generation control framework** with stability, flexibility, and redundancy.  
+
+---
+
+### 📌 統合制御がもたらす効果 / Effects of Integrated Control
+
+| 項目 / Item | 効果 / Effect |
+|---|---|
+| **安定性 / Stability** | 異なるモード間でも連続的で安定した動作を維持<br/>*Maintains continuous and stable operation even across different modes* |
+| **柔軟性 / Flexibility** | 設計時点および運用中の要求変更に柔軟対応<br/>*Adapts flexibly to design-time and runtime requirement changes* |
+| **冗長性 / Redundancy** | 一部機能喪失時にも安全かつ効率的に動作継続<br/>*Continues safe and efficient operation even when some functions fail* |
+
+---
+
+### 🖼️ 統合制御の模式図 / Conceptual Diagram
+
+```mermaid
+flowchart TB
+    A[状態フィードバック制御<br/>State Feedback Control] --> C[統合制御コア<br/>Integrated Control Core]
+    B[状態遷移制御<br/>State Transition Control] --> C
+    C --> D[安定性 + 柔軟性 + 冗長性<br/>Stability + Flexibility + Redundancy]
+```
+
+---
+
+## 2. LLM融合によるAITLの価値 / Value of AITL with LLM {#aitl-llm-value}
+
+AITLは **統合制御** に **LLM（大規模言語モデル）** を加えることで、  
+従来の制御・設計の枠を超えた新しい価値を創出する。  
+
+By incorporating **LLMs (Large Language Models)** into **integrated control**,  
+AITL creates **new value** that goes beyond conventional control and design paradigms.  
+
+---
+
+### 📌 LLMがもたらす新しい価値 / New Value of LLM Integration
+
+| LLM活用領域 / LLM Role | 新しい価値 / New Value |
+|---|---|
+| **状況解析 / Situation Analysis** | ログやセンサーデータから異常検知・原因推定を自動化<br/>*Automates anomaly detection and root-cause estimation from logs and sensor data* |
+| **準リアルタイム設計 / Quasi-Real-Time Design** | 数分単位で仕様変更に対応し、制御アルゴリズムやFSM構造を再設計<br/>*Adapts to specification changes within minutes, redesigning control algorithms and FSM structures* |
+| **統合アーキ設計 / Integrated Architecture Design** | 仕様書から直接、統合制御を含む全体設計図を生成<br/>*Generates complete system architectures, including integrated control, directly from specifications* |
+| **故障時再設計 / Fault-Time Redesign** | 残存機能を活用して動作モードを再構築<br/>*Reconstructs operation modes by leveraging remaining functional modules during faults* |
+| **SystemDK連携 / SystemDK Collaboration** | 物理制約・ノード特性を設計初期から反映し、最適な実装形態を選択<br/>*Integrates physical constraints and node characteristics from the early design stage to select the optimal implementation form* |
+
+---
+
+
