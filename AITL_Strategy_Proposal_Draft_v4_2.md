@@ -421,39 +421,13 @@ timeline
 
 ---
 
-## 5.4.2 **組織拡張モデル / Org Scaling Model**
+## 5.4.2 **組織拡張モデル / Org Scaling Model (Table版)**
 
-```mermaid
-flowchart TB
-    subgraph Phase0["0–6mo: PoC Lab (3–4 ppl)"]
-        A1["System Architect/PM"]
-        A2["EDA Engineer"]
-        A3["Control/Simulink"]
-        A4["Test/Eval (兼務 / Dual role)"]
-    end
-
-    subgraph Phase1["6–24mo: Early Product (5–7 ppl)"]
-        B1["System Architect/PM"]
-        B2["EDA/PCB + SI/PI"]
-        B3["Control/Simulink + Codegen"]
-        B4["Test/Eval Lead + Automation"]
-        B5["QA/Docs (0.5–1)"]
-        B6["FEM/Physics (opt.)"]
-    end
-
-    subgraph Phase2["24–60mo: Growth (8–12 ppl)"]
-        C1["Product Manager"]
-        C2["EDA Lead + PDN"]
-        C3["Control Lead + Toolchain"]
-        C4["Test Automation + Data"]
-        C5["QA/Compliance"]
-        C6["FEM/EMI/THERM"]
-        C7["BizDev/Channel"]
-        C8["Procurement/Ops"]
-    end
-
-    Phase0 --> Phase1 --> Phase2
-```
+| フェーズ / Phase | 期間 / Duration | 人数 / Size | 役割 / Roles |
+|------------------|----------------|-------------|--------------|
+| **Phase0: PoC Lab** | 0–6ヶ月 / 0–6mo | 3–4人 | - **システムアーキテクト／PM** (*System Architect / PM*)<br>- **EDAエンジニア** (*EDA Engineer*)<br>- **制御／Simulink** (*Control / Simulink*)<br>- **テスト／評価（兼務可）** (*Test / Eval – dual role possible*) |
+| **Phase1: Early Product** | 6–24ヶ月 / 6–24mo | 5–7人 | - **システムアーキテクト／PM** (*System Architect / PM*)<br>- **EDA／PCB設計＋SI/PI** (*EDA / PCB + SI/PI*)<br>- **制御／Simulink＋コード生成** (*Control / Simulink + Codegen*)<br>- **テスト／評価リーダー＋自動化** (*Test / Eval Lead + Automation*)<br>- **QA／ドキュメント（0.5〜1名）** (*QA / Docs (0.5–1)*)<br>- **FEM／物理解析（任意）** (*FEM / Physics – optional*) |
+| **Phase2: Growth** | 24–60ヶ月 / 24–60mo | 8–12人 | - **プロダクトマネージャ** (*Product Manager*)<br>- **EDAリード＋PDN** (*EDA Lead + PDN*)<br>- **制御リード＋ツールチェーン** (*Control Lead + Toolchain*)<br>- **テスト自動化＋データ解析** (*Test Automation + Data*)<br>- **QA／コンプライアンス** (*QA / Compliance*)<br>- **FEM／EMI／熱解析** (*FEM / EMI / THERM*)<br>- **事業開発／チャネル** (*BizDev / Channel*)<br>- **調達／オペレーション** (*Procurement / Ops*) |
 
 ---
 
