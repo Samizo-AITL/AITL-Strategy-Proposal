@@ -455,6 +455,75 @@ flowchart TB
     Phase0 --> Phase1 --> Phase2
 ```
 
+---
+
+## 5.4.3 **資金計画 / Funding Plan**
+
+```mermaid
+gantt
+    title Funding & Spend Plan (0–12 months)
+    dateFormat  YYYY-MM
+
+    section 資金調達 / Funding
+    自己資金・補助金 / Self funding & grants        :done, f1a, 2025-09, 6mo
+
+    section 主な支出 / Major Spend
+    人件費 / Personnel (part 1)                     :crit, s1a, 2025-09, 12mo
+    装置投資 / Equipment (EDA/MATLAB/SystemDK)      :s2a, 2025-09, 12mo
+    測定器&評価 / Measurement Equipment             :s3a, 2025-10, 10mo
+    事務所・インフラ / Office & Infra               :s4a, 2025-09, 12mo
+
+    section 収益化 / Revenue
+    PoC売上 / PoC Sales (start)                     :r1a, 2026-01, 8mo
+
+    section ダミー / Spacer
+    _余白 / Spacer (dummy)                           :spA, 2027-03, 6mo
+```
+
+```mermaid
+gantt
+    title Funding & Spend Plan (12–24 months)
+    dateFormat  YYYY-MM
+
+    section 資金調達 / Funding
+    シリーズA準備マイルストーン / Series A Prep     :milestone, m1b, 2027-01, 1d
+    VC/CVC シリーズA (前半) / Series A (front)       :active, f2b, 2027-03, 6mo
+
+    section 主な支出 / Major Spend
+    人件費 / Personnel (part 2)                     :crit, s1b, 2026-09, 12mo
+    事務所・インフラ / Office & Infra (part 2)      :s4b, 2026-09, 12mo
+    認証/QA（前半） / Certification & QA (front)     :s5b, 2026-10, 10mo
+
+    section 収益化 / Revenue
+    PoC売上（後半） / PoC Sales (cont.)              :r1b, 2026-09, 6mo
+    v1製品売上（開始） / v1 Product Sales (start)    :crit, r2b, 2027-04, 5mo
+
+    section ダミー / Spacer
+    _余白 / Spacer (dummy)                           :spB, 2028-01, 6mo
+```
+
+```mermaid
+gantt
+    title Funding & Spend Plan (24–36 months)
+    dateFormat  YYYY-MM
+
+    section 資金調達 / Funding
+    VC/CVC シリーズA (後半) / Series A (back)        :active, f2c, 2027-09, 10mo
+
+    section 主な支出 / Major Spend
+    人件費 / Personnel (part 3)                     :crit, s1c, 2027-09, 12mo
+    事務所・インフラ / Office & Infra (part 3)      :s4c, 2027-09, 12mo
+    認証/QA（後半） / Certification & QA (back)      :s5c, 2027-10, 5mo
+
+    section 収益化 (国内) / Revenue (Domestic)
+    v1製品売上 / v1 Product Sales                    :crit, r2c, 2027-03, 12mo
+
+    section 収益化 (海外) / Revenue (Intl)
+    海外売上拡大 / Intl. Sales Expansion             :r3c, 2028-05, 5mo
+
+    section ダミー / Spacer
+    _余白 / Spacer (dummy)                           :spC, 2029-06, 6mo
+```
 
 ---
 
