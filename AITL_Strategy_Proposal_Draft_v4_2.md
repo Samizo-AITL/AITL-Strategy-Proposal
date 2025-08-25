@@ -328,7 +328,7 @@ flowchart TB
 
 ---
 
-# 5.4 **AITL産業化モデル：Samizo-AITL Design Company**  
+### 5.4 **AITL産業化モデル：Samizo-AITL Design Company**  
 *5.4 AITL Industrialization Model: Samizo-AITL Design Company* {#aitl-industry-model}
 
 本節では、AITL戦略を**実際の産業実装へ接続するためのモデルケース**として、  
@@ -343,7 +343,7 @@ and demonstrates a **roadmap starting with minimal personnel and funding, aiming
 
 ---
 
-## 🧑‍🤝‍🧑 **人員構成 / Team Composition**
+#### 🧑‍🤝‍🧑 **人員構成 / Team Composition**
 
 - **最小構成（PoC段階） / Minimum Setup (PoC Stage):** 3–4 members  
   - システムアーキテクト／リーダー / System Architect & Leader  
@@ -357,7 +357,7 @@ and demonstrates a **roadmap starting with minimal personnel and funding, aiming
 
 ---
 
-## 💰 **投資規模 / Investment Scale**
+#### 💰 **投資規模 / Investment Scale**
 
 - **初期投資（PoCラボ設立） / Initial Investment (PoC Lab Setup):** ~¥15M (1500万円)  
   - 装置投資 / Equipment (EDA, MATLAB, SystemDK, measurement): ¥3–7M  
@@ -369,7 +369,7 @@ and demonstrates a **roadmap starting with minimal personnel and funding, aiming
 
 ---
 
-## 🏦 **支援スキーム / Support Schemes**
+#### 🏦 **支援スキーム / Support Schemes**
 
 - **公的補助金 / Public Grants** (NEDO, “Monozukuri” subsidies): Covers 1/3–1/2 of initial investment  
 - **自治体インキュベーション / Local Incubation**: Halves office costs  
@@ -378,7 +378,7 @@ and demonstrates a **roadmap starting with minimal personnel and funding, aiming
 
 ---
 
-## ⏳ **M&Aロードマップ / M&A Roadmap**
+#### ⏳ **M&Aロードマップ / M&A Roadmap**
 
 | フェーズ / Phase | 年数 / Years | 状態 / Status | M&A可能性 / M&A Potential |
 |------------------|--------------|----------------|---------------------------|
@@ -389,7 +389,7 @@ and demonstrates a **roadmap starting with minimal personnel and funding, aiming
 
 ---
 
-## ✅ **政策的意義 / Policy Significance**
+#### ✅ **政策的意義 / Policy Significance**
 
 この産業化モデルを政策提言に組み込むことで、以下の効果が期待できる：  
 By integrating this industrialization model into the policy proposal, the following benefits are expected:  
@@ -400,7 +400,7 @@ By integrating this industrialization model into the policy proposal, the follow
 
 ---
 
-## 5.4.1 **実装ロードマップ / Implementation Roadmap**
+#### 5.4.1 **実装ロードマップ / Implementation Roadmap**
 
 ```mermaid
 timeline
@@ -421,7 +421,7 @@ timeline
 
 ---
 
-## 5.4.2 **組織拡張モデル / Org Scaling Model (Table版)**
+#### 5.4.2 **組織拡張モデル / Org Scaling Model (Table版)**
 
 | フェーズ / Phase | 期間 / Duration | 人数 / Size | 役割 / Roles |
 |------------------|----------------|-------------|--------------|
@@ -431,7 +431,7 @@ timeline
 
 ---
 
-## 5.4.3 **資金計画 / Funding Plan**
+#### 5.4.3 **資金計画 / Funding Plan**
 
 ```mermaid
 gantt
@@ -501,7 +501,7 @@ gantt
 
 ---
 
-# 6. おわりに / Conclusion {#conclusion}
+## 6. おわりに / Conclusion {#conclusion}
 
 AITL戦略は、これまで分断されてきた **制御技術** と **AI設計** を統合し、  
 仕様変更や故障にも即応できる **新しい産業システム** を実現する。  
