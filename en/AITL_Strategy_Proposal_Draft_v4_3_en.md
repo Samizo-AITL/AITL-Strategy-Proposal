@@ -1,14 +1,14 @@
 ---
 layout: aitl
-title: AITL Strategy Proposal v4.2 (Final Draft – English Version)
-permalink: /en/AITL_Strategy_Proposal_Draft_v4_2_en.html
+title: AITL Strategy Proposal v4.3 (Final Draft – English Version)
+permalink: /en/AITL_Strategy_Proposal_Draft_v4_3_en.html
 ---
 
-# 🇺🇸 **AITL Strategy Proposal v4.2 Final Edition** {#top}
+# 🇺🇸 **AITL Strategy Proposal v4.3 Final Edition** {#top}
 
 <div class="btn-row">
   <a class="btn" href="#overview">📎 Jump to Overview</a>
-  <a class="btn" href="./Figures/AITL_Strategy_Proposal_Draft_v4_2.pdf">⬇️ Download PDF</a>
+  <a class="btn" href="./Figures/AITL_Strategy_Proposal_Draft_v4_3.pdf">⬇️ Download PDF</a>
 </div>
 
 ---
