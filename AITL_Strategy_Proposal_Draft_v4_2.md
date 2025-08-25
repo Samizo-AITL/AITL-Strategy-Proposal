@@ -517,9 +517,11 @@ This synergy accelerates both **industrial efficiency** and the **creation of ne
 
 ## 🔙 戻る / Back {#back}
 
-**Repository Home**: <https://github.com/Samizo-AITL/AITL-Strategy-Proposal>  
-**Contact**: ✉️ <mailto:shin3t72@gmail.com> ｜ 🐦 <https://x.com/shin3t72>
-
+| 項目 / Item | リンク / Link |
+|-------------|---------------|
+| **🏠 Repository Home** | [![Repo](https://img.shields.io/badge/GitHub-Samizo--AITL--Strategy--Proposal-blue?logo=github)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) |
+| **✉️ Contact (Email)** | [![Email](https://img.shields.io/badge/Email-shin3t72%40gmail.com-red?logo=gmail)](mailto:shin3t72@gmail.com) |
+| **🐦 Contact (X)** | [![X](https://img.shields.io/badge/X-@shin3t72-black?logo=x)](https://x.com/shin3t72) |
 
 
 
