@@ -1,7 +1,7 @@
 ---
 layout: aitl
 title: AITL Strategy Proposal v4.2 (Final Draft – English Version)
-permalink: /AITL_Strategy_Proposal_Draft_v4_2_en.html
+permalink: /en/AITL_Strategy_Proposal_Draft_v4_2_en.html
 ---
 
 # 🇺🇸 **AITL Strategy Proposal v4.2 Final Edition** {#top}
