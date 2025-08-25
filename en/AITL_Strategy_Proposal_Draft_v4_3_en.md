@@ -8,7 +8,7 @@ permalink: /en/AITL_Strategy_Proposal_Draft_v4_3_en.html
 
 <div class="btn-row">
   <a class="btn" href="#overview">📎 Jump to Overview</a>
-  <a class="btn" href="./Figures/AITL_Strategy_Proposal_Draft_v4_3.pdf">⬇️ Download PDF</a>
+  <a class="btn" href="{{ site.baseurl }}/Figures/AITL_Strategy_Proposal_Draft_v4_3.pdf">⬇️ Download PDF</a>
 </div>
 
 ---
@@ -67,7 +67,7 @@ it is an **essential foundation for all advanced-node semiconductor design**.
 
 ---
 
-## 1. Value of Integrated Feedback and Transition Control {#feedback-transition}
+## 1. Value of Feedback–Transition Integration {#feedback-transition}
 
 Integrated control resolves the limitations of conventional methods  
 (local optimization, poor tolerance to specification changes, and fragility under faults),  
@@ -357,4 +357,3 @@ This synergy accelerates both **industrial efficiency** and the **creation of ne
 | **🏠 Repository Home** | [![Repo](https://img.shields.io/badge/GitHub-Samizo--AITL--Strategy--Proposal-blue?logo=github)](https://github.com/Samizo-AITL/AITL-Strategy-Proposal) |
 | **✉️ Contact (Email)** | [![Email](https://img.shields.io/badge/Email-shin3t72%40gmail.com-red?logo=gmail)](mailto:shin3t72@gmail.com) |
 | **🐦 Contact (X)** | [![X](https://img.shields.io/badge/X-@shin3t72-black?logo=x)](https://x.com/shin3t72) |
-
