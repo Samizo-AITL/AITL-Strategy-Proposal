@@ -369,6 +369,95 @@ and demonstrates a **roadmap starting with minimal personnel and funding, aiming
 
 ---
 
+## 🏦 **支援スキーム / Support Schemes**
+
+- **公的補助金 / Public Grants** (NEDO, “Monozukuri” subsidies): Covers 1/3–1/2 of initial investment  
+- **自治体インキュベーション / Local Incubation**: Halves office costs  
+- **VC/CVC投資 / VC & CVC Investment**: Several hundred million yen in 2–4 years  
+- **国際共同研究拠点 / Intl. Research Hubs**: Parallel education & talent development  
+
+---
+
+## ⏳ **M&Aロードマップ / M&A Roadmap**
+
+| フェーズ / Phase | 年数 / Years | 状態 / Status | M&A可能性 / M&A Potential |
+|------------------|--------------|----------------|---------------------------|
+| **PoC・実績 / PoC & Proof** | 0–2年 | 技術デモ・初期顧客 / Tech demo & early customers | 低 / Low |
+| **製品化 / Productization** | 2–4年 | ARR ¥100–300M, early customers | 中 / Medium (Acquihire type) |
+| **成長 / Growth** | 4–7年 | ARR ¥500M–1B, intl expansion | 高 / High (Strategic M&A target) |
+| **Exit** | 7–10年 | IPO or large-scale M&A | 確定ライン / Clear Exit Window |
+
+---
+
+## ✅ **政策的意義 / Policy Significance**
+
+この産業化モデルを政策提言に組み込むことで、以下の効果が期待できる：  
+By integrating this industrialization model into the policy proposal, the following benefits are expected:  
+
+- **具体的数値モデルの提示 / Clear quantitative model** → 実行可能性を明確化 / Clarifies feasibility  
+- **小規模投資で始められる / Startable with small-scale investment** → 国家プロジェクトとして魅力 / Attractive as a national project  
+- **M&A／Exitシナリオ / M&A & Exit scenarios** → 民間資本参入を促進 / Encourages private investment  
+
+---
+
+## 5.4.1 **実装ロードマップ / Implementation Roadmap**
+
+```mermaid
+timeline
+    title Samizo-AITL Design Company – Roadmap to M&A (5–7 yrs)
+    0–6mo : PoCラボ立上げ / Launch PoC lab
+          : 評価治具・HIL環境固定 / Fix test jigs & HIL
+    6–18mo: 初期顧客PoC / Early customer PoCs
+          : Mini製品化検討 / Mini productization study
+    18–36mo: v1製品出荷(小ロット) / Ship v1 (small lot)
+           : ARR 1–3億円レンジへ / ARR ¥100–300M
+           : CVC/VC調達(数億) / Raise Series A (¥100–300M)
+    36–60mo: 製品ライン拡張 / Portfolio expansion
+           : 海外PoC/販売チャネル構築 / Intl PoCs & channels
+           : ARR 5–10億円レンジ / ARR ¥500M–¥1B
+    60–84mo: 戦略的M&A交渉 / Strategic M&A talks
+           : または Series B & 共同事業 / or Series B & JVs
+```
+
+---
+
+## 5.4.2 **組織拡張モデル / Org Scaling Model**
+
+```mermaid
+flowchart TB
+    subgraph Phase0["0–6mo: PoC Lab (3–4 ppl)"]
+        A1["System Architect/PM"]
+        A2["EDA Engineer"]
+        A3["Control/Simulink"]
+        A4["Test/Eval (兼務 / Dual role)"]
+    end
+
+    subgraph Phase1["6–24mo: Early Product (5–7 ppl)"]
+        B1["System Architect/PM"]
+        B2["EDA/PCB + SI/PI"]
+        B3["Control/Simulink + Codegen"]
+        B4["Test/Eval Lead + Automation"]
+        B5["QA/Docs (0.5–1)"]
+        B6["FEM/Physics (opt.)"]
+    end
+
+    subgraph Phase2["24–60mo: Growth (8–12 ppl)"]
+        C1["Product Manager"]
+        C2["EDA Lead + PDN"]
+        C3["Control Lead + Toolchain"]
+        C4["Test Automation + Data"]
+        C5["QA/Compliance"]
+        C6["FEM/EMI/THERM"]
+        C7["BizDev/Channel"]
+        C8["Procurement/Ops"]
+    end
+
+    Phase0 --> Phase1 --> Phase2
+```
+
+
+---
+
 # 6. おわりに / Conclusion {#conclusion}
 
 AITL戦略は、これまで分断されてきた **制御技術** と **AI設計** を統合し、  
