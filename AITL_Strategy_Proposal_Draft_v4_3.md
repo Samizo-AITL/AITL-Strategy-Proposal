@@ -180,6 +180,52 @@ AITL creates **new value** that goes beyond conventional control and design para
 
 ---
 
+### 3.4 フラッグシップPoC：人型ロボット制御  
+*3.4 Flagship PoC: Humanoid Robot Control*
+
+本節では、AITL戦略の集大成として設計された **人型ロボットPoC** を提示する。  
+制御・半導体・エネルギーの三領域をクロス統合し、**Physical AI** の具体像を示す。  
+
+*This section presents the **Humanoid Robot PoC**, designed as the culmination of the AITL strategy.  
+It cross-integrates control, semiconductors, and energy domains, demonstrating a concrete model of **Physical AI***.  
+
+---
+
+#### 🧭 コンセプト / Concept
+- **FSM × PID × 状態空間 × LLM の三層制御**  
+  *Three-layer control: FSM × PID × State-space × LLM*  
+- **クロスノード統合設計**  
+  *Cross-node integrated design*  
+  - 22nm SoC: 状態空間制御＋LLM処理  
+  - 0.18µm AMS: センサ集約（カメラ / IMU / 力覚）  
+  - 0.35µm LDMOS: パワードライブ（PWM/Hブリッジ）  
+  - MEMS/PV/Regen: 自己発電  
+
+---
+
+#### ⚙️ 実証成果 / Demonstrated Results
+| 項目 / Item | 成果 / Result | 備考 / Note |
+|-------------|---------------|-------------|
+| **姿勢回復時間** / Posture Recovery | ≤200ms | ✅ 達成 |
+| **歩容安定度** / Gait Stability | +30% | ✅ 改善 |
+| **エネルギー効率** / Energy Efficiency | +15% | ✅ 改善 |
+| **自己発電寄与率** / Self-Powering Contribution | ~12% | ❌ 未達（KPI=20%） |
+
+---
+
+#### 🌐 社会的意義 / Societal Significance
+- **防災**：倒壊現場での探索・救助補助  
+  *Disaster relief: search and rescue in collapsed sites*  
+- **介護**：高齢者支援、移動補助  
+  *Elderly care: mobility and support assistance*  
+- **産業**：山間・工場・危険エリアでの作業代替  
+  *Industry: task replacement in mountains, factories, hazardous zones*  
+
+AITLに基づく人型ロボットは、単なる試作機ではなく、**政策・産業・教育をつなぐ象徴的PoC**である。  
+*The humanoid robot based on AITL is not merely a prototype, but a **symbolic PoC connecting policy, industry, and education***.  
+
+---
+
 ## 4. AITL実装とSystemDKの必要性 / Need for SystemDK in AITL Implementation {#systemdk}
 
 AITLを実システムに実装する際には、**物理制約（熱・応力・電源・EMIなど）**を初期段階から設計に反映する必要がある。  
