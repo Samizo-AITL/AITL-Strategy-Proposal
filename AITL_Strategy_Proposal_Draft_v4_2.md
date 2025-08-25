@@ -251,6 +251,25 @@ timeline
 
 ---
 
+# 6. おわりに / Conclusion {#conclusion}
+
+AITL戦略は、これまで分断されてきた **制御技術** と **AI設計** を統合し、  
+仕様変更や故障にも即応できる **新しい産業システム** を実現する。  
+さらに **SystemDK** との組み合わせにより、物理制約を考慮した最適な実装形態（ワンチップ・マルチチップ）が可能となり、  
+産業・社会全体の効率化と新たな価値創造を加速する。  
+
+The **AITL strategy** unifies traditionally fragmented **control technologies** and **AI-driven design**,  
+enabling industrial systems that can swiftly adapt to **design changes** and **unexpected failures**.  
+Combined with **SystemDK**, it allows the implementation of optimally tailored architectures—whether single-chip or multi-chip—while accounting for physical constraints.  
+This synergy accelerates both **industrial efficiency** and the **creation of new societal value**.  
+
+---
+
+## 🔙 戻る / Back {#back}
+
+**Repository Home**: <https://github.com/Samizo-AITL/AITL-Strategy-Proposal>  
+**Contact**: ✉️ <mailto:shin3t72@gmail.com> ｜ 🐦 <https://x.com/shin3t72>
+
 
 
 
