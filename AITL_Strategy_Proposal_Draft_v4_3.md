@@ -202,13 +202,13 @@ AITL creates **new value** that goes beyond conventional control and design para
 
 ```mermaid
 flowchart TB
-    U[User Voice/Task] --> LLM[LLM Layer<br/>Goal & Anomaly Analysis]
-    LLM --> FSM[FSM Layer<br/>Behavior Switching]
+    U[User Voice/Task] --> LLM[LLM Layer: Goal & Anomaly Analysis]
+    LLM --> FSM[FSM Layer: Behavior Switching]
     FSM --> CTRL[PID + State-Space CTRL]
-    CTRL --> ACT[Power Drive<br/>(PWM/H-Bridge)]
-    SENS[Sensors<br/>IMU/Camera/Force] --> CTRL
-    EH[Energy Harvest<br/>Piezo/PV/Regen] --> PMIC[Power Mgmt<br/>Battery/DC-DC]
-    PMIC --> DRIVE[Power Drive]
+    CTRL --> ACT[Power Drive (PWM H-Bridge)]
+    SENS[Sensors: IMU / Camera / Force] --> CTRL
+    EH[Energy Harvest: Piezo / PV / Regen] --> PMIC[Power Mgmt: Battery & DC-DC]
+    PMIC --> DRIVE[Drive Output]
     SoC[22nm SoC] --> LLM
 ```
 
