@@ -4,6 +4,8 @@ title: AITL Strategy Proposal (Draft v4.2 – Policy-Oriented, Enhanced)
 permalink: /AITL_Strategy_Proposal_Draft_v4_2.html
 ---
 
+---
+
 # 🇯🇵 **AITL戦略提言書 v4.2 完成版**  
 # 🇺🇸 **AITL Strategy Proposal v4.2 Final Edition** {#top}
 
