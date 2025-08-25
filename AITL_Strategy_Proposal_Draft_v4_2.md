@@ -328,6 +328,47 @@ flowchart TB
 
 ---
 
+# 5.4 **AITL産業化モデル：Samizo-AITL Design Company**  
+*5.4 AITL Industrialization Model: Samizo-AITL Design Company* {#aitl-industry-model}
+
+本節では、AITL戦略を**実際の産業実装へ接続するためのモデルケース**として、  
+小規模事業体「**Samizo-AITL Design Company**」の構想を提示する。  
+*This section presents the concept of a small-scale entity, **“Samizo-AITL Design Company”**,  
+as a **model case to connect the AITL strategy to real industrial implementation**.*  
+
+このモデルは、EDA／MATLAB-Simulink／SystemDK評価装置を基盤とし、  
+**最小限の人員・資金からスタートし、5〜7年でM&Aを実現可能とするロードマップ**を示すものである。  
+*This model is based on EDA / MATLAB-Simulink / SystemDK evaluation equipment,  
+and demonstrates a **roadmap starting with minimal personnel and funding, aiming for M&A in 5–7 years**.*  
+
+---
+
+## 🧑‍🤝‍🧑 **人員構成 / Team Composition**
+
+- **最小構成（PoC段階） / Minimum Setup (PoC Stage):** 3–4 members  
+  - システムアーキテクト／リーダー / System Architect & Leader  
+  - EDA回路設計エンジニア / EDA Circuit Design Engineer  
+  - 制御・Simulinkエンジニア / Control & Simulink Engineer  
+  - 評価・テストエンジニア（兼任可） / Test & Evaluation Engineer (dual role possible)  
+
+- **拡張構成（製品化段階） / Expanded Setup (Productization Stage):** 5–7 members  
+  - FEM/物理解析、品質保証、人材育成を追加  
+  - Add FEM/Physics Analysis, Quality Assurance, and Training  
+
+---
+
+## 💰 **投資規模 / Investment Scale**
+
+- **初期投資（PoCラボ設立） / Initial Investment (PoC Lab Setup):** ~¥15M (1500万円)  
+  - 装置投資 / Equipment (EDA, MATLAB, SystemDK, measurement): ¥3–7M  
+  - 事務所設置 / Office setup: ¥1–1.5M  
+  - 人件費（3名×半年） / Personnel (3 members × 6 months): ~¥10M  
+
+- **小規模スタートアップ化 / Small Startup Stage:** ¥22–25M  
+- **製品化・量産準備 / Productization & Mass Production Prep:** ¥30M+  
+
+---
+
 # 6. おわりに / Conclusion {#conclusion}
 
 AITL戦略は、これまで分断されてきた **制御技術** と **AI設計** を統合し、  
