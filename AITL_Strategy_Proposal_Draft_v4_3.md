@@ -221,23 +221,36 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-    subgraph B [Brain SoC : 22nm]
-        B1[LLM + State-Space Control]
-    end
-    subgraph S [Sensor Hub : 0.18µm AMS]
-        S1[IMU / Camera / Force Sensors]
-    end
-    subgraph D [Power Drive : 0.35µm LDMOS]
-        D1[PWM / H-Bridge Torque Drive]
-    end
-    subgraph E [Energy Harvest : MEMS / PV / Regen]
-        E1[Self-Power & Storage]
+    %% タイトルは短く、詳細は箱の中で改行
+    subgraph B [Brain SoC]
+        direction TB
+        B0["22nm SoC"]
+        B1["LLM +<br/>State-Space Control"]
     end
 
-    B --> S
-    B --> D
-    E --> B
-    E --> D
+    subgraph S [Sensor Hub]
+        direction TB
+        S0["0.18µm AMS"]
+        S1["IMU / Camera /<br/>Force Sensors"]
+    end
+
+    subgraph D [Power Drive]
+        direction TB
+        D0["0.35µm LDMOS"]
+        D1["PWM / H-Bridge<br/>Torque Drive"]
+    end
+
+    subgraph E [Energy Harvest]
+        direction TB
+        E0["MEMS / PV / Regen"]
+        E1["Self-Power &<br/>Storage"]
+    end
+
+    %% 接続
+    B1 --> S1
+    B1 --> D1
+    E1 --> B1
+    E1 --> D1
 ```
 
 ---
