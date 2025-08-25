@@ -185,32 +185,103 @@ AITL creates **new value** that goes beyond conventional control and design para
 
 ---
 
-### 3.4 フラッグシップPoC：人型ロボット制御  
+### 3.4 フラッグシップPoC：人型ロボット制御  {#flagship-poc}
 *3.4 Flagship PoC: Humanoid Robot Control*
 
 本節では、AITL戦略の集大成として設計された **人型ロボットPoC** を提示する。  
-制御・半導体・エネルギーの三領域をクロス統合し、**Physical AI** の具体像を示す。  
-
-*This section presents the **Humanoid Robot PoC**, designed as the culmination of the AITL strategy.  
-It cross-integrates control, semiconductors, and energy domains, demonstrating a concrete model of **Physical AI***.  
+制御・半導体・エネルギーをクロス統合し、**Physical AI** の具体像を示す。  
+*This section presents the **Humanoid Robot PoC**, cross-integrating control, semiconductors, and energy to realize a concrete model of **Physical AI**.*
 
 ---
 
-#### 🧭 コンセプト / Concept
-- **FSM × PID × 状態空間 × LLM の三層制御**  
-  *Three-layer control: FSM × PID × State-space × LLM*  
-- **クロスノード統合設計**  
-  *Cross-node integrated design*  
-  - 22nm SoC: 状態空間制御＋LLM処理  
-  - 0.18µm AMS: センサ集約（カメラ / IMU / 力覚）  
-  - 0.35µm LDMOS: パワードライブ（PWM/Hブリッジ）  
-  - MEMS/PV/Regen: 自己発電  
+#### 🧭 三層アーキテクチャ / Three-Layer Architecture
+
+*LLM（目標・異常解釈）→ FSM（行動モード遷移）→ 物理制御（PID＋状態空間）の直列最適化。  
+センサ帰還・安全監視・エネルギーマネジメントが全層を横断。*  
+*LLM (goal/anomaly) → FSM (mode switching) → Physical control (PID + state-space), with sensors, safety, and energy management spanning all layers.*
+
+```mermaid
+%%{init: {'theme':'neutral','flowchart':{'htmlLabels':true,'curve':'basis'}}}%%
+flowchart TB
+    U[User Voice/Task<br/>音声・タスク] --> LLM[LLM Layer<br/>Goal Generation / Anomaly Interpretation]
+    SENS[IMU / Camera / Force<br/>センサ群] -->|Telemetry| LLM
+    LLM --> FSM[FSM Layer<br/>Behavior Mode Switching<br/>立位/歩行/旋回/回復/省エネ/損傷対応]
+    FSM --> CTRL[Physical Control Layer<br/>PID + State-Space (LQR/LQG)]
+    CTRL --> ACT[Actuation<br/>Torque Commands]
+    ACT -->|PWM/H-Bridge| DRIVE[Power Drive<br/>Safety Monitor]
+    SENS -->|Feedback| CTRL
+    EH[Energy Harvest<br/>Piezo / PV / Regen] --> PMIC[Power Mgmt<br/>Battery/DC-DC]
+    PMIC --> DRIVE
+    PMIC --> SoC[22nm SoC]
+    SoC --- LLM
+    classDef blk fill:#f6f9fc,stroke:#8aa4c0,stroke-width:1px;
+    class LLM,FSM,CTRL,DRIVE,SENS,PMIC,EH,SoC,ACT,U blk;
+```
+
+---
+
+#### 🧩 クロスノード・チップセット構成 / Cross-Node Chipset
+
+*22nm（頭脳）× 0.18µm AMS（感覚）× 0.35µm LDMOS＋外付けパワー（筋肉）× 自己発電（エネルギー）。*  
+*22nm “brain” + 0.18µm AMS “senses” + 0.35µm LDMOS (+ external power) “muscles” + self-powering “energy”.*
+
+```mermaid
+%%{init: {'theme':'neutral','flowchart':{'htmlLabels':true,'curve':'monotoneX'}}}%%
+flowchart LR
+    subgraph B[Brain SoC (22nm)]
+      B1[LLM Inference]
+      B2[FSM Management]
+      B3[State-Space Ctrl IP<br/>(LQR/LQG)]
+    end
+
+    subgraph A[Sensor Hub (0.18µm AMS)]
+      A1[CMOS Camera]
+      A2[IMU/Encoders]
+      A3[Force/Pressure]
+      A4[MEMS Mic]
+      A5[AFE/ADC]
+    end
+
+    subgraph D[Power Drive (0.35µm LDMOS + Ext. Power)]
+      D1[PWM / H-Bridge]
+      D2[BLDC/Servo Drivers]
+      D3[Temp/Current Monitor]
+      D4[Safety Interlocks]
+    end
+
+    subgraph E[Energy Harvest (Piezo / PV / Regen)]
+      E1[Piezo Array]
+      E2[Thin-film PV]
+      E3[Regenerative Braking]
+    end
+
+    subgraph P[Battery & PMIC]
+      P1[DC-DC / Charger]
+      P2[SoC/Drive Rails]
+    end
+
+    %% Interfaces
+    B ---|I²C / SPI / MIPI-CSI2| A
+    B -->|PWM / Telemetry| D
+    A -->|Sensor Data| B
+    E -->|Harvested Power| P
+    P -->|Power Rails| D
+    P -->|Power Rails| B
+    D -->|Health/Telem| B
+
+    %% Styling
+    classDef n fill:#f7fbf5,stroke:#7aa974,stroke-width:1px;
+    classDef c fill:#f5f7fb,stroke:#7a92c2,stroke-width:1px;
+    classDef p fill:#fdf7f3,stroke:#c28c5d,stroke-width:1px;
+    class B c; class A c; class D p; class E n; class P n;
+```
 
 ---
 
 #### ⚙️ 実証成果 / Demonstrated Results
+
 | 項目 / Item | 成果 / Result | 備考 / Note |
-|-------------|---------------|-------------|
+|---|---|---|
 | **姿勢回復時間** / Posture Recovery | ≤200ms | ✅ 達成 |
 | **歩容安定度** / Gait Stability | +30% | ✅ 改善 |
 | **エネルギー効率** / Energy Efficiency | +15% | ✅ 改善 |
@@ -219,15 +290,13 @@ It cross-integrates control, semiconductors, and energy domains, demonstrating a
 ---
 
 #### 🌐 社会的意義 / Societal Significance
-- **防災**：倒壊現場での探索・救助補助  
-  *Disaster relief: search and rescue in collapsed sites*  
-- **介護**：高齢者支援、移動補助  
-  *Elderly care: mobility and support assistance*  
-- **産業**：山間・工場・危険エリアでの作業代替  
-  *Industry: task replacement in mountains, factories, hazardous zones*  
 
-AITLに基づく人型ロボットは、単なる試作機ではなく、**政策・産業・教育をつなぐ象徴的PoC**である。  
-*The humanoid robot based on AITL is not merely a prototype, but a **symbolic PoC connecting policy, industry, and education***.  
+- **防災**：倒壊現場での探索・救助補助  
+  *Disaster relief: search & rescue in collapsed sites*  
+- **介護**：高齢者支援、移動補助  
+  *Elderly care: mobility assistance*  
+- **産業**：山間・工場・危険エリアでの代替作業  
+  *Industry: tasks in mountains, factories, hazardous zones*
 
 ---
 
