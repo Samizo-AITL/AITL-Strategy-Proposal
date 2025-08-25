@@ -201,21 +201,15 @@ AITL creates **new value** that goes beyond conventional control and design para
 *LLM (goal/anomaly) → FSM (mode switching) → Physical control (PID + state-space), with sensors, safety, and energy management spanning all layers.*
 
 ```mermaid
-%%{init: {'theme':'neutral','flowchart':{'htmlLabels':true,'curve':'basis'}}}%%
 flowchart TB
-    U[User Voice/Task<br/>音声・タスク] --> LLM[LLM Layer<br/>Goal Generation / Anomaly Interpretation]
-    SENS[IMU / Camera / Force<br/>センサ群] -->|Telemetry| LLM
-    LLM --> FSM[FSM Layer<br/>Behavior Mode Switching<br/>立位/歩行/旋回/回復/省エネ/損傷対応]
-    FSM --> CTRL[Physical Control Layer<br/>PID + State-Space (LQR/LQG)]
-    CTRL --> ACT[Actuation<br/>Torque Commands]
-    ACT -->|PWM/H-Bridge| DRIVE[Power Drive<br/>Safety Monitor]
-    SENS -->|Feedback| CTRL
-    EH[Energy Harvest<br/>Piezo / PV / Regen] --> PMIC[Power Mgmt<br/>Battery/DC-DC]
-    PMIC --> DRIVE
-    PMIC --> SoC[22nm SoC]
-    SoC --- LLM
-    classDef blk fill:#f6f9fc,stroke:#8aa4c0,stroke-width:1px;
-    class LLM,FSM,CTRL,DRIVE,SENS,PMIC,EH,SoC,ACT,U blk;
+    U[User Voice/Task] --> LLM[LLM Layer<br/>Goal & Anomaly Analysis]
+    LLM --> FSM[FSM Layer<br/>Behavior Switching]
+    FSM --> CTRL[PID + State-Space CTRL]
+    CTRL --> ACT[Power Drive<br/>(PWM/H-Bridge)]
+    SENS[Sensors<br/>IMU/Camera/Force] --> CTRL
+    EH[Energy Harvest<br/>Piezo/PV/Regen] --> PMIC[Power Mgmt<br/>Battery/DC-DC]
+    PMIC --> DRIVE[Power Drive]
+    SoC[22nm SoC] --> LLM
 ```
 
 ---
@@ -226,54 +220,24 @@ flowchart TB
 *22nm “brain” + 0.18µm AMS “senses” + 0.35µm LDMOS (+ external power) “muscles” + self-powering “energy”.*
 
 ```mermaid
-%%{init: {'theme':'neutral','flowchart':{'htmlLabels':true,'curve':'monotoneX'}}}%%
 flowchart LR
-    subgraph B[Brain SoC (22nm)]
-      B1[LLM Inference]
-      B2[FSM Management]
-      B3[State-Space Ctrl IP<br/>(LQR/LQG)]
+    subgraph B [Brain SoC (22nm)]
+        B1[LLM + State-Space Control]
+    end
+    subgraph S [Sensor Hub (0.18µm AMS)]
+        S1[IMU / Camera / Force Sensors]
+    end
+    subgraph D [Power Drive (0.35µm LDMOS)]
+        D1[PWM / H-Bridge Torque Drive]
+    end
+    subgraph E [Energy Harvest (MEMS/PV/Regen)]
+        E1[Self-Power & Storage]
     end
 
-    subgraph A[Sensor Hub (0.18µm AMS)]
-      A1[CMOS Camera]
-      A2[IMU/Encoders]
-      A3[Force/Pressure]
-      A4[MEMS Mic]
-      A5[AFE/ADC]
-    end
-
-    subgraph D[Power Drive (0.35µm LDMOS + Ext. Power)]
-      D1[PWM / H-Bridge]
-      D2[BLDC/Servo Drivers]
-      D3[Temp/Current Monitor]
-      D4[Safety Interlocks]
-    end
-
-    subgraph E[Energy Harvest (Piezo / PV / Regen)]
-      E1[Piezo Array]
-      E2[Thin-film PV]
-      E3[Regenerative Braking]
-    end
-
-    subgraph P[Battery & PMIC]
-      P1[DC-DC / Charger]
-      P2[SoC/Drive Rails]
-    end
-
-    %% Interfaces
-    B ---|I²C / SPI / MIPI-CSI2| A
-    B -->|PWM / Telemetry| D
-    A -->|Sensor Data| B
-    E -->|Harvested Power| P
-    P -->|Power Rails| D
-    P -->|Power Rails| B
-    D -->|Health/Telem| B
-
-    %% Styling
-    classDef n fill:#f7fbf5,stroke:#7aa974,stroke-width:1px;
-    classDef c fill:#f5f7fb,stroke:#7a92c2,stroke-width:1px;
-    classDef p fill:#fdf7f3,stroke:#c28c5d,stroke-width:1px;
-    class B c; class A c; class D p; class E n; class P n;
+    B --> S
+    B --> D
+    E --> B
+    E --> D
 ```
 
 ---
