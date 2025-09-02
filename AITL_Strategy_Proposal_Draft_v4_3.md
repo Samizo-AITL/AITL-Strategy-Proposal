@@ -291,13 +291,16 @@ The application scope of SystemDK extends beyond AITL, encompassing **semiconduc
 特に、今後の**先端ノード半導体チップ**においては、物理制約を設計初期段階で統合的に扱う**SystemDKによる設計手法は必須**となる。  
 In particular, for **future advanced-node semiconductor chips**, design methodologies based on SystemDK—which integrate physical constraints at the earliest stages—will be **indispensable**.  
 
+さらに、SystemDK開発は **設計・制御・CAD・製造・評価を跨ぐ14〜16か月規模の現実的なロードマップ**を背景に持つ。  
+*Moreover, SystemDK development is grounded on a **realistic 14–16 month roadmap** spanning design, control, CAD, fabrication, and evaluation.*  
+
 - 高密度実装環境での熱・信号干渉の早期対策が可能  
   *Enables early countermeasures against thermal and signal interference in high-density environments.*  
 - FEM解析を設計段階に組み込み、回路・パッケージ・基板の統合最適化を実現  
   *Integrates FEM analysis directly into the design phase, achieving co-optimization across circuits, packages, and substrates.*  
 - 長期的には設計効率・製品信頼性・量産歩留まりの向上につながる  
   *Ultimately improves design efficiency, product reliability, and mass-production yield.*
-
+  
 ---
 
 ## 4.1 技術的課題とリスク / Technical Challenges and Risks {#risks}
