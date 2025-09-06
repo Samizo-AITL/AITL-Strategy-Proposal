@@ -13,6 +13,12 @@ title: AITL-Strategy-Proposal (EN)
 **National Strategy Proposal × Integrated Educational Package based on AITL**  
 **AITL (AI × Control × Physical Systems) as a framework for education and national-level deployment**
 
+> ⚠️ **Note**  
+> The **AITL-Strategy-Proposal** repository is currently at the **conceptual / PoC stage**.  
+> - The contents are **ideas for education, research, and policy proposals**, not finalized for operational use.  
+> - Technical stability and response design are based on **control theory foundations (e.g., Edusemi, EduController)**.  
+> - The proposals are **subject to change** as further testing and validation progress.
+
 [📄 Read the Proposal (MD)](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/AITL_Strategy_Proposal_Draft_v4_3_en.html)  
 [⬇️ Download PDF](https://samizo-aitl.github.io/AITL-Strategy-Proposal/en/Figures/AITL_Strategy_Proposal_Draft_v4_3_en.pdf)
 
