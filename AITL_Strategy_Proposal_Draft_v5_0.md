@@ -1,6 +1,6 @@
 ---
 layout: aitl
-title: AITL Strategy Proposal (v5.0 – Evidence & Industrial Impact)
+title: AITL Strategy Proposal (v5.0 – Core Evidence & Policy)
 permalink: /AITL_Strategy_Proposal_v5_0.html
 ---
 
@@ -14,21 +14,21 @@ permalink: /AITL_Strategy_Proposal_v5_0.html
 ## 🚀 0. エグゼクティブサマリ / Executive Summary
 
 **AITL (AI-Integrated Transition & Loop)** は  
-- **PID（安定性 / Stability）**  
-- **FSM（モード遷移 / State Transition）**  
-- **LLM（再設計 / Redesign）**  
+- **PID制御（安定性 / Stability）**  
+- **FSM制御（モード遷移 / State Transition）**  
+- **LLM設計（再設計 / Redesign）**  
 
 を統合し、**SystemDK** により **熱・応力・電源・EMI** などの物理制約を設計初期から反映する。  
 *AITL integrates PID, FSM, and LLM, with SystemDK embedding physical constraints (thermal, stress, power, EMI) from the earliest design stage.*  
 
-本提案は、**各論文のPoC実測値** を根拠とし、**産業・教育・政策** への橋渡しを提示する。  
-*This proposal grounds itself on PoC evidence from published papers, bridging industry, education, and policy.*  
+本提案は、**2025年に発表されたコア論文のPoC実測値** を根拠とし、**産業・教育・政策** への橋渡しを提示する。  
+*This proposal is grounded in PoC evidence from 2025 core papers, bridging industry, education, and policy.*  
 
 ---
 
-## 📑 1. 論文別PoC解説 / Paper-Based PoC Examples
+## 📑 1. 論文別PoC解説 / Core PoC Papers (2025)
 
-### 🤖 1.1 Humanoid TCST 論文 (2025)  
+### 🤖 1.1 Humanoid TCST 論文  
 *[Humanoid TCST Paper (2025)](./docs/humanoid_tcst2025.pdf)*  
 
 - **実測 / Results:** 姿勢回復 ≤200ms、歩容安定度 +30%、エネルギー効率 +15%、自己発電寄与 ~12%  
@@ -40,8 +40,8 @@ permalink: /AITL_Strategy_Proposal_v5_0.html
 
 ---
 
-### 🚀 1.2 AITL on Space Main Paper  
-*[AITL on Space Paper](./docs/aitl_space.pdf)*  
+### 🚀 1.2 AITL on Space 論文  
+*[AITL on Space Paper (2025)](./docs/aitl_space.pdf)*  
 
 - **実測 / Results:** Tri-NVM階層、H∞＋FSM＋LLM、22nm FDSOI FPGA実装  
   *Tri-NVM hierarchy, H∞+FSM+LLM, 22nm FDSOI FPGA implementation*  
@@ -50,8 +50,8 @@ permalink: /AITL_Strategy_Proposal_v5_0.html
 
 ---
 
-### ⚡ 1.3 CFET Control Main Paper (2025)  
-*[CFET Control Paper](./docs/cfet_ctrl2025.pdf)*  
+### ⚡ 1.3 CFET Control 論文  
+*[CFET Control Paper (2025)](./docs/cfet_ctrl2025.pdf)*  
 
 - **実測 / Results:** サブ2nm配線遅延・熱結合を補償  
   *Compensation for sub-2nm interconnect delay and thermal coupling*  
@@ -60,8 +60,8 @@ permalink: /AITL_Strategy_Proposal_v5_0.html
 
 ---
 
-### 🖥️ 1.4 SystemDK+AITL Main Paper (2025)  
-*[SystemDK+AITL Paper](./docs/systemdk_aitl2025.pdf)*  
+### 🖥️ 1.4 SystemDK+AITL 論文  
+*[SystemDK+AITL Paper (2025)](./docs/systemdk_aitl2025.pdf)*  
 
 - **実測 / Results:** RC遅延・熱結合・EMIを補償  
   *Compensation for RC delay, thermal coupling, and EMI*  
@@ -70,63 +70,13 @@ permalink: /AITL_Strategy_Proposal_v5_0.html
 
 ---
 
-### 📘 1.5 CFET Tutorial Paper  
-*[CFET Tutorial Paper](./docs/cfet_tutorial_main.pdf)*  
+### 📘 1.5 CFET Tutorial 論文  
+*[CFET Tutorial Paper (2025)](./docs/cfet_tutorial_main.pdf)*  
 
 - **内容 / Content:** Planar→FinFET→GAA→CFET進化を教育的整理  
   *Educational overview of device evolution: Planar → FinFET → GAA → CFET*  
 - **産業貢献 / Industrial Impact:** 次世代エンジニア教育の標準教材。  
   *Standard teaching material for next-generation engineer education.*  
-
----
-
-### 💾 1.6 LPDDR+FeRAM Integration  
-*[LPDDR+FeRAM Paper](./docs/LPDDR_FeRAM.pdf)*  
-
-- **実測 / Results:** 低消費・瞬時復帰  
-  *Low-power, instant resume*  
-- **産業貢献 / Industrial Impact:** 車載・モバイル・IoTにおける低消費スタンバイ実現。  
-  *Enables low-power standby in automotive, mobile, and IoT devices.*  
-
----
-
-### 🔋 1.7 FeFET CMOS Reliability (0.18µm)  
-*[FeFET CMOS Paper](./docs/fefet_cmos018_reliability.pdf)*  
-
-- **実測 / Results:** 1e5サイクル、10年保持@85℃  
-  *1e5 endurance cycles, 10y retention @85℃*  
-- **産業貢献 / Industrial Impact:** レガシーファウンドリで低価格IoT製品を可能にする。  
-  *Enables low-cost IoT products via legacy foundries.*  
-
----
-
-### ⚙️ 1.8 CMOS018 Inductor + LDO Paper  
-*[CMOS018 Inductor+LDO Paper](./docs/cmos018_inductor_ldo.pdf)*  
-
-- **実測 / Results:** 効率 >80%、低ノイズ  
-  *>80% efficiency, low noise*  
-- **産業貢献 / Industrial Impact:** 外付け部品削減 → 車載・IoT SoC低コスト電源。  
-  *Removes external components, reducing costs in automotive/IoT SoCs.*  
-
----
-
-### 🌊 1.9 ScAlN Ultrasonic Paper  
-*[ScAlN Ultrasonic Paper](./docs/scaln_ultrasonic.pdf)*  
-
-- **実測 / Results:** PbフリーMEMS＋65nm CMOSで高感度  
-  *Pb-free MEMS + 65nm CMOS with high sensitivity*  
-- **産業貢献 / Industrial Impact:** 医療機器向け環境調和型センサ。  
-  *Eco-friendly sensor for medical devices.*  
-
----
-
-### 🖨️ 1.10 Bio-Inkjet Paper (KNN)  
-*[Bio-Inkjet Paper](./docs/bioinkjet_knn.pdf)*  
-
-- **実測 / Results:** ±50V駆動でピコリットル滴下  
-  *±50V drive, picoliter droplet ejection*  
-- **産業貢献 / Industrial Impact:** 創薬・細胞工学の高精度プリンティング。  
-  *High-precision printing for drug discovery and cell engineering.*  
 
 ---
 
@@ -196,9 +146,21 @@ timeline
 
 ---
 
+## 📚 Appendix: 2025年関連研究 / Related Works (2025)
+
+AITL本体には含めないが、2025年に発表した関連研究成果：  
+
+- [LPDDR+FeRAM Integration](./docs/LPDDR_FeRAM.pdf)  
+- [FeFET CMOS Reliability (0.18µm)](./docs/fefet_cmos018_reliability.pdf)  
+- [CMOS018 Inductor+LDO](./docs/cmos018_inductor_ldo.pdf)  
+- [ScAlN Ultrasonic](./docs/scaln_ultrasonic.pdf)  
+- [Bio-Inkjet KNN](./docs/bioinkjet_knn.pdf)  
+
+---
+
 ## ✅ 7. 結論 / Conclusion
 
-AITL v5.0は、**論文実測値に基づく戦略**であり、  
+AITL v5.0は、**コア論文の実測値に基づく戦略**であり、  
 
 - **産業界:** 設計効率化・低コスト化・新市場創出  
 - **教育界:** AITL学による人材供給  
