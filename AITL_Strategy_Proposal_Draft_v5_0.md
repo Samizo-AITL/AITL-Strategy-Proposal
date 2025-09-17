@@ -1,141 +1,210 @@
 ---
 layout: aitl
-title: AITL Strategy Proposal (v5.0 – Policy-First, Evidence-Based)
+title: AITL Strategy Proposal (v5.0 – Evidence & Industrial Impact)
 permalink: /AITL_Strategy_Proposal_v5_0.html
 ---
 
-<div class="btn-row">
-  <a class="btn" href="#exec">🚀 Executive Summary</a>
-  <a class="btn" href="#poc">🧪 PoC Examples</a>
-  <a class="btn" href="#kpi">📏 KPI & Evidence</a>
-  <a class="btn" href="#impl">⚙️ Implementation</a>
-  <a class="btn" href="{{ site.baseurl }}/Figures/AITL_Strategy_Proposal_v5_0.pdf">⬇️ Download PDF</a>
-</div>
+---
 
 # 🇯🇵 **AITL戦略提言書 v5.0**  
-# 🇺🇸 **AITL Strategy Proposal v5.0**
+# 🇺🇸 *AITL Strategy Proposal v5.0*
 
 ---
 
-## 0. エグゼクティブサマリ / Executive Summary {#exec}
+## 🚀 0. エグゼクティブサマリ / Executive Summary
 
-AITL (AI-Integrated Transition & Loop) は、  
-- **PID制御（安定性）**  
-- **FSM制御（モード遷移）**  
-- **LLM設計（再設計）**  
+**AITL (AI-Integrated Transition & Loop)** は  
+- **PID（安定性 / Stability）**  
+- **FSM（モード遷移 / State Transition）**  
+- **LLM（再設計 / Redesign）**  
 
-を統合し、**SystemDK (System Design Kit)** で物理制約（熱・電源・EMI・応力）を初期段階から反映する。  
+を統合し、**SystemDK** により **熱・応力・電源・EMI** などの物理制約を設計初期から反映する。  
+*AITL integrates PID, FSM, and LLM, with SystemDK embedding physical constraints (thermal, stress, power, EMI) from the earliest design stage.*  
 
-本提案は、**国家政策・産業・教育の三位一体**で推進すべき枠組みを示し、  
-論文に基づく **実測値・PoC成果** を根拠として提示する。  
-
----
-
-## 1. 政策パッケージ / Policy Package {#policy}
-
-- **基盤R&D (2025–2026)**: AITL-Studies設立、SystemDK α版開発  
-- **標準化推進 (2026–2028)**: 国内WG設立、規制サンドボックス適用  
-- **産業実装 (2028–2030)**: コンソーシアム発足、認証制度設計  
-- **国際標準化 (2030–2032)**: EUV世代設計・自律制御の標準主導  
+本提案は、**各論文のPoC実測値** を根拠とし、**産業・教育・政策** への橋渡しを提示する。  
+*This proposal grounds itself on PoC evidence from published papers, bridging industry, education, and policy.*  
 
 ---
 
-## 2. PoC具体例 / Real-World PoC Examples {#poc}
+## 📑 1. 論文別PoC解説 / Paper-Based PoC Examples
 
-### 2.1 ロボット制御統合 / Integrated Robotic Control
-- **参照論文:** [📄 Humanoid TCST 論文 (2025)](./docs/humanoid_tcst2025.pdf)  
-- **実測値:** 姿勢回復 ≤200 ms、歩容安定度 +30%、エネルギー効率 +15%、自己発電寄与 ~12%  
-- **AITL解釈:** PID×FSM×LLMにより部分故障でも継続動作可能。  
+### 🤖 1.1 Humanoid TCST 論文 (2025)  
+*[Humanoid TCST Paper (2025)](./docs/humanoid_tcst2025.pdf)*  
 
----
-
-### 2.2 スマート工場ライン最適化 / Smart Factory Optimization
-- **参照論文:** [📄 CMOS018 Inductor + LDO Paper](./docs/cmos018_inductor_ldo.pdf)  
-- **実測値:** On-chip磁性インダクタ＋Hybrid Buck–LDOで効率 >80%、低ノイズ動作。  
-- **AITL解釈:** 工場電源ラインをAITL制御すれば、故障時も電源品質を確保しライン再構成。  
+- **実測 / Results:** 姿勢回復 ≤200ms、歩容安定度 +30%、エネルギー効率 +15%、自己発電寄与 ~12%  
+  *Posture recovery ≤200ms, gait stability +30%, energy efficiency +15%, self-powering ~12%*  
+- **AITL位置づけ / AITL Role:** PID＋FSM＋LLMによる三層制御。Flagship PoC。  
+  *Three-layer control with PID, FSM, and LLM. Flagship PoC.*  
+- **産業貢献 / Industrial Impact:** 災害救助、介護支援、工場自動化で信頼性を担保。  
+  *Ensures reliability in disaster relief, elderly care, and factory automation.*  
 
 ---
 
-### 2.3 自律移動ロボット群制御 / Autonomous Mobile Robot Fleet
-- **参照論文:** [📄 ScAlN Ultrasonic Paper](./docs/scaln_ultrasonic.pdf)  
-- **実測値:** PbフリーScAlN MEMSセンサ＋65 nm SiGe CMOSで高感度を実証。  
-- **AITL解釈:** センサ異常時もFSM/LLMで経路再構築し群制御を維持。  
+### 🚀 1.2 AITL on Space Main Paper  
+*[AITL on Space Paper](./docs/aitl_space.pdf)*  
+
+- **実測 / Results:** Tri-NVM階層、H∞＋FSM＋LLM、22nm FDSOI FPGA実装  
+  *Tri-NVM hierarchy, H∞+FSM+LLM, 22nm FDSOI FPGA implementation*  
+- **産業貢献 / Industrial Impact:** 宇宙機器メーカー・防衛産業における長期自律運用の基盤。  
+  *Foundation for long-term autonomous operation in space and defense industries.*  
 
 ---
 
-### 2.4 フラッグシップPoC：人型ロボット / Flagship PoC: Humanoid
-- **参照論文:** [📄 Humanoid TCST 論文 (2025)](./docs/humanoid_tcst2025.pdf)  
-- **成果:** クロスノード構成 (22 nm SoC + 0.18 µm AMS + 0.35 µm LDMOS)、Physical AI の具現化。  
+### ⚡ 1.3 CFET Control Main Paper (2025)  
+*[CFET Control Paper](./docs/cfet_ctrl2025.pdf)*  
+
+- **実測 / Results:** サブ2nm配線遅延・熱結合を補償  
+  *Compensation for sub-2nm interconnect delay and thermal coupling*  
+- **産業貢献 / Industrial Impact:** 半導体EDA・ファウンドリの歩留まり改善。  
+  *Improves yield for semiconductor EDA and foundries.*  
 
 ---
 
-### 2.5 宇宙探査機PoC / Spacecraft Autonomy
-- **参照論文:** [📄 AITL on Space Main Paper](./docs/aitl_space.pdf)  
-- **実測値:** Tri-NVM階層 (SRAM/MRAM/FRAM)、H∞＋FSM＋LLM統合、22 nm FDSOI FPGA実装。  
-- **AITL解釈:** 放射線イベント発生時でもフェイルオペレーショナルを維持。  
+### 🖥️ 1.4 SystemDK+AITL Main Paper (2025)  
+*[SystemDK+AITL Paper](./docs/systemdk_aitl2025.pdf)*  
+
+- **実測 / Results:** RC遅延・熱結合・EMIを補償  
+  *Compensation for RC delay, thermal coupling, and EMI*  
+- **産業貢献 / Industrial Impact:** 自動車・IoT・通信SoCに必須の設計基盤。  
+  *Essential design foundation for automotive, IoT, and communication SoCs.*  
 
 ---
 
-## 3. KPI & Evidence {#kpi}
+### 📘 1.5 CFET Tutorial Paper  
+*[CFET Tutorial Paper](./docs/cfet_tutorial_main.pdf)*  
 
-| KPI / Source | Target | 論文実測値 | 状態 |
+- **内容 / Content:** Planar→FinFET→GAA→CFET進化を教育的整理  
+  *Educational overview of device evolution: Planar → FinFET → GAA → CFET*  
+- **産業貢献 / Industrial Impact:** 次世代エンジニア教育の標準教材。  
+  *Standard teaching material for next-generation engineer education.*  
+
+---
+
+### 💾 1.6 LPDDR+FeRAM Integration  
+*[LPDDR+FeRAM Paper](./docs/LPDDR_FeRAM.pdf)*  
+
+- **実測 / Results:** 低消費・瞬時復帰  
+  *Low-power, instant resume*  
+- **産業貢献 / Industrial Impact:** 車載・モバイル・IoTにおける低消費スタンバイ実現。  
+  *Enables low-power standby in automotive, mobile, and IoT devices.*  
+
+---
+
+### 🔋 1.7 FeFET CMOS Reliability (0.18µm)  
+*[FeFET CMOS Paper](./docs/fefet_cmos018_reliability.pdf)*  
+
+- **実測 / Results:** 1e5サイクル、10年保持@85℃  
+  *1e5 endurance cycles, 10y retention @85℃*  
+- **産業貢献 / Industrial Impact:** レガシーファウンドリで低価格IoT製品を可能にする。  
+  *Enables low-cost IoT products via legacy foundries.*  
+
+---
+
+### ⚙️ 1.8 CMOS018 Inductor + LDO Paper  
+*[CMOS018 Inductor+LDO Paper](./docs/cmos018_inductor_ldo.pdf)*  
+
+- **実測 / Results:** 効率 >80%、低ノイズ  
+  *>80% efficiency, low noise*  
+- **産業貢献 / Industrial Impact:** 外付け部品削減 → 車載・IoT SoC低コスト電源。  
+  *Removes external components, reducing costs in automotive/IoT SoCs.*  
+
+---
+
+### 🌊 1.9 ScAlN Ultrasonic Paper  
+*[ScAlN Ultrasonic Paper](./docs/scaln_ultrasonic.pdf)*  
+
+- **実測 / Results:** PbフリーMEMS＋65nm CMOSで高感度  
+  *Pb-free MEMS + 65nm CMOS with high sensitivity*  
+- **産業貢献 / Industrial Impact:** 医療機器向け環境調和型センサ。  
+  *Eco-friendly sensor for medical devices.*  
+
+---
+
+### 🖨️ 1.10 Bio-Inkjet Paper (KNN)  
+*[Bio-Inkjet Paper](./docs/bioinkjet_knn.pdf)*  
+
+- **実測 / Results:** ±50V駆動でピコリットル滴下  
+  *±50V drive, picoliter droplet ejection*  
+- **産業貢献 / Industrial Impact:** 創薬・細胞工学の高精度プリンティング。  
+  *High-precision printing for drug discovery and cell engineering.*  
+
+---
+
+## 📏 2. KPI一覧 / KPI Table
+
+| 🧪 **KPI** | 🎯 **Target** | 📊 **実測値 / Result** | 📄 **出典 / Source** |
 |---|---|---|---|
-| 姿勢回復時間 | ≤150 ms | Humanoid TCST: ≤200 ms | ほぼ達成 |
-| 歩容安定度改善 | +20% | Humanoid TCST: +30% | ✅ |
-| エネルギー効率改善 | +15% | Humanoid TCST: +15% | ✅ |
-| 自己発電寄与率 | 20% | Humanoid TCST: ~12% | ❌ 未達 |
-| FeFET保持 | ≥10年@85℃ | [FeFET CMOS 論文](./docs/fefet_cmos018_reliability.pdf): 実証済 | ✅ |
-| FeFET耐久性 | ≥1e5 cycle | 同上: 実証済 | ✅ |
-| On-chip電源効率 | >80% | CMOS018 Inductor: 実証済 | ✅ |
-| Ultrasonicセンサ感度 | 高感度・Pbフリー | ScAlN論文: 実証済 | ✅ |
+| 姿勢回復 / Posture Recovery | ≤150ms | ≤200ms | Humanoid |
+| 歩容安定度 / Gait Stability | +20% | +30% | Humanoid |
+| エネルギー効率 / Energy Efficiency | +15% | +15% | Humanoid |
+| 自己発電寄与 / Self-Powering | 20% | 12% | Humanoid |
+| FeFET保持 / Retention | ≥10y@85℃ | 実証済 | FeFET CMOS |
+| FeFET耐久性 / Endurance | ≥1e5 | 実証済 | FeFET CMOS |
+| 電源効率 / Power Efficiency | >80% | 実証済 | CMOS018 Inductor |
+| 超音波感度 / Ultrasonic Sensitivity | 高感度 | 実証済 | ScAlN |
+| 滴下精度 / Droplet Precision | pL級 | 実証済 | Bio-Inkjet |
 
 ---
 
-## 4. 実装とSystemDK / Implementation with SystemDK {#impl}
+## 🔎 3. AITLの具体的解説 / AITL Explained
 
-- **参照論文:** [📄 SystemDK+AITL Main Paper (2025)](./docs/systemdk_aitl2025.pdf), [📄 CFET Control Main Paper (2025)](./docs/cfet_ctrl2025.pdf)  
-- **要点:**  
-  - FEM解析を設計段階に統合し、熱・EMI・電源を最適化。  
-  - RC遅延や熱結合をPID＋FSM＋LLMで補償。  
-  - PoCで **ガードバンド削減・信頼性改善** を実証済。  
+```mermaid
+flowchart TB
+    PID["PID制御<br/>Stability"] --> CORE["AITL Core"]
+    FSM["FSM制御<br/>Transition"] --> CORE
+    LLM["LLM設計<br/>Redesign"] --> CORE
+    CORE --> OPT["統合最適化<br/>Holistic Optimization"]
+    SYS["SystemDK<br/>Physical Constraints"] --> CORE
+```
 
----
-
-## 5. 教育と人材育成 / Education & HRD
-
-- **参照論文:** [📄 CFET Tutorial Paper](./docs/cfet_tutorial_main.pdf)  
-- **提案:** 「AITL学（仮称）」として制御＋AI＋物理制約を横断する新教育体系を構築。  
-- **効果:** 修士・博士レベルでの体系教育、産学共同PoC実習、標準化リーダー育成。  
+**AITLはPID・FSM・LLMを統合し、SystemDKで物理制約を初期段階から反映する。**  
+*AITL integrates PID, FSM, and LLM, embedding SystemDK constraints from the start.*  
 
 ---
 
-## 6. 産業化モデル / Industrialization Model
+## 🏭 4. AITLによる産業界への影響 / Industrial Impact
 
-- **参照:** [📄 Bio-Inkjet Paper](./docs/bioinkjet_knn.pdf)（医療応用PoC）、[📄 LPDDR+FeRAM Integration](./docs/LPDDR_FeRAM.pdf)  
-- **要点:**  
-  - AITL設計会社モデル：3–4名でPoC開始、5–7年でM&A可能。  
-  - 投資規模：初期 ¥15M → Series A (¥100–300M) → ARR 5–10億円レンジへ成長。  
-
----
-
-## 7. リスクと緩和 / Risks & Mitigations
-
-| リスク | 緩和策 |
+| 産業分野 / Sector | 貢献内容 / Contribution |
 |---|---|
-| LLM幻覚応答 | 形式検証＋SystemDK物理制約チェック＋監査ログ必須 |
-| サイバー攻撃 | Zero Trust設計、署名付きデプロイ、最小権限化 |
-| 物理モデル不整合 | 実測フィードバック＋デジタルツイン校正 |
-| IP係争 | RANDベースの標準化ポリシーを早期に整備 |
+| 半導体 / Semiconductor | サブ2nm設計の信頼性・歩留まり改善 |
+| 自動車 / Automotive | 車載SoCの安全性・省エネ化 |
+| ロボット / Robotics | 災害救助・介護・工場自動化 |
+| 医療 / Medical | PbフリーMEMS・Bio-Inkjetによる新市場 |
+| 宇宙 / Space | 探査機の長期自律運用 |
 
 ---
 
-## 8. 結論 / Conclusion
+## 🎓 5. 教育・人材育成 / Education & HRD
 
-AITL v5.0は、**論文実証値に裏付けられた政策・産業・教育戦略**である。  
-- **PoC実績:** Humanoid, Space, Factory, Bio-Inkjet, CFET 教材  
-- **基盤:** SystemDK, Tri-NVM, FeFET CMOS  
-- **政策:** KPIベースの導入効果、標準化・監査体制  
-
-これにより、AITLは **「研究成果」から「国家基盤」へ昇華**できる。  
+- **AITL学（仮称） / “AITL Studies”**  
+  *Interdisciplinary program integrating control, AI, and physical design constraints.*  
+- **教材 / Teaching Materials:** CFET Tutorial, SystemDK論文, Humanoid PoC  
+- **成果 / Outcome:** 修士・博士課程での人材育成、産業PoC連携、国際標準化リーダー輩出  
 
 ---
+
+## 🛣️ 6. ロードマップ / Roadmap
+
+```mermaid
+timeline
+    title AITL導入ロードマップ / AITL Roadmap
+    2025-2026 : 基盤R&D (AITL学, SystemDK α版) / Foundational R&D
+    2026-2028 : 国内WG設立, PoC拡大 / Domestic WG, PoC Expansion
+    2028-2030 : コンソーシアム, 認証制度 / Consortium, Certification
+    2030-2032 : 国際標準化主導 / Intl. Standardization
+```
+
+---
+
+## ✅ 7. 結論 / Conclusion
+
+AITL v5.0は、**論文実測値に基づく戦略**であり、  
+
+- **産業界:** 設計効率化・低コスト化・新市場創出  
+- **教育界:** AITL学による人材供給  
+- **政策:** KPIベースの標準化・国家競争力強化  
+
+を同時に実現する。  
+
+**AITLは「研究成果」から「国家基盤」への昇華を可能にする。**  
+*AITL enables the transition from research results to national infrastructure.*  
