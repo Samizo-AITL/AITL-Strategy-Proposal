@@ -60,55 +60,62 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 
 ## 📑 2. 論文別PoC解説 / Core PoC Papers (2025)
 
-### 🤖 2.1 Humanoid TCST 論文  
-*[Humanoid TCST Paper (2025)](./docs/humanoid_tcst2025.pdf)*  
+### 📘 2.1 CFET Tutorial 論文  
+*[CFET Tutorial Paper (2025)](./docs/cfet_tutorial_main.pdf)*  
 
-- **実測 / Results:** 姿勢回復 ≤200ms、歩容安定度 +30%、エネルギー効率 +15%、自己発電寄与 ~12%  
-  *Posture recovery ≤200ms, gait stability +30%, energy efficiency +15%, self-powering ~12%*  
-- **AITL位置づけ / AITL Role:** PID＋FSM＋LLMによる三層制御。Flagship PoC。  
-  *Three-layer control with PID, FSM, and LLM. Flagship PoC.*  
-- **産業貢献 / Industrial Impact:** 災害救助、介護支援、工場自動化で信頼性を担保。  
-  *Ensures reliability in disaster relief, elderly care, and factory automation.*  
+- **内容 / Content:** Planar→FinFET→GAA→CFET というデバイス進化を教育的に整理。  
+  *Educational overview of device evolution: Planar → FinFET → GAA → CFET*  
+- **産業貢献 / Industrial Impact:** 次世代エンジニア教育の標準教材。  
+  *Standard teaching material for next-generation engineer education.*  
+- **位置づけ / Role:** 本論文はAITLそのものではないが、**2.2 SystemDK+AITLや2.3 CFET Controlを理解する前提教材**として不可欠。  
 
 ---
 
-### 🚀 2.2 AITL on Space 論文  
-*[AITL on Space Paper (2025)](./docs/aitl_space.pdf)*  
+### 🖥️ 2.2 SystemDK+AITL 論文  
+*[SystemDK+AITL Paper (2025)](./docs/systemdk_aitl2025.pdf)*  
 
-- **実測 / Results:** Tri-NVM階層、H∞＋FSM＋LLM、22nm FDSOI FPGA実装  
-  *Tri-NVM hierarchy, H∞+FSM+LLM, 22nm FDSOI FPGA implementation*  
-- **産業貢献 / Industrial Impact:** 宇宙機器メーカー・防衛産業における長期自律運用の基盤。  
-  *Foundation for long-term autonomous operation in space and defense industries.*  
+- **実測 / Results:** RC遅延・熱結合・EMIを補償。  
+  *Compensation for RC delay, thermal coupling, and EMI*  
+- **産業貢献 / Industrial Impact:** 自動車・IoT・通信SoCに必須の設計基盤。  
+  *Essential design foundation for automotive, IoT, and communication SoCs.*  
+- **位置づけ / Role:** AITLを**システム設計レベルで活用**する最初の成果。物理制約を設計段階から反映するSystemDKの有効性を示す。  
 
 ---
 
 ### ⚡ 2.3 CFET Control 論文  
 *[CFET Control Paper (2025)](./docs/cfet_ctrl2025.pdf)*  
 
-- **実測 / Results:** サブ2nm配線遅延・熱結合を補償  
+- **実測 / Results:** サブ2nm配線遅延・熱結合を補償。  
   *Compensation for sub-2nm interconnect delay and thermal coupling*  
 - **産業貢献 / Industrial Impact:** 半導体EDA・ファウンドリの歩留まり改善。  
   *Improves yield for semiconductor EDA and foundries.*  
+- **位置づけ / Role:** 2.2のSystemDK成果を**デバイススケールに適用したPoC**。  
+  → **2.1 Tutorial**で示されたデバイス進化の課題（熱結合・配線遅延）が、AITLによって克服可能であることを実証。  
 
 ---
 
-### 🖥️ 2.4 SystemDK+AITL 論文  
-*[SystemDK+AITL Paper (2025)](./docs/systemdk_aitl2025.pdf)*  
+### 🤖 2.4 Humanoid TCST 論文  
+*[Humanoid TCST Paper (2025)](./docs/humanoid_tcst2025.pdf)*  
 
-- **実測 / Results:** RC遅延・熱結合・EMIを補償  
-  *Compensation for RC delay, thermal coupling, and EMI*  
-- **産業貢献 / Industrial Impact:** 自動車・IoT・通信SoCに必須の設計基盤。  
-  *Essential design foundation for automotive, IoT, and communication SoCs.*  
+- **実測 / Results:** 姿勢回復 ≤200ms、歩容安定度 +30%、エネルギー効率 +15%、自己発電寄与 ~12%。  
+  *Posture recovery ≤200ms, gait stability +30%, energy efficiency +15%, self-powering ~12%*  
+- **AITL位置づけ / AITL Role:** PID＋FSM＋LLMによる三層制御。Flagship PoC。  
+  *Three-layer control with PID, FSM, and LLM. Flagship PoC.*  
+- **産業貢献 / Industrial Impact:** 災害救助、介護支援、工場自動化で信頼性を担保。  
+  *Ensures reliability in disaster relief, elderly care, and factory automation.*  
+- **位置づけ / Role:** 半導体・デバイス領域から離れ、**AITLを動的環境（ヒューマノイド）に応用した代表例**。AITLの汎用性を示す。  
 
 ---
 
-### 📘 2.5 CFET Tutorial 論文  
-*[CFET Tutorial Paper (2025)](./docs/cfet_tutorial_main.pdf)*  
+### 🚀 2.5 AITL on Space 論文  
+*[AITL on Space Paper (2025)](./docs/aitl_space.pdf)*  
 
-- **内容 / Content:** Planar→FinFET→GAA→CFET進化を教育的整理  
-  *Educational overview of device evolution: Planar → FinFET → GAA → CFET*  
-- **産業貢献 / Industrial Impact:** 次世代エンジニア教育の標準教材。  
-  *Standard teaching material for next-generation engineer education.*  
+- **実測 / Results:** Tri-NVM階層、H∞＋FSM＋LLM、22nm FDSOI FPGA実装。  
+  *Tri-NVM hierarchy, H∞+FSM+LLM, 22nm FDSOI FPGA implementation*  
+- **産業貢献 / Industrial Impact:** 宇宙機器メーカー・防衛産業における長期自律運用の基盤。  
+  *Foundation for long-term autonomous operation in space and defense industries.*  
+- **位置づけ / Role:** Humanoidと並ぶ**AITL応用の広がり**を示すPoC。  
+  → 特に**長期自律性**が重視される宇宙・防衛分野で、AITLの優位性を確認。  
 
 ---
 
