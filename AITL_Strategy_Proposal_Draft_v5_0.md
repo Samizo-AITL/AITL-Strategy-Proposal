@@ -13,30 +13,33 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 
 ## 🚀 0. エグゼクティブサマリ / Executive Summary
 
-**AITL (AI-Integrated Transition & Loop)** は  
-- **PID制御（安定性 / Stability）**  
-- **FSM制御（モード遷移 / State Transition）**  
-- **LLM設計（再設計 / Redesign）**  
+**AITL (AI-Integrated Transition & Loop)** は、  
+- **PID制御（安定性の確保 / Stability）**  
+- **FSM制御（モード遷移の統括 / State Transition）**  
+- **LLM設計（再設計・知能統合 / Redesign & Integration）**  
 
-を統合し、**SystemDK** により **熱・応力・電源・EMI** などの物理制約を設計初期から反映する。  
-*AITL integrates PID, FSM, and LLM, with SystemDK embedding physical constraints (thermal, stress, power, EMI) from the earliest design stage.*  
+を三層で統合し、さらに **SystemDK** により **熱・応力・電源・EMI** などの物理的制約を設計初期段階から反映する新しい設計基盤である。  
+*AITL integrates PID, FSM, and LLM in three layers, while SystemDK embeds physical constraints (thermal, stress, power, EMI) from the earliest design stage.*  
 
-本提案は、**2025年に発表されたコア論文のPoC実測値** を根拠とし、**産業・教育・政策** への橋渡しを提示する。  
-*This proposal is grounded in PoC evidence from 2025 core papers, bridging industry, education, and policy.*  
+本提案は、**2025年に発表された複数のコア論文のPoC実測値** に基づき、**産業界・教育界・政策領域** への具体的展開を提示する。  
+*This proposal is grounded in measured PoC evidence from multiple core papers published in 2025, presenting concrete pathways to industry, education, and policy.*  
 
-特に、**ヒューマノイド（姿勢回復 ≤200ms, 安定度 +30%, 効率 +15%）**、  
-**CFET制御（サブ2nm配線遅延・熱結合補償）**、  
-**宇宙応用（22nm FDSOI FPGA実装, 長期自律運用）** など、  
-**実測PoCで効果が確認済み**である。  
-*In particular, validated PoCs include **humanoids (≤200ms posture recovery, +30% stability, +15% efficiency)**,  
-**CFET control (sub-2nm interconnect delay & thermal coupling compensation)**, and  
-**space applications (22nm FDSOI FPGA implementation, long-term autonomous operation)**,  
-all confirming practical effectiveness.*  
+実証成果としては、  
+- **ヒューマノイド制御**において *姿勢回復200ms以内、歩行安定性30%向上、エネルギー効率15%改善* を達成。  
+  *In humanoid control, achieved posture recovery within 200ms, 30% improvement in gait stability, and 15% improvement in energy efficiency.*  
+- **CFET制御**により *サブ2nm領域の配線遅延と熱結合* を補償。  
+  *In CFET control, compensated for sub-2nm interconnect delay and thermal coupling.*  
+- **宇宙応用**では *22nm FDSOI FPGA上での長期自律運用* を実現。  
+  *In space applications, demonstrated long-term autonomous operation on 22nm FDSOI FPGA.*  
 
-さらに、国際比較では、欧米の「AI×制御」研究が未だ**PID拡張や強化学習レベル**に留まる一方で、AITLは**三層統合＋物理制約反映**という先行優位性を持つ。  
-これは日本発の国家競争力強化の切り札となる。  
-*Furthermore, while US and EU research on “AI×control” remains at the level of PID extensions or reinforcement learning, AITL holds a **first-mover advantage through three-layer integration plus physical constraint embedding**.  
-This represents Japan’s strategic advantage for strengthening national competitiveness.*  
+これらはすべて、**実機ベースのPoCで効果が確認された成果**であり、国際的にも稀有な取り組みである。  
+*All of these are validated outcomes based on hardware PoCs, representing a rare achievement even internationally.*  
+
+さらに国際比較の観点では、米国・EU・中国が依然として「強化学習ベースの制御」や「倫理標準化」、「大規模AI基盤」に注力する一方で、AITLは **制御・AI・物理制約を三位一体で統合** する唯一の枠組みを確立している。  
+*From the perspective of international comparison, while the US, EU, and China still emphasize reinforcement learning–based control, ethics standardization, or large-scale AI infrastructures, AITL uniquely integrates control, AI, and physical constraints into a single framework.*  
+
+この独自性は、日本にとって **技術覇権と経済安全保障の確立** に直結する戦略的優位性となる。  
+*This uniqueness represents a strategic advantage for Japan, directly contributing to securing technological leadership and economic security.*  
 
 ---
 
