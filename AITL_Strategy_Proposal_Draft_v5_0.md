@@ -1,7 +1,7 @@
 ---
 layout: aitl
 title: AITL Strategy Proposal (v5.1 – Core Evidence & Policy)
-permalink: /AITL_Strategy_Proposal_Draft_v5_1.html
+permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 ---
 
 ---
