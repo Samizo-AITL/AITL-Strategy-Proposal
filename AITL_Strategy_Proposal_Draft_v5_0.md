@@ -1,13 +1,13 @@
 ---
 layout: aitl
-title: AITL Strategy Proposal (v5.0 – Core Evidence & Policy)
-permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
+title: AITL Strategy Proposal (v5.1 – Core Evidence & Policy)
+permalink: /AITL_Strategy_Proposal_Draft_v5_1.html
 ---
 
 ---
 
-# 🇯🇵 **AITL戦略提言書 v5.0**  
-# 🇺🇸 *AITL Strategy Proposal v5.0*
+# 🇯🇵 **AITL戦略提言書 v5.1**  
+# 🇺🇸 *AITL Strategy Proposal v5.1*
 
 ---
 
@@ -23,6 +23,9 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 
 本提案は、**2025年に発表されたコア論文のPoC実測値** を根拠とし、**産業・教育・政策** への橋渡しを提示する。  
 *This proposal is grounded in PoC evidence from 2025 core papers, bridging industry, education, and policy.*  
+
+さらに、国際比較では、欧米の「AI×制御」研究が未だ**PID拡張や強化学習レベル**に留まる一方で、AITLは**三層統合＋物理制約反映**という先行優位性を持つ。  
+これは日本発の国家競争力強化の切り札となる。  
 
 ---
 
@@ -93,6 +96,8 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 | 電源効率 / Power Efficiency | >80% | 実証済 | CMOS018 Inductor |
 | 超音波感度 / Ultrasonic Sensitivity | 高感度 | 実証済 | ScAlN |
 | 滴下精度 / Droplet Precision | pL級 | 実証済 | Bio-Inkjet |
+| 修士人材育成数 / Graduate Training | ≥100/年 | 計画中 | AITL Studies |
+| 国際標準化WG参加数 / Intl. WG Members | ≥10 | 計画中 | Policy |
 
 ---
 
@@ -112,15 +117,15 @@ flowchart TB
 
 ---
 
-## 🏭 4. AITLによる産業界への影響 / Industrial Impact
+## 🏭 4. AITLによる産業界・政策への影響 / Industrial & Policy Impact
 
-| 産業分野 / Sector | 貢献内容 / Contribution |
-|---|---|
-| 半導体 / Semiconductor | サブ2nm設計の信頼性・歩留まり改善 |
-| 自動車 / Automotive | 車載SoCの安全性・省エネ化 |
-| ロボット / Robotics | 災害救助・介護・工場自動化 |
-| 医療 / Medical | PbフリーMEMS・Bio-Inkjetによる新市場 |
-| 宇宙 / Space | 探査機の長期自律運用 |
+| 産業分野 / Sector | 貢献内容 / Contribution | 政策的意義 / Policy Significance |
+|---|---|---|
+| 半導体 / Semiconductor | サブ2nm設計の信頼性・歩留まり改善 | 経済安全保障・技術覇権 |
+| 自動車 / Automotive | 車載SoCの安全性・省エネ化 | GX・自動運転安全 |
+| ロボット / Robotics | 災害救助・介護・工場自動化 | 労働力不足対策 |
+| 医療 / Medical | PbフリーMEMS・Bio-Inkjetによる新市場 | 超高齢社会対応 |
+| 宇宙 / Space | 探査機の長期自律運用 | 宇宙安全保障・国際協力 |
 
 ---
 
@@ -129,7 +134,10 @@ flowchart TB
 - **AITL学（仮称） / “AITL Studies”**  
   *Interdisciplinary program integrating control, AI, and physical design constraints.*  
 - **教材 / Teaching Materials:** CFET Tutorial, SystemDK論文, Humanoid PoC  
-- **成果 / Outcome:** 修士・博士課程での人材育成、産業PoC連携、国際標準化リーダー輩出  
+- **成果 / Outcome:**  
+  - 修士・博士課程で年間100名規模の人材輩出  
+  - 国際会議・標準化WGでの若手参加者増加  
+  - 産業PoC連携による即戦力養成  
 
 ---
 
@@ -142,13 +150,14 @@ timeline
     2026-2028 : 国内WG設立, PoC拡大 / Domestic WG, PoC Expansion
     2028-2030 : コンソーシアム, 認証制度 / Consortium, Certification
     2030-2032 : 国際標準化主導 / Intl. Standardization
+    2032- : 標準活用による市場展開 / Market Deployment via Standards
 ```
 
 ---
 
 ## 📊 7. 経済効果試算 / Economic Impact Estimation
 
-**2026–2030年にAITLを国内導入した場合のBaseシナリオ（2030年時点）**  
+**2026–2030年にAITLを国内導入した場合のシナリオ比較（2030年時点）**  
 
 | 産業分野 / Sector | 収益 / Revenue (¥Bn) | 削減効果 / Savings (¥Bn) | 輸出 / Exports (¥Bn) | 雇用（直接） / Jobs Direct | 雇用（総計） / Jobs Total |
 |---|---|---|---|---|---|
@@ -158,7 +167,9 @@ timeline
 | 宇宙 / Space | ~4.8 | ~1.6 | ~2.9 | ~120 | ~192 |
 | **合計 / Total** | **~70.8** | **~26.4** | **~21.8** | **~2,400** | **~4,578** |
 
-*試算はPoC実績値＋産業係数に基づく政策説明用モデル。Upsideケースではこの1.4倍規模。*  
+**感度分析 / Sensitivity Analysis (2030)**  
+- **Upside Case:** +40%（海外標準化リード時） → ~1000億円規模  
+- **Downside Case:** –30%（国際標準化遅延時） → ~500億円規模  
 
 ---
 
@@ -174,15 +185,12 @@ AITL本体には含めないが、2025年に発表した関連研究成果：
 
 ---
 
-## ✅ 7. 結論 / Conclusion
+## ✅ 8. 結論 / Conclusion
 
-AITL v5.0は、**コア論文の実測値に基づく戦略**であり、  
+AITL v5.1は、**コア論文の実測値に基づきつつ国際比較と政策的意義を補強した戦略**である。  
 
 - **産業界:** 設計効率化・低コスト化・新市場創出  
-- **教育界:** AITL学による人材供給  
-- **政策:** KPIベースの標準化・国家競争力強化  
+- **教育界:** 年間100名規模のAITL人材育成  
+- **政策:** KPIベースの標準化・安全保障・GX対応  
 
-を同時に実現する。  
-
-**AITLは「研究成果」から「国家基盤」への昇華を可能にする。**  
-*AITL enables the transition from research results to national infrastructure.*  
+AITLは「研究成果」から「国家基盤」への昇華を可能にし、国際標準化を通じて日本の技術覇権確立に寄与する。
