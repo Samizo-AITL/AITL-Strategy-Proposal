@@ -1,13 +1,13 @@
 ---
 layout: aitl
-title: AITL Strategy Proposal (v5.1 – Core Evidence & Policy)
-permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
+title: AITL Strategy Proposal (v5.2 – Policy Edition, Fixed Chapter Numbers)
+permalink: /AITL_Strategy_Proposal_Draft_v5_2_fixed.html
 ---
 
 ---
 
-# 🇯🇵 **AITL戦略提言書 v5.1**  
-# 🇺🇸 *AITL Strategy Proposal v5.1*
+# 🇯🇵 **AITL戦略提言書 v5.2 (政策版・章番号修正版)**  
+# 🇺🇸 *AITL Strategy Proposal v5.2 (Policy Edition, Fixed Chapter Numbers)*
 
 ---
 
@@ -29,9 +29,38 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 
 ---
 
-## 📑 1. 論文別PoC解説 / Core PoC Papers (2025)
+## 🌍 1. 国際比較 / International Comparison
 
-### 🤖 1.1 Humanoid TCST 論文  
+### 🌐 主要国・地域の類似アプローチと限界
+
+| 国・地域 | 代表的プロジェクト | 技術的アプローチ | 限界点 / 課題 |
+|---|---|---|---|
+| 🇺🇸 **米国** | DARPA "Assured Autonomy", NASA AI制御 | 強化学習ベースの適応制御、形式手法 | 物理制約（熱・電源・信頼性）の統合が弱く、宇宙・防衛での長期安定性に課題 |
+| 🇪🇺 **EU** | Horizon Europe "AI4CyberPhysical", "HumanE AI" | サイバーフィジカル統合AI、倫理重視 | 制御理論よりも社会・倫理側に重点。ハード制御のPoC不足 |
+| 🇨🇳 **中国** | 「新世代AI計画」(次世代AI国家戦略) | AIチップ開発と軍民融合、自律制御強化 | 技術成果は膨大だが、標準化で国際的受容性に乏しい |
+| 🇯🇵 **日本 (AITL)** | AITL v5.0 / v5.1 PoC群 | PID＋FSM＋LLMを三層統合、SystemDKで物理制約反映 | 世界で唯一、制御・AI・物理制約を同時統合。国際標準化主導が鍵 |
+
+### ✨ AITLの競合差別化ポイント
+1. **三層アーキテクチャの唯一性**  
+   - 米国＝強化学習／形式手法、EU＝サイバーフィジカル統合、中国＝大規模AI基盤。  
+   - → **PID×FSM×LLM＋SystemDK** の組合せは現状AITLのみ。  
+
+2. **実測PoCによる裏付け**  
+   - 海外はシミュレーション中心、日本AITLは**ロボット・半導体・宇宙実機PoC**で実証済み。  
+
+3. **教育・標準化戦略**  
+   - EUは倫理標準、中国は自国閉鎖型、米国は防衛優先。  
+   - → 日本AITLは**国際標準化と人材育成**を両輪で提示可能。  
+
+### 📌 戦略的示唆
+- 政策文書においては「AITLはDARPAやHorizon Europeの延長線ではなく、**物理制約統合による次世代制御基盤**である」と強調。  
+- 国際会議向けには「米国＝AI制御、EU＝倫理、中国＝大規模化、日本＝AITLの三層＋物理制約」で4象限マップを示すと説得力が増す。  
+
+---
+
+## 📑 2. 論文別PoC解説 / Core PoC Papers (2025)
+
+### 🤖 2.1 Humanoid TCST 論文  
 *[Humanoid TCST Paper (2025)](./docs/humanoid_tcst2025.pdf)*  
 
 - **実測 / Results:** 姿勢回復 ≤200ms、歩容安定度 +30%、エネルギー効率 +15%、自己発電寄与 ~12%  
@@ -43,7 +72,7 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 
 ---
 
-### 🚀 1.2 AITL on Space 論文  
+### 🚀 2.2 AITL on Space 論文  
 *[AITL on Space Paper (2025)](./docs/aitl_space.pdf)*  
 
 - **実測 / Results:** Tri-NVM階層、H∞＋FSM＋LLM、22nm FDSOI FPGA実装  
@@ -53,7 +82,7 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 
 ---
 
-### ⚡ 1.3 CFET Control 論文  
+### ⚡ 2.3 CFET Control 論文  
 *[CFET Control Paper (2025)](./docs/cfet_ctrl2025.pdf)*  
 
 - **実測 / Results:** サブ2nm配線遅延・熱結合を補償  
@@ -63,7 +92,7 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 
 ---
 
-### 🖥️ 1.4 SystemDK+AITL 論文  
+### 🖥️ 2.4 SystemDK+AITL 論文  
 *[SystemDK+AITL Paper (2025)](./docs/systemdk_aitl2025.pdf)*  
 
 - **実測 / Results:** RC遅延・熱結合・EMIを補償  
@@ -73,7 +102,7 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 
 ---
 
-### 📘 1.5 CFET Tutorial 論文  
+### 📘 2.5 CFET Tutorial 論文  
 *[CFET Tutorial Paper (2025)](./docs/cfet_tutorial_main.pdf)*  
 
 - **内容 / Content:** Planar→FinFET→GAA→CFET進化を教育的整理  
@@ -83,7 +112,7 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 
 ---
 
-## 📏 2. KPI一覧 / KPI Table
+## 📏 3. KPI一覧 / KPI Table
 
 | 🧪 **KPI** | 🎯 **Target** | 📊 **実測値 / Result** | 📄 **出典 / Source** |
 |---|---|---|---|
@@ -101,7 +130,7 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 
 ---
 
-## 🔎 3. AITLの具体的解説 / AITL Explained
+## 🔎 4. AITLの具体的解説 / AITL Explained
 
 ```mermaid
 flowchart TB
@@ -117,7 +146,7 @@ flowchart TB
 
 ---
 
-## 🏭 4. AITLによる産業界・政策への影響 / Industrial & Policy Impact
+## 🏭 5. AITLによる産業界・政策への影響 / Industrial & Policy Impact
 
 | 産業分野 / Sector | 貢献内容 / Contribution | 政策的意義 / Policy Significance |
 |---|---|---|
@@ -129,7 +158,7 @@ flowchart TB
 
 ---
 
-## 🎓 5. 教育・人材育成 / Education & HRD
+## 🎓 6. 教育・人材育成 / Education & HRD
 
 - **AITL学（仮称） / “AITL Studies”**  
   *Interdisciplinary program integrating control, AI, and physical design constraints.*  
@@ -141,7 +170,7 @@ flowchart TB
 
 ---
 
-## 🛣️ 6. ロードマップ / Roadmap
+## 🛣️ 7. ロードマップ / Roadmap
 
 ```mermaid
 timeline
@@ -155,7 +184,7 @@ timeline
 
 ---
 
-## 📊 7. 経済効果試算 / Economic Impact Estimation
+## 📊 8. 経済効果試算 / Economic Impact Estimation
 
 **2026–2030年にAITLを国内導入した場合のシナリオ比較（2030年時点）**  
 
@@ -173,7 +202,7 @@ timeline
 
 ---
 
-## 📚 Appendix: 2025年関連研究 / Related Works (2025)
+## 📚 9. Appendix: 2025年関連研究 / Related Works (2025)
 
 AITL本体には含めないが、2025年に発表した関連研究成果：  
 
@@ -185,9 +214,9 @@ AITL本体には含めないが、2025年に発表した関連研究成果：
 
 ---
 
-## ✅ 8. 結論 / Conclusion
+## ✅ 10. 結論 / Conclusion
 
-AITL v5.1は、**コア論文の実測値に基づきつつ国際比較と政策的意義を補強した戦略**である。  
+AITL v5.2 (政策版・章番号修正版)は、**PoC実測値に基づきつつ国際比較を冒頭で提示し、政策的意義を強化した戦略**である。  
 
 - **産業界:** 設計効率化・低コスト化・新市場創出  
 - **教育界:** 年間100名規模のAITL人材育成  
