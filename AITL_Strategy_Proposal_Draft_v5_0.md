@@ -6,8 +6,8 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 
 ---
 
-# 🇯🇵 **AITL戦略提言書 v5.2 (政策版・章番号修正版)**  
-# 🇺🇸 *AITL Strategy Proposal v5.2 (Policy Edition, Fixed Chapter Numbers)*
+# 🇯🇵 **AITL戦略提言書 v5.2 **  
+# 🇺🇸 *AITL Strategy Proposal v5.2 *
 
 ---
 
