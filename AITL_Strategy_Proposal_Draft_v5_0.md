@@ -31,31 +31,46 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 
 ## 🌍 1. 国際比較 / International Comparison
 
-### 🌐 主要国・地域の類似アプローチと限界
+### 🌐 主要国・地域の類似アプローチと限界  
+*Similar approaches and limitations in major countries and regions*
 
-| 国・地域 | 代表的プロジェクト | 技術的アプローチ | 限界点 / 課題 |
+| 国・地域 / Region | 代表的プロジェクト / Representative Projects | 技術的アプローチ / Technical Approach | 限界点・課題 / Limitations & Challenges |
 |---|---|---|---|
-| 🇺🇸 **米国** | DARPA "Assured Autonomy", NASA AI制御 | 強化学習ベースの適応制御、形式手法 | 物理制約（熱・電源・信頼性）の統合が弱く、宇宙・防衛での長期安定性に課題 |
-| 🇪🇺 **EU** | Horizon Europe "AI4CyberPhysical", "HumanE AI" | サイバーフィジカル統合AI、倫理重視 | 制御理論よりも社会・倫理側に重点。ハード制御のPoC不足 |
-| 🇨🇳 **中国** | 「新世代AI計画」(次世代AI国家戦略) | AIチップ開発と軍民融合、自律制御強化 | 技術成果は膨大だが、標準化で国際的受容性に乏しい |
-| 🇯🇵 **日本 (AITL)** | AITL v5.0 / v5.1 PoC群 | PID＋FSM＋LLMを三層統合、SystemDKで物理制約反映 | 世界で唯一、制御・AI・物理制約を同時統合。国際標準化主導が鍵 |
+| 🇺🇸 **米国 / USA** | DARPA "Assured Autonomy", NASA AI Control | 強化学習ベースの適応制御、形式手法  *Reinforcement learning–based adaptive control, formal methods* | 物理制約（熱・電源・信頼性）の統合が弱く、宇宙・防衛での長期安定性に課題  *Weak integration of physical constraints (thermal, power, reliability); issues with long-term stability in space and defense* |
+| 🇪🇺 **EU** | Horizon Europe "AI4CyberPhysical", "HumanE AI" | サイバーフィジカル統合AI、倫理重視  *Cyber-physical integrated AI, ethics-focused* | 制御理論よりも社会・倫理側に重点。ハード制御のPoC不足  *Focus on societal/ethical aspects rather than control theory; lacks hardware-level PoCs* |
+| 🇨🇳 **中国 / China** | 「新世代AI計画」(次世代AI国家戦略)  *Next-Generation AI National Strategy* | AIチップ開発と軍民融合、自律制御強化  *AI chip development, civil–military fusion, enhanced autonomous control* | 技術成果は膨大だが、標準化で国際的受容性に乏しい  *Vast technical output, but weak international acceptance in standardization* |
+| 🇯🇵 **日本 (AITL) / Japan (AITL)** | AITL v5.0 / v5.1 PoCs | PID＋FSM＋LLMを三層統合、SystemDKで物理制約反映  *Three-layer integration of PID, FSM, and LLM, with SystemDK embedding physical constraints* | 世界で唯一、制御・AI・物理制約を同時統合。国際標準化主導が鍵  *Only framework worldwide integrating control, AI, and physical constraints simultaneously; leadership in international standardization is crucial* |
 
-### ✨ AITLの競合差別化ポイント
-1. **三層アーキテクチャの唯一性**  
+---
+
+### ✨ AITLの競合差別化ポイント / AITL’s Differentiation Points
+
+1. **三層アーキテクチャの唯一性 / Uniqueness of the Three-Layer Architecture**  
    - 米国＝強化学習／形式手法、EU＝サイバーフィジカル統合、中国＝大規模AI基盤。  
+     *USA = reinforcement learning / formal methods; EU = cyber-physical integration; China = large-scale AI platforms*  
    - → **PID×FSM×LLM＋SystemDK** の組合せは現状AITLのみ。  
+     *→ Only AITL combines PID×FSM×LLM with SystemDK.*  
 
-2. **実測PoCによる裏付け**  
+2. **実測PoCによる裏付け / Validation through Measured PoCs**  
    - 海外はシミュレーション中心、日本AITLは**ロボット・半導体・宇宙実機PoC**で実証済み。  
+     *Overseas efforts remain simulation-focused, while Japan’s AITL has been demonstrated in real PoCs across robotics, semiconductors, and space.*  
 
-3. **教育・標準化戦略**  
+3. **教育・標準化戦略 / Education & Standardization Strategy**  
    - EUは倫理標準、中国は自国閉鎖型、米国は防衛優先。  
+     *EU emphasizes ethics standards; China is domestically closed; USA prioritizes defense.*  
    - → 日本AITLは**国際標準化と人材育成**を両輪で提示可能。  
+     *→ Japan’s AITL can uniquely present both international standardization and human resource development.*  
 
-### 📌 戦略的示唆
+---
+
+### 📌 戦略的示唆 / Strategic Implications
+
 - 政策文書においては「AITLはDARPAやHorizon Europeの延長線ではなく、**物理制約統合による次世代制御基盤**である」と強調。  
-- 国際会議向けには「米国＝AI制御、EU＝倫理、中国＝大規模化、日本＝AITLの三層＋物理制約」で4象限マップを示すと説得力が増す。  
+  *In policy documents, emphasize that AITL is not a continuation of DARPA or Horizon Europe, but a **next-generation control foundation integrating physical constraints**.*  
 
+- 国際会議向けには「米国＝AI制御、EU＝倫理、中国＝大規模化、日本＝AITLの三層＋物理制約」で4象限マップを示すと説得力が増す。  
+  *For international conferences, a four-quadrant map (USA = AI control, EU = ethics, China = scale, Japan = AITL’s three layers + physical constraints) enhances persuasiveness.*
+  
 ---
 
 ## 📑 2. 論文別PoC解説 / Core PoC Papers (2025)
