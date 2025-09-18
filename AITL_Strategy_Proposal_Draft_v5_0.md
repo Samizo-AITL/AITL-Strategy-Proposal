@@ -1,7 +1,7 @@
 ---
 layout: aitl
 title: AITL Strategy Proposal (v5.2 – Policy Edition, Fixed Chapter Numbers)
-permalink: /AITL_Strategy_Proposal_Draft_v5_2_fixed.html
+permalink: /AITL_Strategy_Proposal_Draft_v5_0_fixed.html
 ---
 
 ---
@@ -204,22 +204,44 @@ timeline
 
 ## 📚 9. Appendix: 2025年関連研究 / Related Works (2025)
 
-AITL本体には含めないが、2025年に発表した関連研究成果：  
+AITL本体には含めないが、2025年に発表した関連研究成果は、  
+**既存技術の強化・医療機器や次世代デバイスの安全性確保**に資する。  
 
 - [LPDDR+FeRAM Integration](./docs/LPDDR_FeRAM.pdf)  
+  - **内容:** 低消費電力DRAMと不揮発性FeRAMを統合し、組込みメモリの信頼性を強化。  
+  - **貢献:** **産業機器・車載システムのデータ保持安全性**に寄与。  
+
 - [FeFET CMOS Reliability (0.18µm)](./docs/fefet_cmos018_reliability.pdf)  
+  - **内容:** FeFETを標準CMOSプロセスに統合し、保持特性・耐久性を実測。  
+  - **貢献:** **半導体・産業用エレクトロニクスの長期信頼性**を確保。  
+
 - [CMOS018 Inductor+LDO](./docs/cmos018_inductor_ldo.pdf)  
+  - **内容:** CMOS0.18µmでインダクタ＋LDOを設計し、高効率電源を実現。  
+  - **貢献:** **低電力IoT機器・ロボット**における安定電源供給に有効。  
+
 - [ScAlN Ultrasonic](./docs/scaln_ultrasonic.pdf)  
+  - **内容:** 高感度ScAlN薄膜による超音波MEMSの実証。  
+  - **貢献:** **非破壊検査やセンシング分野**での高信頼応用が可能。  
+
 - [Bio-Inkjet KNN](./docs/bioinkjet_knn.pdf)  
+  - **内容:** 鉛フリー強誘電体KNNを用いたバイオインクジェット技術。  
+  - **貢献:** **医療分野でのPbフリー材料利用**を実証し、安全性・環境適合を担保。  
 
 ---
 
 ## ✅ 10. 結論 / Conclusion
 
 AITL v5.2 (政策版・章番号修正版)は、**PoC実測値に基づきつつ国際比較を冒頭で提示し、政策的意義を強化した戦略**である。  
+*AITL v5.2 (Policy Edition, with revised chapter numbering) is a strategy that strengthens policy significance by presenting international comparisons at the outset, while remaining grounded in PoC experimental evidence.*  
 
 - **産業界:** 設計効率化・低コスト化・新市場創出  
-- **教育界:** 年間100名規模のAITL人材育成  
-- **政策:** KPIベースの標準化・安全保障・GX対応  
+  *Industry: Improve design efficiency, reduce costs, and create new markets*  
 
-AITLは「研究成果」から「国家基盤」への昇華を可能にし、国際標準化を通じて日本の技術覇権確立に寄与する。
+- **教育界:** 年間100名規模のAITL人材育成  
+  *Education: Cultivate approximately 100 AITL-trained professionals annually*  
+
+- **政策:** KPIベースの標準化・安全保障・GX対応  
+  *Policy: Standardization based on KPIs, enhanced security, and GX (Green Transformation) measures*  
+
+AITLは「研究成果」から「国家基盤」への昇華を可能にし、国際標準化を通じて日本の技術覇権確立に寄与する。  
+*AITL enables the transition from research achievements to national infrastructure, contributing to Japan’s technological leadership through international standardization.*  
