@@ -261,12 +261,13 @@ flowchart TB
 ### 4.3 KPI視覚化 / KPI Visualization
 
 ```mermaid
-bar
-    title KPI達成度 (Achievement vs Target)
+%%{init: {"theme": "default"}}%%
+xychart-beta
+    title "KPI達成度 (Achievement vs Target)"
     x-axis ["Posture Recovery", "Gait Stability", "Energy Efficiency", "Self-Powering"]
-    y-axis "達成率 / Achievement (%)" 0 --> 120
-    "Target" : [100,100,100,100]
-    "Result" : [75,150,100,60]
+    y-axis "達成率 (%)" 0 --> 150
+    bar "Target" [100,100,100,100]
+    bar "Result" [75,150,100,60]
 ```
 
 ---
