@@ -54,12 +54,27 @@ This uniqueness grants Japan a **strategic advantage for technological leadershi
 
 ## 2. Core Framework: SystemDK with AITL
 
-SystemDK extends PDK by integrating thermal, stress, EMI, and RC delay constraints into design.  
-AITL integrates PID, FSM, and LLM for real-time stability, supervised transitions, and redesign.  
+### 2.1 What is SystemDK?  
+SystemDK (System Design Kit) extends PDK by enabling designers to consider thermal, stress, EMI, and RC delay constraints at circuit/system stages. Integrated with EDA and simulation, it ensures feasibility and reliability from the start.
 
-Together, **SystemDK with AITL** enables Runtime Physics-Aware DTCO: continuous loops between design and operation, embedding physical constraints from the start.
+### 2.2 What is AITL?  
+AITL integrates PID (stability), FSM (state transitions), and LLM (redesign) in three layers. PID guarantees real-time stability, FSM supervises mode transitions, and LLM assists redesign under disturbances/failures.
 
-Japan, unlike the US/EU/China, has already demonstrated this integration via hardware PoCs, positioning it uniquely in the global context.
+### 2.3 Integration of SystemDK with AITL  
+Combining SystemDK and AITL realizes **Runtime Physics-Aware DTCO**: a real-time framework embedding physical constraints from the start, where AITL consumes SystemDK thermal/power/stress models in feedback to close the loop from design to operation.
+
+### 2.4 Position in International Context  
+The US is beginning post-hoc compensation for physics; the EU focuses on ethics; China emphasizes mass production. Japan, via **SystemDK with AITL**, has established the world’s only framework unifying design, control, and physical constraints.
+
+```mermaid
+flowchart TB
+    SYS["SystemDK<br/>Physical Constraints"] --> CORE["AITL Core"]
+    PID["PID Control<br/>Stability"] --> CORE
+    FSM["FSM Control<br/>Transition"] --> CORE
+    LLM["LLM Design<br/>Redesign"] --> CORE
+    CORE --> OPT["Holistic Optimization"]
+```
+
 
 ---
 
@@ -123,6 +138,17 @@ Japan, unlike the US/EU/China, has already demonstrated this integration via har
 
 Policy should prioritize **energy harvesting R&D**, and treat HRD/standardization as **policy-driven KPIs**.  
 
+### 4.3 KPI Visualization
+```mermaid
+%%{init: {"theme": "default"}}%%
+xychart-beta
+    title "KPI Achievement (Target vs Result)"
+    x-axis ["Posture Recovery", "Gait Stability", "Energy Efficiency", "Self-Powering"]
+    y-axis "Achievement (%)" 0 --> 150
+    bar "Target" [100,100,100,100]
+    bar "Result" [75,150,100,60]
+```
+
 ---
 
 ## 5. Industrial & Policy Impact
@@ -150,47 +176,103 @@ Outcomes: ~100 graduates annually, young researcher participation in global WGs,
 
 ## 7. Policy Roadmap
 
-- **2025–2026:** AITL Studies launch, SystemDK α release.  
-- **2026–2028:** Domestic WG formation, PoC expansion.  
-- **2028–2030:** Consortium, certification system.  
-- **2030–2032:** International standardization leadership.  
-- **Post-2032:** Market deployment via standards.  
+### 7.1 Overall Roadmap (Timeline)
+```mermaid
+timeline
+    title AITL Roadmap
+    2025-2026 : Foundational R&D (AITL Studies, SystemDK α)
+    2026-2028 : Domestic WG Formation, PoC Expansion
+    2028-2030 : Consortium, Certification Systems
+    2030-2032 : International Standardization Leadership
+    2032- : Market Deployment via Standards
+```
 
-Govt roles:  
-- METI → PoCs, WG secretariat.  
-- MEXT → education programs.  
-- MOFA → diplomacy, WG chairs.  
-- MIC → IoT/telecom support.  
-- CAO → GX/economic security packaging.  
+### 7.2 Roles of Government Agencies
+- **METI:** Support PoCs; WG secretariat; issue industrial standardization guidelines.  
+- **MEXT:** Introduce AITL Studies; lead PhD-level HRD; strengthen education/research bases.  
+- **MOFA:** Secure WG chair positions; diplomacy at ISO/IEC & IEEE.  
+- **MIC:** Frameworks for IoT/telecom PoCs; align with spectrum/cyber policies.  
+- **CAO:** Package AITL within economic security & GX; cross-ministerial coordination.
+
+### 7.3 Milestones
+- 2025–26: Launch education; release SystemDK α.  
+- 2026–28: Establish domestic WG; expand PoCs.  
+- 2028–30: Build certification; form consortium.  
+- 2030–32: Target ISO/IEEE chairmanship.  
+- Post-2032: Deploy globally via standards.
 
 ---
 
-## 8. Economic Impact
+## 8. Economic Impact Estimation
 
-2030 projections: Revenue ~¥71B, Savings ~¥26B, Exports ~¥22B, Jobs ~4,500+.  
+### 8.1 Quantitative Estimate (2030)
+| Sector | Revenue (¥Bn) | Savings (¥Bn) | Exports (¥Bn) | Jobs Direct | Jobs Total |
+|---|---|---|---|---|---|
+| Semiconductor | ~30 | ~12 | ~10.5 | ~900 | ~1,710 |
+| Robotics | ~24 | ~9 | ~6 | ~960 | ~1,920 |
+| Medical | ~12 | ~3.8 | ~2.4 | ~420 | ~756 |
+| Space | ~4.8 | ~1.6 | ~2.9 | ~120 | ~192 |
+| **Total** | **~70.8** | **~26.4** | **~21.8** | **~2,400** | **~4,578** |
 
-Sensitivity: Upside +40% (~¥100B) if Japan leads standards; Downside –30% (~¥50B) if delays.  
+### 8.2 Sensitivity (2030)
+- **Upside:** +40% if Japan leads standardization → ~¥100B scale.  
+- **Downside:** –30% if delayed → ~¥50B scale.
+
+### 8.3 Visualization
+```mermaid
+%%{init: {"theme": "default"}}%%
+xychart-beta
+    title "AITL Economic Impact by Sector (2030)"
+    x-axis ["Semiconductor", "Robotics", "Medical", "Space"]
+    y-axis "¥Bn" 0 --> 40
+    bar "Revenue" [30,24,12,4.8]
+    bar "Savings" [12,9,3.8,1.6]
+    bar "Exports" [10.5,6,2.4,2.9]
+```
 
 ---
 
 ## 9. International Standardization Scenario
 
-Bodies: ISO/IEC JTC1, IEEE CASS, IEEE PELS, IEC TC47.  
+### 9.1 Importance of Standardization  
+AITL’s unique integration of control, AI, and physical constraints should be codified in international standards to secure leadership and set market entry conditions.
 
-Tactics:  
-- Short-term (2025–26): IEEE sessions.  
-- Mid-term (2026–30): ISO/IEC proposals, WG chairs.  
-- Long-term (post-2030): AITL international standards, favorable entry conditions.  
+### 9.2 Relevant Bodies  
+ISO/IEC JTC1, IEEE CASS, IEEE PELS, IEC TC47.
+
+### 9.3 Tactics for Japan  
+- **Short-term (2025–26):** AITL sessions at IEEE; present PoCs.  
+- **Mid-term (2026–30):** Proposals to ISO/IEC JTC1; secure WG chair/secretariat roles.  
+- **Long-term (Post-2030):** Establish AITL international standards; set favorable conditions for Japanese industry.
+
+### 9.4 Path Visualization
+```mermaid
+flowchart TD
+    PoC["AITL PoCs"] --> Conf["IEEE Sessions"]
+    Conf --> WG["ISO/IEC JTC1 WG Proposals"]
+    WG --> Chair["Chair Position Secured"]
+    Chair --> Std["AITL Intl. Standard Established"]
+    Std --> Market["Market Entry Conditions"]
+```
 
 ---
 
-## 10. Strategy for Global Leadership (SystemDK with AITL)
+## 10. Strategy for Global Leadership: SystemDK with AITL
 
-SystemDK with AITL is the **core of Japan’s leadership strategy**.  
-Integration of ministries, industry, academia positions AITL as national infrastructure.  
+### 10.1 Core Strategy  
+Position AITL as **national infrastructure**, with SystemDK integration at its core; link PoCs directly to standards to secure technological leadership and economic security.
 
-Industry: adopt in CFET, auto SoCs, humanoids, space.  
-Academia: ~100 grads/year, PoC-based training, standardization engagement.  
+### 10.2 Roles by Ministries  
+METI (PoCs, guidelines), MEXT (education, PhD deployment), MOFA (diplomacy, chairs), MIC (IoT/telecom frameworks), CAO (GX/DX integration, coordination).
+
+### 10.3 Role of Industry  
+Semiconductor (CFET control, EDA integration), Automotive (AITL in SoCs), Robotics (200ms recovery as product requirement), Space (deep-space autonomy).
+
+### 10.4 Role of Academia  
+Introduce AITL Studies; ~100 grads/year; dispatch young researchers to conferences/WGs; PoC-based practica.
+
+### 10.5 Strategic Conclusion  
+**SystemDK with AITL** unifies ministries, industry, and academia, charting the path from **research achievements to national infrastructure**.
 
 ---
 
@@ -215,10 +297,10 @@ Academia: ~100 grads/year, PoC-based training, standardization engagement.
 
 ## 12. Conclusion
 
-AITL v5.7 strengthens policy significance with international comparisons upfront and PoC evidence.  
+**AITL v5.7** strengthens policy significance with upfront international comparison and PoC evidence.
 
-- Industry: efficiency, cost reduction, new markets.  
-- Education: ~100 AITL-trained experts annually.  
-- Policy: KPI-driven standardization, economic security, GX response.  
+- **Industry:** Design efficiency, cost reduction, new markets.  
+- **Education:** ~100 AITL-trained professionals annually, directly involved in standardization.  
+- **Policy:** KPI-driven standards, economic security, GX response.
 
-**AITL with SystemDK enables the leap from research to national infrastructure, securing Japan’s technological leadership through international standardization.**
+**SystemDK with AITL** enables the leap from research to national infrastructure, and—by leading international standardization—supports Japan’s technological leadership.
