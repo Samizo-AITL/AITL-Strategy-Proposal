@@ -87,4 +87,57 @@ This represents a **strategic advantage for Japan, securing both technological l
 
 ---
 
+## 🧩 2. SystemDK with AITL 基盤説明 / Core Framework: SystemDK with AITL
+
+### 2.1 SystemDKとは / What is SystemDK?  
+
+**🇯🇵 日本語:**  
+SystemDK (System Design Kit) は、従来のPDK (Process Design Kit) を拡張し、熱・応力・電磁干渉（EMI）・RC遅延などの物理的制約を、回路・システム設計段階で考慮可能にする設計基盤である。EDAツールやシミュレーション環境に直接統合されることで、設計初期から実装現実性と信頼性を担保する。  
+
+**🇺🇸 English:**  
+SystemDK (System Design Kit) extends the conventional PDK (Process Design Kit) by enabling designers to account for physical constraints such as thermal effects, stress, EMI, and RC delay at the circuit and system design stages. Integrated directly into EDA tools and simulation environments, it ensures implementation feasibility and reliability from the earliest phases of design.  
+
+---
+
+### 2.2 AITLとは / What is AITL?  
+
+**🇯🇵 日本語:**  
+AITLは、PID制御（安定性）、FSM制御（状態遷移）、LLM設計（再設計）を三層で統合した新しい制御アーキテクチャである。PIDがリアルタイム安定性を担保し、FSMがモード遷移を監督し、LLMが外乱や故障時に再設計を支援する。  
+
+**🇺🇸 English:**  
+AITL is a novel control architecture that integrates PID control (stability), FSM control (state transitions), and LLM design (redesign) in three layers. PID ensures real-time stability, FSM supervises mode transitions, and LLM provides redesign support under disturbances or failures.  
+
+---
+
+### 2.3 SystemDK with AITL の統合 / Integration of SystemDK with AITL  
+
+**🇯🇵 日本語:**  
+SystemDKとAITLを組み合わせることで、「物理制約を初期から考慮したリアルタイム制御フレームワーク」が実現する。これを **Runtime Physics-Aware DTCO (Design-Technology Co-Optimization)** と定義できる。AITLの三層制御は、SystemDKが与える熱・電力・応力モデルをリアルタイムに取り込み、設計と運用を循環させる。  
+
+**🇺🇸 English:**  
+By combining SystemDK and AITL, we realize a “real-time control framework with physical constraints embedded from the start.” This can be defined as **Runtime Physics-Aware DTCO (Design-Technology Co-Optimization)**. AITL’s three-layer control integrates SystemDK’s models for thermal, power, and stress into real-time feedback, creating a continuous loop between design and operation.  
+
+---
+
+### 2.4 国際比較における位置づけ / Position in International Context  
+
+**🇯🇵 日本語:**  
+米国は物理制約の後付け補償に着手し始めた段階であり、EUは倫理・制度側に注力、中国はチップ量産に集中している。一方、日本は **SystemDK with AITL** により、「設計×制御×物理制約」を統合する世界唯一のフレームワークを確立している。  
+
+**🇺🇸 English:**  
+The US is only beginning to address post-hoc compensation for physical constraints, the EU focuses on ethics and institutional frameworks, and China emphasizes chip mass production. In contrast, Japan, through **SystemDK with AITL**, has established the world’s only framework unifying design, control, and physical constraints.  
+
+```mermaid
+flowchart TB
+    SYS["SystemDK<br/>Physical Constraints"] --> CORE["AITL Core"]
+    PID["PID制御<br/>Stability"] --> CORE
+    FSM["FSM制御<br/>Transition"] --> CORE
+    LLM["LLM設計<br/>Redesign"] --> CORE
+    CORE --> OPT["統合最適化<br/>Holistic Optimization"]
+```
+
+---
+
+
+
 
