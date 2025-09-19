@@ -479,13 +479,14 @@ timeline
 ### 8.3 可視化 / Visualization
 
 ```mermaid
-bar
-    title AITL Economic Impact by Sector (2030)
+%%{init: {"theme": "default"}}%%
+xychart-beta
+    title "AITL Economic Impact by Sector (2030)"
     x-axis ["Semiconductor", "Robotics", "Medical", "Space"]
     y-axis "¥Bn" 0 --> 40
-    "Revenue" : [30,24,12,4.8]
-    "Savings" : [12,9,3.8,1.6]
-    "Exports" : [10.5,6,2.4,2.9]
+    bar "Revenue" [30,24,12,4.8]
+    bar "Savings" [12,9,3.8,1.6]
+    bar "Exports" [10.5,6,2.4,2.9]
 ```
 
 ---
