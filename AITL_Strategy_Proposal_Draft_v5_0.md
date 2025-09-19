@@ -138,6 +138,140 @@ flowchart TB
 
 ---
 
+## 📑 3. 論文別PoC解説 / Core PoC Papers (2025)
+
+---
+
+### 📘 3.1 CFET Tutorial 論文 / CFET Tutorial Paper (2025)  
+
+**🇯🇵 日本語:**  
+- **内容 / Content:** Planar → FinFET → GAA → CFET というデバイス進化を体系的に整理し、教育的観点からまとめた。  
+- **産業貢献 / Industrial Impact:** 次世代エンジニア教育における標準教材。PoCの理解を助ける基礎知識を提供。  
+- **AITLにおける位置づけ / Role in AITL:** AITL直接ではないが、**SystemDKやCFET制御PoCを理解する前提教材**。教育・人材育成の基盤。  
+
+**🇺🇸 English:**  
+- **Content:** An educational overview of device evolution from Planar → FinFET → GAA → CFET.  
+- **Industrial Impact:** Standard teaching material for next-generation engineers, providing foundational knowledge for PoCs.  
+- **Role in AITL:** Not directly AITL, but essential as a **prerequisite for understanding SystemDK and CFET control PoCs**, forming the basis of education and HRD.  
+
+---
+
+### 🖥️ 3.2 SystemDK+AITL 論文 / SystemDK+AITL Paper (2025)  
+
+**🇯🇵 日本語:**  
+- **内容 / Content:** RC遅延・熱結合・EMIをEDAフロー内で補償。PIDとFSMで安定化。  
+- **産業貢献 / Industrial Impact:** 自動車・IoT・通信SoCの設計に不可欠。EDAベンダーとの協働余地が大きい。  
+- **AITLにおける位置づけ / Role in AITL:** **AITLをシステム設計レベルで活用した初めての成果**。SystemDKが設計段階から物理制約を反映可能であることを示す。  
+
+**🇺🇸 English:**  
+- **Content:** Compensates RC delay, thermal coupling, and EMI in the EDA flow. PID and FSM stabilize variations.  
+- **Industrial Impact:** Essential for automotive, IoT, and communication SoC design. High potential for collaboration with EDA vendors.  
+- **Role in AITL:** The **first result applying AITL at the system design level**, proving SystemDK’s capability to embed physical constraints from early design stages.  
+
+---
+
+### ⚡ 3.3 CFET Control 論文 / CFET Control Paper (2025)  
+
+**🇯🇵 日本語:**  
+- **内容 / Content:** サブ2nm領域における配線遅延・熱結合を補償。歩留まりを改善。  
+- **産業貢献 / Industrial Impact:** 次世代半導体EDAフローに直結し、ファウンドリの生産効率向上。  
+- **AITLにおける位置づけ / Role in AITL:** **SystemDK成果をデバイススケールに適用**したPoC。CFET特有の課題を克服可能であることを実証。  
+
+**🇺🇸 English:**  
+- **Content:** Compensates interconnect delay and thermal coupling at the sub-2nm node, improving yield.  
+- **Industrial Impact:** Directly linked to next-generation semiconductor EDA flows, improving foundry efficiency.  
+- **Role in AITL:** A PoC applying **SystemDK at the device scale**, proving that CFET-specific challenges can be overcome with AITL.  
+
+---
+
+### 🤖 3.4 Humanoid TCST 論文 / Humanoid TCST Paper (2025)  
+
+**🇯🇵 日本語:**  
+- **内容 / Content:** PID＋FSM＋LLMによる三層制御をヒューマノイドに実装。姿勢回復200ms以内、歩容安定性30%向上、エネルギー効率15%改善、自己発電寄与12%。  
+- **産業貢献 / Industrial Impact:** 災害救助、介護、工場自動化で信頼性を保証。  
+- **AITLにおける位置づけ / Role in AITL:** **AITLのFlagship PoC**。半導体から離れ、動的環境に応用した代表例。  
+
+**🇺🇸 English:**  
+- **Content:** Implements three-layer control (PID + FSM + LLM) in humanoids. Achieved ≤200ms posture recovery, +30% gait stability, +15% energy efficiency, ~12% self-power.  
+- **Industrial Impact:** Ensures reliability in disaster relief, eldercare, and factory automation.  
+- **Role in AITL:** The **flagship PoC** of AITL, demonstrating versatility in dynamic environments beyond semiconductors.  
+
+---
+
+### 🚀 3.5 AITL on Space 論文 / AITL on Space Paper (2025)  
+
+**🇯🇵 日本語:**  
+- **内容 / Content:** H∞制御＋FSM＋LLMを22nm FDSOI FPGAに実装。Tri-NVM階層で長期自律性を確保。  
+- **産業貢献 / Industrial Impact:** 宇宙・防衛産業における長期運用基盤を提供。  
+- **AITLにおける位置づけ / Role in AITL:** **Humanoidと並ぶ応用拡張PoC**。特に宇宙探査・防衛での長期安定性を確認。  
+
+**🇺🇸 English:**  
+- **Content:** Implements H∞ + FSM + LLM on 22nm FDSOI FPGA with a Tri-NVM hierarchy, ensuring long-term autonomy.  
+- **Industrial Impact:** Provides a foundation for long-term operation in space and defense.  
+- **Role in AITL:** A **broadening PoC** alongside humanoids, proving AITL’s long-term stability advantage in space/defense.  
+
+---
+
+## 📏 4. KPI一覧と政策的示唆 / KPI Table & Policy Implications
+
+### 4.1 KPI一覧 / KPI Table
+
+| 🧪 **KPI** | 🎯 **目標 / Target** | 📊 **実測値 / Result** | 📄 **出典 / Source** |
+|---|---|---|---|
+| 姿勢回復 / Posture Recovery | ≤150ms | ≤200ms | Humanoid TCST |
+| 歩容安定度 / Gait Stability | +20% | +30% | Humanoid TCST |
+| エネルギー効率 / Energy Efficiency | +15% | +15% | Humanoid TCST |
+| 自己発電寄与 / Self-Powering | 20% | 12% | Humanoid TCST |
+| FeFET保持 / Retention | ≥10y @ 85℃ | 実証済 / Validated | FeFET CMOS Reliability |
+| FeFET耐久性 / Endurance | ≥1e5 cycles | 実証済 / Validated | FeFET CMOS Reliability |
+| 電源効率 / Power Efficiency | >80% | 実証済 / Validated | CMOS018 Inductor+LDO |
+| 超音波感度 / Ultrasonic Sensitivity | 高感度 / High | 実証済 / Validated | ScAlN Ultrasonic MEMS |
+| 滴下精度 / Droplet Precision | pL級 | 実証済 / Validated | Bio-Inkjet KNN |
+| 修士人材育成数 / Graduate Training | ≥100人/年 | 計画中 / Planned | AITL Studies |
+| 国際標準化WG参加数 / Intl. WG Members | ≥10 | 計画中 / Planned | Policy Initiatives |
+
+---
+
+### 4.2 KPI分析と示唆 / Analysis & Implications
+
+**🇯🇵 日本語:**  
+- **達成済KPI:** 半導体デバイス（FeFET、CMOS018）、センサー（ScAlN）、インクジェット（KNN）は実測で目標達成。  
+- **部分達成:** ヒューマノイド制御では姿勢回復は200ms（目標150ms）とやや未達だが、歩容安定性とエネルギー効率では目標を超過。  
+- **未達KPI:** 自己発電寄与は12%にとどまり、目標20%には至らず。→ 政策的にエネルギーハーベスティング強化が必要。  
+- **計画中:** 教育人材育成と国際標準化WG参加は、政策的投資次第で達成可能。  
+
+**政策的示唆:**  
+- 「技術的未達成（例: 自己発電20%）」は、国家R&D投資の重点領域とすべき。  
+- 人材育成と標準化は「政策主導型KPI」として、教育・産業・外務省の連携が必要。  
+
+---
+
+**🇺🇸 English:**  
+- **Achieved KPIs:** Semiconductor devices (FeFET, CMOS018), sensors (ScAlN), and inkjet (KNN) have achieved their targets in measured PoCs.  
+- **Partially Achieved:** Humanoid control shows posture recovery at 200ms (target 150ms), slightly underachieved, but gait stability (+30%) and energy efficiency (+15%) exceed targets.  
+- **Unmet KPIs:** Self-powering contribution remains at 12%, below the 20% target → Policy should prioritize energy harvesting R&D.  
+- **Planned:** Graduate training and international WG participation are feasible with sufficient policy-driven investment.  
+
+**Policy Implications:**  
+- **Technological gaps (e.g., self-powering 20%)** should be addressed by targeted national R&D programs.  
+- **Human resource development and standardization** must be treated as **policy-driven KPIs**, requiring collaboration among education, industry, and foreign affairs ministries.  
+
+---
+
+### 4.3 KPI視覚化 / KPI Visualization
+
+```mermaid
+bar
+    title KPI達成度 (Achievement vs Target)
+    x-axis ["Posture Recovery", "Gait Stability", "Energy Efficiency", "Self-Powering"]
+    y-axis "達成率 / Achievement (%)" 0 --> 120
+    "Target" : [100,100,100,100]
+    "Result" : [75,150,100,60]
+```
+
+---
+
+
 
 
 
