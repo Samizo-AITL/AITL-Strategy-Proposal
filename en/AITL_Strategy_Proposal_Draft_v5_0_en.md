@@ -196,11 +196,20 @@ Academia: ~100 grads/year, PoC-based training, standardization engagement.
 
 ## 11. Appendix: Related Works (2025)
 
-- LPDDR+FeRAM Integration → Embedded memory reliability.  
-- FeFET CMOS Reliability → Long-term endurance/retention.  
-- CMOS018 Inductor+LDO → Efficient power for IoT/robots.  
-- ScAlN Ultrasonic MEMS → High-reliability sensing.  
-- Bio-Inkjet KNN → Pb-free medical device safety.  
+- 📄 [LPDDR+FeRAM Integration (2025)](./docs/LPDDR_FeRAM.pdf)  
+  - Integration of low-power DRAM with non-volatile FeRAM.  
+
+- 📄 [FeFET CMOS Reliability (0.18µm) (2025)](./docs/fefet_cmos018_reliability.pdf)  
+  - FeFET integrated into CMOS process with measured retention and endurance.  
+
+- 📄 [CMOS018 Inductor+LDO (2025)](./docs/cmos018_inductor_ldo.pdf)  
+  - Inductor+LDO design achieving high-efficiency power supply.  
+
+- 📄 [ScAlN Ultrasonic MEMS (2025)](./docs/scaln_ultrasonic.pdf)  
+  - Ultrasonic MEMS with high-sensitivity ScAlN thin films.  
+
+- 📄 [Bio-Inkjet KNN (2025)](./docs/bioinkjet_knn.pdf)  
+  - Pb-free bio-inkjet technology for medical devices.  
 
 ---
 
