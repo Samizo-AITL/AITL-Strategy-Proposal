@@ -7,7 +7,7 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 ---
 
 # 🇯🇵 **AITL戦略提言書 v5.2**  
-🇺🇸 *AITL Strategy Proposal v5.2*
+🇺🇸 *AITL Strategy Proposal v5.2 (Policy Edition, Fixed Chapter Numbers)*
 
 ---
 
@@ -25,11 +25,11 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 *This proposal is grounded in measured PoC evidence from multiple core papers published in 2025, presenting concrete pathways to industry, education, and policy.*  
 
 実証成果としては、  
-- **ヒューマノイド制御**において *姿勢回復200ms以内、歩行安定性30%向上、エネルギー効率15%改善* を達成。  
+- **ヒューマノイド制御**において *姿勢回復200ms以内、歩行安定性30%向上、エネルギー効率15%改善* を達成。[^humanoid]  
   *In humanoid control, achieved posture recovery within 200ms, 30% improvement in gait stability, and 15% improvement in energy efficiency.*  
-- **CFET制御**により *サブ2nm領域の配線遅延と熱結合* を補償。  
+- **CFET制御**により *サブ2nm領域の配線遅延と熱結合* を補償。[^cfetctrl]  
   *In CFET control, compensated for sub-2nm interconnect delay and thermal coupling.*  
-- **宇宙応用**では *22nm FDSOI FPGA上での長期自律運用* を実現。  
+- **宇宙応用**では *22nm FDSOI FPGA上での長期自律運用* を実現。[^space]  
   *In space applications, demonstrated long-term autonomous operation on 22nm FDSOI FPGA.*  
 
 これらはすべて、**実機ベースのPoCで効果が確認された成果**であり、国際的にも稀有な取り組みである。  
@@ -55,8 +55,6 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 | 🇨🇳 **中国 / China** | 「新世代AI計画」(次世代AI国家戦略)  *Next-Generation AI National Strategy* | AIチップ開発と軍民融合、自律制御強化  *AI chip development, civil–military fusion, enhanced autonomous control* | 技術成果は膨大だが、標準化で国際的受容性に乏しい  *Vast technical output, but weak international acceptance in standardization* |
 | 🇯🇵 **日本 (AITL) / Japan (AITL)** | AITL v5.0 / v5.1 PoCs | PID＋FSM＋LLMを三層統合、SystemDKで物理制約反映  *Three-layer integration of PID, FSM, and LLM, with SystemDK embedding physical constraints* | 世界で唯一、制御・AI・物理制約を同時統合。国際標準化主導が鍵  *Only framework worldwide integrating control, AI, and physical constraints simultaneously; leadership in international standardization is crucial* |
 
----
-
 ### ✨ AITLの競合差別化ポイント / AITL’s Differentiation Points
 
 1. **三層アーキテクチャの唯一性 / Uniqueness of the Three-Layer Architecture**  
@@ -75,8 +73,6 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
    - → 日本AITLは**国際標準化と人材育成**を両輪で提示可能。  
      *→ Japan’s AITL can uniquely present both international standardization and human resource development.*  
 
----
-
 ### 📌 戦略的示唆 / Strategic Implications
 
 - 政策文書においては「AITLはDARPAやHorizon Europeの延長線ではなく、**物理制約統合による次世代制御基盤**である」と強調。  
@@ -84,7 +80,23 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 
 - 国際会議向けには「米国＝AI制御、EU＝倫理、中国＝大規模化、日本＝AITLの三層＋物理制約」で4象限マップを示すと説得力が増す。  
   *For international conferences, a four-quadrant map (USA = AI control, EU = ethics, China = scale, Japan = AITL’s three layers + physical constraints) enhances persuasiveness.*
-  
+
+#### 四象限マップ / Quadrant Map
+```mermaid
+quadrantChart
+    title 国際比較マップ / Intl. Comparison Map
+    x-axis "AI・制御重視" --> "物理制約重視"
+    y-axis "倫理・社会重視" --> "スケール・軍事重視"
+    quadrant-1 "日本: AITL (三層+SystemDK)"
+    quadrant-2 "EU: 倫理標準化"
+    quadrant-3 "米国: 強化学習・形式手法"
+    quadrant-4 "中国: 大規模AI基盤・軍民融合"
+    "日本 AITL" : [0.8,0.6]
+    "EU" : [0.1,0.7]
+    "米国" : [0.3,0.3]
+    "中国" : [0.7,0.1]
+```
+
 ---
 
 ## 📑 2. 論文別PoC解説 / Core PoC Papers (2025)
@@ -98,8 +110,6 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
   *Standard teaching material for next-generation engineer education.*  
 - **位置づけ / Role:** 本論文はAITLそのものではないが、**2.2 SystemDK+AITLや2.3 CFET Controlを理解する前提教材**として不可欠。  
 
----
-
 ### 🖥️ 2.2 SystemDK+AITL 論文  
 *[SystemDK+AITL Paper (2025)](./docs/systemdk_aitl2025.pdf)*  
 
@@ -108,8 +118,6 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 - **産業貢献 / Industrial Impact:** 自動車・IoT・通信SoCに必須の設計基盤。  
   *Essential design foundation for automotive, IoT, and communication SoCs.*  
 - **位置づけ / Role:** AITLを**システム設計レベルで活用**する最初の成果。物理制約を設計段階から反映するSystemDKの有効性を示す。  
-
----
 
 ### ⚡ 2.3 CFET Control 論文  
 *[CFET Control Paper (2025)](./docs/cfet_ctrl2025.pdf)*  
@@ -121,8 +129,6 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 - **位置づけ / Role:** 2.2のSystemDK成果を**デバイススケールに適用したPoC**。  
   → **2.1 Tutorial**で示されたデバイス進化の課題（熱結合・配線遅延）が、AITLによって克服可能であることを実証。  
 
----
-
 ### 🤖 2.4 Humanoid TCST 論文  
 *[Humanoid TCST Paper (2025)](./docs/humanoid_tcst2025.pdf)*  
 
@@ -133,8 +139,6 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 - **産業貢献 / Industrial Impact:** 災害救助、介護支援、工場自動化で信頼性を担保。  
   *Ensures reliability in disaster relief, elderly care, and factory automation.*  
 - **位置づけ / Role:** 半導体・デバイス領域から離れ、**AITLを動的環境（ヒューマノイド）に応用した代表例**。AITLの汎用性を示す。  
-
----
 
 ### 🚀 2.5 AITL on Space 論文  
 *[AITL on Space Paper (2025)](./docs/aitl_space.pdf)*  
@@ -163,6 +167,23 @@ permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 | 滴下精度 / Droplet Precision | pL級 | 実証済 | Bio-Inkjet |
 | 修士人材育成数 / Graduate Training | ≥100/年 | 計画中 | AITL Studies |
 | 国際標準化WG参加数 / Intl. WG Members | ≥10 | 計画中 | Policy |
+
+**KPIギャップと政策介入 / KPI Gaps & Policy Interventions**  
+| KPI | 目標 | 実測 | 状態 | 政策介入余地 |
+|---|---|---|---|---|
+| 姿勢回復 ≤150ms | 200ms | 未達 | 重点研究支援（制御・機構） |
+| Self-Powering 20% | 12% | 未達 | エネルギー変換材料・回路投資 |
+| 人材育成 ≥100/年 | 計画中 | 未達 | 大学院プログラム創設・奨学金 |
+| WG参加 ≥10 | 計画中 | 未達 | 国際WG派遣・標準化外交費 |
+
+#### KPI視覚化（任意） / KPI Visualization (optional)
+> Mermaidのバージョンにより可視化が異なるため、表を正とし、以下は参考図です。
+
+```mermaid
+pie title KPI達成状況（達成 vs 未達・計画中）
+    "達成/実証済" : 5
+    "未達/計画中" : 6
+```
 
 ---
 
@@ -218,6 +239,17 @@ timeline
     2032- : 標準活用による市場展開 / Market Deployment via Standards
 ```
 
+**政策フェーズ明示版 / Policy Roadmap**  
+```mermaid
+timeline
+    title AITL政策導入ロードマップ / AITL Policy Roadmap
+    2025-2026 : 基盤R&D (科研費, SIP) / Foundational R&D (Grants, SIP)
+    2026-2028 : 国内WG設立 (経産省・総務省) / Domestic WG Formation
+    2028-2030 : 認証制度 (JIS/ISO連携) / Certification System
+    2030-2032 : 国際標準化 (外務省＋産業界) / Intl. Standardization
+    2032- : 市場展開 (国策投資) / Market Deployment via National Strategy
+```
+
 ---
 
 ## 📊 8. 経済効果試算 / Economic Impact Estimation
@@ -233,15 +265,14 @@ timeline
 | **合計 / Total** | **~70.8** | **~26.4** | **~21.8** | **~2,400** | **~4,578** |
 
 **感度分析 / Sensitivity Analysis (2030)**  
-- **Upside Case:** +40%（海外標準化リード時） → ~1000億円規模  
+- **Upside Case:** +40%（海外標準化リード時） → ~1,000億円規模  
 - **Downside Case:** –30%（国際標準化遅延時） → ~500億円規模  
 
 ---
 
 ## 📚 9. Appendix: 2025年関連研究 / Related Works (2025)
 
-AITL本体には含めないが、2025年に発表した関連研究成果は、  
-**既存技術の強化・医療機器や次世代デバイスの安全性確保**に資する。  
+AITL本体には含めないが、2025年に発表した関連研究成果は、**既存技術の強化・医療機器や次世代デバイスの安全性確保**に資する。  
 
 - [LPDDR+FeRAM Integration](./docs/LPDDR_FeRAM.pdf)  
   - **内容:** 低消費電力DRAMと不揮発性FeRAMを統合し、組込みメモリの信頼性を強化。  
@@ -279,5 +310,11 @@ AITL v5.2 (政策版・章番号修正版)は、**PoC実測値に基づきつつ
 - **政策:** KPIベースの標準化・安全保障・GX対応  
   *Policy: Standardization based on KPIs, enhanced security, and GX (Green Transformation) measures*  
 
-AITLは「研究成果」から「国家基盤」への昇華を可能にし、国際標準化を通じて日本の技術覇権確立に寄与する。  
-*AITL enables the transition from research achievements to national infrastructure, contributing to Japan’s technological leadership through international standardization.*  
+> よってAITLは、研究成果から国家基盤への移行を加速するために、**政策的支援（研究資金・人材育成・標準化外交）**を必須とする。これにより日本は、国際標準化を通じて技術覇権と経済安全保障を確立できる。
+
+---
+
+### 注・脚注 / Notes & Footnotes
+[^humanoid]: *Humanoid TCST Paper (2025)* — ./docs/humanoid_tcst2025.pdf  
+[^cfetctrl]: *CFET Control Paper (2025)* — ./docs/cfet_ctrl2025.pdf  
+[^space]: *AITL on Space Paper (2025)* — ./docs/aitl_space.pdf
