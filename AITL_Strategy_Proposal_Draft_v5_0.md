@@ -411,4 +411,83 @@ timeline
     2032- : 標準活用による市場展開 / Market Deployment via Standards
 ```
 
+---
+
+### 7.2 政府機関別の役割 / Roles of Government Agencies
+
+**🇯🇵 日本語:**  
+- **経済産業省 (METI):** 半導体・自動車・ロボット産業PoCの支援、国内WGの事務局機能を担う。産業界への標準化ガイドラインの発出。  
+- **文部科学省 (MEXT):** AITL学を大学院カリキュラムに導入し、博士課程レベルの人材育成を主導。教育・研究基盤の整備を推進。  
+- **外務省 (MOFA):** 国際標準化WGでの議長ポジション獲得、ISO/IEC・IEEE会議での外交交渉を担当。  
+- **総務省 (MIC):** IoT・通信分野のPoC制度整備、電波政策・サイバーセキュリティとの連携。  
+- **内閣府 (CAO):** 経済安全保障・GX戦略の一環としてAITLを政策パッケージ化。総合戦略本部による横断的調整を実施。  
+
+**🇺🇸 English:**  
+- **METI:** Support PoCs in semiconductors, automotive, and robotics; act as secretariat for domestic WGs; issue industrial standardization guidelines.  
+- **MEXT:** Introduce AITL Studies into graduate curricula; lead PhD-level human resource development; strengthen education and research infrastructure.  
+- **MOFA:** Secure chair positions in international standardization WGs; conduct diplomatic negotiations at ISO/IEC and IEEE meetings.  
+- **MIC:** Establish institutional frameworks for IoT/telecom PoCs; link with spectrum and cybersecurity policies.  
+- **CAO:** Package AITL into national strategies under economic security and GX; conduct cross-ministerial coordination through the Strategic Headquarters.  
+
+---
+
+### 7.3 マイルストーン / Milestones
+
+**🇯🇵 日本語:**  
+- **2025–2026:** AITL基礎教育プログラムを開始、SystemDK α版を公開。  
+- **2026–2028:** 国内WGを設立し、産学官連携でPoC拡大。  
+- **2028–2030:** 認証制度を設計し、産業界コンソーシアムを形成。  
+- **2030–2032:** ISO/IEEE標準化で議長国を目指す。  
+- **2032以降:** 標準化に基づくグローバル市場展開を推進。  
+
+**🇺🇸 English:**  
+- **2025–2026:** Launch AITL foundational education program; release SystemDK α version.  
+- **2026–2028:** Establish domestic WG; expand PoCs via industry–academia–government collaboration.  
+- **2028–2030:** Develop certification system; form industry consortium.  
+- **2030–2032:** Aim for chairmanship in ISO/IEEE standardization.  
+- **Post-2032:** Promote global market deployment based on international standards.  
+
+---
+
+## 📊 8. 経済効果試算 / Economic Impact Estimation
+
+### 8.1 定量試算 / Quantitative Estimation (2030)
+
+| 産業分野 / Sector | 収益 / Revenue (¥Bn) | 削減効果 / Savings (¥Bn) | 輸出 / Exports (¥Bn) | 雇用（直接） / Jobs Direct | 雇用（総計） / Jobs Total |
+|---|---|---|---|---|---|
+| 半導体 / Semiconductor | ~30 | ~12 | ~10.5 | ~900 | ~1,710 |
+| ロボット / Robotics | ~24 | ~9 | ~6 | ~960 | ~1,920 |
+| 医療 / Medical | ~12 | ~3.8 | ~2.4 | ~420 | ~756 |
+| 宇宙 / Space | ~4.8 | ~1.6 | ~2.9 | ~120 | ~192 |
+| **合計 / Total** | **~70.8** | **~26.4** | **~21.8** | **~2,400** | **~4,578** |
+
+---
+
+### 8.2 感度分析 / Sensitivity Analysis (2030)
+
+**🇯🇵 日本語:**  
+- **Upside Case:** 国際標準化を主導 → +40%成長、1000億円規模へ拡大。  
+- **Downside Case:** 標準化遅延 → –30%縮小、500億円規模にとどまる。  
+
+**🇺🇸 English:**  
+- **Upside Case:** Lead international standardization → +40% growth, expanding to ~¥100B scale.  
+- **Downside Case:** Delay in standardization → –30% contraction, limited to ~¥50B scale.  
+
+---
+
+### 8.3 可視化 / Visualization
+
+```mermaid
+bar
+    title AITL Economic Impact by Sector (2030)
+    x-axis ["Semiconductor", "Robotics", "Medical", "Space"]
+    y-axis "¥Bn" 0 --> 40
+    "Revenue" : [30,24,12,4.8]
+    "Savings" : [12,9,3.8,1.6]
+    "Exports" : [10.5,6,2.4,2.9]
+```
+
+---
+
+
 
