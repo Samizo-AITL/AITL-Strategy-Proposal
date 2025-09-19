@@ -66,28 +66,34 @@ Japan, unlike the US/EU/China, has already demonstrated this integration via har
 ## 3. Core PoC Papers (2025)
 
 ### 3.1 CFET Tutorial Paper
-- Educational overview of device evolution: Planar → FinFET → GAA → CFET.  
-- Serves as prerequisite material for understanding SystemDK+AITL and CFET Control.  
+- **Content:** An educational overview of device evolution from Planar → FinFET → GAA → CFET.  
+- **Industrial Impact:** Standard teaching material for next-generation engineers.  
+- **Role in AITL:** Serves as prerequisite for SystemDK+AITL and CFET Control.  
+- 📄 [Download: CFET Tutorial Paper (2025)](./docs/CFET_Tutorial_2025.pdf)
 
 ### 3.2 SystemDK+AITL Paper
-- Results: compensation for RC delay, thermal coupling, and EMI.  
-- Impact: foundation for automotive, IoT, and communication SoCs.  
-- Significance: first demonstration of embedding SystemDK constraints into system design.  
+- **Content:** Compensation for RC delay, thermal coupling, and EMI.  
+- **Impact:** Foundation for automotive, IoT, and communication SoCs.  
+- **Significance:** First demonstration of embedding SystemDK constraints into system design.  
+- 📄 [Download: SystemDK+AITL Paper (2025)](./docs/SystemDK_AITL_2025.pdf)
 
 ### 3.3 CFET Control Paper
-- Results: compensation for sub-2nm interconnect delay and thermal coupling.  
-- Impact: improves yield for EDA/foundry.  
-- Significance: applies SystemDK to device scale.  
+- **Content:** Compensation for sub-2nm interconnect delay and thermal coupling.  
+- **Impact:** Improves yield for EDA/foundry.  
+- **Significance:** Applies SystemDK to device scale.  
+- 📄 [Download: CFET Control Paper (2025)](./docs/CFET_Control_2025.pdf)
 
 ### 3.4 Humanoid TCST Paper
-- Results: posture recovery ≤200ms, gait stability +30%, energy efficiency +15%, self-powering ~12%.  
-- Impact: reliability in disaster relief, elderly care, and factory automation.  
-- Significance: flagship PoC applying AITL to dynamic humanoid environments.  
+- **Content:** Posture recovery ≤200ms, gait stability +30%, energy efficiency +15%, self-powering ~12%.  
+- **Impact:** Reliability in disaster relief, eldercare, and factory automation.  
+- **Significance:** Flagship PoC applying AITL to humanoid environments.  
+- 📄 [Download: Humanoid TCST Paper (2025)](./docs/Humanoid_TCST_2025.pdf)
 
 ### 3.5 AITL on Space Paper
-- Results: Tri-NVM hierarchy, H∞+FSM+LLM, implemented on 22nm FDSOI FPGA.  
-- Impact: foundation for autonomous operation in space/defense.  
-- Significance: demonstrates AITL applicability to long-term autonomy in space.  
+- **Content:** Tri-NVM hierarchy, H∞+FSM+LLM, implemented on 22nm FDSOI FPGA.  
+- **Impact:** Foundation for autonomous operation in space/defense.  
+- **Significance:** Demonstrates AITL applicability to long-term autonomy in space.  
+- 📄 [Download: AITL on Space Paper (2025)](./docs/AITL_Space_2025.pdf)
 
 ---
 
