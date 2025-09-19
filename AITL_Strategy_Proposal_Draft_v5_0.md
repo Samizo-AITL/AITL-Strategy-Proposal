@@ -397,7 +397,18 @@ AITL学（仮称）は、制御理論・AI設計・物理制約モデリング�
 
 ---
 
+## 🛣️ 7. 政策ロードマップ / Policy Roadmap
 
+### 7.1 全体ロードマップ / Overall Roadmap
 
+```mermaid
+timeline
+    title AITL導入ロードマップ / AITL Roadmap
+    2025-2026 : 基盤R&D (AITL学, SystemDK α版) / Foundational R&D (AITL Studies, SystemDK α)
+    2026-2028 : 国内WG設立, PoC拡大 / Domestic WG Formation, PoC Expansion
+    2028-2030 : コンソーシアム, 認証制度 / Consortium, Certification Systems
+    2030-2032 : 国際標準化主導 / International Standardization Leadership
+    2032- : 標準活用による市場展開 / Market Deployment via Standards
+```
 
 
