@@ -614,6 +614,62 @@ The AITL leadership strategy places **SystemDK with AITL** at its core, integrat
 
 ---
 
+## 📚 11. Appendix: 2025年関連研究 / Related Works (2025)
+
+### 11.1 位置づけ / Positioning
+
+**🇯🇵 日本語:**  
+以下の研究成果はAITL本体には含まれないが、**既存技術の強化**や**医療機器・次世代デバイスの安全性確保**に資する。AITLの「周辺技術群」として、産業応用と政策的波及効果を補完する。  
+
+**🇺🇸 English:**  
+The following research outputs are not part of the AITL core but contribute to **strengthening existing technologies** and **ensuring safety in medical devices and next-generation electronics**. As “peripheral technologies,” they complement AITL’s industrial applications and policy impacts.  
+
+---
+
+### 11.2 関連研究一覧 / List of Related Works
+
+- **[LPDDR+FeRAM Integration (2025)](./docs/LPDDR_FeRAM.pdf)**  
+  - **🇯🇵 内容:** 低消費電力DRAMと不揮発性FeRAMを統合し、組込みメモリの信頼性を強化。  
+  - **🇺🇸 Content:** Integration of low-power DRAM with non-volatile FeRAM to enhance embedded memory reliability.  
+  - **🇯🇵 貢献:** 産業機器・車載システムのデータ保持安全性を担保。  
+  - **🇺🇸 Contribution:** Improves data retention safety in industrial and automotive systems.  
+
+- **[FeFET CMOS Reliability (0.18µm) (2025)](./docs/fefet_cmos018_reliability.pdf)**  
+  - **🇯🇵 内容:** FeFETを標準CMOSプロセスに統合し、保持特性・耐久性を実測。  
+  - **🇺🇸 Content:** Integrated FeFET into standard CMOS process and measured retention and endurance.  
+  - **🇯🇵 貢献:** 半導体・産業用エレクトロニクスの長期信頼性を確保。  
+  - **🇺🇸 Contribution:** Ensures long-term reliability in semiconductors and industrial electronics.  
+
+- **[CMOS018 Inductor+LDO (2025)](./docs/cmos018_inductor_ldo.pdf)**  
+  - **🇯🇵 内容:** CMOS0.18µmでインダクタ＋LDOを設計し、高効率電源を実現。  
+  - **🇺🇸 Content:** Designed inductor + LDO in CMOS 0.18µm process, achieving high-efficiency power supply.  
+  - **🇯🇵 貢献:** 低電力IoT機器・ロボットにおける安定電源供給に寄与。  
+  - **🇺🇸 Contribution:** Provides stable power supply for low-power IoT devices and robotics.  
+
+- **[ScAlN Ultrasonic MEMS (2025)](./docs/scaln_ultrasonic.pdf)**  
+  - **🇯🇵 内容:** 高感度ScAlN薄膜による超音波MEMSの実証。  
+  - **🇺🇸 Content:** Demonstrated ultrasonic MEMS with high-sensitivity ScAlN thin films.  
+  - **🇯🇵 貢献:** 非破壊検査・センシング分野での高信頼応用が可能。  
+  - **🇺🇸 Contribution:** Enables high-reliability applications in non-destructive testing and sensing.  
+
+- **[Bio-Inkjet KNN (2025)](./docs/bioinkjet_knn.pdf)**  
+  - **🇯🇵 内容:** 鉛フリー強誘電体KNNを用いたバイオインクジェット技術を開発。  
+  - **🇺🇸 Content:** Developed bio-inkjet technology using Pb-free ferroelectric KNN.  
+  - **🇯🇵 貢献:** 医療分野におけるPbフリー材料利用を実証、安全性・環境適合性を確保。  
+  - **🇺🇸 Contribution:** Demonstrates Pb-free material use in medical applications, ensuring safety and environmental compliance.  
+
+---
+
+### 11.3 政策的補完効果 / Policy Complementarity
+
+**🇯🇵 日本語:**  
+これらの研究群は、AITLの中心である「制御・AI・物理制約統合」には直接含まれないが、**環境規制対応、医療安全性、半導体信頼性**といった政策的要求に応答する。AITL標準化と並行して推進することで、日本の国際的プレゼンスを補強する。  
+
+**🇺🇸 English:**  
+While these works are not part of the AITL core (“control–AI–physical integration”), they directly address policy requirements such as **environmental regulations, medical safety, and semiconductor reliability**. Advancing them in parallel with AITL standardization strengthens Japan’s international presence.  
+
+---
+
 
 
 
