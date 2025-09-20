@@ -738,6 +738,40 @@ AITL enables the transition from “research achievements” to “national infr
 
 ---
 
+### Figure 1. EDA統合フロー（SystemDK with AITL）
+
+```mermaid
+flowchart TB
+    subgraph EDA["EDA Flow"]
+        PDK["PDK"]
+        LOGIC["Logic"]
+        PR["P&R"]
+        LVS["LVS/DRC"]
+        STA["STA"]
+        GDS["GDS II"]
+
+        PDK --> LOGIC --> PR --> LVS --> STA --> GDS
+    end
+
+    subgraph SYS["SystemDK Analysis"]
+        TH["Thermal"]
+        ST["Stress"]
+        EMI["EMI"]
+        DL["Delay"]
+    end
+
+    subgraph AITL["AITL Control"]
+        PID["PID"]
+        FSM["FSM"]
+        LLM["LLM"]
+    end
+
+    STA --> SYS
+    SYS --> AITL
+    AITL --> LOGIC
+```
+---
+
 ### 12.2 最終メッセージ / Final Message
 
 **🇯🇵 日本語:**  
