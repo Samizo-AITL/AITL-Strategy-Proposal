@@ -135,7 +135,49 @@ flowchart TB
     LLM["LLM設計<br/>Redesign"] --> CORE
     CORE --> OPT["統合最適化<br/>Holistic Optimization"]
 ```
+---
 
+### 2.5 EDA統合図 / EDA Integration Flow with SystemDK and AITL
+
+以下に、SystemDK with AITL の統合フローを図示する。EDA設計フローに物理制約解析を組込み、AITL制御モジュールを介してリアルタイムに再帰する点が特徴である。これにより、従来の「設計後補償」ではなく **設計初期からのRuntime Physics-Aware DTCO** を実現する。
+
+#### 📊 Mermaid版 (技術者向け)
+
+```mermaid
+flowchart TB
+    subgraph EDA_Flow ["EDA Flow"]
+        PDK["Process Design Kit"]
+        SYN["Logic Synthesis"]
+        PR["Place & Route"]
+        LVS["LVS/DRC"]
+        STA["Static Timing Analysis"]
+        GDS["GDS II"]
+
+        PDK --> SYN --> PR --> LVS --> STA --> GDS
+    end
+
+    subgraph Physics ["SystemDK Analysis"]
+        FEM["FEM Analysis"]
+        SP["S-Parameter Measurement"]
+        METRICS["Runtime Metrics: Delay / Thermal / EMI"]
+    end
+
+    subgraph Control ["AITL Control Modeling"]
+        PID["PID Controller"]
+        FSM["FSM Supervisor"]
+        LLM["LLM (Next)"]
+        RTL["Verilog RTL"]
+
+        PID --> FSM --> RTL
+        LLM --> FSM
+    end
+
+    PR --> FEM
+    PR --> SP
+    STA --> METRICS
+    METRICS --> PID
+    RTL --> SYN
+```
 ---
 
 ## 📑 3. 論文別PoC解説 / Core PoC Papers (2025)
