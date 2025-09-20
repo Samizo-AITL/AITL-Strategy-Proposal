@@ -74,7 +74,53 @@ flowchart TB
     LLM["LLM Design<br/>Redesign"] --> CORE
     CORE --> OPT["Holistic Optimization"]
 ```
+---
 
+### 2.X EDA Integration Flow with SystemDK and AITL
+
+The following diagram illustrates the integration flow of **SystemDK with AITL**.  
+Unlike traditional “post-design compensation,” this framework embeds physical constraint analysis into the EDA design flow and recursively feeds it back through the AITL control modules.  
+This enables **Runtime Physics-Aware DTCO** from the earliest design stages.  
+
+---
+
+#### 📊 Mermaid Version (For Technical Audience)
+
+```mermaid
+flowchart TB
+    subgraph EDA_Flow ["EDA Flow"]
+        PDK["Process Design Kit"]
+        SYN["Logic Synthesis"]
+        PR["Place & Route"]
+        LVS["LVS/DRC"]
+        STA["Static Timing Analysis"]
+        GDS["GDS II"]
+
+        PDK --> SYN --> PR --> LVS --> STA --> GDS
+    end
+
+    subgraph Physics ["SystemDK Analysis"]
+        FEM["FEM Analysis"]
+        SP["S-Parameter Measurement"]
+        METRICS["Runtime Metrics: Delay / Thermal / EMI"]
+    end
+
+    subgraph Control ["AITL Control Modeling"]
+        PID["PID Controller"]
+        FSM["FSM Supervisor"]
+        LLM["LLM (Redesign)"]
+        RTL["Verilog RTL"]
+
+        PID --> FSM --> RTL
+        LLM --> FSM
+    end
+
+    PR --> FEM
+    PR --> SP
+    STA --> METRICS
+    METRICS --> PID
+    RTL --> SYN
+```
 
 ---
 
