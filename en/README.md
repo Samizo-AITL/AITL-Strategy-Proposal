@@ -34,7 +34,7 @@ title: AITL-Strategy-Proposal (EN)
 ---
 
 ## 🧭 Overview
-This repository presents a **national-level architecture proposal** based on AITL (All-in-Theory Logic),  
+This repository presents a **national-level architecture proposal** based on AITL (AI-Integrated Transition & Loop),  
 together with a **validated integrated package** centered on Edusemi, extended with control (AITL-H) and intelligent integration for deployable PoC models.
 
 ---
