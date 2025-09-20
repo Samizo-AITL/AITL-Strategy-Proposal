@@ -40,7 +40,7 @@ title: AITL-Strategy-Proposal
 ---
 
 ## 🧭 概要 / Overview
-**JP:** 本リポジトリは、AITL (All-in-Theory Logic) に基づく **国家レベルの統合アーキテクチャ提案** と、Edusemiを中核とした **実証済み統合パッケージ** を公開します。  
+**JP:** 本リポジトリは、AITL (AI-Integrated Transition & Loop) に基づく **国家レベルの統合アーキテクチャ提案** と、Edusemiを中核とした **実証済み統合パッケージ** を公開します。  
 **EN:** This repo presents a **national-level architecture proposal** based on AITL, plus a **validated integration package** centered on Edusemi, extended to control (AITL-H) and intelligent integration for deployable PoC models.
 
 ---
