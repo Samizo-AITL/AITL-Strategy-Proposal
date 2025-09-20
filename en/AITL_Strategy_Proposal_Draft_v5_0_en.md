@@ -295,6 +295,40 @@ Introduce AITL Studies; ~100 grads/year; dispatch young researchers to conferenc
 
 ---
 
+### Figure 1. EDA Integration Flow (SystemDK with AITL)
+
+```mermaid
+flowchart TB
+    subgraph EDA["EDA Flow"]
+        PDK["PDK"]
+        LOGIC["Logic"]
+        PR["P&R"]
+        LVS["LVS/DRC"]
+        STA["STA"]
+        GDS["GDS II"]
+
+        PDK --> LOGIC --> PR --> LVS --> STA --> GDS
+    end
+
+    subgraph SYS["SystemDK Analysis"]
+        TH["Thermal"]
+        ST["Stress"]
+        EMI["EMI"]
+        DL["Delay"]
+    end
+
+    subgraph AITL["AITL Control"]
+        PID["PID"]
+        FSM["FSM"]
+        LLM["LLM"]
+    end
+
+    STA --> SYS
+    SYS --> AITL
+    AITL --> LOGIC
+```
+---
+
 ## 12. Conclusion
 
 **AITL v5.7** strengthens policy significance with upfront international comparison and PoC evidence.
