@@ -185,88 +185,92 @@ flowchart TB
 ---
 
 ### 📘 3.1 CFET Tutorial 論文 / CFET Tutorial Paper (2025)  
-
 **🇯🇵 日本語:**  
 - **内容 / Content:** Planar → FinFET → GAA → CFET というデバイス進化を体系的に整理し、教育的観点からまとめた。  
 - **産業貢献 / Industrial Impact:** 次世代エンジニア教育における標準教材。PoCの理解を助ける基礎知識を提供。  
-- **AITLにおける位置づけ / Role in AITL:** AITL直接ではないが、**SystemDKやCFET制御PoCを理解する前提教材**。教育・人材育成の基盤。  
+- **AITLにおける位置づけ / Role in AITL:** **SystemDKやCFET制御PoCを理解する前提教材**。教育・人材育成の基盤。  
 
 **🇺🇸 English:**  
 - **Content:** An educational overview of device evolution from Planar → FinFET → GAA → CFET.  
 - **Industrial Impact:** Standard teaching material for next-generation engineers, providing foundational knowledge for PoCs.  
-- **Role in AITL:** Not directly AITL, but essential as a **prerequisite for understanding SystemDK and CFET control PoCs**, forming the basis of education and HRD.  
+- **Role in AITL:** Not directly AITL, but essential as a prerequisite for understanding SystemDK and CFET control PoCs.  
+
+[📄 CFET Tutorial Paper (PDF)](../docs/cfet_tutorial_main.pdf)
 
 ---
 
 ### 🖥️ 3.2 SystemDK+AITL 論文 / SystemDK+AITL Paper (2025)  
-
 **🇯🇵 日本語:**  
 - **内容 / Content:** RC遅延・熱結合・EMIをEDAフロー内で補償。PIDとFSMで安定化。  
 - **産業貢献 / Industrial Impact:** 自動車・IoT・通信SoCの設計に不可欠。EDAベンダーとの協働余地が大きい。  
-- **AITLにおける位置づけ / Role in AITL:** **AITLをシステム設計レベルで活用した初めての成果**。SystemDKが設計段階から物理制約を反映可能であることを示す。  
+- **AITLにおける位置づけ / Role in AITL:** **AITLをシステム設計レベルで活用した初めての成果**。  
 
 **🇺🇸 English:**  
 - **Content:** Compensates RC delay, thermal coupling, and EMI in the EDA flow. PID and FSM stabilize variations.  
-- **Industrial Impact:** Essential for automotive, IoT, and communication SoC design. High potential for collaboration with EDA vendors.  
-- **Role in AITL:** The **first result applying AITL at the system design level**, proving SystemDK’s capability to embed physical constraints from early design stages.  
+- **Industrial Impact:** Essential for automotive, IoT, and communication SoC design.  
+- **Role in AITL:** The first result applying AITL at the system design level.  
+
+[📄 SystemDK+AITL Paper (PDF)](../docs/systemdk_aitl2025.pdf)
 
 ---
 
 ### ⚡ 3.3 CFET Control 論文 / CFET Control Paper (2025)  
-
 **🇯🇵 日本語:**  
 - **内容 / Content:** サブ2nm領域における配線遅延・熱結合を補償。歩留まりを改善。  
-- **産業貢献 / Industrial Impact:** 次世代半導体EDAフローに直結し、ファウンドリの生産効率向上。  
-- **AITLにおける位置づけ / Role in AITL:** **SystemDK成果をデバイススケールに適用**したPoC。CFET特有の課題を克服可能であることを実証。  
+- **産業貢献 / Industrial Impact:** 次世代半導体EDAフローに直結し、ファウンドリ効率を向上。  
+- **AITLにおける位置づけ / Role in AITL:** **SystemDK成果をデバイススケールに適用**したPoC。  
 
 **🇺🇸 English:**  
-- **Content:** Compensates interconnect delay and thermal coupling at the sub-2nm node, improving yield.  
-- **Industrial Impact:** Directly linked to next-generation semiconductor EDA flows, improving foundry efficiency.  
-- **Role in AITL:** A PoC applying **SystemDK at the device scale**, proving that CFET-specific challenges can be overcome with AITL.  
+- **Content:** Compensates interconnect delay and thermal coupling at sub-2nm nodes.  
+- **Industrial Impact:** Directly linked to next-generation semiconductor EDA flows.  
+- **Role in AITL:** Demonstrates SystemDK applied at the device scale.  
+
+[📄 CFET Control Paper (PDF)](../docs/cfet_ctrl2025.pdf)
 
 ---
 
 ### 🤖 3.4 Humanoid TCST 論文 / Humanoid TCST Paper (2025)  
-
 **🇯🇵 日本語:**  
-- **内容 / Content:** PID＋FSM＋LLMによる三層制御をヒューマノイドに実装。姿勢回復200ms以内、歩容安定性30%向上、エネルギー効率15%改善、自己発電寄与12%。  
-- **産業貢献 / Industrial Impact:** 災害救助、介護、工場自動化で信頼性を保証。  
-- **AITLにおける位置づけ / Role in AITL:** **AITLのFlagship PoC**。半導体から離れ、動的環境に応用した代表例。  
+- **内容 / Content:** PID＋FSM＋LLMによる三層制御をヒューマノイドに実装。姿勢回復200ms以内、歩容安定性30%向上、エネルギー効率15%改善。  
+- **産業貢献 / Industrial Impact:** 災害救助、介護、工場自動化に応用。  
+- **AITLにおける位置づけ / Role in AITL:** **AITLのFlagship PoC**。  
 
 **🇺🇸 English:**  
-- **Content:** Implements three-layer control (PID + FSM + LLM) in humanoids. Achieved ≤200ms posture recovery, +30% gait stability, +15% energy efficiency, ~12% self-power.  
-- **Industrial Impact:** Ensures reliability in disaster relief, eldercare, and factory automation.  
-- **Role in AITL:** The **flagship PoC** of AITL, demonstrating versatility in dynamic environments beyond semiconductors.  
+- **Content:** Implements PID + FSM + LLM three-layer control in humanoids.  
+- **Industrial Impact:** Disaster relief, eldercare, and automation reliability.  
+- **Role in AITL:** The flagship PoC demonstrating versatility beyond semiconductors.  
+
+[📄 Humanoid TCST Paper (PDF)](../docs/humanoid_tcst2025.pdf)
 
 ---
 
 ### 🚀 3.5 AITL on Space 論文 / AITL on Space Paper (2025)  
-
 **🇯🇵 日本語:**  
 - **内容 / Content:** H∞制御＋FSM＋LLMを22nm FDSOI FPGAに実装。Tri-NVM階層で長期自律性を確保。  
-- **産業貢献 / Industrial Impact:** 宇宙・防衛産業における長期運用基盤を提供。  
-- **AITLにおける位置づけ / Role in AITL:** **Humanoidと並ぶ応用拡張PoC**。特に宇宙探査・防衛での長期安定性を確認。  
+- **産業貢献 / Industrial Impact:** 宇宙・防衛での長期運用基盤を提供。  
+- **AITLにおける位置づけ / Role in AITL:** **Humanoidと並ぶ応用拡張PoC**。  
 
 **🇺🇸 English:**  
-- **Content:** Implements H∞ + FSM + LLM on 22nm FDSOI FPGA with a Tri-NVM hierarchy, ensuring long-term autonomy.  
-- **Industrial Impact:** Provides a foundation for long-term operation in space and defense.  
-- **Role in AITL:** A **broadening PoC** alongside humanoids, proving AITL’s long-term stability advantage in space/defense.  
+- **Content:** Implements H∞ + FSM + LLM on 22nm FDSOI FPGA with Tri-NVM.  
+- **Industrial Impact:** Foundation for long-term operation in space/defense.  
+- **Role in AITL:** A broadening PoC alongside Humanoid.  
+
+[📄 AITL on Space Paper (PDF)](../docs/aitl_space.pdf)
 
 ---
 
 ### ✈️ 3.6 SkyEdge 論文 / SkyEdge Drone Paper (2025)  
-
 **🇯🇵 日本語:**  
-- **内容 / Content:** 高高度ドローンのリファレンス設計。H∞制御、可変ピッチロータ、国内製造デバイス、PQCセキュリティを統合。10 km級の信頼性ある飛行を実現。  
-- **産業貢献 / Industrial Impact:** 災害通信、国境監視、環境モニタリング、防衛ISR用途など多様なミッションを想定。国内部材による供給網強靱化も意識。  
-- **AITLにおける位置づけ / Role in AITL:** **空域応用PoC**。AITLの制御アーキテクチャを空モビリティ分野に展開した事例で、**Humanoid・Spaceと並ぶ応用拡張PoC**。  
+- **内容 / Content:** 高高度ドローンのリファレンス設計。H∞制御、可変ピッチロータ、国内デバイス、PQCセキュリティを統合。  
+- **産業貢献 / Industrial Impact:** 災害通信、国境監視、環境モニタリング、防衛ISR用途を想定。  
+- **AITLにおける位置づけ / Role in AITL:** **空域応用PoC**。Humanoid・Spaceと並ぶ応用拡張PoC。  
 
 **🇺🇸 English:**  
-- **Content:** A reference design for a high-altitude UAV platform. Integrates H∞ control, variable-pitch rotor scheduling, domestically manufactured devices, and PQC-secured system stack. Achieves reliable operation up to 10 km.  
-- **Industrial Impact:** Targeted for disaster-relief communication, border surveillance, environmental monitoring, and defense ISR. Also strengthens supply-chain resilience with domestic sourcing.  
-- **Role in AITL:** An **aerospace application PoC**, expanding AITL’s control architecture into air mobility. Considered a **broadening PoC** alongside Humanoid and Space.  
+- **Content:** High-altitude UAV reference design with H∞ control, variable-pitch rotor, domestic devices, and PQC security.  
+- **Industrial Impact:** Disaster-relief, surveillance, environmental monitoring, defense ISR.  
+- **Role in AITL:** An aerospace application PoC broadening AITL into air mobility.  
 
-[📄 SkyEdge Drone Paper (PDF)](../docs/skyedge_drone.pdf)
+[📄 SkyEdge Drone Paper (PDF)](./docs/skyedge_drone.pdf)
 
 ---
 
