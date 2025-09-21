@@ -195,7 +195,7 @@ flowchart TB
 - **Industrial Impact:** Standard teaching material for next-generation engineers, providing foundational knowledge for PoCs.  
 - **Role in AITL:** Not directly AITL, but essential as a prerequisite for understanding SystemDK and CFET control PoCs.  
 
-[📄 CFET Tutorial Paper (PDF)](../docs/cfet_tutorial_main.pdf)
+[📄 CFET Tutorial Paper (PDF)](./docs/cfet_tutorial_main.pdf)
 
 ---
 
@@ -210,7 +210,7 @@ flowchart TB
 - **Industrial Impact:** Essential for automotive, IoT, and communication SoC design.  
 - **Role in AITL:** The first result applying AITL at the system design level.  
 
-[📄 SystemDK+AITL Paper (PDF)](../docs/systemdk_aitl2025.pdf)
+[📄 SystemDK+AITL Paper (PDF)](./docs/systemdk_aitl2025.pdf)
 
 ---
 
@@ -225,7 +225,7 @@ flowchart TB
 - **Industrial Impact:** Directly linked to next-generation semiconductor EDA flows.  
 - **Role in AITL:** Demonstrates SystemDK applied at the device scale.  
 
-[📄 CFET Control Paper (PDF)](../docs/cfet_ctrl2025.pdf)
+[📄 CFET Control Paper (PDF)](./docs/cfet_ctrl2025.pdf)
 
 ---
 
@@ -240,7 +240,7 @@ flowchart TB
 - **Industrial Impact:** Disaster relief, eldercare, and automation reliability.  
 - **Role in AITL:** The flagship PoC demonstrating versatility beyond semiconductors.  
 
-[📄 Humanoid TCST Paper (PDF)](../docs/humanoid_tcst2025.pdf)
+[📄 Humanoid TCST Paper (PDF)](./docs/humanoid_tcst2025.pdf)
 
 ---
 
@@ -255,7 +255,7 @@ flowchart TB
 - **Industrial Impact:** Foundation for long-term operation in space/defense.  
 - **Role in AITL:** A broadening PoC alongside Humanoid.  
 
-[📄 AITL on Space Paper (PDF)](../docs/aitl_space.pdf)
+[📄 AITL on Space Paper (PDF)](./docs/aitl_space.pdf)
 
 ---
 
