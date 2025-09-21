@@ -124,37 +124,61 @@ flowchart TB
 
 ---
 
-## 3. Core PoC Papers (2025)
+## 📑 3. Core PoC Papers (2025)
 
-### 3.1 CFET Tutorial Paper
+---
+
+### 📘 3.1 CFET Tutorial Paper (2025)  
 - **Content:** An educational overview of device evolution from Planar → FinFET → GAA → CFET.  
-- **Industrial Impact:** Standard teaching material for next-generation engineers.  
-- **Role in AITL:** Serves as prerequisite for SystemDK+AITL and CFET Control.  
-- 📄 [Download: CFET Tutorial Paper (2025)](./docs/CFET_Tutorial_2025.pdf)
+- **Industrial Impact:** Standard teaching material for next-generation engineers, providing foundational knowledge for PoCs.  
+- **Role in AITL:** Not directly AITL, but essential as a prerequisite for understanding SystemDK and CFET control PoCs.  
 
-### 3.2 SystemDK+AITL Paper
-- **Content:** Compensation for RC delay, thermal coupling, and EMI.  
-- **Impact:** Foundation for automotive, IoT, and communication SoCs.  
-- **Significance:** First demonstration of embedding SystemDK constraints into system design.  
-- 📄 [Download: SystemDK+AITL Paper (2025)](./docs/SystemDK_AITL_2025.pdf)
+[📄 CFET Tutorial Paper (PDF)](../docs/cfet_tutorial_main.pdf)
 
-### 3.3 CFET Control Paper
-- **Content:** Compensation for sub-2nm interconnect delay and thermal coupling.  
-- **Impact:** Improves yield for EDA/foundry.  
-- **Significance:** Applies SystemDK to device scale.  
-- 📄 [Download: CFET Control Paper (2025)](./docs/CFET_Control_2025.pdf)
+---
 
-### 3.4 Humanoid TCST Paper
-- **Content:** Posture recovery ≤200ms, gait stability +30%, energy efficiency +15%, self-powering ~12%.  
-- **Impact:** Reliability in disaster relief, eldercare, and factory automation.  
-- **Significance:** Flagship PoC applying AITL to humanoid environments.  
-- 📄 [Download: Humanoid TCST Paper (2025)](./docs/Humanoid_TCST_2025.pdf)
+### 🖥️ 3.2 SystemDK+AITL Paper (2025)  
+- **Content:** Compensates RC delay, thermal coupling, and EMI in the EDA flow. PID and FSM stabilize variations.  
+- **Industrial Impact:** Essential for automotive, IoT, and communication SoC design. High potential for collaboration with EDA vendors.  
+- **Role in AITL:** The first result applying AITL at the system design level, proving SystemDK’s capability to embed physical constraints from early design stages.  
 
-### 3.5 AITL on Space Paper
-- **Content:** Tri-NVM hierarchy, H∞+FSM+LLM, implemented on 22nm FDSOI FPGA.  
-- **Impact:** Foundation for autonomous operation in space/defense.  
-- **Significance:** Demonstrates AITL applicability to long-term autonomy in space.  
-- 📄 [Download: AITL on Space Paper (2025)](./docs/AITL_Space_2025.pdf)
+[📄 SystemDK+AITL Paper (PDF)](../docs/systemdk_aitl2025.pdf)
+
+---
+
+### ⚡ 3.3 CFET Control Paper (2025)  
+- **Content:** Compensates interconnect delay and thermal coupling at sub-2nm nodes, improving yield.  
+- **Industrial Impact:** Directly linked to next-generation semiconductor EDA flows, improving foundry efficiency.  
+- **Role in AITL:** A PoC applying SystemDK at the device scale, proving that CFET-specific challenges can be overcome with AITL.  
+
+[📄 CFET Control Paper (PDF)](../docs/cfet_ctrl2025.pdf)
+
+---
+
+### 🤖 3.4 Humanoid TCST Paper (2025)  
+- **Content:** Implements three-layer control (PID + FSM + LLM) in humanoids. Achieved ≤200ms posture recovery, +30% gait stability, +15% energy efficiency, and ~12% self-power contribution.  
+- **Industrial Impact:** Ensures reliability in disaster relief, eldercare, and factory automation.  
+- **Role in AITL:** The flagship PoC of AITL, demonstrating versatility in dynamic environments beyond semiconductors.  
+
+[📄 Humanoid TCST Paper (PDF)](../docs/humanoid_tcst2025.pdf)
+
+---
+
+### 🚀 3.5 AITL on Space Paper (2025)  
+- **Content:** Implements H∞ + FSM + LLM on 22nm FDSOI FPGA with a Tri-NVM hierarchy, ensuring long-term autonomy.  
+- **Industrial Impact:** Provides a foundation for long-term operation in space and defense.  
+- **Role in AITL:** A broadening PoC alongside humanoids, proving AITL’s long-term stability advantage in space/defense applications.  
+
+[📄 AITL on Space Paper (PDF)](../docs/aitl_space.pdf)
+
+---
+
+### ✈️ 3.6 SkyEdge Drone Paper (2025)  
+- **Content:** A reference design for a high-altitude UAV platform. Integrates H∞ control, variable-pitch rotor scheduling, domestically manufactured devices, and PQC-secured system stack. Achieves reliable operation up to 10 km.  
+- **Industrial Impact:** Targeted for disaster-relief communication, border surveillance, environmental monitoring, and defense ISR. Also strengthens supply-chain resilience with domestic sourcing.  
+- **Role in AITL:** An aerospace application PoC, expanding AITL’s control architecture into air mobility. Considered a broadening PoC alongside Humanoid and Space.  
+
+[📄 SkyEdge Drone Paper (PDF)](../docs/skyedge_drone.pdf)
 
 ---
 
