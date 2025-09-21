@@ -254,6 +254,22 @@ flowchart TB
 
 ---
 
+### ✈️ 3.6 SkyEdge 論文 / SkyEdge Drone Paper (2025)  
+
+**🇯🇵 日本語:**  
+- **内容 / Content:** 高高度ドローンのリファレンス設計。H∞制御、可変ピッチロータ、国内製造デバイス、PQCセキュリティを統合。10 km級の信頼性ある飛行を実現。  
+- **産業貢献 / Industrial Impact:** 災害通信、国境監視、環境モニタリング、防衛ISR用途など多様なミッションを想定。国内部材による供給網強靱化も意識。  
+- **AITLにおける位置づけ / Role in AITL:** **空域応用PoC**。AITLの制御アーキテクチャを空モビリティ分野に展開した事例で、**Humanoid・Spaceと並ぶ応用拡張PoC**。  
+
+**🇺🇸 English:**  
+- **Content:** A reference design for a high-altitude UAV platform. Integrates H∞ control, variable-pitch rotor scheduling, domestically manufactured devices, and PQC-secured system stack. Achieves reliable operation up to 10 km.  
+- **Industrial Impact:** Targeted for disaster-relief communication, border surveillance, environmental monitoring, and defense ISR. Also strengthens supply-chain resilience with domestic sourcing.  
+- **Role in AITL:** An **aerospace application PoC**, expanding AITL’s control architecture into air mobility. Considered a **broadening PoC** alongside Humanoid and Space.  
+
+[📄 SkyEdge Drone Paper (PDF)](../docs/skyedge_drone.pdf)
+
+---
+
 ## 📏 4. KPI一覧と政策的示唆 / KPI Table & Policy Implications
 
 ### 4.1 KPI一覧 / KPI Table
