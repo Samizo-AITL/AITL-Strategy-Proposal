@@ -137,7 +137,16 @@ flowchart TB
 
 ---
 
-### 🖥️ 3.2 SystemDK+AITL Paper (2025)  
+### 🖥️ 3.2 SystemDK for 3D-IC Paper (2025)  
+- **Content:** Introduces a constraint-driven design framework that translates FEM-based thermal/stress maps and S-parameter EMI analyses directly into EDA-native constraints (STA derates, placement blockages, CTS shielding).  
+- **Industrial Impact:** Demonstrated on a 4-die TSV stack, achieving **87% slack recovery, 11 °C hotspot reduction, and 23% eye-opening improvement under EMI**. Establishes SystemDK as a practical DTCO methodology bridging multiphysics analysis and design closure.  
+- **Role in AITL:** Serves as the **foundational PoC** of SystemDK, validating constraint translation as the bridge between device-level physics and system-level EDA. Provides the baseline for subsequent AITL integration.  
+
+[📄 SystemDK for 3D-IC Paper (PDF)](../docs/systemdk_3dic.pdf)
+
+---
+
+### 🖥️ 3.3 SystemDK+AITL Paper (2025)  
 - **Content:** Compensates RC delay, thermal coupling, and EMI in the EDA flow. PID and FSM stabilize variations.  
 - **Industrial Impact:** Essential for automotive, IoT, and communication SoC design. High potential for collaboration with EDA vendors.  
 - **Role in AITL:** The first result applying AITL at the system design level, proving SystemDK’s capability to embed physical constraints from early design stages.  
@@ -146,7 +155,7 @@ flowchart TB
 
 ---
 
-### ⚡ 3.3 CFET Control Paper (2025)  
+### ⚡ 3.4 CFET Control Paper (2025)  
 - **Content:** Compensates interconnect delay and thermal coupling at sub-2nm nodes, improving yield.  
 - **Industrial Impact:** Directly linked to next-generation semiconductor EDA flows, improving foundry efficiency.  
 - **Role in AITL:** A PoC applying SystemDK at the device scale, proving that CFET-specific challenges can be overcome with AITL.  
@@ -155,7 +164,7 @@ flowchart TB
 
 ---
 
-### 🤖 3.4 Humanoid TCST Paper (2025)  
+### 🤖 3.5 Humanoid TCST Paper (2025)  
 - **Content:** Implements three-layer control (PID + FSM + LLM) in humanoids. Achieved ≤200ms posture recovery, +30% gait stability, +15% energy efficiency, and ~12% self-power contribution.  
 - **Industrial Impact:** Ensures reliability in disaster relief, eldercare, and factory automation.  
 - **Role in AITL:** The flagship PoC of AITL, demonstrating versatility in dynamic environments beyond semiconductors.  
@@ -164,7 +173,7 @@ flowchart TB
 
 ---
 
-### 🚀 3.5 AITL on Space Paper (2025)  
+### 🚀 3.6 AITL on Space Paper (2025)  
 - **Content:** Implements H∞ + FSM + LLM on 22nm FDSOI FPGA with a Tri-NVM hierarchy, ensuring long-term autonomy.  
 - **Industrial Impact:** Provides a foundation for long-term operation in space and defense.  
 - **Role in AITL:** A broadening PoC alongside humanoids, proving AITL’s long-term stability advantage in space/defense applications.  
@@ -173,7 +182,7 @@ flowchart TB
 
 ---
 
-### ✈️ 3.6 SkyEdge Drone Paper (2025)  
+### ✈️ 3.7 SkyEdge Drone Paper (2025)  
 - **Content:** A reference design for a high-altitude UAV platform. Integrates H∞ control, variable-pitch rotor scheduling, domestically manufactured devices, and PQC-secured system stack. Achieves reliable operation up to 10 km.  
 - **Industrial Impact:** Targeted for disaster-relief communication, border surveillance, environmental monitoring, and defense ISR. Also strengthens supply-chain resilience with domestic sourcing.  
 - **Role in AITL:** An aerospace application PoC, expanding AITL’s control architecture into air mobility. Considered a broadening PoC alongside Humanoid and Space.  
