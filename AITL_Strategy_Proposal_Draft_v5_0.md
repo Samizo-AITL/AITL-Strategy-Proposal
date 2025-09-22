@@ -199,7 +199,22 @@ flowchart TB
 
 ---
 
-### 🖥️ 3.2 SystemDK+AITL 論文 / SystemDK+AITL Paper (2025)  
+### 🖥️ 3.2 SystemDK for 3D-IC 論文 / SystemDK for 3D-IC Paper (2025)  
+**🇯🇵 日本語:**  
+- **内容 / Content:** FEM熱解析・応力分布・SパラメータEMI解析をEDA制約（STA derate, Placement Blockage, CTS Shielding）へ直接変換。  
+- **産業貢献 / Industrial Impact:** TSVスタックを対象に、タイミング変動87%改善、ホットスポット温度11℃低減、アイ開口23%拡大を実証。  
+- **AITLにおける位置づけ / Role in AITL:** **AITL統合の前段階となる基盤PoC**。SystemDK+AITLへ発展する橋渡し。  
+
+**🇺🇸 English:**  
+- **Content:** Translates FEM thermal/stress simulations and S-parameter EMI analysis into EDA-native constraints.  
+- **Industrial Impact:** Demonstrated on a 4-die TSV stack with **87% slack recovery, 11 °C hotspot reduction, and 23% eye-opening improvement**.  
+- **Role in AITL:** A foundational PoC bridging multi-physics analysis and EDA flows, preceding SystemDK+AITL.  
+
+[📄 SystemDK for 3D-IC Paper (PDF)](./docs/systemdk_3dic.pdf)
+
+---
+
+### 🖥️ 3.3 SystemDK+AITL 論文 / SystemDK+AITL Paper (2025)  
 **🇯🇵 日本語:**  
 - **内容 / Content:** RC遅延・熱結合・EMIをEDAフロー内で補償。PIDとFSMで安定化。  
 - **産業貢献 / Industrial Impact:** 自動車・IoT・通信SoCの設計に不可欠。EDAベンダーとの協働余地が大きい。  
@@ -214,7 +229,7 @@ flowchart TB
 
 ---
 
-### ⚡ 3.3 CFET Control 論文 / CFET Control Paper (2025)  
+### ⚡ 3.4 CFET Control 論文 / CFET Control Paper (2025)  
 **🇯🇵 日本語:**  
 - **内容 / Content:** サブ2nm領域における配線遅延・熱結合を補償。歩留まりを改善。  
 - **産業貢献 / Industrial Impact:** 次世代半導体EDAフローに直結し、ファウンドリ効率を向上。  
@@ -229,7 +244,7 @@ flowchart TB
 
 ---
 
-### 🤖 3.4 Humanoid TCST 論文 / Humanoid TCST Paper (2025)  
+### 🤖 3.5 Humanoid TCST 論文 / Humanoid TCST Paper (2025)  
 **🇯🇵 日本語:**  
 - **内容 / Content:** PID＋FSM＋LLMによる三層制御をヒューマノイドに実装。姿勢回復200ms以内、歩容安定性30%向上、エネルギー効率15%改善。  
 - **産業貢献 / Industrial Impact:** 災害救助、介護、工場自動化に応用。  
@@ -244,7 +259,7 @@ flowchart TB
 
 ---
 
-### 🚀 3.5 AITL on Space 論文 / AITL on Space Paper (2025)  
+### 🚀 3.6 AITL on Space 論文 / AITL on Space Paper (2025)  
 **🇯🇵 日本語:**  
 - **内容 / Content:** H∞制御＋FSM＋LLMを22nm FDSOI FPGAに実装。Tri-NVM階層で長期自律性を確保。  
 - **産業貢献 / Industrial Impact:** 宇宙・防衛での長期運用基盤を提供。  
@@ -259,7 +274,7 @@ flowchart TB
 
 ---
 
-### ✈️ 3.6 SkyEdge 論文 / SkyEdge Drone Paper (2025)  
+### ✈️ 3.7 SkyEdge 論文 / SkyEdge Drone Paper (2025)  
 **🇯🇵 日本語:**  
 - **内容 / Content:** 高高度ドローンのリファレンス設計。H∞制御、可変ピッチロータ、国内デバイス、PQCセキュリティを統合。  
 - **産業貢献 / Industrial Impact:** 災害通信、国境監視、環境モニタリング、防衛ISR用途を想定。  
