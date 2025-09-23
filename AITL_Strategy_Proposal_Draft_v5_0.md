@@ -1,6 +1,6 @@
 ---
 layout: aitl
-title: AITL Strategy Proposal (v5.2 – Policy Edition, Fixed Chapter Numbers)
+title: AITL Strategy Proposal (v5.2 – Policy Edition, Fixed Chapter Numbers) 
 permalink: /AITL_Strategy_Proposal_Draft_v5_0.html
 ---
 
