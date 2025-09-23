@@ -372,6 +372,12 @@ Introduce AITL Studies; ~100 grads/year; dispatch young researchers to conferenc
 - 📄 [Bio-Inkjet KNN (2025)](./docs/bioinkjet_knn.pdf)  
   - Pb-free bio-inkjet technology for medical devices.  
 
+- 📄 [Historical Case Study: 0.25-µm DRAM & VSRAM (2025)](./docs/dram_vsram_history.pdf)  
+  - Case study of 0.25 µm DRAM ramp-up and pseudo-SRAM mass production.  
+
+- 📄 [Post-CFET Device Architectures (2025)](./docs/post_cfet.pdf)  
+  - Survey of post-CFET device options and roadmap (2030–2045).
+    
 ---
 
 ### Figure 1. EDA Integration Flow (SystemDK with AITL)
