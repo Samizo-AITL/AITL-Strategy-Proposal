@@ -737,7 +737,7 @@ The following research outputs are not part of the AITL core but contribute to *
   - **🇯🇵 貢献:** 医療分野におけるPbフリー材料利用を実証、安全性・環境適合性を確保。  
   - **🇺🇸 Contribution:** Demonstrates Pb-free material use in medical applications, ensuring safety and environmental compliance.  
 
- **[Historical Case Study: 0.25-µm DRAM & VSRAM (2025)](./docs/dram_vsram_history.pdf)**  
+- **[Historical Case Study: 0.25-µm DRAM & VSRAM (2025)](./docs/dram_vsram_history.pdf)**  
   - 🇯🇵 内容: 0.25µm DRAM立ち上げとVSRAM量産移管を事例研究。歩留まり改善、不良解析、モバイル応用の歴史的意義を整理。  
   - 🇺🇸 Content: Case study of 0.25 µm DRAM ramp-up and pseudo-SRAM mass production, including yield-improvement cycles and mobile application impact.  
   - 🇯🇵 貢献: 歴史的半導体プロセス移管・教育的教訓を提供。  
