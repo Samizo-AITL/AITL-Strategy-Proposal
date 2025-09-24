@@ -375,6 +375,9 @@ Introduce AITL Studies; ~100 grads/year; dispatch young researchers to conferenc
 - 📄 [Historical Case Study: 0.25-µm DRAM & VSRAM (2025)](./docs/dram_vsram_history.pdf)  
   - Case study of 0.25 µm DRAM ramp-up and pseudo-SRAM mass production.  
 
+- 📄 [Historical Case Study on Ti Silicide (TiSi₂) Reliability Issues (2025)](./docs/tisalicide_case.pdf)  
+  - Analysis of TiSi₂ phase-transition instability at 0.25 µm CMOS node, with impact on embedded SRAM yield.
+  - 
 - 📄 [Post-CFET Device Architectures (2025)](./docs/post_cfet.pdf)  
   - Survey of post-CFET device options and roadmap (2030–2045).
     
