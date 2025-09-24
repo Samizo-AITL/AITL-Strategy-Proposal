@@ -743,6 +743,12 @@ The following research outputs are not part of the AITL core but contribute to *
   - 🇯🇵 貢献: 歴史的半導体プロセス移管・教育的教訓を提供。  
   - 🇺🇸 Contribution: Provides historical insights into semiconductor process transfer and educational lessons.  
 
+- **[Historical Case Study on Ti Silicide (TiSi₂) Reliability Issues (2025)](./docs/tisilicide_case.pdf)**  
+  - 🇯🇵 内容: 0.25µm CMOSノードにおけるTiSi₂相転移不安定性を解析。未完了のC49→C54変態とB吸収が局所高抵抗スポットを引き起こし、1Mbit SRAM歩留まりを低下させた事例を整理。  
+  - 🇺🇸 Content: Analyzes TiSi₂ phase-transition instability at the 0.25 µm CMOS node. Incomplete C49→C54 transformation with boron absorption created localized high-resistance spots, reducing 1 Mbit SRAM yield.  
+  - 🇯🇵 貢献: 組込みSRAM冗長性の限界、暫定・恒久的対策（エッチング条件最適化、RTA制御）を提示し、スケーリングと信頼性の交差点を教育的に示す。  
+  - 🇺🇸 Contribution: Highlights redundancy limitations in embedded SRAM, provisional/permanent countermeasures (etch tuning, RTA optimization), and educational lessons on scaling vs. reliability.
+    
 - **[Post-CFET Device Architectures (2025)](./docs/post_cfet.pdf)**  
   - 🇯🇵 内容: ポストCFETデバイスアーキテクチャを総合的に調査。2D材料FET、モノリシック3D、スピントロニクス、ヘテロ集積の視点を比較。  
   - 🇺🇸 Content: Survey of post-CFET device options including 2D FETs, monolithic 3D integration, spintronics, and heterogeneous integration.  
