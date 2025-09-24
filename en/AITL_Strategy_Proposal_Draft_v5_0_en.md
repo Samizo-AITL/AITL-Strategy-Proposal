@@ -357,28 +357,28 @@ Introduce AITL Studies; ~100 grads/year; dispatch young researchers to conferenc
 
 ## 11. Appendix: Related Works (2025)
 
-- 📄 [LPDDR+FeRAM Integration (2025)](./docs/LPDDR_FeRAM.pdf)  
+- 📄 [LPDDR+FeRAM Integration (2025)](../docs/LPDDR_FeRAM.pdf)  
   - Integration of low-power DRAM with non-volatile FeRAM.  
 
-- 📄 [FeFET CMOS Reliability (0.18µm) (2025)](./docs/fefet_cmos018_reliability.pdf)  
+- 📄 [FeFET CMOS Reliability (0.18µm) (2025)](../docs/fefet_cmos018_reliability.pdf)  
   - FeFET integrated into CMOS process with measured retention and endurance.  
 
-- 📄 [CMOS018 Inductor+LDO (2025)](./docs/cmos018_inductor_ldo.pdf)  
+- 📄 [CMOS018 Inductor+LDO (2025)](../docs/cmos018_inductor_ldo.pdf)  
   - Inductor+LDO design achieving high-efficiency power supply.  
 
-- 📄 [ScAlN Ultrasonic MEMS (2025)](./docs/scaln_ultrasonic.pdf)  
+- 📄 [ScAlN Ultrasonic MEMS (2025)](../docs/scaln_ultrasonic.pdf)  
   - Ultrasonic MEMS with high-sensitivity ScAlN thin films.  
 
-- 📄 [Bio-Inkjet KNN (2025)](./docs/bioinkjet_knn.pdf)  
+- 📄 [Bio-Inkjet KNN (2025)](../docs/bioinkjet_knn.pdf)  
   - Pb-free bio-inkjet technology for medical devices.  
 
-- 📄 [Historical Case Study: 0.25-µm DRAM & VSRAM (2025)](./docs/dram_vsram_history.pdf)  
+- 📄 [Historical Case Study: 0.25-µm DRAM & VSRAM (2025)](../docs/dram_vsram_history.pdf)  
   - Case study of 0.25 µm DRAM ramp-up and pseudo-SRAM mass production.  
 
-- 📄 [Historical Case Study on Ti Silicide (TiSi₂) Reliability Issues (2025)](./docs/tisalicide_case.pdf)  
+- 📄 [Historical Case Study on Ti Silicide (TiSi₂) Reliability Issues (2025)](../docs/tisalicide_case.pdf)  
   - Analysis of TiSi₂ phase-transition instability at 0.25 µm CMOS node, with impact on embedded SRAM yield.
   - 
-- 📄 [Post-CFET Device Architectures (2025)](./docs/post_cfet.pdf)  
+- 📄 [Post-CFET Device Architectures (2025)](../docs/post_cfet.pdf)  
   - Survey of post-CFET device options and roadmap (2030–2045).
     
 ---
