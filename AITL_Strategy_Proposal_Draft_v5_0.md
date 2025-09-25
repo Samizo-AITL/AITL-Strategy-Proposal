@@ -707,11 +707,23 @@ The following research outputs are not part of the AITL core but contribute to *
 
 ### 11.2 関連研究一覧 / List of Related Works
 
-- **[LPDDR+FeRAM Integration (2025)](./docs/LPDDR_FeRAM.pdf)**  
-  - **🇯🇵 内容:** 低消費電力DRAMと不揮発性FeRAMを統合し、組込みメモリの信頼性を強化。  
-  - **🇺🇸 Content:** Integration of low-power DRAM with non-volatile FeRAM to enhance embedded memory reliability.  
-  - **🇯🇵 貢献:** 産業機器・車載システムのデータ保持安全性を担保。  
-  - **🇺🇸 Contribution:** Improves data retention safety in industrial and automotive systems.  
+- **[Historical Case Study: 0.25-µm DRAM & VSRAM (2025)](./docs/dram_vsram_history.pdf)**  
+  - 🇯🇵 内容: 0.25µm DRAM立ち上げとVSRAM量産移管を事例研究。歩留まり改善、不良解析、モバイル応用の歴史的意義を整理。  
+  - 🇺🇸 Content: Case study of 0.25 µm DRAM ramp-up and pseudo-SRAM mass production, including yield-improvement cycles and mobile application impact.  
+  - 🇯🇵 貢献: 歴史的半導体プロセス移管・教育的教訓を提供。  
+  - 🇺🇸 Contribution: Provides historical insights into semiconductor process transfer and educational lessons.  
+
+- **[Historical Case Study on Ti Silicide (TiSi₂) Reliability Issues (2025)](./docs/tisalicide_case.pdf)**  
+  - 🇯🇵 内容: 0.25µm CMOSノードにおけるTiSi₂相転移不安定性を解析。未完了のC49→C54変態とB吸収が局所高抵抗スポットを引き起こし、1Mbit SRAM歩留まりを低下させた事例を整理。  
+  - 🇺🇸 Content: Analyzes TiSi₂ phase-transition instability at the 0.25 µm CMOS node. Incomplete C49→C54 transformation with boron absorption created localized high-resistance spots, reducing 1 Mbit SRAM yield.  
+  - 🇯🇵 貢献: 組込みSRAM冗長性の限界、暫定・恒久的対策（エッチング条件最適化、RTA制御）を提示し、スケーリングと信頼性の交差点を教育的に示す。  
+  - 🇺🇸 Contribution: Highlights redundancy limitations in embedded SRAM, provisional/permanent countermeasures (etch tuning, RTA optimization), and educational lessons on scaling vs. reliability.
+
+- **[Process-Based Differentiation for Analog CMOS (2025)](./docs/cmos018_noise.pdf)**  
+  - 🇯🇵 内容: エピ基板、ウェルドーピング最適化、酸化膜厚制御、水素アニール、デバイス幾何を組み合わせ、0.18µm CMOSで1/fノイズを50%以上低減。温度範囲25–125℃および85℃で1000hの長期信頼性を実証。  
+  - 🇺🇸 Content: Combined epitaxial substrate, optimized well doping, oxide thickness control, hydrogen anneal, and device geometry to achieve >50% 1/f noise reduction at 0.18 µm CMOS. Demonstrated robustness across 25–125 °C and long-term stability at 85 °C for 1000 h.  
+  - 🇯🇵 貢献: バイオメディカル回路、センサ、車載アナログ、精密計測機器への適用価値を提示し、プロセス/デバイス最適化をアナログ性能に結びつける教育的意義を強調。  
+  - 🇺🇸 Contribution: Highlights application value in biomedical, sensor, automotive analog, and precision instrumentation, while emphasizing educational significance of linking process/device optimization to analog circuit performance.
 
 - **[FeFET CMOS Reliability (0.18µm) (2025)](./docs/fefet_cmos018_reliability.pdf)**  
   - **🇯🇵 内容:** FeFETを標準CMOSプロセスに統合し、保持特性・耐久性を実測。  
@@ -737,18 +749,12 @@ The following research outputs are not part of the AITL core but contribute to *
   - **🇯🇵 貢献:** 医療分野におけるPbフリー材料利用を実証、安全性・環境適合性を確保。  
   - **🇺🇸 Contribution:** Demonstrates Pb-free material use in medical applications, ensuring safety and environmental compliance.  
 
-- **[Historical Case Study: 0.25-µm DRAM & VSRAM (2025)](./docs/dram_vsram_history.pdf)**  
-  - 🇯🇵 内容: 0.25µm DRAM立ち上げとVSRAM量産移管を事例研究。歩留まり改善、不良解析、モバイル応用の歴史的意義を整理。  
-  - 🇺🇸 Content: Case study of 0.25 µm DRAM ramp-up and pseudo-SRAM mass production, including yield-improvement cycles and mobile application impact.  
-  - 🇯🇵 貢献: 歴史的半導体プロセス移管・教育的教訓を提供。  
-  - 🇺🇸 Contribution: Provides historical insights into semiconductor process transfer and educational lessons.  
+- **[LPDDR+FeRAM Integration (2025)](./docs/LPDDR_FeRAM.pdf)**  
+  - **🇯🇵 内容:** 低消費電力DRAMと不揮発性FeRAMを統合し、組込みメモリの信頼性を強化。  
+  - **🇺🇸 Content:** Integration of low-power DRAM with non-volatile FeRAM to enhance embedded memory reliability.  
+  - **🇯🇵 貢献:** 産業機器・車載システムのデータ保持安全性を担保。  
+  - **🇺🇸 Contribution:** Improves data retention safety in industrial and automotive systems.  
 
-- **[Historical Case Study on Ti Silicide (TiSi₂) Reliability Issues (2025)](./docs/tisalicide_case.pdf)**  
-  - 🇯🇵 内容: 0.25µm CMOSノードにおけるTiSi₂相転移不安定性を解析。未完了のC49→C54変態とB吸収が局所高抵抗スポットを引き起こし、1Mbit SRAM歩留まりを低下させた事例を整理。  
-  - 🇺🇸 Content: Analyzes TiSi₂ phase-transition instability at the 0.25 µm CMOS node. Incomplete C49→C54 transformation with boron absorption created localized high-resistance spots, reducing 1 Mbit SRAM yield.  
-  - 🇯🇵 貢献: 組込みSRAM冗長性の限界、暫定・恒久的対策（エッチング条件最適化、RTA制御）を提示し、スケーリングと信頼性の交差点を教育的に示す。  
-  - 🇺🇸 Contribution: Highlights redundancy limitations in embedded SRAM, provisional/permanent countermeasures (etch tuning, RTA optimization), and educational lessons on scaling vs. reliability.
-    
 - **[Post-CFET Device Architectures (2025)](./docs/post_cfet.pdf)**  
   - 🇯🇵 内容: ポストCFETデバイスアーキテクチャを総合的に調査。2D材料FET、モノリシック3D、スピントロニクス、ヘテロ集積の視点を比較。  
   - 🇺🇸 Content: Survey of post-CFET device options including 2D FETs, monolithic 3D integration, spintronics, and heterogeneous integration.  
