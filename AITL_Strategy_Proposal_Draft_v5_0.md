@@ -716,50 +716,56 @@ The following research outputs are not part of the AITL core but contribute to *
 - **[Historical Case Study on Ti Silicide (TiSi₂) Reliability Issues (2025)](./docs/tisalicide_case.pdf)**  
   - 🇯🇵 内容: 0.25µm CMOSノードにおけるTiSi₂相転移不安定性を解析。未完了のC49→C54変態とB吸収が局所高抵抗スポットを引き起こし、1Mbit SRAM歩留まりを低下させた事例を整理。  
   - 🇺🇸 Content: Analyzes TiSi₂ phase-transition instability at the 0.25 µm CMOS node. Incomplete C49→C54 transformation with boron absorption created localized high-resistance spots, reducing 1 Mbit SRAM yield.  
-  - 🇯🇵 貢献: 組込みSRAM冗長性の限界、暫定・恒久的対策（エッチング条件最適化、RTA制御）を提示し、スケーリングと信頼性の交差点を教育的に示す。  
-  - 🇺🇸 Contribution: Highlights redundancy limitations in embedded SRAM, provisional/permanent countermeasures (etch tuning, RTA optimization), and educational lessons on scaling vs. reliability.
+  - 🇯🇵 貢献: 冗長性の限界、暫定・恒久的対策（エッチング条件最適化、RTA制御）を提示し、信頼性とスケーリングの交差点を教育的に示す。  
+  - 🇺🇸 Contribution: Highlights redundancy limitations, provisional/permanent countermeasures (etch tuning, RTA optimization), and educational lessons on scaling vs. reliability.  
 
 - **[Process-Based Differentiation for Analog CMOS (2025)](./docs/cmos018_noise.pdf)**  
   - 🇯🇵 内容: エピ基板、ウェルドーピング最適化、酸化膜厚制御、水素アニール、デバイス幾何を組み合わせ、0.18µm CMOSで1/fノイズを50%以上低減。温度範囲25–125℃および85℃で1000hの長期信頼性を実証。  
   - 🇺🇸 Content: Combined epitaxial substrate, optimized well doping, oxide thickness control, hydrogen anneal, and device geometry to achieve >50% 1/f noise reduction at 0.18 µm CMOS. Demonstrated robustness across 25–125 °C and long-term stability at 85 °C for 1000 h.  
-  - 🇯🇵 貢献: バイオメディカル回路、センサ、車載アナログ、精密計測機器への適用価値を提示し、プロセス/デバイス最適化をアナログ性能に結びつける教育的意義を強調。  
-  - 🇺🇸 Contribution: Highlights application value in biomedical, sensor, automotive analog, and precision instrumentation, while emphasizing educational significance of linking process/device optimization to analog circuit performance.
+  - 🇯🇵 貢献: 医療・センサ・車載アナログ応用に有効で、プロセス最適化とアナログ性能を結びつける教育的意義を示す。  
+  - 🇺🇸 Contribution: Shows value for biomedical, sensor, and automotive analog, while emphasizing educational significance of linking process optimization to analog performance.  
 
 - **[FeFET CMOS Reliability (0.18µm) (2025)](./docs/fefet_cmos018_reliability.pdf)**  
-  - **🇯🇵 内容:** FeFETを標準CMOSプロセスに統合し、保持特性・耐久性を実測。  
-  - **🇺🇸 Content:** Integrated FeFET into standard CMOS process and measured retention and endurance.  
-  - **🇯🇵 貢献:** 半導体・産業用エレクトロニクスの長期信頼性を確保。  
-  - **🇺🇸 Contribution:** Ensures long-term reliability in semiconductors and industrial electronics.  
+  - 🇯🇵 内容: FeFETを標準0.18µm CMOSプロセスに+1マスクで統合し、保持特性と耐久性を実測。  
+  - 🇺🇸 Content: Integrated FeFET into standard 0.18 µm CMOS process with +1 mask, measuring retention and endurance.  
+  - 🇯🇵 貢献: 不揮発性メモリ応用（SRAMバックアップ、セキュアキー保存）に有効で、産業用の長期信頼性を確保。  
+  - 🇺🇸 Contribution: Ensures long-term reliability for non-volatile memory use in IoT and automotive.  
 
 - **[CMOS018 Inductor+LDO (2025)](./docs/cmos018_inductor_ldo.pdf)**  
-  - **🇯🇵 内容:** CMOS0.18µmでインダクタ＋LDOを設計し、高効率電源を実現。  
-  - **🇺🇸 Content:** Designed inductor + LDO in CMOS 0.18µm process, achieving high-efficiency power supply.  
-  - **🇯🇵 貢献:** 低電力IoT機器・ロボットにおける安定電源供給に寄与。  
-  - **🇺🇸 Contribution:** Provides stable power supply for low-power IoT devices and robotics.  
+  - 🇯🇵 内容: 0.18µm CMOSにオンチップラミネートインダクタを統合し、ハイブリッドBuck–LDOで高効率・低ノイズ電源を実現。  
+  - 🇺🇸 Content: Integrated laminated on-chip inductor with Buck–LDO in 0.18 µm CMOS, achieving high efficiency and low noise.  
+  - 🇯🇵 貢献: 車載・IoT機器で外付けインダクタ依存を削減し、安定した電源供給を可能にする。  
+  - 🇺🇸 Contribution: Provides competitive power supply architecture for IoT/automotive SoCs.  
+
+- **[Inkjet Tutorial: Principles, Materials, and Emerging Applications (2025)](./docs/inkjet_tutorial.pdf)**  
+  - 🇯🇵 内容: インクジェット技術を総合的に整理。アクチュエーション原理、液滴生成物理、インク材料、システム工学、デバイス構造、設計・解析手法、応用をレビュー。  
+  - 🇺🇸 Content: Comprehensive tutorial on inkjet technology, covering actuation principles, droplet physics, ink materials, system engineering, device structures, design/analysis, and applications.  
+  - 🇯🇵 貢献: Pbフリー圧電体、低電圧駆動、デジタルツイン、バイオ統合など今後の方向性を示し、教育・研究基盤を提供。  
+  - 🇺🇸 Contribution: Outlines future directions (Pb-free piezoelectrics, digital twins, bio-integration), serving as a base for research and education.  
 
 - **[ScAlN Ultrasonic MEMS (2025)](./docs/scaln_ultrasonic.pdf)**  
-  - **🇯🇵 内容:** 高感度ScAlN薄膜による超音波MEMSの実証。  
-  - **🇺🇸 Content:** Demonstrated ultrasonic MEMS with high-sensitivity ScAlN thin films.  
-  - **🇯🇵 貢献:** 非破壊検査・センシング分野での高信頼応用が可能。  
-  - **🇺🇸 Contribution:** Enables high-reliability applications in non-destructive testing and sensing.  
+  - 🇯🇵 内容: PbフリーScAlNを用いたMEMS超音波アレイを65nm SiGe CMOSとSiPで統合。次世代医療センサに提案。  
+  - 🇺🇸 Content: Pb-free ScAlN MEMS ultrasonic array integrated with 65 nm SiGe CMOS via SiP, proposed for next-gen medical sensors.  
+  - 🇯🇵 貢献: 環境調和型で高信頼な医療用超音波センサ技術を提示。  
+  - 🇺🇸 Contribution: Presents eco-friendly, reliable approach for medical ultrasonic sensing.  
 
 - **[Bio-Inkjet KNN (2025)](./docs/bioinkjet_knn.pdf)**  
-  - **🇯🇵 内容:** 鉛フリー強誘電体KNNを用いたバイオインクジェット技術を開発。  
-  - **🇺🇸 Content:** Developed bio-inkjet technology using Pb-free ferroelectric KNN.  
-  - **🇯🇵 貢献:** 医療分野におけるPbフリー材料利用を実証、安全性・環境適合性を確保。  
-  - **🇺🇸 Contribution:** Demonstrates Pb-free material use in medical applications, ensuring safety and environmental compliance.  
+  - 🇯🇵 内容: 鉛フリーKNNアクチュエータを用いたバイオインクジェットを提案。±50Vでピコリットル液滴生成を実証。  
+  - 🇺🇸 Content: Proposed Bio-Inkjet with lead-free KNN actuators, generating picoliter droplets under ±50 V.  
+  - 🇯🇵 貢献: 細胞パターニングやタンパク質アレイへの応用を想定し、環境負荷低減を実証。  
+  - 🇺🇸 Contribution: Demonstrates biomedical applications with Pb-free materials, ensuring safety and eco-compliance.  
 
 - **[LPDDR+FeRAM Integration (2025)](./docs/LPDDR_FeRAM.pdf)**  
-  - **🇯🇵 内容:** 低消費電力DRAMと不揮発性FeRAMを統合し、組込みメモリの信頼性を強化。  
-  - **🇺🇸 Content:** Integration of low-power DRAM with non-volatile FeRAM to enhance embedded memory reliability.  
-  - **🇯🇵 貢献:** 産業機器・車載システムのデータ保持安全性を担保。  
-  - **🇺🇸 Contribution:** Improves data retention safety in industrial and automotive systems.  
+  - 🇯🇵 内容: 低消費電力LPDDRと不揮発性FeRAMをチップレット統合し、即時復帰と低スタンバイ電力を実現。  
+  - 🇺🇸 Content: Hybrid memory combining low-power LPDDR and FeRAM chiplets, achieving instant resume with low standby power.  
+  - 🇯🇵 貢献: IoT/車載向けに低消費かつ高信頼なメモリアーキテクチャを提示。  
+  - 🇺🇸 Contribution: Improves energy efficiency and retention safety for embedded/automotive memory.  
 
 - **[Post-CFET Device Architectures (2025)](./docs/post_cfet.pdf)**  
-  - 🇯🇵 内容: ポストCFETデバイスアーキテクチャを総合的に調査。2D材料FET、モノリシック3D、スピントロニクス、ヘテロ集積の視点を比較。  
-  - 🇺🇸 Content: Survey of post-CFET device options including 2D FETs, monolithic 3D integration, spintronics, and heterogeneous integration.  
-  - 🇯🇵 貢献: 材料・集積・EDA課題を統合したロードマップと教育的観点を提示。  
-  - 🇺🇸 Contribution: Provides a 2030–2045 roadmap integrating material, integration, reliability, and EDA challenges.
+  - 🇯🇵 内容: ポストCFETデバイスを包括調査。2D材料FET、モノリシック3D、スピントロニクス、量子、ヘテロ集積を比較し、2030–2045ロードマップを提示。  
+  - 🇺🇸 Content: Survey of post-CFET devices: 2D FETs, monolithic 3D, spintronics, quantum, and heterogeneous integration, with a 2030–2045 roadmap.  
+  - 🇯🇵 貢献: 材料・集積・信頼性・EDA課題を総合し、教育的観点も含めた長期ロードマップを提供。  
+  - 🇺🇸 Contribution: Provides integrated roadmap of material, integration, reliability, and EDA challenges, with educational perspective.  
     
 ---
 
