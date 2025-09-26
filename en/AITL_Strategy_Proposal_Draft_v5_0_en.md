@@ -358,32 +358,35 @@ Introduce AITL Studies; ~100 grads/year; dispatch young researchers to conferenc
 ## 11. Appendix: Related Works (2025)
 
 - 📄 [Historical Case Study: 0.25-µm DRAM & VSRAM (2025)](../docs/dram_vsram_history.pdf)  
-  - Case study of 0.25 µm DRAM ramp-up and pseudo-SRAM mass production.  
+  Case study of 0.25 µm DRAM ramp-up and pseudo-SRAM mass production, focusing on yield-improvement cycles and mobile application impact.  
 
 - 📄 [Historical Case Study on Ti Silicide (TiSi₂) Reliability Issues (2025)](../docs/tisalicide_case.pdf)  
-  - Analysis of TiSi₂ phase-transition instability at 0.25 µm CMOS node, with impact on embedded SRAM yield.
+  Analysis of TiSi₂ phase-transition instability at 0.25 µm CMOS, its effect on embedded SRAM yield, and process countermeasures.  
 
 - 📄 [Process-Based Differentiation for Analog CMOS (2025)](../docs/cmos018_noise.pdf)  
-  - Achieves >50% reduction in 1/f noise at 0.18 µm CMOS through epi substrate, well doping, oxide/interface control, and H₂ annealing, with validated long-term reliability.
-    
+  Demonstrates >50% reduction in 1/f noise at 0.18 µm CMOS through substrate, doping, oxide/interface control, and annealing.  
+
 - 📄 [FeFET CMOS Reliability (0.18µm) (2025)](../docs/fefet_cmos018_reliability.pdf)  
-  - FeFET integrated into CMOS process with measured retention and endurance.  
+  Integration of FeFET into 0.18 µm CMOS baseline, with validated endurance (>10⁵ cycles) and retention (>10 years).  
 
 - 📄 [CMOS018 Inductor+LDO (2025)](../docs/cmos018_inductor_ldo.pdf)  
-  - Inductor+LDO design achieving high-efficiency power supply.  
+  On-chip laminated inductor with hybrid Buck–LDO design achieving >80% efficiency and low noise for IoT/automotive.  
+
+- 📄 [Inkjet Tutorial: Principles, Materials, and Emerging Applications (2025)](../docs/inkjet_tutorial.pdf)  
+  Comprehensive tutorial reviewing actuation principles, droplet physics, ink materials, system/device design, and applications.  
 
 - 📄 [ScAlN Ultrasonic MEMS (2025)](../docs/scaln_ultrasonic.pdf)  
-  - Ultrasonic MEMS with high-sensitivity ScAlN thin films.  
+  Pb-free ScAlN MEMS ultrasonic array integrated with CMOS, targeting eco-friendly and reliable medical sensor applications.  
 
 - 📄 [Bio-Inkjet KNN (2025)](../docs/bioinkjet_knn.pdf)  
-  - Pb-free bio-inkjet technology for medical devices.  
+  Bio-Inkjet architecture using Pb-free KNN actuators, enabling picoliter droplet generation for biomedical printing.  
 
 - 📄 [LPDDR+FeRAM Integration (2025)](../docs/LPDDR_FeRAM.pdf)  
-  - Integration of low-power DRAM with non-volatile FeRAM.  
+  Hybrid memory architecture combining low-power LPDDR and non-volatile FeRAM, achieving instant resume and low standby power.  
 
 - 📄 [Post-CFET Device Architectures (2025)](../docs/post_cfet.pdf)  
-  - Survey of post-CFET device options and roadmap (2030–2045).
-    
+  Survey of post-CFET device options (2D FETs, 3D integration, spintronics, quantum) and a 2030–2045 technology roadmap.
+  
 ---
 
 ### Figure 1. EDA Integration Flow (SystemDK with AITL)
