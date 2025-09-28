@@ -191,6 +191,15 @@ flowchart TB
 
 ---
 
+### 🖨️ 3.8 SystemDK Inkjet Paper (2025)  
+- **Content:** Proposes a System Design Kit (SystemDK) framework for industrial piezoelectric inkjet systems, unifying electrical, mechanical, and fluidic domains.  
+- **Industrial Impact:** Improves droplet control accuracy (up to 12% reduction in diameter errors, 42% velocity variation reduction), shortens design cycles by 42%, and reduces prototyping iterations by 60%. Establishes SystemDK as a reusable multiphysics framework for advanced manufacturing.  
+- **Role in AITL:** Extends SystemDK into manufacturing applications, demonstrating its adaptability beyond semiconductors and positioning inkjet technology as a key PoC for multiphysics co-design.  
+
+[📄 SystemDK Inkjet Paper (PDF)](../docs/systemdk_inkjet.pdf)
+
+---
+
 ## 4. KPIs & Policy Implications
 
 ### 4.1 KPI Table
