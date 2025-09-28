@@ -289,6 +289,21 @@ flowchart TB
 
 ---
 
+### 🖨️ 3.8 SystemDK Inkjet 論文 / SystemDK Inkjet Paper (2025)  
+**🇯🇵 日本語:**  
+- **内容 / Content:** 産業用ピエゾインクジェットを対象に、電気・機械・流体の統合設計をSystem Design Kit (SystemDK) として提案。  
+- **産業貢献 / Industrial Impact:** 液滴制御精度を改善（直径誤差を最大12%低減、速度変動42%短縮）、設計期間を42%削減、試作回数を60%削減。  
+- **AITLにおける位置づけ / Role in AITL:** **SystemDKをインクジェット応用に展開したPoC**。マルチフィジックス統合設計の適用拡張を示す。  
+
+**🇺🇸 English:**  
+- **Content:** Proposes a System Design Kit (SystemDK) framework integrating electrical, mechanical, and fluidic domains for industrial piezoelectric inkjet systems.  
+- **Industrial Impact:** Improves droplet control accuracy (reducing diameter errors up to 12%, velocity variation by 42%), shortens design cycle by 42%, and reduces prototyping iterations by 60%.  
+- **Role in AITL:** Extends SystemDK to inkjet applications, demonstrating applicability of multiphysics co-design to manufacturing technologies.  
+
+[📄 SystemDK Inkjet Paper (PDF)](./docs/systemdk_inkjet.pdf)
+
+---
+
 ## 📏 4. KPI一覧と政策的示唆 / KPI Table & Policy Implications
 
 ### 4.1 KPI一覧 / KPI Table
